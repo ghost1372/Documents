@@ -22,7 +22,7 @@
   display: block;
   margin: 0;
 
-  a, span.exturl {
+a, span.exturl {
     padding: 5px 20px;
     position: relative;
     text-align: left;
@@ -32,6 +32,21 @@
       @extend .menu-item-active a;
     }
   }
+
+if (hexo-config('darkmode')) {
+  @media (prefers-color-scheme: dark) {
+  a, span.exturl {
+    padding: 5px 20px;
+    position: relative;
+    text-align: left;
+    transition-property: background-color;
+    color: #d0d0d0
+    &:hover {
+      @extend .menu-item-active a;
+    }
+  }
+  }
+}
 
   +tablet-mobile() {
     &.menu-item-search {

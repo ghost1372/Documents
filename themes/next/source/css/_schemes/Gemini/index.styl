@@ -26,6 +26,21 @@ $use-seo = hexo-config('seo');
 // ==================================================
 // Desktop layout styles.
 // ==================================================
+
+if (hexo-config('darkmode')) {
+  @media (prefers-color-scheme: dark) {
+    .nav-item {
+      a, span.exturl {
+        color: #d0d0d0; 
+      }
+
+      a:hover {
+        color: $orange;
+      }
+    }
+  }
+}
+
 // Post blocks.
 .content-wrap {
   background: initial;
@@ -100,7 +115,7 @@ $use-seo = hexo-config('seo');
 .sub-menu {
   border-bottom: initial;
   box-shadow: $box-shadow-inner;
-
+  
   // Adapt submenu(s) with post-blocks.
   + .content .post-block {
     box-shadow: $box-shadow;
