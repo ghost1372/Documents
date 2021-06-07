@@ -1,0 +1,66 @@
+---
+title: ComboBox
+---
+
+HC extension of native combobox.
+
+```cs
+public class ComboBox : System.Windows.Controls.ComboBox, IDataInput
+```
+# Attributes
+|Property|Description|Default Value|Remarks|
+|-|-|-|-|
+|VerifyFunc|Data Verification Delegation|||
+|IsError|Is the data wrong|false||
+|ErrorStr|Error prompt|||
+|TextType|Text Type|||
+|ShowClearButton|Whether to show the clear button|false||
+|AutoComplete|Whether to automatically complete the input|false||
+|SelectionTextBrush||||
+|SelectionOpacity||||
+|SelectionBrush||||
+|CaretBrushProperty||||
+
+
+# Additional attributes
+|Attribute|Description|Default Value|Remarks|
+|-|-|-|-|
+|InfoElement.Placeholder|Placeholder|||
+|InfoElement.Necessary|Is it required|false||
+|InfoElement.Symbol|Required mark|●||
+|InfoElement.ContentHeight|Content Height|30|Available when the title is above|
+|InfoElement.MinContentHeight|Minimum content height|30|Available when the title is on top|
+|TitleElement.Title|Title|||
+|TitleElement.TitlePlacement|Title Alignment|TitlePlacementType.Top||
+|TitleElement.TitleWidth|TitleWidth|120||
+|DropDownElement.ConsistentWidth|Whether the drop-down content is the same as the width of the drop-down box|false|||
+
+# Method
+|Method|Description|Remarks|
+|-|-|-|
+|VerifyData|Verify Data|Verification can be triggered manually|
+
+# Style
+|Style|Description|
+|-|-|
+|ComboBoxPlusBaseStyle|Default Style|
+
+# Case
+The native functions behave the same on the extended ComboBox.
+
+```xml
+<StackPanel Margin="32">
+    <hc:ComboBox ShowClearButton="True" ItemsSource="{Binding DataList}" SelectedIndex="0"/>
+    <hc:ComboBox ItemsSource="{Binding DataList}" Margin="0,16,0,0" SelectedIndex="0" IsEnabled="False"/>
+    <hc:ComboBox ShowClearButton="True" ItemsSource="{Binding DataList}" SelectedIndex="0" Margin="0,16,0,0" IsEditable="True"/>
+    <hc:ComboBox ItemsSource="{Binding DataList}" SelectedIndex="0" hc:InfoElement.Title="{ex:Lang Key={x:Static langs:LangKeys.TitleDemoStr1}}" Margin="0,32,0,0" Text="{ex:Lang Key={x:Static langs:LangKeys.ContentDemoStr}}"/>
+    <hc:ComboBox ShowClearButton="True" ItemsSource="{Binding DataList}" hc:InfoElement.Placeholder="{ex:Lang Key={x:Static langs:LangKeys.PlsEnterContent}}" hc:InfoElement.Title="{ex:Lang Key={x:Static langs:LangKeys.TitleDemoStr2}}" hc:InfoElement.Necessary="True" Margin="0,32,0,0"/>
+    <hc:ComboBox ItemsSource="{Binding DataList}" IsEditable="True" SelectedIndex="0" hc:InfoElement.Title="{ex:Lang Key={x:Static langs:LangKeys.TitleDemoStr1}}" Margin="0,32,0,0" Text="{ex:Lang Key={x:Static langs:LangKeys.ContentDemoStr}}"/>
+    <hc:ComboBox AutoComplete="True" ShowClearButton="True" ItemsSource="{Binding DataList}" IsEditable="True" hc:InfoElement.Placeholder="{ex:Lang Key={x:Static langs:LangKeys.PlsEnterContent}}" hc:InfoElement.Title="{ex:Lang Key={x:Static langs:LangKeys.TitleDemoStr2}}" hc:InfoElement.Necessary="True" Margin="0,32,0,0"/>
+    <hc:ComboBox ItemsSource="{Binding DataList}" Width="380" hc:InfoElement.TitleWidth="140" hc:InfoElement.TitlePlacement="Left" hc:InfoElement.Title="{ex:Lang Key={x:Static langs:LangKeys.TitleDemoStr3}}" Margin="0,32,0,0" Text="{ex:Lang Key={x:Static langs:LangKeys.ContentDemoStr}}"/>
+    <hc:ComboBox ShowClearButton="True" ItemsSource="{Binding DataList}" Width="380" hc:InfoElement.TitleWidth="140" hc:InfoElement.Placeholder="{ex:Lang Key={x:Static langs:LangKeys.PlsEnterContent}}" hc:InfoElement.TitlePlacement="Left" hc:InfoElement.Title="{ex:Lang Key={x:Static langs:LangKeys.TitleDemoStr3}}" hc:InfoElement.Necessary="True" Margin="0,32,0,0"/>
+    <hc:ComboBox ItemsSource="{Binding DataList}" IsEditable="True" Width="380" hc:InfoElement.TitleWidth="140" hc:InfoElement.TitlePlacement="Left" hc:InfoElement.Title="{ex:Lang Key={x:Static langs:LangKeys.TitleDemoStr3}}" Margin="0,32,0,0" Text="{ex:Lang Key={x:Static langs:LangKeys.ContentDemoStr}}"/>
+    <hc:ComboBox AutoComplete="True" ShowClearButton="True" ItemsSource="{Binding DataList}" IsEditable="True" Width="380" hc:InfoElement.TitleWidth="140" hc:InfoElement.Placeholder="{ex:Lang Key={x:Static langs:LangKeys.PlsEnterContent}}" hc:InfoElement.TitlePlacement="Left" hc:InfoElement.Title="{ex:Lang Key={x:Static langs:LangKeys.TitleDemoStr3}}" hc:InfoElement.Necessary="True" Margin="0,32,0,0"/>
+</StackPanel>
+```
+![ComboBox](https://raw.githubusercontent.com/HandyOrg/HandyOrgResource/master/HandyControl/Doc/extend_controls/ComboBox_1.png)
