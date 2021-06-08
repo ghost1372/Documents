@@ -144,6 +144,11 @@
   }
 
   &.info {
+      if (hexo-config('darkmode')) {
+        @media (prefers-color-scheme: dark) {
+          background: #272727 !important;
+      }
+    }
     if ($note-style == 'flat') {
       background: $note-info-bg;
     }
@@ -186,6 +191,12 @@
   }
 
   &.success {
+    if (hexo-config('darkmode')) {
+        @media (prefers-color-scheme: dark) {
+          background: #393D1B !important;
+        }
+    }
+
     if ($note-style == 'flat') {
       background: $note-success-bg;
     }
@@ -228,6 +239,11 @@
   }
 
   &.warning {
+    if (hexo-config('darkmode')) {
+        @media (prefers-color-scheme: dark) {
+          background: #433519 !important;
+        }
+    }
     if ($note-style == 'flat') {
       background: $note-warning-bg;
     }
@@ -270,6 +286,11 @@
   }
 
   &.danger {
+    if (hexo-config('darkmode')) {
+        @media (prefers-color-scheme: dark) {
+          background: #442726 !important;
+        }
+    }
     if ($note-style == 'flat') {
       background: $note-danger-bg;
     }

@@ -17,6 +17,11 @@
 }
 
 .table-container table {
+  if (hexo-config('darkmode')) {
+    @media (prefers-color-scheme: dark) {
+     background-color: #555;
+    }
+}
   background-color: #eee;
   border-collapse:separate;
   border-spacing: 0 4px;
