@@ -222,7 +222,7 @@ menu:
       Divider : /divider/ ||
       Drawer : /drawer/ ||
       Effect : /effect/ ||
-      ElementGroup: /elementGroup / ||
+      ElementGroup: /elementGroup/ ||
       Empty: /empty/ ||
       FlexPanel: /flexPanel/ ||
       FlipClock: /flipClock/ ||
