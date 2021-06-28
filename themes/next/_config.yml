@@ -117,7 +117,7 @@ darkmode: true
 # External url should start with http:// or https://
 menu:
   Home: / || fa fa-home
-  HandyControl - 3.3.5:
+  HandyControl - 3.3.7:
     default: /handycontrol/ || fa fa-h-square
     Thanks: /tnx/ || fa fa-user
     Quick start: /quick_start/ || fa fa-h-square
@@ -140,6 +140,7 @@ menu:
       DropDownElement: /dropDownElement/ ||
       EdgeElement: /edgeElement/ ||
       GlobalShortcut : /globalShortcut/ ||
+      GridAttach: /gridAttach/ ||
       IconElement: /iconElement/ ||
       IconSwitchElement: /iconSwitchElement/ ||
       ImageAttach: /imageAttach/ ||
@@ -149,6 +150,7 @@ menu:
       PanelElement: /panelElement/ ||
       PasswordBoxAttach: /passwordBoxAttach/ ||
       RectangleAttach: /rectangleAttach/ ||
+      ScrollViewerAttach: /scrollViewerAttach/ ||
       StatusSwitchElement: /statusSwitchElement/ ||
       TextBlockAttach : /textBlockAttach/ ||
       TipElement: /tipElement/ ||
@@ -220,6 +222,7 @@ menu:
       Divider : /divider/ ||
       Drawer : /drawer/ ||
       Effect : /effect/ ||
+      ElementGroup: /elementGroup / ||
       Empty: /empty/ ||
       FlexPanel: /flexPanel/ ||
       FlipClock: /flipClock/ ||

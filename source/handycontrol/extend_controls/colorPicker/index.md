@@ -27,7 +27,7 @@ public class ColorPicker : Control, ISingleOpen
 |-|-|-|
 |SelectedColorChanged|Color change event||
 |Canceled|Cancel event||
-|Confirmed|Only Custom Version|||
+|Confirmed|Confirm event|||
 
 # Case
 ```xml
