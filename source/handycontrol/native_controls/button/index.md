@@ -125,26 +125,6 @@ Example：
 
 {% endnote %}
 
-# ButtonViolet : ButtonBaseStyle
-
-Violet button
-{% note info no-icon %}
-Only Custom Version
-{% endnote %}
-
-{% note info no-icon %}
-Example：
-
-{% code lang:xml %}
-<StackPanel Orientation="Horizontal">
-    <Button Style="{StaticResource ButtonViolet}" Content="This is a button"/>
-    <Button Style="{StaticResource ButtonViolet}" Content="This is a button" Margin="10,0,0,0" controls:BorderElement.CornerRadius="15"/>
-    <Button Style="{StaticResource ButtonViolet}" Content="This is a button" Margin="10,0,0,0" controls:IconElement.Geometry="{StaticResource GithubGeometry}"/>
-</StackPanel>
-{% endcode %}
-
-{% endnote %}
-
 # ButtonDefault : ButtonBaseStyle
 
 Default button
@@ -203,7 +183,6 @@ Example：
 | ButtonInfo  | 
 | ButtonDanger  | 
 | ButtonWarning  | 
-| ButtonViolet (Only Custom Version) | 
 | ButtonDefault | 
 | ButtonSuccess  | 
 | ButtonIcon  | 

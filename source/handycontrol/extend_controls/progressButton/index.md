@@ -43,7 +43,5 @@ you can use ToggleButton instead of ProgressButton
 | ProgressButtonInfo | ToggleButtonLoadingSuccess |
 | ProgressButtonWarning    | ToggleButtonLoadingInfo |
 | ProgressButtonDanger | ToggleButtonLoadingWarning |
-| ProgressButtonDefault [Available Only in Custom Version](https://github.com/ghost1372/HandyControls)  | ToggleButtonLoadingDanger | 
-| ProgressButtonViolet [Available Only in Custom Version](https://github.com/ghost1372/HandyControls) | ToggleButtonLoadingViolet [Available Only in Custom Version](https://github.com/ghost1372/HandyControls) |
 
 ![ProgressButton](https://raw.githubusercontent.com/HandyOrg/HandyOrgResource/master/HandyControl/Resources/ProgressButton.png)

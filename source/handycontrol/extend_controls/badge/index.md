@@ -120,8 +120,6 @@ badge status type, divided into three types, default is text display
 | BadgeInfo      | Information color badge style               | BadgeBaseStyle |
 | BadgeWarning   | Warning color badge style               | BadgeBaseStyle |
 | BadgeDanger    | Anomalous badge style               | BadgeBaseStyle |
-| BadgeDefault | Default badge style | [Available Only in Custom Version](https://github.com/ghost1372/HandyControls) |
-| BadgeViolet | Purple color badge style | [Available Only in Custom Version](https://github.com/ghost1372/HandyControls) |
 
 ## Case
 

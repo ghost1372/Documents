@@ -8,6 +8,11 @@ A breaking change is a change that may require you to make changes to your appli
 See [here](https://github.com/ghost1372/HandyControls/releases) and [here](https://github.com/HandyOrg/HandyControl/releases) for full changes
 {% endnote %}
 
+## 3.3.8 (HandyControls)
+- All Violet and Default Styles Removed eg: ToggleButtonViolet, SplitButtonDefault
+- GithubTimeLine Removed
+- TabControl UsingWinUIStyle Property Removed
+
 ## 3.3.0 (HandyControls)
 - Legacy Dynamic Localization Removed and The newer version has been replaced with better features See [here](https://hosseini.ninja/handycontrol/persianToolkit/dynamicLanguage/)
 

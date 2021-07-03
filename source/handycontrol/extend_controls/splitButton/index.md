@@ -19,8 +19,6 @@ public class SplitButton : ButtonBase
 # Styles
 | Style |
 | ------------------ |
-| SplitButtonDefault [Available Only in Custom Version](https://github.com/ghost1372/HandyControls) |
-| SplitButtonViolet [Available Only in Custom Version](https://github.com/ghost1372/HandyControls) |
 | SplitButtonPrimary |
 | SplitButtonDanger |
 | SplitButtonWarning |

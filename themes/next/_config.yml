@@ -331,7 +331,6 @@ menu:
       Command: /command/ ||
       DynamicLanguage: /dynamicLanguage/ ||
       Extensions: /extensions/ ||
-      GithubTimeLine: /githubTimeLine/ ||
       Helpers: /helpers/ ||
       LoadingIndicator: /loadingIndicator/ ||
       Logger: /logger/ ||

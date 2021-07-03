@@ -25,8 +25,6 @@ public class CircleProgressBar : RangeBase
 | ProgressBarInfoCircle    | Info style |
 | ProgressBarWarningCircle | Warning style |
 | ProgressBarDangerCircle  | Danger style |
-| ProgressBarDefaultCircle [Available Only in Custom Version](https://github.com/ghost1372/HandyControls) | Default style |
-| ProgressBarVioletCircle [Available Only in Custom Version](https://github.com/ghost1372/HandyControls) | Violet style |
 
 # Case
 ```xml

@@ -125,26 +125,6 @@ Example：
 
 {% endnote %}
 
-# RepeatButtonViolet : RepeatButtonBaseStyle
-
-Violet RepeatButton
-{% note info no-icon %}
-Only Custom Version
-{% endnote %}
-
-{% note info no-icon %}
-Example：
-
-{% code lang:xml %}
-<StackPanel Orientation="Horizontal">
-    <RepeatButton Style="{StaticResource RepeatButtonViolet}" Content="This is a RepeatButton"/>
-    <RepeatButton Style="{StaticResource RepeatButtonViolet}" Content="This is a RepeatButton" Margin="10,0,0,0" controls:BorderElement.CornerRadius="15"/>
-    <RepeatButton Style="{StaticResource RepeatButtonViolet}" Content="This is a RepeatButton" Margin="10,0,0,0" controls:IconElement.Geometry="{StaticResource GithubGeometry}"/>
-</StackPanel>
-{% endcode %}
-
-{% endnote %}
-
 # RepeatButtonDefault : RepeatButtonBaseStyle
 
 Default RepeatButton
@@ -203,7 +183,6 @@ Example：
 | RepeatButtonInfo  | 
 | RepeatButtonDanger  | 
 | RepeatButtonWarning  | 
-| RepeatButtonViolet (Only Custom Version) | 
 | RepeatButtonDefault | 
 | RepeatButtonSuccess  | 
 | RepeatButtonIcon  | 

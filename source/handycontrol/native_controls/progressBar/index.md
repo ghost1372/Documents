@@ -16,15 +16,12 @@ Other styles and effects included in `HandyControl`, including the following sty
 | ProgressBarInfo | Prompt Color ProgressBar | ProgressBarBaseStyle |
 | ProgressBarWarning | Warning color progressbar | ProgressBarBaseStyle |
 | ProgressBarDanger | Dangerous ProgressBar | ProgressBarBaseStyle |
-| ProgressBarViolet | Violet ProgressBar | ProgressBarBaseStyle |
-| ProgressBarDefault | Default ProgressBar | ProgressBarBaseStyle |
 | ProgressBarStripeBaseStyle | Stripe progressbar default style (not recommended for direct use) |-|
 | ProgressBarPrimaryStripe | Stripe ProgressBar | ProgressBarStripeBaseStyle |
 | ProgressBarSuccessStripe | ProgressBar Stripe | ProgressBarStripeBaseStyle |
 | ProgressBarInfoStripe | Information color stripe progressbar | ProgressBarStripeBaseStyle |
 | ProgressBarWarningStripe | ProgressBar with warning stripes | ProgressBarStripeBaseStyle |
 | ProgressBarDangerStripe | Dangerous Stripe ProgressBar | ProgressBarStripeBaseStyle |
-| ProgressBarVioletStripe | Violet Stripe ProgressBar | ProgressBarStripeBaseStyle |
 | ProgressBarFlat | Flat style |-|
 
 Case:

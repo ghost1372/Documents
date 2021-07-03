@@ -85,33 +85,3 @@ Example：
 ![Label.DangerStyle](https://raw.githubusercontent.com/HandyOrg/HandyOrgResource/master/HandyControl/Doc/native_controls/Label.DangerStyle.png)
 
 {% endnote %}
-
-# LabelViolet : LabelBaseStyle
-
-Violet type style 
-{% note info no-icon %}
-Only Custom Version
-{% endnote %}
-
-{% note info no-icon %}
-Example：
-{% code %}
-    <Label Content="LabelViolet style" Margin="10" Style="{DynamicResource LabelViolet}"></Label>
-{% endcode %}
-
-{% endnote %}
-
-# LabelDefault : LabelBaseStyle
-
-Default type style 
-{% note info no-icon %}
-Only Custom Version
-{% endnote %}
-
-{% note info no-icon %}
-Example：
-{% code %}
-    <Label Content="LabelDefault style" Margin="10" Style="{DynamicResource LabelDefault}"></Label>
-{% endcode %}
-
-{% endnote %}

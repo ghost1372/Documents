@@ -27,8 +27,6 @@ public class TabControl : System.Windows.Controls.TabControl
 |IsScrollable|Whether the mouse wheel scroll is supported after the tab overflows|false||
 |ShowOverflowButton|Whether to show the drop-down button after the tab overflows|true||
 |ShowScrollButton|Whether to display scroll buttons|false||
-| UsingWinUIStyle | Windows 10 WinUI Style, [Only Available in [Custom](https://github.com/ghost1372/handyControls) Version] |false||
-| IndicatorDisplayMode | dependent on UsingWinUIStyle, The location of the Indicator of the selected item [Only Available in [Custom](https://github.com/ghost1372/handyControls) Version] |Bottom|||
 
 # Events
 |Event|
@@ -81,16 +79,3 @@ or
 
 ## TabItem
 You can use the `IconElement` class to set icons for tabs.
-
-
-# UsingWinUIStyle
-WinUI Style for TabControl
-{% note info %}
-Only Custom Version
-{% endnote %}
-
-``` xml
-<hc:TabControl UsingWinUIStyle="True" />
-```
-
-![UsingWinUIStyle](https://raw.githubusercontent.com/ghost1372/HandyControls/develop/Resources/TabControlUWPStyle.png)

@@ -24,7 +24,6 @@ All buttons inheriting this style can use the `BorderElement.CornerRadius` addit
 | ToggleButtonWarning | ToggleButtonBaseStyle | Warning |
 | ToggleButtonDanger | ToggleButtonBaseStyle | Danger |
 | ToggleButtonDefault | ToggleButtonBaseStyle | Default |
-| ToggleButtonViolet [Available Only in Custom Version](https://github.com/ghost1372/HandyControls) | ToggleButtonBaseStyle | Violet |
 
 Case:
 
@@ -66,7 +65,6 @@ All buttons inheriting this style can use the `BorderElement.CornerRadius` addit
 | ToggleButtonIconWarning | ToggleButtonIconBaseStyle | Warning |
 | ToggleButtonIconDanger | ToggleButtonIconBaseStyle | Danger |
 | ToggleButtonIconTransparent | ToggleButtonIconBaseStyle | Transparent |
-| ToggleButtonIconViolet [Available Only in Custom Version](https://github.com/ghost1372/HandyControls) | ToggleButtonIconBaseStyle | Violet |
 
 Case:
 

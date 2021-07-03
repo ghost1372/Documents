@@ -27,9 +27,6 @@ public class WaveProgressBar : RangeBase
 | ProgressBarWarningWave |
 | ProgressBarDangerWave |
 | ProgressBarPrimaryWave |
-| ProgressBarDefaultWave [Available Only in Custom Version](https://github.com/ghost1372/HandyControls) |
-| ProgressBarVioletWave [Available Only in Custom Version](https://github.com/ghost1372/HandyControls) |
-
 
 # Case
 
