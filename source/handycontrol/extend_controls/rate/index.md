@@ -49,4 +49,4 @@ public class Rate : RegularItemsControl
     <hc:Rate Value="4.5" AllowHalf="True" ShowText="True" Margin="0,16,0,0" Foreground="{DynamicResource DangerBrush}" Icon="{StaticResource LoveGeometry}"/>
 </StackPanel>
 ```
-![Rate](https://raw.githubusercontent.com/HandyOrg/HandyOrgResource/master/HandyControl/Resources/Rate.png)
+![Rate](https://raw.githubusercontent.com/HandyOrg/HandyOrgResource/master/HandyControl/Resources/Rate.gif)

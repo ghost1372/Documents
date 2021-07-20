@@ -37,4 +37,4 @@ public class CircleProgressBar : RangeBase
     <hc:CircleProgressBar Value="{Binding Value,ElementName=SliderDemo}" Margin="16,0,0,0" Width="50" Height="50" Style="{StaticResource ProgressBarDangerCircle}"/>
 </StackPanel>
 ```
-![CircleProgressBar](https://raw.githubusercontent.com/HandyOrg/HandyOrgResource/master/HandyControl/Resources/CircleProgressBar.png)
+![CircleProgressBar](https://raw.githubusercontent.com/HandyOrg/HandyOrgResource/master/HandyControl/Resources/CircleProgressBar.gif)

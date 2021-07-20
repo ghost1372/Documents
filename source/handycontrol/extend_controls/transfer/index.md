@@ -38,4 +38,4 @@ public class Transfer : SimpleItemsControl
     </hc:Transfer.ItemTemplate>
 </hc:Transfer>
 ```
-![Transfer](https://raw.githubusercontent.com/HandyOrg/HandyOrgResource/master/HandyControl/Resources/Transfer.png)
+![Transfer](https://raw.githubusercontent.com/HandyOrg/HandyOrgResource/master/HandyControl/Resources/Transfer.gif)

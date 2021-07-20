@@ -9,18 +9,10 @@ public class BlurWindow : Window
 ```
 
 {% note warning %}
-Operating system support range: win10 10240 ~ win10 18362
+Operating system support : windows 10
 {% endnote %}
 {% note warning %}
 Rewrite the resource `BlurGradientValue` to customize the blur color
-{% endnote %}
-
-{% note info %}
-If you want to enable acrylic blur on unsupported builds (build >= 1903), you can use `FORCE_ENABLE_ACRYLIC_BLUR` Property.
- ```xml
- <hc:BlurWindow FORCE_ENABLE_ACRYLIC_BLUR="true"
-
- ```
 {% endnote %}
 
 # Case
@@ -34,18 +26,11 @@ If you want to enable acrylic blur on unsupported builds (build >= 1903), you ca
                xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
                xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
                xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
-               xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
                xmlns:hc="https://handyorg.github.io/handycontrol"
-               xmlns:langs="clr-namespace:HandyControlDemo.Properties.Langs"
-               xmlns:ex="clr-namespace:HandyControlDemo.Tools.Extension"
-               mc:Ignorable="d"
-               Style="{StaticResource WindowBlur}"
-               WindowStartupLocation="CenterScreen"
-               Title="{ex:Lang Key={x:Static langs:LangKeys.Title}}"
+               Title="Title"
                Height="450" 
-               Width="800" 
-               Icon="/HandyControlDemo;component/Resources/Img/icon.ico">
+               Width="800" >
 </hc:BlurWindow>
 ```
 
-![BlurWindow](https://raw.githubusercontent.com/HandyOrg/HandyOrgResource/master/HandyControl/Resources/BlurWindow.png)
+![BlurWindow](https://raw.githubusercontent.com/HandyOrg/HandyOrgResource/master/HandyControl/Resources/BlurWindow.gif)

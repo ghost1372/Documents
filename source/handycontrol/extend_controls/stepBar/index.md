@@ -78,4 +78,4 @@ you need to create a list with a model that contain `Header` and `Content` that 
 </hc:StepBar>
 ```
 
-![StepBar](https://raw.githubusercontent.com/HandyOrg/HandyOrgResource/master/HandyControl/Resources/StepBar.png)
+![StepBar](https://raw.githubusercontent.com/HandyOrg/HandyOrgResource/master/HandyControl/Resources/StepBar.gif)

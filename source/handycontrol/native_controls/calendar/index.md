@@ -22,5 +22,5 @@ ConfigHelper.Instance.SetLang("en");
 
 {% endnote %}
 
-![Calendar](https://raw.githubusercontent.com/HandyOrg/HandyOrgResource/master/HandyControl/Resources/Calendar.jpg)
+![Calendar](https://raw.githubusercontent.com/HandyOrg/HandyOrgResource/master/HandyControl/Resources/Calendar.gif)
 {% endnote %}

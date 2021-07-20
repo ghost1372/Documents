@@ -59,4 +59,4 @@ public class SplitButton : ButtonBase
 </StackPanel>
 ```
 
-![SplitButton](https://raw.githubusercontent.com/HandyOrg/HandyOrgResource/master/HandyControl/Resources/SplitButton.png)
+![SplitButton](https://raw.githubusercontent.com/HandyOrg/HandyOrgResource/master/HandyControl/Resources/SplitButton.gif)

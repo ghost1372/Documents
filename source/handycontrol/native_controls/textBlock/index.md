@@ -44,4 +44,4 @@ The default style of bold textblocks is not recommended. It should always be use
 |TextBlockDefaultAccent|TextBlockDefaultSecLight|TextBlockDefaultInfo|
 |TextBlockDefaultSuccess|TextBlockDefaultSecLight| |
 
-![TextBlockStyle](https://raw.githubusercontent.com/HandyOrg/HandyOrgResource/master/HandyControl/Resources/TextBlock.jpg)
+![TextBlockStyle](https://raw.githubusercontent.com/HandyOrg/HandyOrgResource/master/HandyControl/Resources/TextBlock.png)

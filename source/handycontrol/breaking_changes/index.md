@@ -12,6 +12,7 @@ See [here](https://github.com/ghost1372/HandyControls/releases) and [here](https
 - All Violet and Default Styles Removed eg: ToggleButtonViolet, SplitButtonDefault
 - GithubTimeLine Removed
 - TabControl UsingWinUIStyle Property Removed
+- FORCE_ENABLE_ACRYLIC_BLUR Property Removed (BlurWindow now can be used in all windows 10 builds)
 
 ## 3.3.0 (HandyControls)
 - Legacy Dynamic Localization Removed and The newer version has been replaced with better features See [here](https://hosseini.ninja/handycontrol/persianToolkit/dynamicLanguage/)
