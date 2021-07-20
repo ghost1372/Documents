@@ -38,7 +38,7 @@ public class Card : ContentControl
             <StackPanel Margin="10" Width="160">
                 <!--Card First-level content-->
                 <TextBlock TextWrapping="NoWrap"  Style="{DynamicResource TextBlockLargeBold}" TextTrimming="CharacterEllipsis" 
-                                           Text="Headline" 
+                                           Text="Title" 
                                            HorizontalAlignment="Left"/>
                 <!--Card Secondary content-->
                 <TextBlock TextWrapping="NoWrap" Style="{DynamicResource TextBlockDefault}" TextTrimming="CharacterEllipsis" 

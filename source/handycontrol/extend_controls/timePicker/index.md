@@ -61,8 +61,8 @@ By changing the Clock property, TimePicker can change the style of the clock.
 You can add Headers and Placeholders to the DatePicker to indicate to the user what they do. To use these two properties, you first need to apply the **TimePickerExtend** or **TimePickerPlus** styles.
 
 ``` XML
-<hc:TimePicker hc:InfoElement.Placeholder="{x:Static langs:Lang.PlsEnterContent}"
-               hc:InfoElement.Title="{x:Static langs:Lang.TitleDemoStr2}"
+<hc:TimePicker hc:InfoElement.Placeholder="Please enter the content"
+               hc:InfoElement.Title="This is the title"
                Style="{StaticResource TimePickerExtend}"/>
 ```
 

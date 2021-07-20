@@ -49,8 +49,8 @@ You can add Headers and Placeholders to the DatePicker to indicate to the user w
 ``` XML
 <hc:DateTimePicker ShowClearButton="True"
                    Style="{StaticResource DateTimePickerExtend}"
-                   hc:InfoElement.Title="{x:Static langs:Lang.TitleDemoStr1}"
-                   hc:InfoElement.Placeholder="{x:Static langs:Lang.PlsEnterContent}"/>
+                   hc:InfoElement.Title="This is the title"
+                   hc:InfoElement.Placeholder="Please enter the content"/>
 ```
 # Attributes
 | Property | Description |

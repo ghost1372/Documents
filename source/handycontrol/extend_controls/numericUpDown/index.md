@@ -67,7 +67,7 @@ numericUpDown.Maximum = 1000;
 You can add Headers and Placeholders to NumericUpDown to indicate to users what they do. To use these two additional attributes, you need to apply the **NumericUpDownPlus** style first.
 
 ``` XML
-                <hc:NumericUpDown ValueFormat="N2" Maximum="100000" Value="10000" Width="380" hc:InfoElement.TitleWidth="140" hc:InfoElement.Placeholder="{ex:Lang Key={x:Static langs:LangKeys.PlsEnterContent}}" hc:InfoElement.TitlePlacement="Left" hc:InfoElement.Title="{ex:Lang Key={x:Static langs:LangKeys.TitleDemoStr3}}" Style="{StaticResource NumericUpDownExtend}" hc:InfoElement.Necessary="True" Margin="0,32,0,0"/>
+                <hc:NumericUpDown ValueFormat="N2" Maximum="100000" Value="10000" Width="380" hc:InfoElement.TitleWidth="140" hc:InfoElement.Placeholder="Please enter the content" hc:InfoElement.TitlePlacement="Left" hc:InfoElement.Title="This is the title" Style="{StaticResource NumericUpDownExtend}" hc:InfoElement.Necessary="True" Margin="0,32,0,0"/>
 ```
 
 ![NumericUpDown](https://raw.githubusercontent.com/HandyOrg/HandyOrgResource/master/HandyControl/Doc/extend_controls/NumericUpDown_3.png)

@@ -16,19 +16,19 @@ The native datepicker extends the default style and is not recommended for direc
 
 # DatePickerExtend : DatePickerExtendBaseStyle
 
-- Heading on
+- Title on
 `<DatePicker SelectedDate="{x:Static system:DateTime.Now}" Style="{StaticResource DatePickerExtend}" hc:InfoElement.Title="This is the title"/>`
 ![DatePickerExtend_1](https://raw.githubusercontent.com/HandyOrg/HandyOrgResource/master/HandyControl/Doc/native_controls/DatePickerExtend_1.png)
 
-- Heading left
-`<DatePicker SelectedDate="{x:Static system:DateTime.Now}" Width="380" hc:InfoElement.TitleWidth="140" hc:InfoElement.TitlePlacement="Left" Style="{StaticResource DatePickerExtend}" hc:InfoElement.Title="Heading on the left"/>`
+- Title left
+`<DatePicker SelectedDate="{x:Static system:DateTime.Now}" Width="380" hc:InfoElement.TitleWidth="140" hc:InfoElement.TitlePlacement="Left" Style="{StaticResource DatePickerExtend}" hc:InfoElement.Title="Title on the left"/>`
 ![DatePickerExtend_2](https://raw.githubusercontent.com/HandyOrg/HandyOrgResource/master/HandyControl/Doc/native_controls/DatePickerExtend_2.png)
 
 {% note warning %}
 When the title is on the left, in order to align the left side of multiple input boxes, you need to set the title width. The title width does not need to be set one by one, and can be set uniformly on the external container.
 {% endnote %}
 
-- Heading on, with watermark
+- Title on, with watermark
 [See Combobox](https://handyorg.github.io/handycontrol/native_controls/comboBox/)
 
 - Title is on, with watermark, and is required

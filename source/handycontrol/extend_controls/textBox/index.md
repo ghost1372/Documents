@@ -36,8 +36,8 @@ For more examples of TextBox, you can refer to the [Document](https://docs.micro
 You can add a Header and a Placeholder to a TextBox to indicate to the user its purpose. To use these two attributes
 
 ``` XML
-<hc:TextBox hc:InfoElement.Placeholder="{x:Static langs:Lang.PlsEnterContent}"
-               hc:InfoElement.Title="{x:Static langs:Lang.TitleDemoStr2}"
+<hc:TextBox hc:InfoElement.Placeholder="Please enter the content"
+               hc:InfoElement.Title="This is the content"
 ```
 
 # Attributes

@@ -20,9 +20,8 @@ Example:
 {% code lang:xml %}
 <StackPanel Orientation="Horizontal">
   <Button Content="This is a button"/>
-  <Button Content="This is a button" Margin="10,0,0,0" controls:BorderElement.CornerRadius="15"/>
-  <Button Content="This is a button" Margin="10,0,0,0"
-controls:IconElement.Geometry="{StaticResource GithubGeometry}"/>
+  <Button Content="This is a button" Margin="10,0,0,0" hc:BorderElement.CornerRadius="15"/>
+  <Button Content="This is a button" Margin="10,0,0,0" hc:IconElement.Geometry="{StaticResource GithubGeometry}"/>
 </StackPanel>
 {% endcode %}
 
@@ -40,8 +39,8 @@ Example:
 {% code lang:xml %}
 <StackPanel Orientation="Horizontal">
    <Button Style="{StaticResource ButtonPrimary}" Content="This is a button"/>
-   <Button Style="{StaticResource ButtonPrimary}" Content="This is a button" Margin="10,0,0,0" controls:BorderElement.CornerRadius="15"/>
-   <Button Style="{StaticResource ButtonPrimary}" Content="This is a button" Margin="10,0,0,0" controls:IconElement.Geometry="{StaticResource GithubGeometry}"/>
+   <Button Style="{StaticResource ButtonPrimary}" Content="This is a button" Margin="10,0,0,0" hc:BorderElement.CornerRadius="15"/>
+   <Button Style="{StaticResource ButtonPrimary}" Content="This is a button" Margin="10,0,0,0" hc:IconElement.Geometry="{StaticResource GithubGeometry}"/>
 </StackPanel>
 {% endcode %}
 
@@ -59,8 +58,8 @@ Example：
 {% code lang:xml %}
 <StackPanel Orientation="Horizontal">
    <Button Style="{StaticResource ButtonSuccess}" Content="This is a button"/>
-   <Button Style="{StaticResource ButtonSuccess}" Content="This is a button" Margin="10,0,0,0" controls:BorderElement.CornerRadius="15"/>
-   <Button Style="{StaticResource ButtonSuccess}" Content="This is a button" Margin="10,0,0,0" controls:IconElement.Geometry="{StaticResource GithubGeometry}"/>
+   <Button Style="{StaticResource ButtonSuccess}" Content="This is a button" Margin="10,0,0,0" hc:BorderElement.CornerRadius="15"/>
+   <Button Style="{StaticResource ButtonSuccess}" Content="This is a button" Margin="10,0,0,0" hc:IconElement.Geometry="{StaticResource GithubGeometry}"/>
 </StackPanel>
 {% endcode %}
 
@@ -78,8 +77,8 @@ Example：
 {% code lang:xml %}
 <StackPanel Orientation="Horizontal">
   <Button Style="{StaticResource ButtonInfo}" Content="This is a button"/>
-  <Button Style="{StaticResource ButtonInfo}" Content="This is a button" Margin="10,0,0,0" controls:BorderElement.CornerRadius="15"/>
-  <Button Style="{StaticResource ButtonInfo}" Content="This is a button" Margin="10,0,0,0" controls:IconElement.Geometry="{StaticResource GithubGeometry}"/>
+  <Button Style="{StaticResource ButtonInfo}" Content="This is a button" Margin="10,0,0,0" hc:BorderElement.CornerRadius="15"/>
+  <Button Style="{StaticResource ButtonInfo}" Content="This is a button" Margin="10,0,0,0" hc:IconElement.Geometry="{StaticResource GithubGeometry}"/>
 </StackPanel>
 {% endcode %}
 
@@ -97,8 +96,8 @@ Example：
 {% code lang:xml %}
 <StackPanel Orientation="Horizontal">
     <Button Style="{StaticResource ButtonWarning}" Content="This is a button"/>
-    <Button Style="{StaticResource ButtonWarning}" Content="This is a button" Margin="10,0,0,0" controls:BorderElement.CornerRadius="15"/>
-    <Button Style="{StaticResource ButtonWarning}" Content="This is a button" Margin="10,0,0,0" controls:IconElement.Geometry="{StaticResource GithubGeometry}"/>
+    <Button Style="{StaticResource ButtonWarning}" Content="This is a button" Margin="10,0,0,0" hc:BorderElement.CornerRadius="15"/>
+    <Button Style="{StaticResource ButtonWarning}" Content="This is a button" Margin="10,0,0,0" hc:IconElement.Geometry="{StaticResource GithubGeometry}"/>
 </StackPanel>
 {% endcode %}
 
@@ -116,8 +115,8 @@ Example：
 {% code lang:xml %}
 <StackPanel Orientation="Horizontal">
     <Button Style="{StaticResource ButtonDanger}" Content="This is a button"/>
-    <Button Style="{StaticResource ButtonDanger}" Content="This is a button" Margin="10,0,0,0" controls:BorderElement.CornerRadius="15"/>
-    <Button Style="{StaticResource ButtonDanger}" Content="This is a button" Margin="10,0,0,0" controls:IconElement.Geometry="{StaticResource GithubGeometry}"/>
+    <Button Style="{StaticResource ButtonDanger}" Content="This is a button" Margin="10,0,0,0" hc:BorderElement.CornerRadius="15"/>
+    <Button Style="{StaticResource ButtonDanger}" Content="This is a button" Margin="10,0,0,0" hc:IconElement.Geometry="{StaticResource GithubGeometry}"/>
 </StackPanel>
 {% endcode %}
 
@@ -135,8 +134,8 @@ Example：
 {% code lang:xml %}
 <StackPanel Orientation="Horizontal">
     <Button Style="{StaticResource ButtonDefault}" Content="This is a button"/>
-    <Button Style="{StaticResource ButtonDefault}" Content="This is a button" Margin="10,0,0,0" controls:BorderElement.CornerRadius="15"/>
-    <Button Style="{StaticResource ButtonDefault}" Content="This is a button" Margin="10,0,0,0" controls:IconElement.Geometry="{StaticResource GithubGeometry}"/>
+    <Button Style="{StaticResource ButtonDefault}" Content="This is a button" Margin="10,0,0,0" hc:BorderElement.CornerRadius="15"/>
+    <Button Style="{StaticResource ButtonDefault}" Content="This is a button" Margin="10,0,0,0" hc:IconElement.Geometry="{StaticResource GithubGeometry}"/>
 </StackPanel>
 {% endcode %}
 
@@ -151,9 +150,9 @@ Example：
 
 {% code lang:xml %}
 <StackPanel Orientation="Horizontal">
-    <Button Style="{StaticResource ButtonIcon}" Foreground="Black" controls:IconElement.Geometry="{StaticResource UpDownGeometry}"/>
-    <Button Style="{StaticResource ButtonIcon}" Background="Black" Foreground="White" controls:BorderElement.CornerRadius="15" controls:IconElement.Geometry="{StaticResource UpDownGeometry}" Margin="10,0,0,0"/>
-    <Button Style="{StaticResource ButtonIcon}" BorderThickness="1" BorderBrush="Black" Foreground="Black" controls:IconElement.Geometry="{StaticResource UpDownGeometry}" Margin="10,0,0,0"/>
+    <Button Style="{StaticResource ButtonIcon}" Foreground="Black" hc:IconElement.Geometry="{StaticResource UpDownGeometry}"/>
+    <Button Style="{StaticResource ButtonIcon}" Background="Black" Foreground="White" hc:BorderElement.CornerRadius="15" hc:IconElement.Geometry="{StaticResource UpDownGeometry}" Margin="10,0,0,0"/>
+    <Button Style="{StaticResource ButtonIcon}" BorderThickness="1" BorderBrush="Black" Foreground="Black" hc:IconElement.Geometry="{StaticResource UpDownGeometry}" Margin="10,0,0,0"/>
 </StackPanel>
 {% endcode %}
 
@@ -169,7 +168,7 @@ This style is recommended if you want to fully customize the content of the butt
 Example：
 
 {% code %}
-<Button Height="30" Padding="10,0" Background="Black" Foreground="White" Content="This is a button" Style="{StaticResource ButtonCustom}" controls:BackgroundSwitchElement.MouseHoverBackground="Red" controls:BackgroundSwitchElement.MouseDownBackground="PaleVioletRed"/>
+<Button Height="30" Padding="10,0" Background="Black" Foreground="White" Content="This is a button" Style="{StaticResource ButtonCustom}" hc:BackgroundSwitchElement.MouseHoverBackground="Red" hc:BackgroundSwitchElement.MouseDownBackground="PaleVioletRed"/>
 {% endcode %}
 
 ![ButtonCustom](https://raw.githubusercontent.com/HandyOrg/HandyOrgResource/master/HandyControl/Doc/native_controls/ButtonCustom_1.gif)
