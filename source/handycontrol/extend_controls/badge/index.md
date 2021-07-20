@@ -8,6 +8,9 @@ The badge control, as a specific state content badge of other controls, can mini
 public class Badge : ContentControl
 ```
 
+![Badge](https://raw.githubusercontent.com/HandyOrg/HandyOrgResource/master/HandyControl/Resources/Badge.gif)
+
+
 # Basic attributes
 
 | Property Name | Use                                                        |
