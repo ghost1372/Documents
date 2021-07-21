@@ -9,14 +9,14 @@ The default style of the calendar is not recommended for direct use and should a
 {% note info no-icon %}
 Example：
 
-{% code %}
+{% code lang:xml %}
 <Calendar/>
 {% endcode %}
 
 {% note info %}
 you can change calendar ui culture:
 
-{% code %}
+{% code lang:cs %}
 ConfigHelper.Instance.SetLang("en");
 {% endcode %}
 

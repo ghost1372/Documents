@@ -9,7 +9,7 @@ The default style of the context menu is not recommended for direct use and shou
 {% note info no-icon %}
 Example：
 
-{% code %}
+{% code lang:xml %}
 <ContextMenu ItemsSource="{Binding DataList}">
     <ContextMenu.ItemTemplate>
         <HierarchicalDataTemplate ItemsSource="{Binding DataList}">

@@ -16,7 +16,7 @@ title: DataGrid
 {% note info no-icon %}
 Example：
 
-{% code %}
+{% code lang:xml %}
 <DataGrid HeadersVisibility="All" RowHeaderWidth="60" AutoGenerateColumns="False" ItemsSource="{Binding DataList}">
     <DataGrid.RowHeaderTemplate>
         <DataTemplate>
@@ -24,7 +24,7 @@ Example：
         </DataTemplate>
     </DataGrid.RowHeaderTemplate>
     <DataGrid.Columns>
-        <DataGridTextColumn IsReadOnly="True" Width="80" CanUserResize="False" Binding="{Binding Index}" Header="{x:Static langs:Lang.Index}"/>
+        <DataGridTextColumn IsReadOnly="True" Width="80" CanUserResize="False" Binding="{Binding Index}" Header="Index"/>
         <DataGridTemplateColumn Width="60" CanUserResize="False">
             <DataGridTemplateColumn.CellTemplate>
                 <DataTemplate>
@@ -32,10 +32,10 @@ Example：
                 </DataTemplate>
             </DataGridTemplateColumn.CellTemplate>
         </DataGridTemplateColumn>
-        <DataGridTextColumn Width="1*" Binding="{Binding Name}" Header="{x:Static langs:Lang.Name}"/>
-        <DataGridCheckBoxColumn Width="100" CanUserResize="False" Binding="{Binding IsSelected}" Header="{x:Static langs:Lang.Selected}"/>
-        <DataGridComboBoxColumn ItemsSource="{Binding Source={StaticResource DemoTypes}}" Width="100" CanUserResize="False" SelectedValueBinding="{Binding Type}" Header="{x:Static langs:Lang.Type}"/>
-        <DataGridTextColumn Width="1*" Binding="{Binding Remark}" Header="{x:Static langs:Lang.Remark}"/>
+        <DataGridTextColumn Width="1*" Binding="{Binding Name}" Header="Name"/>
+        <DataGridCheckBoxColumn Width="100" CanUserResize="False" Binding="{Binding IsSelected}" Header="Selected"/>
+        <DataGridComboBoxColumn ItemsSource="{Binding Source={StaticResource DemoTypes}}" Width="100" CanUserResize="False" SelectedValueBinding="{Binding Type}" Header="Type"/>
+        <DataGridTextColumn Width="1*" Binding="{Binding Remark}" Header="Remark"/>
     </DataGrid.Columns>
 </DataGrid>
 {% endcode %}
@@ -52,23 +52,20 @@ For the text display column `DataGridTextColumn`, you need to set the text conte
 
 Use for example:
 
-{% code %}
-
-style:
+```xml
 <Style x:Key="DataGridTextCenterColumnStyle" TargetType="DataGridCell" BasedOn="{StaticResource DataGridCellStyle}">
     <Setter Property="HorizontalContentAlignment" Value="Center"/>
 </Style>
+```
 
-Use in xaml:
-
+```xml
 <DataGrid ItemsSource="{Binding Datas}" AutoGenerateColumns="False">
     <DataGrid.Columns>
         <DataGridTextColumn Header="Left" Binding="{Binding Name}" Width="*"/>
         <DataGridTextColumn Header="Centered" CellStyle="{StaticResource DataGridTextCenterColumnStyle}" Width="*" Binding="{Binding Name}"/>
 ​    </DataGrid.Columns>
 </DataGrid>
-
-{% endcode %}
+```
 
 The effect is as follows:
 
@@ -78,7 +75,7 @@ The effect is as follows:
 if you want to generate row numbers you should use DataGridAttach Attached Property.
 
 First Remove `DataGrid.RowHeaderTemplate` Then add this Attached Property
-{% code %}
+{% code lang:xml %}
 <DataGrid hc:DataGridAttach.ShowRowNumber="True"/>
 {% endcode %}
 {% endnote %}

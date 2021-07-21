@@ -20,9 +20,9 @@ Example:
 {% code lang:xml %}
 <StackPanel Orientation="Horizontal">
   <RepeatButton Content="This is a RepeatButton"/>
-  <RepeatButton Content="This is a RepeatButton" Margin="10,0,0,0" controls:BorderElement.CornerRadius="15"/>
+  <RepeatButton Content="This is a RepeatButton" Margin="10,0,0,0" hc:BorderElement.CornerRadius="15"/>
   <RepeatButton Content="This is a RepeatButton" Margin="10,0,0,0"
-controls:IconElement.Geometry="{StaticResource GithubGeometry}"/>
+hc:IconElement.Geometry="{StaticResource GithubGeometry}"/>
 </StackPanel>
 {% endcode %}
 
@@ -40,8 +40,8 @@ Example:
 {% code lang:xml %}
 <StackPanel Orientation="Horizontal">
    <RepeatButton Style="{StaticResource RepeatButtonPrimary}" Content="This is a RepeatButton"/>
-   <RepeatButton Style="{StaticResource RepeatButtonPrimary}" Content="This is a RepeatButton" Margin="10,0,0,0" controls:BorderElement.CornerRadius="15"/>
-   <RepeatButton Style="{StaticResource RepeatButtonPrimary}" Content="This is a RepeatButton" Margin="10,0,0,0" controls:IconElement.Geometry="{StaticResource GithubGeometry}"/>
+   <RepeatButton Style="{StaticResource RepeatButtonPrimary}" Content="This is a RepeatButton" Margin="10,0,0,0" hc:BorderElement.CornerRadius="15"/>
+   <RepeatButton Style="{StaticResource RepeatButtonPrimary}" Content="This is a RepeatButton" Margin="10,0,0,0" hc:IconElement.Geometry="{StaticResource GithubGeometry}"/>
 </StackPanel>
 {% endcode %}
 
@@ -59,8 +59,8 @@ Example：
 {% code lang:xml %}
 <StackPanel Orientation="Horizontal">
    <RepeatButton Style="{StaticResource RepeatButtonSuccess}" Content="This is a RepeatButton"/>
-   <RepeatButton Style="{StaticResource RepeatButtonSuccess}" Content="This is a RepeatButton" Margin="10,0,0,0" controls:BorderElement.CornerRadius="15"/>
-   <RepeatButton Style="{StaticResource RepeatButtonSuccess}" Content="This is a RepeatButton" Margin="10,0,0,0" controls:IconElement.Geometry="{StaticResource GithubGeometry}"/>
+   <RepeatButton Style="{StaticResource RepeatButtonSuccess}" Content="This is a RepeatButton" Margin="10,0,0,0" hc:BorderElement.CornerRadius="15"/>
+   <RepeatButton Style="{StaticResource RepeatButtonSuccess}" Content="This is a RepeatButton" Margin="10,0,0,0" hc:IconElement.Geometry="{StaticResource GithubGeometry}"/>
 </StackPanel>
 {% endcode %}
 
@@ -78,8 +78,8 @@ Example：
 {% code lang:xml %}
 <StackPanel Orientation="Horizontal">
   <RepeatButton Style="{StaticResource RepeatButtonInfo}" Content="This is a RepeatButton"/>
-  <RepeatButton Style="{StaticResource RepeatButtonInfo}" Content="This is a RepeatButton" Margin="10,0,0,0" controls:BorderElement.CornerRadius="15"/>
-  <RepeatButton Style="{StaticResource RepeatButtonInfo}" Content="This is a RepeatButton" Margin="10,0,0,0" controls:IconElement.Geometry="{StaticResource GithubGeometry}"/>
+  <RepeatButton Style="{StaticResource RepeatButtonInfo}" Content="This is a RepeatButton" Margin="10,0,0,0" hc:BorderElement.CornerRadius="15"/>
+  <RepeatButton Style="{StaticResource RepeatButtonInfo}" Content="This is a RepeatButton" Margin="10,0,0,0" hc:IconElement.Geometry="{StaticResource GithubGeometry}"/>
 </StackPanel>
 {% endcode %}
 
@@ -97,8 +97,8 @@ Example：
 {% code lang:xml %}
 <StackPanel Orientation="Horizontal">
     <RepeatButton Style="{StaticResource RepeatButtonWarning}" Content="This is a RepeatButton"/>
-    <RepeatButton Style="{StaticResource RepeatButtonWarning}" Content="This is a RepeatButton" Margin="10,0,0,0" controls:BorderElement.CornerRadius="15"/>
-    <RepeatButton Style="{StaticResource RepeatButtonWarning}" Content="This is a RepeatButton" Margin="10,0,0,0" controls:IconElement.Geometry="{StaticResource GithubGeometry}"/>
+    <RepeatButton Style="{StaticResource RepeatButtonWarning}" Content="This is a RepeatButton" Margin="10,0,0,0" hc:BorderElement.CornerRadius="15"/>
+    <RepeatButton Style="{StaticResource RepeatButtonWarning}" Content="This is a RepeatButton" Margin="10,0,0,0" hc:IconElement.Geometry="{StaticResource GithubGeometry}"/>
 </StackPanel>
 {% endcode %}
 
@@ -116,8 +116,8 @@ Example：
 {% code lang:xml %}
 <StackPanel Orientation="Horizontal">
     <RepeatButton Style="{StaticResource RepeatButtonDanger}" Content="This is a RepeatButton"/>
-    <RepeatButton Style="{StaticResource RepeatButtonDanger}" Content="This is a RepeatButton" Margin="10,0,0,0" controls:BorderElement.CornerRadius="15"/>
-    <RepeatButton Style="{StaticResource RepeatButtonDanger}" Content="This is a RepeatButton" Margin="10,0,0,0" controls:IconElement.Geometry="{StaticResource GithubGeometry}"/>
+    <RepeatButton Style="{StaticResource RepeatButtonDanger}" Content="This is a RepeatButton" Margin="10,0,0,0" hc:BorderElement.CornerRadius="15"/>
+    <RepeatButton Style="{StaticResource RepeatButtonDanger}" Content="This is a RepeatButton" Margin="10,0,0,0" hc:IconElement.Geometry="{StaticResource GithubGeometry}"/>
 </StackPanel>
 {% endcode %}
 
@@ -135,8 +135,8 @@ Example：
 {% code lang:xml %}
 <StackPanel Orientation="Horizontal">
     <RepeatButton Style="{StaticResource RepeatButtonDefault}" Content="This is a RepeatButton"/>
-    <RepeatButton Style="{StaticResource RepeatButtonDefault}" Content="This is a RepeatButton" Margin="10,0,0,0" controls:BorderElement.CornerRadius="15"/>
-    <RepeatButton Style="{StaticResource RepeatButtonDefault}" Content="This is a RepeatButton" Margin="10,0,0,0" controls:IconElement.Geometry="{StaticResource GithubGeometry}"/>
+    <RepeatButton Style="{StaticResource RepeatButtonDefault}" Content="This is a RepeatButton" Margin="10,0,0,0" hc:BorderElement.CornerRadius="15"/>
+    <RepeatButton Style="{StaticResource RepeatButtonDefault}" Content="This is a RepeatButton" Margin="10,0,0,0" hc:IconElement.Geometry="{StaticResource GithubGeometry}"/>
 </StackPanel>
 {% endcode %}
 
@@ -151,9 +151,9 @@ Example：
 
 {% code lang:xml %}
 <StackPanel Orientation="Horizontal">
-    <RepeatButton Style="{StaticResource RepeatButtonIcon}" Foreground="Black" controls:IconElement.Geometry="{StaticResource UpDownGeometry}"/>
-    <RepeatButton Style="{StaticResource RepeatButtonIcon}" Background="Black" Foreground="White" controls:BorderElement.CornerRadius="15" controls:IconElement.Geometry="{StaticResource UpDownGeometry}" Margin="10,0,0,0"/>
-    <RepeatButton Style="{StaticResource RepeatButtonIcon}" BorderThickness="1" BorderBrush="Black" Foreground="Black" controls:IconElement.Geometry="{StaticResource UpDownGeometry}" Margin="10,0,0,0"/>
+    <RepeatButton Style="{StaticResource RepeatButtonIcon}" Foreground="Black" hc:IconElement.Geometry="{StaticResource UpDownGeometry}"/>
+    <RepeatButton Style="{StaticResource RepeatButtonIcon}" Background="Black" Foreground="White" hc:BorderElement.CornerRadius="15" hc:IconElement.Geometry="{StaticResource UpDownGeometry}" Margin="10,0,0,0"/>
+    <RepeatButton Style="{StaticResource RepeatButtonIcon}" BorderThickness="1" BorderBrush="Black" Foreground="Black" hc:IconElement.Geometry="{StaticResource UpDownGeometry}" Margin="10,0,0,0"/>
 </StackPanel>
 {% endcode %}
 
@@ -169,7 +169,7 @@ This style is recommended if you want to fully customize the content of the Repe
 Example：
 
 {% code lang:xml %}
-<RepeatButton Height="30" Padding="10,0" Background="Black" Foreground="White" Content="This is a RepeatButton" Style="{StaticResource RepeatButtonCustom}" controls:BackgroundSwitchElement.MouseHoverBackground="Red" controls:BackgroundSwitchElement.MouseDownBackground="PaleVioletRed"/>
+<RepeatButton Height="30" Padding="10,0" Background="Black" Foreground="White" Content="This is a RepeatButton" Style="{StaticResource RepeatButtonCustom}" hc:BackgroundSwitchElement.MouseHoverBackground="Red" hc:BackgroundSwitchElement.MouseDownBackground="PaleVioletRed"/>
 {% endcode %}
 
 ![ButtonCustom](https://raw.githubusercontent.com/HandyOrg/HandyOrgResource/master/HandyControl/Doc/native_controls/ButtonCustom_1.gif)

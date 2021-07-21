@@ -13,11 +13,7 @@ The default style of the richtext box is not recommended. It should always be us
 Case:
 
 ```xml
-<RichTextBox Margin="10,10" VerticalAlignment="Center" HorizontalAlignment="Center"></RichTextBox>
-```
-
-```xml
-<RichTextBox Margin="10,10" VerticalAlignment="Center" HorizontalAlignment="Center"></RichTextBox>
+<RichTextBox Margin="10,10" VerticalAlignment="Center" HorizontalAlignment="Center"/>
 ```
 
 

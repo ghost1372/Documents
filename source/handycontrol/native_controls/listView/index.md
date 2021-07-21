@@ -6,7 +6,7 @@ title: ListView
 
 {% note info no-icon %}
 Example：
-{% code %}
+{% code lang:xml %}
     <ListView ItemsSource="{Binding DataList}" Margin="20">
         <ListView.View>
             <GridView>

@@ -8,8 +8,8 @@ The default style of the native passwordbox is not recommended. It should always
 
 {% note info no-icon %}
 Example：
-{% code %}
-    <PasswordBox PasswordChar="*" VerticalAlignment="Center" Width="120"></PasswordBox>
+{% code lang:xml %}
+    <PasswordBox PasswordChar="*" VerticalAlignment="Center" Width="120"/>
 {% endcode %}
 
 ![PasswordBox.BaseStyle](https://raw.githubusercontent.com/HandyOrg/HandyOrgResource/master/HandyControl/Doc/native_controls/PasswordBox.BaseStyle.png)
@@ -26,18 +26,18 @@ Compared to the default style of the native passwordbox, it can implement the fu
 
 {% note info no-icon %}
 example:
-{% code %}
+{% code lang:xml %}
     <!--In order to display the watermark in the normal password input text box, you need to set PasswordBoxAttach.PasswordLength="0"-->
     <PasswordBox Style="{DynamicResource PasswordBoxExtend}" PasswordChar="*" 
                  hc:PasswordBoxAttach.PasswordLength="0"
                  hc:InfoElement.Placeholder="Please enter the password" 
                  VerticalAlignment="Center"
-                 Width="120"></PasswordBox>
+                 Width="120"/>
     <PasswordBox Style="{DynamicResource PasswordBoxExtend}" PasswordChar="*" 
                  hc:TitleElement.Title="user password:"
                  hc:TitleElement.TitlePlacement="Top"
                  VerticalAlignment="Center"
-                 Width="120"></PasswordBox>
+                 Width="120"/>
 {% endcode %}
 
 ![PasswordBox.ExtendStyle](https://raw.githubusercontent.com/HandyOrg/HandyOrgResource/master/HandyControl/Doc/native_controls/PasswordBox.ExtendStyle.png)

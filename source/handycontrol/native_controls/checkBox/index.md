@@ -9,7 +9,7 @@ The default style of the checkbox is not recommended for direct use and should a
 {% note info no-icon %}
 Example：
 
-{% code %}
+{% code lang:xml %}
 <StackPanel>
     <CheckBox Content="CheckBox" IsChecked="True"/>
     <CheckBox Margin="0,16,0,0" Content="CheckBox" IsChecked="True" IsEnabled="False"/>

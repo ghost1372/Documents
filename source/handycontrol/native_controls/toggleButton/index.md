@@ -118,21 +118,21 @@ Case:
     <ToggleButton BorderThickness="0" IsChecked="True" Style="{StaticResource ToggleButtonFlip}">
         <hc:StatusSwitchElement.CheckedElement>
             <Border Background="{DynamicResource PrimaryBrush}">
-                <TextBlock HorizontalAlignment="Center" VerticalAlignment="Center" Text="关" Foreground="{DynamicResource TextIconBrush}"/>
+                <TextBlock HorizontalAlignment="Center" VerticalAlignment="Center" Text="Off" Foreground="{DynamicResource TextIconBrush}"/>
             </Border>
         </hc:StatusSwitchElement.CheckedElement>
         <Border Background="{DynamicResource DangerBrush}">
-            <TextBlock HorizontalAlignment="Center" VerticalAlignment="Center" Text="开" Foreground="{DynamicResource TextIconBrush}"/>
+            <TextBlock HorizontalAlignment="Center" VerticalAlignment="Center" Text="On" Foreground="{DynamicResource TextIconBrush}"/>
         </Border>
     </ToggleButton>
     <ToggleButton Margin="0,6,0,0" BorderThickness="0" IsChecked="False" Style="{StaticResource ToggleButtonFlip}">
         <hc:StatusSwitchElement.CheckedElement>
             <Border Background="{DynamicResource PrimaryBrush}">
-                <TextBlock HorizontalAlignment="Center" VerticalAlignment="Center" Text="关" Foreground="{DynamicResource TextIconBrush}"/>
+                <TextBlock HorizontalAlignment="Center" VerticalAlignment="Center" Text="Off" Foreground="{DynamicResource TextIconBrush}"/>
             </Border>
         </hc:StatusSwitchElement.CheckedElement>
         <Border Background="{DynamicResource DangerBrush}">
-            <TextBlock HorizontalAlignment="Center" VerticalAlignment="Center" Text="开" Foreground="{DynamicResource TextIconBrush}"/>
+            <TextBlock HorizontalAlignment="Center" VerticalAlignment="Center" Text="On" Foreground="{DynamicResource TextIconBrush}"/>
         </Border>
     </ToggleButton>
 </StackPanel>

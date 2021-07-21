@@ -9,18 +9,18 @@ Expander Expand Box The default style, which is not recommended for direct use, 
 {% note info no-icon %}
 
 Example:
-{% code %}
+{% code lang:xml %}
 <StackPanel Margin="32" VerticalAlignment="Center" Width="240">
-    <Expander Header="{x:Static langs:Lang.Title}" BorderThickness="1,1,1,0" BorderBrush="{DynamicResource BorderBrush}">
+    <Expander Header="Title" BorderThickness="1,1,1,0" BorderBrush="{DynamicResource BorderBrush}">
         <Border Height="100" Background="{DynamicResource SecondaryRegionBrush}"/>
     </Expander>
-    <Expander Header="{x:Static langs:Lang.Title}" BorderThickness="1,1,1,0" BorderBrush="{DynamicResource BorderBrush}">
+    <Expander Header="Title" BorderThickness="1,1,1,0" BorderBrush="{DynamicResource BorderBrush}">
         <Border Height="100" Background="{DynamicResource SecondaryRegionBrush}"/>
     </Expander>
-    <Expander Header="{x:Static langs:Lang.Title}" BorderThickness="1,1,1,0" BorderBrush="{DynamicResource BorderBrush}">
+    <Expander Header="Title" BorderThickness="1,1,1,0" BorderBrush="{DynamicResource BorderBrush}">
         <Border Height="100" Background="{DynamicResource SecondaryRegionBrush}"/>
     </Expander>
-    <Expander Header="{x:Static langs:Lang.Title}" BorderThickness="1" BorderBrush="{DynamicResource BorderBrush}">
+    <Expander Header="Title" BorderThickness="1" BorderBrush="{DynamicResource BorderBrush}">
         <Border Height="100" Background="{DynamicResource SecondaryRegionBrush}"/>
     </Expander>
 </StackPanel>

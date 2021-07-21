@@ -6,23 +6,24 @@ title: NavigationWindow
 Implicit styles are not automatically applied to windows in `wpf`, and related methods are provided in `hc` to solve this problem.
 
 {% note info %}
-The default style of the navigationWindow can be set via `ConfigHelper.Instance.SetNavigationWindowDefaultStyle()`.
+The default style of the navigationWindow can be set via 
+{% code lang:cs %}
+ConfigHelper.Instance.SetNavigationWindowDefaultStyle();
+{% endcode %}
 {% endnote %}
 
-{% code %}
+{% code lang:xml %}
 <NavigationWindow x:Class="HandyControlDemo.Window.NavigationWindow"
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         WindowStartupLocation="CenterScreen"
-        xmlns:langs="clr-namespace:HandyControlDemo.Properties.Langs"
-        Title="{x:Static langs:Lang.Title}" 
+        Title="Title" 
         Height="450" 
-        Width="800" 
-        Icon="/HandyControlDemo;component/Resources/Img/icon.ico">
+        Width="800">
 </NavigationWindow>
 {% endcode %}
 
-{% code %}
+{% code lang:cs %}
 private readonly List<Page> _pageList;
 
         public NavigationWindow()

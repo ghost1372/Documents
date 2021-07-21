@@ -18,7 +18,7 @@ effect:
 
 {% note info %}
 you can use `TipElement` Attached Property
-{% code %}
+{% code lang:xml %}
 <Slider hc:TipElement.Visibility="Visible" hc:TipElement.Placement="BottomRight" IsSnapToTickEnabled="True" Value="5" TickPlacement="Both" Orientation="Vertical"/>
 {% endcode %}
 {% endnote %}

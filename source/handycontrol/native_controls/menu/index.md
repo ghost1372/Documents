@@ -20,7 +20,7 @@ The default style of the menu is not recommended. It should always be used by ot
 
 {% note info no-icon %}
 example:
-{% code %}
+{% code lang:xml %}
     <Menu ItemsSource="{Binding Menus}">
         <Menu.ItemTemplate>
             <HierarchicalDataTemplate ItemsSource="{Binding Children}">
