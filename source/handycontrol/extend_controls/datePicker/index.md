@@ -45,8 +45,8 @@ You can add Headers and Placeholders to the DatePicker to indicate to the user w
 ``` XML
 <hc:DatePicker hc:InfoElement.TitleWidth="140"
                hc:InfoElement.TitlePlacement="Left"
-               hc:InfoElement.Placeholder="{x:Static langs:Lang.PlsEnterContent}"
-               hc:InfoElement.Title="{x:Static langs:Lang.TitleDemoStr3}" />
+               hc:InfoElement.Placeholder="Please enter the content"
+               hc:InfoElement.Title="Title" />
 ```
 
 # Attributes

@@ -184,7 +184,7 @@ Ask is special, what?
 
 The main focus of the Ask method is the second parameter, its type is `Func<bool, bool>`, let's look at the sample code:
 ``` csharp
-Growl.Ask(Properties.Langs.Lang.GrowlAsk, isConfirmed =>
+Growl.Ask("do you want to update?", isConfirmed =>
 {
     Growl.Info(isConfirmed.ToString());
     return true;
