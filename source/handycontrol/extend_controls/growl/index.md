@@ -24,11 +24,11 @@ Step 1: Set `StackPanel` to the container of `Growl`
 
 ``` xml
 <ScrollViewer VerticalScrollBarVisibility="Hidden" HorizontalAlignment="Right">
-    <StackPanel controls:Growl.GrowlParent="True" VerticalAlignment="Top" Margin="0,10,10,10"/>
+    <StackPanel hc:Growl.GrowlParent="True" VerticalAlignment="Top" Margin="0,10,10,10"/>
 </ScrollViewer>
 ```
 {% note warning %}
-Note the code `controls:Growl.GrowlParent="True"`。
+Note the code `hc:Growl.GrowlParent="True"`。
 {% endnote %}
 
 {% note warning %}
@@ -54,7 +54,7 @@ Need to explain here, a window corresponds to a `StackPanel` container, Growl in
 {% endnote %}
 
 {% note warning %}
-In this case, you don't need to set `controls:Growl.GrowlParent="True"` in xaml.
+In this case, you don't need to set `hc:Growl.GrowlParent="True"` in xaml.
 {% endnote %}
 
 # Display information notifications in any `StackPanel` container
@@ -62,11 +62,11 @@ In this case, you don't need to set `controls:Growl.GrowlParent="True"` in xaml.
 Step 1: Give the message to the `StackPanel` container: SuccessMsg
 ``` xml
 <ScrollViewer VerticalScrollBarVisibility="Hidden" HorizontalAlignment="Right">
-    <StackPanel controls:Growl.Token="SuccessMsg" VerticalAlignment="Top" Margin="0,10,10,10"/>
+    <StackPanel hc:Growl.Token="SuccessMsg" VerticalAlignment="Top" Margin="0,10,10,10"/>
 </ScrollViewer>
 ```
 {% note warning %}
-Note the code`controls:Growl.Token="SuccessMsg"`。
+Note the code`hc:Growl.Token="SuccessMsg"`。
 {% endnote %}
 
 Step 2: Use the message tag: SuccessMsg and call the relevant interface of `Growl` to display the specified message.

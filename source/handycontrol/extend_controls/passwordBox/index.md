@@ -41,8 +41,8 @@ The PasswordBox control can actively display the entered password. Set `ShowEyeB
 You can add Headers and Placeholders to the PasswordBox to indicate to the user what they do.
 
 ``` XML
-<hc:PasswordBox hc:InfoElement.Placeholder="{x:Static langs:Lang.PlsEnterContent}"
-               hc:InfoElement.Title="{x:Static langs:Lang.TitleDemoStr2}"
+<hc:PasswordBox hc:InfoElement.Placeholder="Please enter the content"
+               hc:InfoElement.Title="Title"
 ```
 
 # Attributes

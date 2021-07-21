@@ -31,7 +31,7 @@ public sealed class MessageBox : Window
 # Case
 
 ```cs
-MessageBox.Show(Properties.Langs.Lang.GrowlAsk, Properties.Langs.Lang.Title, MessageBoxButton.YesNo, MessageBoxImage.Question);
+MessageBox.Show("a new version has been detected!Do you want to update?", "Title", MessageBoxButton.YesNo, MessageBoxImage.Question);
 ```
 
 ![MessageBox](https://raw.githubusercontent.com/HandyOrg/HandyOrgResource/master/HandyControl/Resources/MessageBox.png)

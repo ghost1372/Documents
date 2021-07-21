@@ -38,12 +38,10 @@ public class Window : System.Windows.Window
            xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
            xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
            xmlns:hc="https://handyorg.github.io/handycontrol"
-           xmlns:langs="clr-namespace:HandyControlDemo.Properties.Langs"
-           xmlns:ex="clr-namespace:HandyControlDemo.Tools.Extension"
            mc:Ignorable="d"
            Background="{DynamicResource MainContentBackgroundBrush}"
            WindowStartupLocation="CenterScreen"
-           Title="{ex:Lang Key={x:Static langs:LangKeys.Title}}" 
+           Title="Title" 
            Height="450" 
            Width="800" 
            Icon="/HandyControlDemo;component/Resources/Img/icon.ico">

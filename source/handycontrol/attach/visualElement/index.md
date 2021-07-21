@@ -44,7 +44,7 @@ Custom style:
 
 ```xml
 <Style x: Key = "ProgressBarBaseStyle" TargetType = "ProgressBar">
-    <Setter Property = "controls: VisualElement.Text">
+    <Setter Property = "hc: VisualElement.Text">
             <Setter.Value>
                 ..... ignore code ...
             </Setter.Value>
@@ -52,13 +52,13 @@ Custom style:
     <Setter Property = "Template">
             <Setter.Value>
                 <ControlTemplate TargetType = "ProgressBar">
-                    <controls:SimplePanel x: Name = "TemplateRoot">
+                    <hc:SimplePanel x: Name = "TemplateRoot">
 .... ignore code ...
-                        <controls:SimplePanel HorizontalAlignment = "Left">
+                        <hc:SimplePanel HorizontalAlignment = "Left">
                             .... ignore code ...
-                            <TextBlock HorizontalAlignment = "Center" VerticalAlignment = "Center" Foreground = "{DynamicResource TextIconBrush}" Text = "{Binding Path = (controls: VisualElement.Text), RelativeSource = {RelativeSource TemplatedParent}}" />
-                        </controls:SimplePanel>
-                    </controls:SimplePanel>
+                            <TextBlock HorizontalAlignment = "Center" VerticalAlignment = "Center" Foreground = "{DynamicResource TextIconBrush}" Text = "{Binding Path = (hc: VisualElement.Text), RelativeSource = {RelativeSource TemplatedParent}}" />
+                        </hc:SimplePanel>
+                    </hc:SimplePanel>
                 </ControlTemplate>
             </Setter.Value>
         </Setter>
