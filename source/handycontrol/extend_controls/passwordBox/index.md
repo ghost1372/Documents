@@ -32,7 +32,7 @@ passwordBox.Password = "123456";
 The PasswordBox control can actively display the entered password. Set `ShowEyeButton` to `true` and PasswordBox will display an "eye" button. Click this button to display the password you have entered.
 
 ``` xml
-<hc:PasswordBox ShowClearButton="True"/>
+<hc:PasswordBox ShowEyeButton="True"/>
 ``` 
 
 ![PasswordBox](https://raw.githubusercontent.com/HandyOrg/HandyOrgResource/master/HandyControl/Doc/extend_controls/PasswordBox_2.gif)
