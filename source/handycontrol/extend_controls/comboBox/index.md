@@ -49,6 +49,16 @@ public class ComboBox : System.Windows.Controls.ComboBox, IDataInput
 The native functions behave the same on the extended ComboBox.
 
 ```xml
+<hc:ComboBox>
+    <hc:ComboBoxItem Content="Item 1"/>
+    <hc:ComboBoxItem Content="Item 2"/>
+    <hc:ComboBoxItem Content="Item 3"/>
+</hc:ComboBox>
+
+```
+Or
+
+```xml
 <StackPanel Margin="32">
     <hc:ComboBox ShowClearButton="True" ItemsSource="{Binding DataList}" SelectedIndex="0"/>
     <hc:ComboBox ItemsSource="{Binding DataList}" Margin="0,16,0,0" SelectedIndex="0" IsEnabled="False"/>

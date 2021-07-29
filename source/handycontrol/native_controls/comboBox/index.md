@@ -11,6 +11,17 @@ The default style of the original combo box is not recommended for direct use. I
 <ComboBox ItemsSource="{Binding DataList}" SelectedIndex="0"/>
 ```
 
+or
+
+```xml
+<ComboBox>
+    <ComboBoxItem Content="Item 1"/>
+    <ComboBoxItem Content="Item 2"/>
+    <ComboBoxItem Content="Item 3"/>
+</ComboBox>
+
+```
+
 ![ComboBoxBaseStyle](https://raw.githubusercontent.com/HandyOrg/HandyOrgResource/master/HandyControl/Doc/native_controls/ComboBoxBaseStyle.png)
 
 # ComboBoxExtendBaseStyle : ComboBoxBaseStyle

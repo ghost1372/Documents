@@ -53,6 +53,16 @@ public class CheckComboBox : ListBox, IDataInput
 # Case
 
 ```xml
+<hc:CheckComboBox>
+    <hc:CheckComboBoxItem Content="Item 1"/>
+    <hc:CheckComboBoxItem Content="Item 2"/>
+    <hc:CheckComboBoxItem Content="Item 3"/>
+</hc:CheckComboBox>
+
+```
+Or
+
+```xml
 <StackPanel Margin="32" Orientation="Horizontal">
     <StackPanel>
         <hc:CheckComboBox ShowClearButton="True" MaxWidth="380" ItemsSource="{Binding DataList}" ShowSelectAllButton="True"/>
