@@ -17,3 +17,4 @@ This additional attribute is specific to the hc internal DataGrid style and is n
 | EditingCheckBoxColumnStyle | Checkbox column style when editing |
 | ShowRowNumber | Whether to display the line number |
 | CanUnselectAllWithBlankArea | |
+| ShowSelectAllButton ||

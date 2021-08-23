@@ -67,6 +67,14 @@ You can add a Header and a Placeholder to a TextBox to indicate to the user its 
 | Persian `Only Custom Version`            | IranNationalCode `Only Custom Version`  |                    |
 
 you can use regex pattern in texttype
+
+{% note info %}
+if you want to use RegexPatter, you should Set `TextType` to Anything except Common
+```cs
+Using HandyControl.Tools;
+```
+{% endnote %}
+
 ``` XML
-<hc:TextBox hc:InfoElement.RegexPattern="Regex Pattern"/>
+<hc:TextBox TextType="Mail" hc:InfoElement.RegexPattern="^[0-9]*(?:\.[0-9]+)?$"/>
 ```

@@ -147,3 +147,5 @@ if you need to use binding in Converter Parameter you can use this converter typ
     </Setter.Value>
 </Setter>
 ```
+
+# DataGridSelectAllButtonVisibilityConverter
