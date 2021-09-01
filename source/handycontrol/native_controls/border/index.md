@@ -11,6 +11,13 @@ title: Border
 |BorderTipWarning|
 |BorderTipInfo|
 |BorderTipSuccess|
+|BorderRegion|
+|BorderTipBaseStyle|
+|BorderVerticallySplitter|
+|BorderHorizontallySplitter|
+|BorderCircular|
+|BorderClip|
+|BorderCircularClip|
 
 # BorderRegionStyle
 
