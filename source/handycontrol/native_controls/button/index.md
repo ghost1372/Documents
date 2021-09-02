@@ -150,9 +150,9 @@ Example：
 
 {% code lang:xml %}
 <StackPanel Orientation="Horizontal">
-    <Button Style="{StaticResource ButtonIcon}" Foreground="Black" hc:IconElement.Geometry="{StaticResource UpDownGeometry}"/>
+    <Button Style="{StaticResource ButtonIcon}" Foreground="{DynamicResource PrimaryTextBrush}" hc:IconElement.Geometry="{StaticResource UpDownGeometry}"/>
     <Button Style="{StaticResource ButtonIcon}" Background="Black" Foreground="White" hc:BorderElement.CornerRadius="15" hc:IconElement.Geometry="{StaticResource UpDownGeometry}" Margin="10,0,0,0"/>
-    <Button Style="{StaticResource ButtonIcon}" BorderThickness="1" BorderBrush="Black" Foreground="Black" hc:IconElement.Geometry="{StaticResource UpDownGeometry}" Margin="10,0,0,0"/>
+    <Button Style="{StaticResource ButtonIcon}" BorderThickness="1" BorderBrush="Black" Foreground="{DynamicResource PrimaryTextBrush}" hc:IconElement.Geometry="{StaticResource UpDownGeometry}" Margin="10,0,0,0"/>
 </StackPanel>
 {% endcode %}
 

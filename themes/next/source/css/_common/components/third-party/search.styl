@@ -152,6 +152,14 @@ if (hexo-config('algolia_search.enable')) {
 
 if (hexo-config('local_search.enable')) {
   .search-popup {
+
+    if (hexo-config('darkmode')) {
+      @media (prefers-color-scheme: dark) {
+        a, span.exturl {
+          color: $text-color-dark;
+        }
+      }
+    }
     .search-input-container {
       flex-grow: 1;
       padding: 2px;
