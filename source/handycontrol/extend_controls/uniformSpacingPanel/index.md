@@ -16,6 +16,8 @@ public class UniformSpacingPanel : Panel
 |ItemHeight||NaN||
 |ItemHorizontalAlignment||Stretch||
 |ItemVerticalAlignment||Stretch||
+|HorizontalSpacing||NaN||
+|VerticalSpacing||NaN||
 |ChildWrapping|||||
 
 ```xml

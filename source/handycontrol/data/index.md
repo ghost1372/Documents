@@ -9,3 +9,4 @@ title: Data
 |HwndWrapper||
 |ResourceToken||
 |ValueBoxes||
+|EnumItem||

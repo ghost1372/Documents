@@ -11,6 +11,8 @@ public class WaterfallPanel : Panel
 # Attributes
 |Property|Description|Default Value|Remarks|
 |-|-|-|-|
+|AutoGroup||False||
+|DesiredLength||0||
 |Groups|Number of groups|2|The number of columns is the number of columns when the width is equal and the width of the same height is the number of rows|
 |Orientation|Arrangement direction|Orientation.Horizontal|Horizontal is equal width and unequal height, Vertical is equal height and unequal width||
 

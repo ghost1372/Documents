@@ -20,6 +20,7 @@ title: Helper
 |ValidateHelper||
 |VisualHelper||
 |WindowHelper||
+|BindingHelper||
 
 # AnimationHelper
 ## CreateAnimation

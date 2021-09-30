@@ -117,7 +117,7 @@ darkmode: true
 # External url should start with http:// or https://
 menu:
   Home: / || fa fa-home
-  HandyControl - 3.3.7:
+  HandyControl - 3.3.8:
     default: /handycontrol/ || fa fa-h-square
     Thanks: /tnx/ || fa fa-user
     Quick start: /quick_start/ || fa fa-h-square
@@ -198,6 +198,7 @@ menu:
     Extended control:
       default: /extend_controls/ || fab fa-intercom
       AnimationPath: /animationPath/ ||
+      AutoCompleteTextBox: /autoCompleteTextBox/ ||
       Badge: /badge/ ||
       ButtonGroup : /buttonGroup/ ||
       BlurWindow: /blurWindow/ ||
@@ -219,21 +220,22 @@ menu:
       DateTimePicker: /dateTimePicker/ ||
       DashBorder: /dashBorder/ ||
       Dialog: /dialog/ ||
-      Divider : /divider/ ||
-      Drawer : /drawer/ ||
-      Effect : /effect/ ||
+      Divider: /divider/ ||
+      Drawer: /drawer/ ||
+      Effect: /effect/ ||
       ElementGroup: /elementGroup/ ||
       Empty: /empty/ ||
       FlexPanel: /flexPanel/ ||
       FlipClock: /flipClock/ ||
-      FloatingBlock : /floatingBlock/ ||
+      FloatingBlock: /floatingBlock/ ||
       GifImage: /gifImage/ ||
       GotoTop: /gotoTop/ ||
       GlowWindow: /glowWindow/ ||
       Gravatar: /gravatar/ ||
-      Grid : /grid/ ||
+      Grid: /grid/ ||
       Growl: /growl/ ||
-      HatchBrushGenerator : /hatchBrushGenerator/ ||
+      HatchBrushGenerator: /hatchBrushGenerator/ ||
+      HighlightTextBlock: /highlightTextBlock/ ||
       HoneycombPanel : /honeycombPanel/ ||
       ImageBlock : /imageBlock/ ||
       ImageBrowser: /imageBrowser/ ||
