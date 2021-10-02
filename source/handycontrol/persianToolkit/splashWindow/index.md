@@ -14,10 +14,10 @@ public class SplashWindow : HandyControl.Controls.Window, ISplashWindow, INotify
 
 # Case
 
-First create a Windows (we call it `mySplashWindow.xaml`) and change `<Window` to `<hc:SplashWindow`
+First create a Windows (we call it `MySplashWindow.xaml`) and change `<Window` to `<hc:SplashWindow`
 
 ```xml
-<hc:SplashWindow x:Class="HandyControlDemo.Window.SplashWindow"
+<hc:SplashWindow x:Class="HandyControlDemo.MySplashWindow"
            xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
            xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
            xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
@@ -32,13 +32,23 @@ First create a Windows (we call it `mySplashWindow.xaml`) and change `<Window` t
 </hc:SplashWindow>
 ```
 
+```cs
+public partial class MySplashWindow : HandyControl.Controls.SplashWindow
+{
+    public MySplashWindow()
+    {
+        InitializeComponent();
+    }
+}
+```
+
 Now initialize the `SplashWindow` in `App.cs` and `OnStartup` method
 
 ``` CS
 protected override void OnStartup(StartupEventArgs e)
 {
     SplashWindow.Init(()=> {
-                mySplashWindow splash = new mySplashWindow();
+                MySplashWindow splash = new MySplashWindow();
                 return splash;
             });
     base.OnStartup(e);
@@ -49,7 +59,7 @@ Now to display messages in splash you can use the built-in `Message` property.
 Be sure to connect the `AncestorType` to the `hc:SplashWindow`
 
 ```xml
-<hc:SplashWindow x:Class="HandyControlDemo.Window.SplashWindow"
+<hc:SplashWindow x:Class="HandyControlDemo.MySplashWindow"
            xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
            xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
            xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
@@ -77,5 +87,15 @@ public MainWindow()
     SplashWindow.Instance.AddMessage("Done!");
     InitializeComponent();
     SplashWindow.Instance.LoadComplete();
+}
+
+private void DoSomethingElseThatTakesALongTime()
+{
+    Thread.Sleep(2000);
+}
+
+private void DoSomethingThatTakesALongTime()
+{
+    Thread.Sleep(2000);
 }
 ```
