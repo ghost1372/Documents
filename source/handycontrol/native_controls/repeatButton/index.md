@@ -179,7 +179,7 @@ Example：
 # Styles
 | Style |
 | - |
-| ButtonPrimary  | 
+| RepeatButtonPrimary  | 
 | RepeatButtonInfo  | 
 | RepeatButtonDanger  | 
 | RepeatButtonWarning  | 
@@ -200,3 +200,17 @@ Example：
 | RepeatButtonGroupItemSingle |
 | RepeatButtonGroupItemVerticalFirst |
 | RepeatButtonGroupItemVerticalLast |
+|RepeatButtonDefault.Small|
+|RepeatButtonPrimary.Small|
+|RepeatButtonInfo.Small|
+|RepeatButtonDanger.Small|
+|RepeatButtonWarning.Small|
+|RepeatButtonSuccess.Small|
+|RepeatButtonIcon.Small|
+|RepeatButtonIconCircular.Small|
+|RepeatButtonDashed.Small|
+|RepeatButtonDashedPrimary.Small|
+|RepeatButtonDashedSuccess.Small|
+|RepeatButtonDashedInfo.Small|
+|RepeatButtonDashedWarning.Small|
+|RepeatButtonDashedDanger.Small|

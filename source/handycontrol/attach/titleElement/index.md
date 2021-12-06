@@ -12,7 +12,7 @@ title: TitleElement
 | BorderBrush | Title Border Color |
 | TitlePlacement | Title Alignment |
 | TitleWidth | Title Width |
-
+| MarginOnTheLeft | Margin On The Left |
 # Use Cases
 
 ## Title

@@ -33,3 +33,5 @@ effect:
 |-|-|-|
 | TreeViewItemBaseStyle | BaseStyle | Tree View Item Default Style |
 | ExpandCollapseToggleStyle | | Treeview Collapse Button Style |
+|TreeViewItemBaseStyle.Small|||
+|TreeView.Small|||

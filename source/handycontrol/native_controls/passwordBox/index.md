@@ -2,6 +2,14 @@
 title: PasswordBox
 ---
 
+# Styles
+|Style|
+|-|
+|PasswordBoxBaseStyle| 
+|PasswordBox.Small| 
+|PasswordBoxExtend| 
+|PasswordBoxExtend.Small| 
+
 # PasswordBoxBaseStyle
 
 The default style of the native passwordbox is not recommended. It should always be used by other styles based on On.

@@ -621,3 +621,43 @@ person2 = XmlHelper.Deserialize<Person>(@"output.xml");
 Console.WriteLine("Name: {0}", person2.Name);
 Console.WriteLine("Age: {0}", person2.Age);
 ```
+
+# WindowHelper
+
+## EnableMicaEffect
+You can enable mica material for Windows
+{% note info %}
+You do not need to use this helper to activate mica on hc:Window, hc:GlowWindow and BlurWindow, Mica is available on these windows by default through `ApplyBackdropMaterial` Property.
+{% endnote %}
+
+Use this helper for `System.Windows.Window` or any other type
+
+{% note warning %}
+Mica only works on Windows 11 and above
+{% endnote %}
+
+1.First we need to Create a WindowChrome and then change the background to `Transparent`
+```cs
+public MainWindow()
+{
+    var chrome = new WindowChrome
+    {
+        CornerRadius = new CornerRadius(),
+        GlassFrameThickness = new Thickness(0, 0, 0, 1),
+        UseAeroCaptionButtons = true
+    };
+    WindowChrome.SetWindowChrome(this, chrome);
+    InitializeComponent();
+    this.Background = Brushes.Transparent;
+}
+```
+
+2. Now we can Activate mica 
+
+```cs
+var isDark = false;
+WindowHelper.EnableMicaEffect(new WindowInteropHelper(this).EnsureHandle(), isDark);
+```
+{% note warning %}
+If your Windows uses a dark theme, you need to set `isDark` to `true`
+{% endnote %}

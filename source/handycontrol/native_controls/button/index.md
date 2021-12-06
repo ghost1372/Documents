@@ -183,7 +183,7 @@ Example：
 | ButtonDanger  | 
 | ButtonWarning  | 
 | ButtonDefault | 
-| ButtonSuccess  | 
+| ButtonSuccess | 
 | ButtonIcon  | 
 | ButtonIconCircular  | 
 | ButtonDashed  | 
@@ -199,3 +199,17 @@ Example：
 | ButtonGroupItemSingle |
 | ButtonGroupItemVerticalFirst |
 | ButtonGroupItemVerticalLast |
+|ButtonDefault.Small|
+|ButtonPrimary.Small|
+|ButtonInfo.Small|
+|ButtonDanger.Small|
+|ButtonWarning.Small|
+|ButtonSuccess.Small|
+|ButtonIcon.Small|
+|ButtonIconCircular.Small|
+|ButtonDashed.Small|
+|ButtonDashedPrimary.Small|
+|ButtonDashedSuccess.Small|
+|ButtonDashedInfo.Small|
+|ButtonDashedWarning.Small|
+|ButtonDashedDanger.Small|

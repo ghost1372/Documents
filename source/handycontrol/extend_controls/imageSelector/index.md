@@ -25,6 +25,12 @@ public class ImageSelector : Control
 |-|-|
 |ImageSelectorBaseStyle|Default Style|
 
+# Event
+|name|
+|-|
+|ImageSelected|
+
+
 # Case
 ```xml
 <UniformGrid Columns="3" Margin="16">

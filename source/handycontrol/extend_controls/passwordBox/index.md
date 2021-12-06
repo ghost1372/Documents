@@ -45,6 +45,12 @@ You can add Headers and Placeholders to the PasswordBox to indicate to the user 
                hc:InfoElement.Title="Title"
 ```
 
+# Styles
+|Style|
+|-|
+|PasswordBoxPlusBaseStyle| 
+|PasswordBoxPlus.Small| 
+
 # Attributes
 | Property | Description |
 | ---------------- | ------------------ |

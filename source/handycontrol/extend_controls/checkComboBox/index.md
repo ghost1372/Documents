@@ -49,6 +49,10 @@ public class CheckComboBox : ListBox, IDataInput
 |CheckComboBoxPlusBaseStyle|Default Enhanced Style|
 |CheckComboBoxExtend|Extended Style|
 |CheckComboBoxPlus|Enhanced Style|
+|Tag4CheckComboBoxStyle.Small|
+|CheckComboBox.Small|
+|CheckComboBoxExtend.Small|
+|CheckComboBoxPlus.Small|
 
 # Case
 

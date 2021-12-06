@@ -22,7 +22,8 @@ public class CoverFlow : Control
 |Add(string)|Add a resource|
 |Add(Uri)|Add a resource|
 |AddRange(IEnumerable<object>)|Add resources in batches|
-|JumpTo(int)|Jump|
+|Next||
+|Prev||
 
 # Case
 

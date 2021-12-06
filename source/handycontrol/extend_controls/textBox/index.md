@@ -40,6 +40,13 @@ You can add a Header and a Placeholder to a TextBox to indicate to the user its 
                hc:InfoElement.Title="This is the content"
 ```
 
+# Styles
+| Style |
+| - |
+| TextBoxPlusBaseStyle  | 
+| TextBoxPlus.Small  |  
+
+
 # Attributes
 | Property | Description |
 | ---------------- | ------------------ |

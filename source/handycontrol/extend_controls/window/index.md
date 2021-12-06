@@ -28,6 +28,10 @@ public class Window : System.Windows.Window
 |ShowTitle|Whether to show the window title|true||
 |ExtendViewIntoNonClientArea|Extend View Into NonClientArea|false|Only Custom Version|
 |IsFullScreen|Whether the window is in full screen|false|||
+|ApplyBackdropMaterial| Apply Mica Material for window| false|Only Available in Custom Version|
+|ShowCloseButton| Show or Hide Close Button| true|Only Available in Custom Version|
+|ShowMaxButton| Show or Hide Max Button| true|Only Available in Custom Version|
+|ShowMinButton| Show or Hide Min Button| true|Only Available in Custom Version|
 
 # Case
 
@@ -49,6 +53,38 @@ public class Window : System.Windows.Window
 </hc:Window>
 ```
 ![Window](https://raw.githubusercontent.com/HandyOrg/HandyOrgResource/master/HandyControl/Doc/extend_controls/Window.png)
+
+# Mica Material
+
+```xml
+<hc:Window x:Class="HandyControlDemo.MainWindow"
+           xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+           xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+           xmlns:hc="https://handyorg.github.io/handycontrol"
+           xmlns:local="clr-namespace:WpfApp4"
+           ApplyBackdropMaterial="True">
+    <Grid />
+</hc:Window>
+```
+
+For synchronization with the Windows theme, set the `UsingSystemTheme="True"` property in the app.xaml file
+
+```xml
+<ResourceDictionary>
+    <ResourceDictionary.MergedDictionaries>
+        <hc:ThemeResources UsingSystemTheme="True" />
+        <hc:Theme />
+    </ResourceDictionary.MergedDictionaries>
+</ResourceDictionary>
+```
+
+{% note warning %}
+In XAML if you set a background brush for the window and the line is AFTER ApplyBackdropMaterial="true", in Windows 11 the Mica effect is applied to the Window but immediately overridden by the background brush, Mica effect goes away. if you call EnableMicaEffect in code on this Window the effect doesn't come back.
+
+Some XAML formatter extensions will sort the properties alphabetically. `ApplyBackdropMaterial` is then before Background and the "bug" above occurs.
+{% endnote %}
+
+![Mica](https://user-images.githubusercontent.com/9213496/139540320-a2f9e7ff-77dd-4334-8535-31a78626cd1d.png)
 
 
 # Attached Properties

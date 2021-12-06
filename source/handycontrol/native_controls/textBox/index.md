@@ -2,6 +2,14 @@
 title: TextBox
 ---
 
+# Styles
+| Style |
+| - |
+| TextBoxBaseStyle  | 
+| TextBox.Small  | 
+| TextBoxExtend  | 
+| TextBoxExtend.Small  | 
+
 # TextBoxBaseStyle
 
 The default style of the native textbox is not recommended. It should always be used by other styles as BasedOn.

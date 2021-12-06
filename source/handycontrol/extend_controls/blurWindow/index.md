@@ -8,6 +8,10 @@ The background blur window can be used to enhance the UI effect, but it will sac
 public class BlurWindow : Window
 ```
 
+{% note info %}
+All `hc:Window` properties can be used. Click <ins>**[here](https://hosseini.ninja/handycontrol/extend_controls/window/#Attributes)**</ins> to view
+{% endnote %}
+
 {% note warning %}
 Operating system support : windows 10
 {% endnote %}

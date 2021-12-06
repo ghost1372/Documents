@@ -8,11 +8,11 @@ title: Helper
 |ArithmeticHelper|Internal|
 |ConfigHelper||
 |DesignerHelper||
-|DpiHelper|Internal|
-|IconHelper|Internal|
+|DpiHelper||
+|IconHelper||
 |InputClickHelper||
 |ResourceHelper||
-|ScreenHelper|Internal|
+|ScreenHelper||
 |SecurityHelper|Internal|
 |SingleOpenHelper||
 |TokenizerHelper|Internal|
@@ -101,3 +101,15 @@ window.Show();
 |GetHandle||
 |GetHwndSource||
 |IsInRangeOfNegIntIncludeZero||
+
+# DpiHelper
+
+Get Device Dpi and Dpi Scale
+
+```cs
+var DpiScale = DpiHelper.LogicalToDeviceUnitsScalingFactorX;
+// result: 1.25
+var dpi = DpiHelper.DeviceDpiX;
+// result: 120
+
+```

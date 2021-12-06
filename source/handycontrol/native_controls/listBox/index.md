@@ -2,6 +2,29 @@
 title: ListBox
 ---
 
+# Styles
+|ListBox|ListBoxItem|ItemsPanelTemplate|
+|-|-|-|
+|ListBoxBaseStyle|ListBoxItemBaseStyle.Small|WrapPanelHorizontalItemsPanelTemplate|
+|ListBox.Small|ListBoxItemCustom|WrapPanelVerticalItemsPanelTemplate|
+|ListBoxCustom||StackPanelHorizontalItemsPanelTemplate|
+|WrapPanelHorizontalListBox||StackPanelVerticalItemsPanelTemplate|
+|WrapPanelVerticalListBox|||
+|StackPanelHorizontalListBox|||
+|StackPanelVerticalListBox|||
+
+# Styles (Custom Version)
+{% note info no-icon %}
+This style is Only Available in `Custom Version`
+{% endnote %}
+
+|ListBox|ListBoxItem|
+|-|-|
+|ListBoxModernStyle|ListBoxItemNewStyle|
+|ListBoxTransparentStyle|ListBoxModernItemBaseStyle|
+|ListBoxModernBaseStyle|ListBoxItemBaseTransparent|
+|ListBoxBaseTransparentStyle|ListBoxItemBaseNewStyle|
+
 # Attached Property
 | Properties | Description |
 | - | - |

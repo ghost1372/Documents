@@ -86,3 +86,16 @@ private void ButtonPush_OnClick(object sender, RoutedEventArgs e) => NotifyIconC
 ```cs
 NotifyIcon.ShowBalloonTip("HandyControl", "Hello", NotifyIconInfoType.None, ContextMenuIsShow ? MessageToken.NotifyIconDemo : MessageToken.NotifyIconContextDemo);
 ```
+
+# Fix dissapear icon from taskbar
+If `Explorer.exe` process restarts or crashs, the notification icon will disappear from the taskbar.
+To Fix this issue, define the following behavior in the one of `hc:Window`, `hc:BlurWindow`, `hc:GlowWindow` or `System.Windows.Window`
+
+``` xml
+<hc:Window>
+  <hc:NotifyIcon x:Name="NotifyIcon"/>
+  <hc:Interaction.Behaviors>
+    <hc:TaskbarRebuildBehavior Element="{Binding ElementName=NotifyIcon}" />
+  </behaviors:Interaction.Behaviors>
+</hc:Window>
+```
