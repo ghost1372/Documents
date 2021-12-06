@@ -55,6 +55,11 @@ public class Window : System.Windows.Window
 ![Window](https://raw.githubusercontent.com/HandyOrg/HandyOrgResource/master/HandyControl/Doc/extend_controls/Window.png)
 
 # Mica Material
+Mica is an opaque, dynamic material that incorporates theme and desktop wallpaper to paint the background of long-lived windows such as apps and settings. Mica is specifically designed for app performance as it only samples the desktop wallpaper once to create its visualization.
+
+{% note info %}
+Mica can only be used on Windows 11 and above
+{% endnote %}
 
 ```xml
 <hc:Window x:Class="HandyControlDemo.MainWindow"
