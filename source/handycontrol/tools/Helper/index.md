@@ -21,6 +21,7 @@ title: Helper
 |VisualHelper||
 |WindowHelper||
 |BindingHelper||
+|FullScreenHelper||
 
 # AnimationHelper
 ## CreateAnimation
@@ -101,6 +102,8 @@ window.Show();
 |GetHandle||
 |GetHwndSource||
 |IsInRangeOfNegIntIncludeZero||
+|StartFullScreen||
+|EndFullScreen||
 
 # DpiHelper
 

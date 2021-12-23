@@ -35,6 +35,16 @@ If you need to expand on your own, it is recommended to use the open source plug
 
 After the control library is referenced, the language package folder is generated in the running directory, and its naming style is like zh-cn, en, and so on.
 
+## How to Install and Use Language Packs?
+Language packs are provided as a nuget package, So just install your favorite language packs as nuget packs.
+For example, if you want your app to support `Persian` and `Chinese`, just add the following packages to your project.
+
+```
+Install-Package HandyControl.Lang.fa
+Install-Package HandyControl.Lang.zh-CN
+```
+After that you can change the language of the app as before.
+
 # Dynamic Multi Language
 You can use this method to bring dynamic multilingual switching features to your applications
 

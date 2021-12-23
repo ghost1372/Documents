@@ -11,7 +11,6 @@ public class ScrollViewer : System.Windows.Controls.ScrollViewer
 # Attributes
 |Property|Description|Default Value|Remarks|
 |-|-|-|-|
-|Orientation|Scrolling Direction|Orientation.Vertical||
 |CanMouseWheel|Whether to respond to mouse wheel operation|true||
 |IsInertiaEnabled|Whether to support inertial scrolling|false||
 |IsPenetrating|Is it possible to penetrate the click|false|||

@@ -37,7 +37,7 @@ You can add a Header and a Placeholder to a TextBox to indicate to the user its 
 
 ``` XML
 <hc:TextBox hc:InfoElement.Placeholder="Please enter the content"
-               hc:InfoElement.Title="This is the content"
+               hc:InfoElement.Title="This is the content"/>
 ```
 
 # Styles

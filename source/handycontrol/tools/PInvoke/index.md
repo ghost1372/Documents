@@ -104,6 +104,10 @@ We have a lot of WinAPI functions that You can easily use them in your applicati
 |WritePrivateProfileString||
 |GetPrivateProfileString||
 |DwmGetColorizationColor||
+|DwmSetWindowAttribute||
+|GetWindowLongPtr32||
+|GetWindowLongPtr64||
+|GetWindowLongPtr||
 |GdipImageGetFrameDimensionsCount|located in Gdip|
 |GdipImageGetFrameDimensionsList|located in Gdip|
 |GdipImageGetFrameCount|located in Gdip|

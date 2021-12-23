@@ -624,7 +624,17 @@ Console.WriteLine("Age: {0}", person2.Age);
 
 # WindowHelper
 
-## EnableMicaEffect
+## DetermineIfInLightThemeMode
+
+you can determine if windows theme is light or Dark
+
+```cs
+bool isLight = WindowHelper.DetermineIfInLightThemeMode();
+```
+
+# MicaHelper
+
+## ApplyMicaEffect
 You can enable mica material for Windows
 {% note info %}
 You do not need to use this helper to activate mica on hc:Window, hc:GlowWindow and BlurWindow, Mica is available on these windows by default through `ApplyBackdropMaterial` Property.
@@ -643,8 +653,10 @@ public MainWindow()
     var chrome = new WindowChrome
     {
         CornerRadius = new CornerRadius(),
-        GlassFrameThickness = new Thickness(0, 0, 0, 1),
-        UseAeroCaptionButtons = true
+        ResizeBorderThickness = new Thickness(8),
+        GlassFrameThickness = new Thickness(-1),
+        NonClientFrameEdges = NonClientFrameEdges.None,
+        UseAeroCaptionButtons = false
     };
     WindowChrome.SetWindowChrome(this, chrome);
     InitializeComponent();
@@ -655,9 +667,26 @@ public MainWindow()
 2. Now we can Activate mica 
 
 ```cs
-var isDark = false;
-WindowHelper.EnableMicaEffect(new WindowInteropHelper(this).EnsureHandle(), isDark);
+MicaHelper.ApplyMicaEffect(this);
 ```
+or you can use another method with support dark mode
+```cs
+MicaHelper.ApplyMicaEffect(handle, isDark);
+```
+
 {% note warning %}
 If your Windows uses a dark theme, you need to set `isDark` to `true`
 {% endnote %}
+
+if you need to remove Mica you can use RemoveMicaEffect method
+
+```cs
+MicaHelper.RemoveMicaEffect();
+// OR
+MicaHelper.RemoveMicaEffect(handle);
+```
+
+if you want to know that mica effect is applied you can use:
+```cs
+bool isApplied = MicaHelper.IsMicaEffectApplied;
+```

@@ -7,6 +7,7 @@ title: ScrollViewerAttach
 | Name | Use |
 |-|-|
 | AutoHide ||
+|Orientation||
 
 # Use Cases
 
