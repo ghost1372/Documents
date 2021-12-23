@@ -8,6 +8,9 @@ A breaking change is a change that may require you to make changes to your appli
 See [here](https://github.com/ghost1372/HandyControls/releases) and [here](https://github.com/HandyOrg/HandyControl/releases) for full changes
 {% endnote %}
 
+## 3.3.0 and 3.3.10 (HandyControls)
+- To change the language of the controls, you must first install the desired language pack See [here](https://ghost1372.github.io/handycontrol/langs/#Language-packs) for more information
+
 ## 3.3.8 (HandyControls)
 - All Violet and Default Styles Removed eg: ToggleButtonViolet, SplitButtonDefault
 - GithubTimeLine Removed
