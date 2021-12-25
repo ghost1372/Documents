@@ -13,6 +13,7 @@ public class HighlightTextBlock : TextBlock
 |SourceText|
 |QueriesText|
 |HighlightBrush|
+|HighlightTextBrush|
 
 ```xml
 <hc:HighlightTextBlock SourceText="some text for example" QueriesText="text example" HighlightBrush="#f06632" />
