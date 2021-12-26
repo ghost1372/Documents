@@ -96,6 +96,6 @@ To Fix this issue, define the following behavior in the one of `hc:Window`, `hc:
   <hc:NotifyIcon x:Name="NotifyIcon"/>
   <hc:Interaction.Behaviors>
     <hc:TaskbarRebuildBehavior Element="{Binding ElementName=NotifyIcon}" />
-  </behaviors:Interaction.Behaviors>
+  </hc:Interaction.Behaviors>
 </hc:Window>
 ```
