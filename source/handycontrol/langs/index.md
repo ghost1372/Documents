@@ -66,69 +66,84 @@ We want our program to have 2 languages, `English` and `Persian` So I create 2 r
 - `Lang.resx`
 - `Lang.en.resx` or `Lang.en-US.resx`
 
-now we need to create a class called `LangProvider` we should declare our language resource here and Make a reference to the LangProvider class:
+now we need to create a class called `LangProvider.cs` in `Langs` folder we should declare our language resource here and Make a reference to the LangProvider class:
 
 ``` CS
-public class LangProvider : INotifyPropertyChanged
+using HandyControl.Tools;
+using System.ComponentModel;
+using System.Globalization;
+using System.Windows;
+using System.Windows.Data;
+
+namespace HandyControlProjectDemo.Properties.Langs
 {
-    internal static LangProvider Instance => ResourceHelper.GetResource<LangProvider>("DemoLangs");
-
-    private static string CultureInfoStr;
-
-    public static CultureInfo Culture
+    public class LangProvider : INotifyPropertyChanged
     {
-        get => Lang.Culture;
-        set
-        {
-            if (value == null) return;
-            if (Equals(CultureInfoStr, value.EnglishName)) return;
-            Lang.Culture = value;
-            CultureInfoStr = value.EnglishName;
+        internal static LangProvider Instance => ResourceHelper.GetResource<LangProvider>("DemoLangs");
 
-            Instance.UpdateLangs();
+        private static string CultureInfoStr;
+
+        public static CultureInfo Culture
+        {
+            get => Lang.Culture;
+            set
+            {
+                if (value == null) return;
+                if (Equals(CultureInfoStr, value.EnglishName)) return;
+                Lang.Culture = value;
+                CultureInfoStr = value.EnglishName;
+
+                Instance.UpdateLangs();
+            }
         }
-    }
 
-    public static string GetLang(string key) => Lang.ResourceManager.GetString(key, Culture);
+        public static string GetLang(string key) => Lang.ResourceManager.GetString(key, Culture);
 
-    public static void SetLang(DependencyObject dependencyObject, DependencyProperty dependencyProperty, string key) =>
-        BindingOperations.SetBinding(dependencyObject, dependencyProperty, new Binding(key)
+        public static void SetLang(DependencyObject dependencyObject, DependencyProperty dependencyProperty, string key) =>
+            BindingOperations.SetBinding(dependencyObject, dependencyProperty, new Binding(key)
+            {
+                Source = Instance,
+                Mode = BindingMode.OneWay
+            });
+
+        private void UpdateLangs()
         {
-            Source = Instance,
-            Mode = BindingMode.OneWay
-        });
-
-    private void UpdateLangs()
-    {
-        OnPropertyChanged(nameof(About));
-    }
+            OnPropertyChanged(nameof(Test));
+        }
         public event PropertyChangedEventHandler PropertyChanged;
 
-    protected virtual void OnPropertyChanged(string propertyName) =>
-        PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(propertyName));
+        protected virtual void OnPropertyChanged(string propertyName) =>
+            PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(propertyName));
 
-    public string About => Lang.About;
-}    
+        public string Test => Lang.Test;
+    }
     public class LangKeys
     {
-        public static string About = nameof(About);
+        public static string Test = nameof(Test);
     }
-
+}
 ```
 you should add all of your language resources here:
-`OnPropertyChanged(nameof(About));`
-`public string About => Lang.About;`
-`public static string About = nameof(About);`
+`OnPropertyChanged(nameof(Test));`
+`public string Test => Lang.Test;`
+`public static string Test = nameof(Test);`
+
 {% note info %}
 Because it is time consuming and tedious, you can use text templates (t4) or similar options to automatically generate all language resources.
 this is a example of t4 that can generate all language resources:
-{% code %}
+
+{% note warning %}
+Please delete `LangProvider.cs` before creating T4 file.
+{% endnote %}
+
+now create a T4 file named `LangProvider.tt`
+```cs
 <#@ template debug="false" hostspecific="false" language="C#" #>
 <#@ assembly name="System.Core" #>
 <#@ import namespace="System.Linq" #>
 <#@ import namespace="System.Collections.Generic"#>
 <#@ assembly name="$(TargetPath)" #>
-<#@ import namespace="HandyControlDemo.Properties.Langs" #>
+<#@ import namespace="HandyControlProjectDemo.Properties.Langs" #>
 <#@ output extension=".cs" #>
 <#
 	var resourceType = typeof(Lang);
@@ -148,7 +163,7 @@ using System.Windows;
 using System.Windows.Data;
 using HandyControl.Tools;
 
-namespace HandyControlDemo.Properties.Langs
+namespace HandyControlProjectDemo.Properties.Langs
 {
     public class LangProvider : INotifyPropertyChanged
     {
@@ -181,9 +196,9 @@ namespace HandyControlDemo.Properties.Langs
 
 		private void UpdateLangs()
         {
-<#foreach(var item in propertyNameList){#>
-			OnPropertyChanged(nameof(<#=item#>));
-<#}#>
+            <#foreach(var item in propertyNameList){#>
+                OnPropertyChanged(nameof(<#=item#>));
+            <#}#>
         }
 
 <#foreach(var item in propertyNameList){#>
@@ -207,7 +222,7 @@ namespace HandyControlDemo.Properties.Langs
 <#}#>
     }
 }
-{% endcode %}
+```
 {% endnote %}
 
 now in `app.xaml` after MergedDictionary write this code:
