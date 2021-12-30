@@ -40,8 +40,8 @@ Language packs are provided as a nuget package, So just install your favorite la
 For example, if you want your app to support `Persian` and `Chinese`, just add the following packages to your project.
 
 ```
-Install-Package HandyControl.Lang.fa
-Install-Package HandyControl.Lang.zh-CN
+Install-Package HandyControls.Lang.fa
+Install-Package HandyControls.Lang.zh-CN
 ```
 After that you can change the language of the app as before.
 
