@@ -17,15 +17,16 @@
 }
 
 .table-container table {
+  border-collapse:separate;
+  border-spacing: 0 4px;
+  padding: 0 6px 2px 6px;
+
   if (hexo-config('darkmode')) {
     @media (prefers-color-scheme: dark) {
      background-color: #555;
     }
 }
   background-color: #eee;
-  border-collapse:separate;
-  border-spacing: 0 4px;
-  padding: 0 6px 2px 6px;
 }
 
 .table-container th, td {
@@ -38,10 +39,6 @@
 
 .table-container tr td:last-child {
   border-radius: 0 4px 4px 0;
-}
-
-.table-container tbody > tr {
-    background-color: white !important;
 }
 
 ::-webkit-scrollbar {
@@ -121,7 +118,6 @@ a, span.exturl {
     overflow-wrap: break-word;
     word-wrap: break-word;
     background-color: transparent;
-    color: #555;
     text-decoration: none;
     outline: none;
     border-bottom: 0px solid #999;
