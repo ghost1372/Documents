@@ -10,7 +10,7 @@ example:
  <hc:PersianCalendar Margin="10"/>
 ```
 
-![PersianCalendar](https://raw.githubusercontent.com/ghost1372/HandyControls/develop/Resources/PersianCalendar.png)
+![PersianCalendar](https://raw.githubusercontent.com/ghost1372/Resources/main/HandyControls/Docs/PersianCalendar.png)
 
 # Afghanistan Calendar
 Since the calendars of Iran and Afghanistan are the same and only the names of the months are different, You can use the Afghan calendar with Afghan names.

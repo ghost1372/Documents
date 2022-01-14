@@ -23,4 +23,4 @@ item.Add(subItem2);
 TreeRoot.Add(item);
 ```
 
-![CheckTreeView](https://raw.githubusercontent.com/ghost1372/HandyControls/develop/Resources/CheckTreeView.png)
+![CheckTreeView](https://raw.githubusercontent.com/ghost1372/Resources/main/HandyControls/Docs/CheckTreeView.png)

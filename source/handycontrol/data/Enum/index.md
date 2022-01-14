@@ -300,3 +300,10 @@ Message type
 |-|
 |NoWrap|
 |Wrap|
+
+# LinearLayout
+
+|Name|
+|-|
+|Stack|
+|Uniform|

@@ -44,7 +44,7 @@ Example：
 <ListBox hc:ListBoxAttach.IsOddEvenRow="True" AlternationCount="2"/>
 ```
 
-![ListBox.IsOddEvenRow](https://raw.githubusercontent.com/ghost1372/HandyControls/develop/Resources/ListBoxIsOddOrEven.png)
+![ListBox.IsOddEvenRow](https://raw.githubusercontent.com/ghost1372/Resources/main/HandyControls/Docs/ListBoxIsOddOrEven.png)
 
 {% note info no-icon %}
 Example：
@@ -203,7 +203,7 @@ you can use `IconElement` and `ListBoxAttach` AttachedProperty
 {% endcode %}
 {% endnote %}
 
-![ListBox.ListBoxModernStyle](https://raw.githubusercontent.com/ghost1372/HandyControls/develop/Resources/ListBoxModernStyle.png)
+![ListBox.ListBoxModernStyle](https://raw.githubusercontent.com/ghost1372/Resources/main/HandyControls/Docs/ListBoxModernStyle.png)
 
 # ListBoxTransparentStyle
 `This style is Only Available in Custom Version`

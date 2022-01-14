@@ -23,4 +23,4 @@ title: SpeedoMeter
 | StatusVisibility|
 |Angle|
 
-![SpeedoMeter](https://raw.githubusercontent.com/ghost1372/HandyControls/develop/Resources/SpeedoMeter.gif)
+![SpeedoMeter](https://raw.githubusercontent.com/ghost1372/Resources/main/HandyControls/Docs/SpeedoMeter.gif)

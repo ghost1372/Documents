@@ -13,4 +13,4 @@ example:
 ``` xml               
 <hc:PersianDatePicker Margin="10"/>
 ```
-![PersianDatePicker](https://raw.githubusercontent.com/ghost1372/HandyControls/develop/Resources/PersianDatePicker.png)
+![PersianDatePicker](https://raw.githubusercontent.com/ghost1372/Resources/main/HandyControls/Docs/PersianDatePicker.png)

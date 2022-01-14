@@ -43,5 +43,6 @@ The default style of bold textblocks is not recommended. It should always be use
 |TextBlockSubTitle|TextBlockDefault|TextBlockDefaultWarning|
 |TextBlockDefaultAccent|TextBlockDefaultSecLight|TextBlockDefaultInfo|
 |TextBlockDefaultSuccess|TextBlockDefaultSecLight| |
+|HighlightTextBlockBaseStyle|||
 
 ![TextBlockStyle](https://raw.githubusercontent.com/HandyOrg/HandyOrgResource/master/HandyControl/Resources/TextBlock.png)

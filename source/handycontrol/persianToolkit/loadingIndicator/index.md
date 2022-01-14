@@ -36,4 +36,4 @@ LoadingIndicators is a collection of 11 animated loading indicators.
 
 ```
 
-![LoadingIndicator](https://raw.githubusercontent.com/ghost1372/HandyControls/develop/Resources/Indicator.gif)
+![LoadingIndicator](https://raw.githubusercontent.com/ghost1372/Resources/main/HandyControls/Docs/Indicator.gif)

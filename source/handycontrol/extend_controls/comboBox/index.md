@@ -44,6 +44,7 @@ public class ComboBox : System.Windows.Controls.ComboBox, IDataInput
 |Style|Description|
 |-|-|
 |ComboBoxPlusBaseStyle|Default Style|
+|ComboBoxPlus.Small||
 
 # Case
 The native functions behave the same on the extended ComboBox.

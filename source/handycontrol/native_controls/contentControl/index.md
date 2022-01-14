@@ -21,4 +21,4 @@ Only Custom Version
 
 {% endnote %}
 
-![ContentControl](https://raw.githubusercontent.com/ghost1372/HandyControls/develop/Resources/MCBackgroundLiveStyle.gif)
+![ContentControl](https://raw.githubusercontent.com/ghost1372/Resources/main/HandyControls/Docs/MCBackgroundLiveStyle.gif)

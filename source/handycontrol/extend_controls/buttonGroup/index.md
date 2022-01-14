@@ -2,6 +2,21 @@
 title: ButtonGroup
 ---
 
+# Attribute
+|Name|
+|-|
+|Layout|
+|Orientation|
+
+# Style
+|Name|
+|-|
+|ButtonGroupHorizontalUniformItemsPanelTemplate|
+|ButtonGroupVerticalUniformItemsPanelTemplate|
+|ButtonGroupHorizontalStackItemsPanelTemplate|
+|ButtonGroupVerticalStackItemsPanelTemplate|
+|ButtonGroupBaseStyle|
+
 # RadioGroupItemBaseStyle
 
 Subset `RadioButton` style base class in `ButtonGroup` control. It is not recommended to use it directly. It is often used as `Item` style base class in `ButtonGroup`. It is also used in conjunction with `ButtonGroup` control.

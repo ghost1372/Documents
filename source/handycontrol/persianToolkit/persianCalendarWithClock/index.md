@@ -8,4 +8,4 @@ PersianCalendarWithClock is Based on [CalendarWithClock](https://ghost1372.githu
 <hc:PersianCalendarWithClock Margin="10" ConfirmButtonText="Ok"/>
 ```
 
-![PersianCalendar](https://raw.githubusercontent.com/ghost1372/HandyControls/develop/Resources/PersianCalendar.png)
+![PersianCalendar](https://raw.githubusercontent.com/ghost1372/Resources/main/HandyControls/Docs/PersianCalendar.png)

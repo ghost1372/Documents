@@ -93,7 +93,7 @@ Add a namespace: `xmlns:hc="https://handyorg.github.io/handycontrol"`
 
 just download and install handycontrol template from marketplace. in this way you dont need to add anything. after installing hc, create new project with handycontrol template
 
-![Extension](https://raw.githubusercontent.com/ghost1372/HandyControls/develop/Resources/vsixTemplate.png)
+![Extension](https://raw.githubusercontent.com/ghost1372/Resources/main/HandyControls/Docs/vsixTemplate.png)
 
 # Nuget Nightly Builds
 
