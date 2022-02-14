@@ -1,5 +1,5 @@
 ---
-title: Lable
+title: Label
 ---
 
 # LabelBaseStyle

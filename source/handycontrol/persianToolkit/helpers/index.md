@@ -690,3 +690,19 @@ if you want to know that mica effect is applied you can use:
 ```cs
 bool isApplied = MicaHelper.IsMicaEffectApplied;
 ```
+
+# TaskbarHelper
+
+You can control your app Taskbar Progressbar with this helper class
+
+for changing Progressbar state:
+
+```cs
+TaskbarHelper.SetProgressState(handle, TaskbarStates.Error);
+```
+
+for changing Progressbar value:
+
+```cs
+TaskbarHelper.SetProgressValue(handle, 10, 100);
+```
