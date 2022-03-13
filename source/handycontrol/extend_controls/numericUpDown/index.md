@@ -80,11 +80,6 @@ You can add Headers and Placeholders to NumericUpDown to indicate to users what 
 | Minimum | Get or set the minimum allowable value |
 | Increment | Gets or sets the value that the digital display box (also known as an up-down control) increments or decrements when the up or down button is clicked. |
 | DecimalPlaces | Gets or sets the decimal digits to be displayed in NumericUpDown. This property does not affect the Value property. |
-| VerifyFunc | Get or Set Data Validation Delegation |
-| IsError | Get or set whether the data is wrong |
-| ErrorStr | Get or Set Error Alert |
-| TextType | Get or Set Text Type |
-| ShowClearButton | Gets or sets whether to show the clear button |
 |SelectionTextBrush||
 |SelectionOpacity||
 |SelectionBrush||
@@ -92,12 +87,50 @@ You can add Headers and Placeholders to NumericUpDown to indicate to users what 
 |ValueFormat||
 |ShowUpDownButton||
 
-# Method
-| Method | Description |
-| ---------------- | ------------------ |
-| VerifyData () | Verify Data |
-
 # Event
 | Event | Description |
 | ---------------- | ------------------ |
 | ValueChanged | Occurs after the Value property has been changed in some way. |
+
+# Style
+|name|
+|-|
+|NumericUpDown.Small|
+|NumericUpDownExtend|
+|NumericUpDownExtend.Small|
+|NumericUpDownPlus|
+|NumericUpDownPlus.Small|
+
+# Validation
+
+for validation follow instructions:
+create a Class and inherit from `ValidationRule`
+
+```cs
+public class NumericUpDownDemoRule : ValidationRule
+{
+    public override ValidationResult Validate(object value, CultureInfo cultureInfo)
+    {
+        if (value is not double doubleValue)
+        {
+            return new ValidationResult(false, HandyControl.Properties.Langs.Lang.FormatError);
+        }
+
+        return doubleValue % 2 > double.Epsilon
+            ? new ValidationResult(false, Properties.Langs.Lang.Error)
+            : ValidationResult.ValidResult;
+    }
+}
+```
+now bind to ValidationRule
+```cs
+<hc:NumericUpDown hc:InfoElement.ShowClearButton="True" Style="{StaticResource NumericUpDownPlus}">
+    <hc:NumericUpDown.Value>
+        <Binding Path="DoubleValue1" UpdateSourceTrigger="PropertyChanged">
+            <Binding.ValidationRules>
+                <tools:NumericUpDownDemoRule/>
+            </Binding.ValidationRules>
+        </Binding>
+    </hc:NumericUpDown.Value>
+</hc:NumericUpDown>
+```

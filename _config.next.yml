@@ -284,6 +284,7 @@ menu:
       Extension: /Extension/ ||
       Helper: /Helper/ ||
       P/Invoke: /PInvoke/ ||
+      Validation Rule: /ValidationRule/ ||
     Globalization:
       default: /langs/ || fas fa-globe-asia
     Breaking Changes:

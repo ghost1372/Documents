@@ -19,6 +19,7 @@ Inherited from [TitleElement]( https://handyorg.github.io/handycontrol/attach/ti
 | MinContentHeight | Minimum Content Height |
 | MaxContentHeight | Maximum Content Height |
 | RegexPattern | Regex Pattern |
+|ShowClearButton||
 
 # Use Cases
 

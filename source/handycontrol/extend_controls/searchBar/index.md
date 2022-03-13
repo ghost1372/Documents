@@ -41,6 +41,9 @@ public class SearchBar : TextBox, ICommandSource
 |SearchBarPlusBaseStyle|The default enhanced style|
 |SearchBarExtend|Extended Style|
 |SearchBarPlus|Enhance the style|
+|SearchBar.Small||
+|SearchBarExtend.Small||
+|SearchBarPlus.Small||
 
 # Case
 
@@ -63,6 +66,22 @@ public class SearchBar : TextBox, ICommandSource
         <hc:SearchBar ShowClearButton="True" Width="380" hc:InfoElement.TitleWidth="140" hc:InfoElement.Placeholder="PlsEnterContent" hc:InfoElement.TitlePlacement="Left" hc:InfoElement.Title="TitleDemoStr3" Style="{StaticResource SearchBarPlus}" hc:InfoElement.Necessary="True" Margin="0,32,0,0"/>
     </StackPanel>
 </StackPanel>
+```
+
+# Validation
+for validation follow instructions:
+
+bind to ValidationRule
+```cs
+ <hc:SearchBar hc:InfoElement.Placeholder="Please Enter Email" hc:InfoElement.Title="Title" Margin="0,32,0,0" hc:InfoElement.Necessary="True" Style="{StaticResource SearchBarPlus}">
+    <hc:SearchBar.Text>
+        <Binding Path="Email1" UpdateSourceTrigger="PropertyChanged">
+            <Binding.ValidationRules>
+                <hc:RegexRule Type="Mail"/>
+            </Binding.ValidationRules>
+        </Binding>
+    </hc:SearchBar.Text>
+</hc:SearchBar>
 ```
 
 ![SearchBar](https://raw.githubusercontent.com/HandyOrg/HandyOrgResource/master/HandyControl/Resources/SearchBar.png)

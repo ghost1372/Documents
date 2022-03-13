@@ -2,6 +2,14 @@
 title: DatePicker
 ---
 
+# Styles
+
+|Available Styles|
+|-|
+|DatePicker.Small|
+|DatePickerExtend|
+|DatePickerExtend.Small|
+
 # DatePickerBaseStyle
 
 Native datepicker default style, not recommended for direct use, should always be used by other styles in the BasedOn mode. The native datepicker uses this style by default if no style is set:

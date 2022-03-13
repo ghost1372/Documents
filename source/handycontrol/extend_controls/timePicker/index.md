@@ -66,6 +66,16 @@ You can add Headers and Placeholders to the DatePicker to indicate to the user w
                Style="{StaticResource TimePickerExtend}"/>
 ```
 
+# Styles
+
+|Available Styles|
+|-|
+|TimePicker.Small|
+|TimePickerExtend|
+|TimePickerExtend.Small|
+|TimePickerPlus|
+|TimePickerPlus.Small|
+
 # Attributes
 
 | Property | Description |

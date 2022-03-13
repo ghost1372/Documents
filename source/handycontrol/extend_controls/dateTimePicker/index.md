@@ -52,6 +52,17 @@ You can add Headers and Placeholders to the DatePicker to indicate to the user w
                    hc:InfoElement.Title="This is the title"
                    hc:InfoElement.Placeholder="Please enter the content"/>
 ```
+
+# Styles
+
+|Available Styles|
+|-|
+|DateTimePicker.Small|
+|DateTimePickerExtend|
+|DateTimePickerExtend.Small|
+|DateTimePickerPlus|
+|DateTimePickerPlus.Small|
+
 # Attributes
 | Property | Description |
 | ---------------- | ------------------ |

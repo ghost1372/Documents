@@ -18,6 +18,7 @@ public class ImageViewer : Control
 |-|-|-|-|
 |ShowImgMap|Whether to display the small map|false||
 |ImageSource|Image Resources|||
+|ShowToolBar||||
 |IsFullScreen|Is it in full screen display|false|||
 
 # Case

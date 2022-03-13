@@ -51,16 +51,6 @@ You can add a Header and a Placeholder to a TextBox to indicate to the user its 
 | Property | Description |
 | ---------------- | ------------------ |
 | Text | Gets or sets the text content of the textbox. |
-| VerifyFunc | Gets or sets the data validation delegate. |
-| IsError | Gets or sets whether the data is wrong. |
-| ErrorStr | Gets or sets the error prompt. |
-| TextType | Gets or sets the text type. |
-| ShowClearButton | Gets or sets whether to show the clear button. |
-
-# Method
-| Method | Description |
-| ---------------- | ------------------ |
-| VerifyData () | Verify the data. |
 
 # TextType
 | TextType | TextType | TextType |
@@ -84,4 +74,20 @@ Using HandyControl.Tools;
 
 ``` XML
 <hc:TextBox TextType="Mail" hc:InfoElement.RegexPattern="^[0-9]*(?:\.[0-9]+)?$"/>
+```
+
+# Validation
+for validation follow instructions:
+
+bind to ValidationRule
+```cs
+<hc:TextBox hc:InfoElement.Placeholder="Please Enter Email" hc:InfoElement.Title="Title" hc:InfoElement.Necessary="True" Margin="0,16,0,0">
+    <hc:TextBox.Text>
+        <Binding Path="Email1" UpdateSourceTrigger="PropertyChanged">
+            <Binding.ValidationRules>
+                <hc:RegexRule Type="Mail"/>
+            </Binding.ValidationRules>
+        </Binding>
+    </hc:TextBox.Text>
+</hc:TextBox>
 ```

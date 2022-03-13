@@ -49,6 +49,13 @@ You can add Headers and Placeholders to the DatePicker to indicate to the user w
                hc:InfoElement.Title="Title" />
 ```
 
+
+# Styles
+
+|Available Styles|
+|-|
+|DatePickerPlus.Small|
+
 # Attributes
 | Property | Description |
 | ---------------- | ------------------ |

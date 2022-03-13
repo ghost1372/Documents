@@ -16,6 +16,16 @@ Note that you must write `Persian` at the bottom of the style name ==> `DateTime
 |SelectionBrush||
 |CaretBrushProperty||
 
+# Styles
+
+|Available Styles|
+|-|
+|DateTimePicker|
+|DateTimePickerPlusPersian|
+|DateTimePickerPersian.Small|
+|DateTimePickerExtendPersian.Small|
+|DateTimePickerPlusPersian.Small|
+
 example:
 
 ``` xml                

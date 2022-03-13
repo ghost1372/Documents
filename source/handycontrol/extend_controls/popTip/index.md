@@ -16,7 +16,8 @@ public class Poptip : AdornerElement
 |ContentTemplate|Prompt content template|||
 |ContentStringFormat|Prompt content text format|||
 |ContentTemplateSelector|Prompt Content Template Selector|||
-|Offset|Offset|6||
+|VerticalOffset|Offset|0||
+|HorizontalOffset|Offset|0||
 |PlacementType|PlacementType.Top|||
 |IsOpen|Whether to open|false|||
 
