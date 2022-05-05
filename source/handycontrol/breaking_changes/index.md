@@ -8,6 +8,9 @@ A breaking change is a change that may require you to make changes to your appli
 See [here](https://github.com/ghost1372/HandyControls/releases) and [here](https://github.com/HandyOrg/HandyControl/releases) for full changes
 {% endnote %}
 
+## 3.4.0 (HandyControls)
+- `ApplyBackdropMaterial` Changed to `SystemBackdropType`
+
 ## 3.3.0 and 3.3.10 (HandyControls)
 - To change the language of the controls, you must first install the desired language pack See [here](https://ghost1372.github.io/handycontrol/langs/#Language-packs) for more information
 
@@ -18,7 +21,7 @@ See [here](https://github.com/ghost1372/HandyControls/releases) and [here](https
 - FORCE_ENABLE_ACRYLIC_BLUR Property Removed (BlurWindow now can be used in all windows 10 builds)
 
 ## 3.3.0 (HandyControls)
-- Legacy Dynamic Localization Removed and The newer version has been replaced with better features See [here](https://hosseini.ninja/handycontrol/persianToolkit/dynamicLanguage/)
+- Legacy Dynamic Localization Removed and The newer version has been replaced with better features See [here](https://ghost1372.github.io/handycontrol/persianToolkit/dynamicLanguage/)
 
 ## 3.2.0 (HandyControls)
 - The namespace of the helper classes has changed from `HandyControl.Controls` to `HandyControl.Tools`.

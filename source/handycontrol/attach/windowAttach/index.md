@@ -10,7 +10,7 @@ title: WindowAttach
 | IgnoreAltF4 | Whether to ignore the shortcuts Alt and F4 (the keyboard quickly exits or ends the currently running application) |
 | ShowInTaskManager | Whether the form is displayed in the task manager |
 | HideWhenClosing | |
-
+|SystemBackdropType||
 # Use Cases
 
 ## IsDragElement Whether to allow the current element to drag the form
@@ -43,3 +43,29 @@ Prerequisites:
 -The window must also set `ShowInTaskBar` to` false`
 
 ps: The effect of this additional property is not very obvious in `Windows7`
+
+## SystemBackdropType
+you can use **SystemBackdropType** Attached Property for Activating Mica for any window (System.Window.Window or HandyControl.Controls.Window). 
+
+``` xml
+<hc:Window x:Class="HandyControlDemo.MainWindow"
+           xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+           xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+           xmlns:hc="https://handyorg.github.io/handycontrol"
+           xmlns:local="clr-namespace:WpfApp4"
+           hc:WindowAttach.SystemBackdropType="Mica">
+    <Grid />
+</hc:Window>
+```
+or
+
+``` xml
+<Window x:Class="HandyControlDemo.MainWindow"
+           xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+           xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+           xmlns:hc="https://handyorg.github.io/handycontrol"
+           xmlns:local="clr-namespace:WpfApp4"
+           hc:WindowAttach.SystemBackdropType="Mica">
+    <Grid />
+<Window>
+```

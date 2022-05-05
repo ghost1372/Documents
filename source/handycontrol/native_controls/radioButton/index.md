@@ -20,6 +20,13 @@ title: RadioButton
 |RadioButtonSameAsButtonInfo|
 |RadioButtonSameAsButtonWarning|
 |RadioButtonSameAsButtonDanger|
+|RadioButtonSameAsButtonDefault.Small|
+|RadioButtonSameAsButtonPrimary.Small|
+|RadioButtonSameAsButtonSuccess.Small|
+|RadioButtonSameAsButtonInfo.Small|
+|RadioButtonSameAsButtonWarning.Small|
+|RadioButtonSameAsButtonDanger.Small|
+|RadioButtonIcon.Small|
 
 # RadioButtonBaseStyle
 

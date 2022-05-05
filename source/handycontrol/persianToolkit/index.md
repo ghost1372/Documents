@@ -18,7 +18,7 @@ Includes Additional controls, properties, events and styles
 | [SideMenu](https://ghost1372.github.io/handycontrol/extend_controls/sideMenu/#Attributes) |
 | [Growl Info](https://ghost1372.github.io/handycontrol/data/Info/) |
 | [Window](https://ghost1372.github.io/handycontrol/extend_controls/window/#Attributes) |
-| [BlurWindow](https://hosseini.ninja/handycontrol/extend_controls/blurWindow/) |
+| [BlurWindow](https://ghost1372.github.io/handycontrol/extend_controls/blurWindow/) |
 | [ColorPicker [Color Picker Can Work outside of Application]](https://ghost1372.github.io/handycontrol/extend_controls/colorPicker/) |
 
 # Styles

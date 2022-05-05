@@ -18,12 +18,19 @@ public class SplitButton : ButtonBase
 
 # Styles
 | Style |
-| ------------------ |
+| - |
+|SplitButtonDefault|
 | SplitButtonPrimary |
 | SplitButtonDanger |
 | SplitButtonWarning |
 | SplitButtonInfo |
 | SplitButtonSuccess |
+|SplitButtonDefault.Small|
+| SplitButtonPrimary.Small |
+| SplitButtonDanger.Small |
+| SplitButtonWarning.Small |
+| SplitButtonInfo.Small |
+| SplitButtonSuccess.Small |
 
 # Case
 

@@ -311,7 +311,6 @@ menu:
       Helpers: /helpers/ ||
       LoadingIndicator: /loadingIndicator/ ||
       Logger: /logger/ ||
-      MaskedTextBox: /maskedTextBox/ ||
       IfExtension: /markupIfExtension/ ||
       OptimizedObservableCollection: /optimizedObservableCollection/ ||
       PersianDateTime: /persianDateTime/ ||

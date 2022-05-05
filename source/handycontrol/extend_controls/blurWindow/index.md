@@ -9,7 +9,7 @@ public class BlurWindow : Window
 ```
 
 {% note info %}
-All `hc:Window` properties can be used. Click <ins>**[here](https://hosseini.ninja/handycontrol/extend_controls/window/#Attributes)**</ins> to view
+All `hc:Window` properties can be used. Click <ins>**[here](https://ghost1372.github.io/handycontrol/extend_controls/window/#Attributes)**</ins> to view
 {% endnote %}
 
 {% note warning %}

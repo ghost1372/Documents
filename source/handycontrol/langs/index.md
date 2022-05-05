@@ -28,6 +28,9 @@ The language packs included with the control library include:
 * Turkish (tr)
 * Brazillian (pt-br)
 * Polish (pl)
+* Spanish (es)
+* Catalan (Spain) (ca-ES)
+* Japanese (ja)
 
 `The default is English (en).`
 

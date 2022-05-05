@@ -28,7 +28,7 @@ public class Window : System.Windows.Window
 |ShowTitle|Whether to show the window title|true||
 |ExtendViewIntoNonClientArea|Extend View Into NonClientArea|false|Only Custom Version|
 |IsFullScreen|Whether the window is in full screen|false|||
-|ApplyBackdropMaterial| Apply Mica Material for window| false|Only Available in Custom Version|
+|SystemBackdropType| Apply Mica Material for window| false|Only Available in Custom Version|
 |ShowCloseButton| Show or Hide Close Button| true|Only Available in Custom Version|
 |ShowMaxButton| Show or Hide Max Button| true|Only Available in Custom Version|
 |ShowMinButton| Show or Hide Min Button| true|Only Available in Custom Version|
@@ -67,7 +67,7 @@ Mica can only be used on Windows 11 and above
            xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
            xmlns:hc="https://handyorg.github.io/handycontrol"
            xmlns:local="clr-namespace:WpfApp4"
-           ApplyBackdropMaterial="True">
+           SystemBackdropType="Mica">
     <Grid />
 </hc:Window>
 ```
@@ -84,9 +84,9 @@ For synchronization with the Windows theme, set the `UsingSystemTheme="True"` pr
 ```
 
 {% note warning %}
-In XAML if you set a background brush for the window and the line is AFTER ApplyBackdropMaterial="true", in Windows 11 the Mica effect is applied to the Window but immediately overridden by the background brush, Mica effect goes away. if you call EnableMicaEffect in code on this Window the effect doesn't come back.
+In XAML if you set a background brush for the window and the line is AFTER SystemBackdropType="Mica", in Windows 11 the Mica effect is applied to the Window but immediately overridden by the background brush, Mica effect goes away.
 
-Some XAML formatter extensions will sort the properties alphabetically. `ApplyBackdropMaterial` is then before Background and the "bug" above occurs.
+Some XAML formatter extensions will sort the properties alphabetically. `SystemBackdropType` is then before Background and the "bug" above occurs.
 {% endnote %}
 
 ![Mica](https://user-images.githubusercontent.com/9213496/139540320-a2f9e7ff-77dd-4334-8535-31a78626cd1d.png)
@@ -96,10 +96,36 @@ Some XAML formatter extensions will sort the properties alphabetically. `ApplyBa
 
 you can use **WindowAttach** Attached Property for dragging window or any control. 
 
+## IsDragElement
 ``` xml
  <hc:Window WindowAttach:IsDragElement="True" 
 ...
 />
+```
+## SystemBackdropType
+you can use **SystemBackdropType** Attached Property for Activating Mica for any window (System.Window.Window or HandyControl.Controls.Window). 
+
+``` xml
+<hc:Window x:Class="HandyControlDemo.MainWindow"
+           xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+           xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+           xmlns:hc="https://handyorg.github.io/handycontrol"
+           xmlns:local="clr-namespace:WpfApp4"
+           hc:WindowAttach.SystemBackdropType="Mica">
+    <Grid />
+</hc:Window>
+```
+or
+
+``` xml
+<Window x:Class="HandyControlDemo.MainWindow"
+           xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+           xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+           xmlns:hc="https://handyorg.github.io/handycontrol"
+           xmlns:local="clr-namespace:WpfApp4"
+           hc:WindowAttach.SystemBackdropType="Mica">
+    <Grid />
+<Window>
 ```
 
 # Shortcut

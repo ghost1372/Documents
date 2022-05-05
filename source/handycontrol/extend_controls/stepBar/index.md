@@ -16,6 +16,7 @@ public class StepBar : ItemsControl
 |-|-|-|-|
 |StepIndex|The current step number|0||
 |Dock|Step bar top method|Dock.Top|||
+|IsMouseSelectable |Change current index by clicking on label and icon|false||
 
 # Method
 |Name|Description|
