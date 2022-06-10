@@ -50,9 +50,9 @@ darkmode: true
 # ---------------------------------------------------------------
 
 favicon:
-  small: /images/favicon-16x16-HandyOrg.png
-  medium: /images/favicon-32x32-HandyOrg.png
-  apple_touch_icon: /images/apple-touch-icon-HandyOrg.png
+  small: /images/favicon-16x16.png
+  medium: /images/favicon-32x32.png
+  apple_touch_icon: /images/touch-icon.png
   safari_pinned_tab: /images/logo.svg
   #android_manifest: /manifest.json
 
@@ -92,7 +92,9 @@ menu:
   #commonweal: /404/ || fa fa-heartbeat
   Home: / || fa fa-home
   HandyControl - 3.3.11:
-    
+    default: /handycontrol/ || fa fa-h-square
+    Thanks: /tnx/ || fa fa-user
+    Quick start: /quick_start/ || fa fa-h-square
     Basic xaml: 
       default: /basic_xaml/ || fab fa-xing
       Behavior: /behaviors/ || fab fa-behance
@@ -324,7 +326,6 @@ menu:
     Intellisense:
       default: /intellisense/ || fas fa-brain
   SettingsUI - 2.0.7:
-
     default: /settingsui/ || fas fa-dice-d20
     Quick start: /quick_start/ || fas fa-dice-d20
     Controls: 
@@ -338,7 +339,7 @@ menu:
       SettingsGroup: /settingsGroup/ ||
       SettingsPageControl: /settingsPageControl/ ||
       Shortcut: /shortcut/ ||
-      Windows11SettingsExamples: /windows11SettingsExamples/ ||
+      Windows 11 Settings Examples: /windows11SettingsExamples/ ||
     Extensions: 
       default: /extensions/ || fas fa-tools
     Helpers: 
@@ -405,7 +406,7 @@ sidebar:
 # Sidebar Avatar
 avatar:
   # Replace the default image and set the url here.
-  url: https://avatars2.githubusercontent.com/u/17383395?s=460&v=4
+  url: https://avatars.githubusercontent.com/u/9213496?v=4
   # If true, the avatar will be displayed in circle.
   rounded: true
   # If true, the avatar will be rotated with the cursor.
@@ -419,15 +420,10 @@ site_state: false
 # Key is the link label showing to end users.
 # Value before `||` delimiter is the target permalink, value after `||` delimiter is the name of Font Awesome icon.
 social:
-  GitHub: https://github.com/HandyOrg || fab fa-github
-  GitHub (CV): https://github.com/ghost1372/HandyControls || fab fa-github
+  GitHub: https://github.com/ghost1372 || fab fa-github
   E-Mail: mailto:mahdidvb72@gmail.com || fa fa-envelope
-  QQ group 1: //shang.qq.com/wpa/qunwpa?idkey=a571e5553c9d41e49c4f22f3a8b2865451497a795ff281fedf3285def247efc1 || fab fa-qq
-  QQ group 2: //shang.qq.com/wpa/qunwpa?idkey=5c18622a0f6ee07a6f33afa8cdb85b1f72ea50e878271dfcec919c76b55afee7 || fab fa-qq
   Nuget: https://www.nuget.org/packages/HandyControl || fab fa-microsoft
-  Nuget (CV): https://www.nuget.org/packages/HandyControls || fab fa-microsoft
-  Gitter: https://gitter.im/HandyControl/Lobby || fab fa-gitter
-  Telegram: https://t.me/KlausM72 || fab fa-telegram
+  Nuget (SettingsUI): https://www.nuget.org/packages/SettingsUI || fab fa-microsoft
 
 social_icons:
   enable: true
@@ -473,7 +469,7 @@ footer:
   # Icon between year and copyright info.
   icon:
     # Icon name in Font Awesome. See: https://fontawesome.com/icons
-    name: HandyOrg
+    name: Ghost1372
     # If you want to animate the icon, set it to true.
     animated: false
     # Change the color of icon, using Hex Code.
