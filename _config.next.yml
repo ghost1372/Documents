@@ -92,9 +92,7 @@ menu:
   #commonweal: /404/ || fa fa-heartbeat
   Home: / || fa fa-home
   HandyControl - 3.3.11:
-    default: /handycontrol/ || fa fa-h-square
-    Thanks: /tnx/ || fa fa-user
-    Quick start: /quick_start/ || fa fa-h-square
+    
     Basic xaml: 
       default: /basic_xaml/ || fab fa-xing
       Behavior: /behaviors/ || fab fa-behance
@@ -325,6 +323,50 @@ menu:
       UpdatableMarkupExtension: /updatableMarkupExtension/ ||
     Intellisense:
       default: /intellisense/ || fas fa-brain
+  SettingsUI - 2.0.7:
+
+    default: /settingsui/ || fas fa-dice-d20
+    Quick start: /quick_start/ || fas fa-dice-d20
+    Controls: 
+      default: /controls/ || fab fa-intercom
+      CheckBoxWithDescriptionControl: /checkBoxWithDescriptionControl/ ||
+      InlineAutoCompleteTextBox: /inlineAutoCompleteTextBox/ ||
+      IsEnabledTextBox: /isEnabledTextBox/ ||
+      KeyVisual: /keyVisual/ ||
+      OOBEPageControl: /oOBEPageControl/ ||
+      Setting: /setting/ ||
+      SettingsGroup: /settingsGroup/ ||
+      SettingsPageControl: /settingsPageControl/ ||
+      Shortcut: /shortcut/ ||
+      Windows11SettingsExamples: /windows11SettingsExamples/ ||
+    Extensions: 
+      default: /extensions/ || fas fa-tools
+    Helpers: 
+      default: /helpers/ || fas fa-tools
+      ApplicationDataContainerHelper: /applicationDataContainerHelper/ ||
+      ApplicationHelper: /applicationHelper/ ||
+      AppNotification: /appNotification/ ||
+      AutoSuggestBoxHelper: /autoSuggestBoxHelper/ ||
+      GeneralHelper: /generalHelper/ ||
+      NavigationViewHelper: /navigationViewHelper/ ||
+      OSVersionHelper: /osVersionHelper/ ||
+      ResourceHelper: /resourceHelper/ ||
+      StorageFileHelper: /storageFileHelper/ ||
+      SystemBackdropsHelper: /systemBackdropsHelper/ ||
+      TaskbarHelper: /taskbarHelper/ ||
+      ThemeHelper: /themeHelper/ ||
+      TitleBarHelper: /titleBarHelper/ ||
+      UpdateHelper: /updateHelper/ ||
+      VisualHelper: /visualHelper/ ||
+      WindowHelper: /windowHelper/ ||
+    Services: 
+      default: /services/ || fas fa-tools
+    Styles: 
+      default: /styles/ || fas fa-palette
+    tools:
+      default: /tools/ || fas fa-tools
+
+
 
 
 # Enable / Disable menu icons / item badges.

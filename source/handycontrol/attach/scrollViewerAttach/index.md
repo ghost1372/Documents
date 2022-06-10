@@ -8,6 +8,7 @@ title: ScrollViewerAttach
 |-|-|
 | AutoHide ||
 |Orientation||
+|IsDisabled||
 
 # Use Cases
 
