@@ -106,5 +106,7 @@ if you have `Microsoft.Xaml.Behaviors.WinUI.Managed` nuget package, you can bind
 </UserControl>
 ```
 
+![SettingsUI](https://raw.githubusercontent.com/ghost1372/Resources/main/SettingsUI/Samples/NavigationViewHelper.gif)
+
 # Demo
 you can run [demo](https://github.com/ghost1372/SettingsUI) and see this feature.

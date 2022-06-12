@@ -18,6 +18,10 @@ using existing helper classes you will create a desktop Windows application that
 if your app is a Packaged app, please see [here](https://docs.microsoft.com/en-us/windows/apps/windows-app-sdk/notifications/app-notifications/app-notifications-quickstart?tabs=cs#step-2-update-your-apps-manifest)
 {% endnote %}
 
+![SettingsUI](https://raw.githubusercontent.com/ghost1372/Resources/main/SettingsUI/Samples/AppNotificationAvatar.png)
+
+![SettingsUI](https://raw.githubusercontent.com/ghost1372/Resources/main/SettingsUI/Samples/AppNotificationTextBox.png)
+
 # Send Toast with Existing Payloads
 in this way you can create and send Toast with Existing Payloads.
 
