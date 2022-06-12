@@ -6,29 +6,48 @@ title: Shortcut
 public sealed partial class SettingsPageControl : UserControl
 ```
 
-# Attributes
+# ShortcutWithTextLabelControl
+## Attributes
 
 | Name | Class|
 |-|-|
-|Keys|ShortcutDialogContentControl|
-|IsError|ShortcutDialogContentControl|
 |Text|ShortcutWithTextLabelControl|
 |Keys|ShortcutWithTextLabelControl|
 
 # Example
 
+```xml
+<StackPanel>
+    <controls:ShortcutWithTextLabelControl x:Name="HotkeyMicVidControl" Text="to toggle both your microphone and video" />
+    <controls:ShortcutWithTextLabelControl x:Name="HotkeyMicControl" Text="to toggle your microphone" />
+    <controls:ShortcutWithTextLabelControl x:Name="HotkeyVidControl" Text="to toggle your microphone" />
+
+    <Button Content="Open Shortcut Dialog" Click="Button_Click"/>
+</StackPanel>
+```
+
+```cs
+HotkeyMicVidControl.Keys = new List<object> { "Ctrl", "Alt", "F5" };
+HotkeyMicControl.Keys = new List<object> { "Ctrl", "Alt", "F5" };
+HotkeyVidControl.Keys = new List<object> { "Ctrl", "Alt", "F5" };
+```
+
+![SettingsUI](https://raw.githubusercontent.com/ghost1372/Resources/main/SettingsUI/Samples/Shortcut.png)
+
+# ShortcutDialogContentControl
+## Attributes
+
+| Name | Class|
+|-|-|
+|Keys|ShortcutDialogContentControl|
+|IsError|ShortcutDialogContentControl|
+
 ```cs
 private ShortcutDialogContentControl c = new ShortcutDialogContentControl();
 private ContentDialog shortcutDialog;
 bool canClose = false;
-public ShortcutGuidePage()
-{
-    this.InitializeComponent();
-    HotkeyMicVidControl.Keys = new List<object> { "Ctrl", "Alt", "F5" };
-    HotkeyMicControl.Keys = new List<object> { "Ctrl", "Alt", "F5" };
-    HotkeyVidControl.Keys = new List<object> { "Ctrl", "Alt", "F5" };
-}
-private async void Button_Click(object sender, Microsoft.UI.Xaml.RoutedEventArgs e)
+
+public void OpenDialog()
 {
     c.Keys = new List<object> { "Ctrl", "Alt", "F5" };
     shortcutDialog = new ContentDialog
@@ -48,7 +67,6 @@ private async void Button_Click(object sender, Microsoft.UI.Xaml.RoutedEventArgs
     shortcutDialog.CloseButtonClick += ShortcutDialog_CloseButtonClick;
     await shortcutDialog.ShowAsyncQueue();
 }
-
 private void ShortcutDialog_CloseButtonClick(ContentDialog sender, ContentDialogButtonClickEventArgs args)
 {
     canClose = true;
@@ -78,86 +96,10 @@ private void DisableKeys()
 }
 ```
 
-```xml
-<controls:SettingsPageControl
-    ModuleDescription="Shows a help overlay with Windows shortcuts when the Windows key is pressed."
-    ModuleImageSource="ms-appx:///Assets/Modules/ShortcutGuide.png"
-    ModuleTitle="Shortcut Guide">
-    <controls:SettingsPageControl.ModuleContent>
-        <StackPanel Orientation="Vertical">
-            <controls:Setting Header="Enable Shortcut Guide">
-                <controls:Setting.Icon>
-                    <BitmapIcon ShowAsMonochrome="False" UriSource="ms-appx:///Assets/FluentIcons/FluentIconsShortcutGuide.png"/>
-                </controls:Setting.Icon>
-                <controls:Setting.ActionContent>
-                    <ToggleSwitch/>
-                </controls:Setting.ActionContent>
-            </controls:Setting>
+![SettingsUI](https://raw.githubusercontent.com/ghost1372/Resources/main/SettingsUI/Samples/Shortcut_Dialog.png)
 
-            <controls:KeyVisual IsTabStop="False"
-                                        AutomationProperties.AccessibilityView="Raw"
-                                        VisualType="SmallOutline"
-                                        VerticalAlignment="Center"
-                                HorizontalAlignment="Left"
-                                        Content="Ctrl+F5" />
-            <controls:ShortcutWithTextLabelControl x:Name="HotkeyMicVidControl" Text="to toggle both your microphone and video" />
-            <controls:ShortcutWithTextLabelControl x:Name="HotkeyMicControl" Text="to toggle your microphone" />
-            <controls:ShortcutWithTextLabelControl x:Name="HotkeyVidControl" Text="to toggle your microphone" />
-            <Button Content="Open Shortcut Dialog" Click="Button_Click"/>
-            <controls:SettingsGroup Header="Appearance &amp; behavior">
-
-                <controls:Setting Header="Choose a mode" Icon="&#xE771;">
-                    <controls:Setting.Description>
-                        <HyperlinkButton Content="Windows color settings"/>
-                    </controls:Setting.Description>
-                    <controls:Setting.ActionContent>
-                        <ComboBox MinWidth="{StaticResource SettingActionControlMinWidth}" SelectedIndex="0">
-                            <ComboBoxItem Content="Dark"/>
-                            <ComboBoxItem Content="Light"/>
-                            <ComboBoxItem Content="Default"/>
-                        </ComboBox>
-                    </controls:Setting.ActionContent>
-                </controls:Setting>
-
-                <controls:Setting Header="Opacity of background">
-                    <controls:Setting.ActionContent>
-                        <Slider
-                            MinWidth="{StaticResource SettingActionControlMinWidth}"
-                            Maximum="100"
-                            Minimum="0"/>
-                    </controls:Setting.ActionContent>
-                </controls:Setting>
-            </controls:SettingsGroup>
-            <controls:SettingsGroup Header="Excluded apps">
-                <controls:SettingExpander IsExpanded="True">
-                    <controls:SettingExpander.Header>
-                        <controls:Setting
-                            Description="Turns off Shortcut Guide when these applications have focus - add one application name per line"
-                            Header="Exclude apps"
-                            Icon="&#xE103;"
-                            Style="{StaticResource ExpanderHeaderSettingStyle}"/>
-                    </controls:SettingExpander.Header>
-                    <controls:SettingExpander.Content>
-                        <TextBox
-                            MinWidth="240"
-                            MinHeight="160"
-                            Margin="{StaticResource ExpanderSettingMargin}"
-                            AcceptsReturn="True"
-                            PlaceholderText="Example: outlook.exe"
-                            ScrollViewer.IsVerticalRailEnabled="True"
-                            ScrollViewer.VerticalScrollBarVisibility="Visible"
-                            ScrollViewer.VerticalScrollMode="Enabled"
-                            TextWrapping="Wrap"/>
-                    </controls:SettingExpander.Content>
-                </controls:SettingExpander>
-            </controls:SettingsGroup>
-        </StackPanel>
-    </controls:SettingsPageControl.ModuleContent>
-    <controls:SettingsPageControl.PrimaryLinks>
-        <controls:PageLink Link="https://aka.ms/PowerToysOverview_ShortcutGuide" Text="Learn more about Shortcut Guide"/>
-    </controls:SettingsPageControl.PrimaryLinks>
-</controls:SettingsPageControl>
-```
+![SettingsUI](https://raw.githubusercontent.com/ghost1372/Resources/main/SettingsUI/Samples/Shortcut_Dialog_Error.png)
 
 # Demo
 you can run [demo](https://github.com/ghost1372/SettingsUI) and see this feature.
+
