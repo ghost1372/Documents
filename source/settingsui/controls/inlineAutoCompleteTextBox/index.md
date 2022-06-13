@@ -29,8 +29,8 @@ public MainWindow()
     DemoSuggestions.Add("Barney Stinson");
 }
 ```
+![SettingsUI](https://raw.githubusercontent.com/ghost1372/Resources/main/SettingsUI/Samples/InlineAutoComplete.png)
 
 # Demo
 you can run [demo](https://github.com/ghost1372/SettingsUI) and see this feature.
 
-![SettingsUI](https://raw.githubusercontent.com/ghost1372/Resources/main/SettingsUI/Samples/InlineAutoComplete.png)
