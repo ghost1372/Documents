@@ -183,6 +183,7 @@ menu:
       CheckComboBox: /checkComboBox/ ||
       CirclePanel: /circlePanel/ ||
       CircleProgressBar: /circleProgressBar/ ||
+      ClipGrid: /clipGrid/ ||
       Clock: /clock/ ||
       ColorPicker: /colorPicker/ ||
       ComboBox: /comboBox/ ||
@@ -234,6 +235,7 @@ menu:
       RangeSlider : /rangeSlider/ ||
       Rate: /rate/ ||
       RelativePanel : /relativePanel/ ||
+      Ribbon: /ribbon/ ||
       RunningBlock : /runningBlock/ ||
       ScreenShot: /screenshot/ ||
       ScrollViewer: /scrollViewer/ ||
@@ -325,7 +327,7 @@ menu:
       UpdatableMarkupExtension: /updatableMarkupExtension/ ||
     Intellisense:
       default: /intellisense/ || fas fa-brain
-  SettingsUI - 2.0.7:
+  SettingsUI - 2.1.0:
     default: /settingsui/ || fas fa-dice-d20
     Quick start: /quick_start/ || fas fa-dice-d20
     Controls: 

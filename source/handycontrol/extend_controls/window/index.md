@@ -26,7 +26,6 @@ public class Window : System.Windows.Window
 |NonClientAreaHeight|NonClientAreaHeight|||
 |ShowNonClientArea|Whether to display non-client area|true||
 |ShowTitle|Whether to show the window title|true||
-|ExtendViewIntoNonClientArea|Extend View Into NonClientArea|false|Only Custom Version|
 |IsFullScreen|Whether the window is in full screen|false|||
 |SystemBackdropType| Apply Mica Material for window| false|Only Available in Custom Version|
 |ShowCloseButton| Show or Hide Close Button| true|Only Available in Custom Version|

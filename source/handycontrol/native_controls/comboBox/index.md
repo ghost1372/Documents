@@ -2,6 +2,15 @@
 title: ComboBox
 ---
 
+# Styles
+
+|Name|
+|-|
+|ComboBoxItem.Small|
+|ComboBox.Small|
+|ComboBoxExtend|
+|ComboBoxExtend.Small|
+
 # ComboBoxBaseStyle
 
 The default style of the original combo box is not recommended for direct use. It should always be used by other styles in the BasedOn method. Native combo box uses this style by default if no style is set:

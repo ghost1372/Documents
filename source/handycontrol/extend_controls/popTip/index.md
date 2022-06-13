@@ -20,6 +20,7 @@ public class Poptip : AdornerElement
 |HorizontalOffset|Offset|0||
 |PlacementType|PlacementType.Top|||
 |IsOpen|Whether to open|false|||
+|Delay||1000.0|||
 
 # Case
 

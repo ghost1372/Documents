@@ -11,6 +11,7 @@ title: WindowAttach
 | ShowInTaskManager | Whether the form is displayed in the task manager |
 | HideWhenClosing | |
 |SystemBackdropType||
+|ExtendContentToNonClientArea||
 # Use Cases
 
 ## IsDragElement Whether to allow the current element to drag the form
