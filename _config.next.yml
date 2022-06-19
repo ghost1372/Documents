@@ -115,11 +115,13 @@ menu:
       EdgeElement: /edgeElement/ ||
       GlobalShortcut : /globalShortcut/ ||
       GridAttach: /gridAttach/ ||
+      GridViewAttach: /gridViewAttach/ ||
       IconElement: /iconElement/ ||
       IconSwitchElement: /iconSwitchElement/ ||
       ImageAttach: /imageAttach/ ||
       InfoElement: /infoElement/ ||
       LinkElement : /linkElement/ ||
+      MenuAttach: /menuAttach/ ||
       MenuTopLineAttach: /menuTopLineAttach/ ||
       PanelElement: /panelElement/ ||
       PasswordBoxAttach: /passwordBoxAttach/ ||
@@ -327,7 +329,7 @@ menu:
       UpdatableMarkupExtension: /updatableMarkupExtension/ ||
     Intellisense:
       default: /intellisense/ || fas fa-brain
-  SettingsUI - 2.1.0:
+  SettingsUI - 2.1.2:
     default: /settingsui/ || fas fa-dice-d20
     Quick start: /quick_start/ || fas fa-dice-d20
     Controls: 
@@ -353,6 +355,7 @@ menu:
       GeneralHelper: /generalHelper/ ||
       NavigationViewHelper: /navigationViewHelper/ ||
       OSVersionHelper: /osVersionHelper/ ||
+      PrintHelper: /printHelper/ ||
       ResourceHelper: /resourceHelper/ ||
       StorageFileHelper: /storageFileHelper/ ||
       SystemBackdropsHelper: /systemBackdropsHelper/ ||

@@ -2,6 +2,13 @@
 title: ListView
 ---
 
+# Styles
+|Name|
+|-|
+|ListViewBaseStyle|
+|ListViewItemBaseStyle.Small|
+|ListView.Small|
+
 `HandyControl` only provides a default `ListView` style, which can be customized according to personal needs.
 
 {% note info no-icon %}

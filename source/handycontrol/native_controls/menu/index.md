@@ -2,6 +2,12 @@
 title: Menu
 ---
 
+# Styles
+|Name|
+|-|
+|Menu.Small|
+|MenuBaseStyle|
+
 # Attached Property
 | Properties | Description |
 | - | - |

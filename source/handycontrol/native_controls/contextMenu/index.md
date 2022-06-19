@@ -2,6 +2,12 @@
 title: ContextMenu 
 ---
 
+# Styles
+
+|Name|
+|-|
+|ContextMenu.Small|
+
 # ContextMenuBaseStyle
 
 The default style of the context menu is not recommended for direct use and should always be used by other styles in the BasedOn mode.
