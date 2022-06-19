@@ -3,7 +3,7 @@ title: PrintHelper
 ---
 
 {% note warning %}
-- Because `PrintHelper` has not yet been updated to the `CommunityToolkit` package, we added it. But note that whenever it is updated to the CommunityToolkit package, we will `remove` this helper class. To avoid any problems in the process of removing and fixing your code, we have used the CommunityToolkit namespaces for this helper class, so you can use `using CommunityToolkit.WinUI.Helpers;`
+- Because `PrintHelper` has not yet been updated to the `CommunityToolkit` package, we added it. But note that whenever it is updated to the CommunityToolkit package, we will `remove` this helper class.
 
 - `PrintHelper` is Available Only in `Windows10.0.19041_OR_Greater` Target Frameworks.
 {% endnote %}
