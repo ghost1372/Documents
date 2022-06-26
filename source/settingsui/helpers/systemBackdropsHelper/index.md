@@ -6,34 +6,22 @@ you can use `SystemBackdropsHelper` for accessing Mica and Acrylic Effect for yo
 
 # ThemeHelper
 
-if you want to Mica/Acrylic effect change with Windows/Application theme (Dark/Light Mode) you can use ThemeHelper with a new Initialize Method:
+if you want to Mica/Acrylic effect change with Windows/Application theme (Dark/Light Mode) you can use `ThemeHelper`:
 
 ```cs
-ThemeHelper.Initialize(m_window, true);
-// Default Material is Mica if you want to Change to Acrylic:
-// ThemeHelper.Initialize(m_window, true, BackdropType.DesktopAcrylic);
+ThemeHelper.Initialize(window, BackdropType.Mica);
 ```
 
-now if you want to change Material in application runtime, you should use GetCurrent Method, because GetCurrent Returns an instance of `SystemBackdropsHelper` previously created by the ThemeHelper.
-
-```cs
-public SystemBackdropsHelper backdropsHelper = SystemBackdropsHelper.GetCurrent();
-backdropsHelper.SetBackdrop(BackdropType.Mica);
-```
+{% note info %}
+for more info, please see [here](https://ghost1372.github.io/settingsui/helpers/themeHelper/)
+{% endnote %}
 
 # Using Without ThemeHelper
-you can use `SystemBackdropsHelper` without ThemeHelper but keep in mind that Materials will not change by changing the theme And you have to handle the theme changes yourself.
-
-1. Initialize `SystemBackdropsHelper`
+you can use `SystemBackdropsHelper`
 
 ```cs
-SystemBackdropsHelper backdropsHelper = SystemBackdropsHelper.CreateInstance();
-backdropsHelper.Initialize(window, BackdropType.Mica);
-```
-2. for changing Material in runtime:
-
-```cs
-backdropsHelper.SetBackdrop(BackdropType.DesktopAcrylic);
+SystemBackdropsHelper systemBackdropsHelper = new SystemBackdropsHelper(m_window);
+systemBackdropsHelper.SetBackdrop(BackdropType.Mica);
 ```
 
 ![SettingsUI](https://raw.githubusercontent.com/ghost1372/Resources/main/SettingsUI/Samples/Mica.png)
