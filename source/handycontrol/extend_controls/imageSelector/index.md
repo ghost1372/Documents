@@ -29,6 +29,7 @@ public class ImageSelector : Control
 |name|
 |-|
 |ImageSelected|
+|ImageUnSelected|
 
 
 # Case
