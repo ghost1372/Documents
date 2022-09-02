@@ -69,7 +69,7 @@ You can add Headers and Placeholders to the PasswordBox to indicate to the user 
 | SelectionTextBrush | |
 | SelectionBrush | |
 | MaxLength | |
-| IsSafeEnabled | if this property is false, we can bind UnsagePassword |
+| IsSafeEnabled | if this property is false, we can bind UnsafePassword |
 | UnsafePassword | |
 
 # Method
