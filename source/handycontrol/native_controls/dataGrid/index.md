@@ -10,7 +10,11 @@ title: DataGrid
 | DataGridRowStyle | DataGridRow | Line Style |
 | DataGridColumnHeaderStyle | DataGridColumnHeader | Column Header Style |
 | DataGridRowHeaderStyle | DataGridRowHeader | Row Header Style |
-| TextBlockComboBoxStyle | ComboBox | ComboBox Non-Edit Mode Style |
+| DataGridComboBoxColumnStyle | ComboBox | ComboBox Non-Edit Mode Style |
+| DataGridEditingComboBoxColumnStyle | ComboBox | |
+| DataGridEditingComboBoxColumnStyle.Small | ComboBox | |
+| DataGridEditingTextColumnStyle | TextBox | |
+| DataGridEditingTextColumnStyle.Small | TextBox | |
 | DataGridTextColumnStyle | TextBlock | Default Text Style |
 
 {% note info no-icon %}

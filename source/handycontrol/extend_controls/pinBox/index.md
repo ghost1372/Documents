@@ -14,6 +14,8 @@ public class PinBox : Control
 |-|-|-|-|
 |Password|Password||For security reasons, cannot bind|
 |PasswordChar|Mask character|●||
+|IsSafeEnabled||||
+|UnsafePassword||||
 |Length|Password length|4|The minimum value is 4|
 |SelectionTextBrush||||
 |SelectionOpacity|||||
