@@ -91,7 +91,7 @@ menu:
   #sitemap: /sitemap.xml || fa fa-sitemap
   #commonweal: /404/ || fa fa-heartbeat
   Home: / || fa fa-home
-  HandyControl - 3.4.0:
+  HandyControl - 3.4.2:
     default: /handycontrol/ || fa fa-h-square
     Thanks: /tnx/ || fa fa-user
     Quick start: /quick_start/ || fa fa-h-square
@@ -329,7 +329,7 @@ menu:
       UpdatableMarkupExtension: /updatableMarkupExtension/ ||
     Intellisense:
       default: /intellisense/ || fas fa-brain
-  SettingsUI - 2.1.4:
+  SettingsUI - 2.1.8:
     default: /settingsui/ || fas fa-dice-d20
     Quick start: /quick_start/ || fas fa-dice-d20
     Controls: 
@@ -371,6 +371,7 @@ menu:
       default: /styles/ || fas fa-palette
     tools:
       default: /tools/ || fas fa-tools
+      DynamicLanguage: /dynamicLanguage/ ||
 
 
 
