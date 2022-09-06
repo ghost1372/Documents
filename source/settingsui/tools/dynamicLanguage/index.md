@@ -16,19 +16,23 @@ Create your resources in this format:
 
 `Strings\fa-IR\Resources.resw`
 
-now Create a `Static` Helper Class for example, `DynamicLanguageHelper.cs` and Create a new static Instance of Localizer:
+Go to `App.cs` file and Create a new Instance of Localizer:
 
 ```cs
-public static class DynamicLanguageHelper
+public App()
 {
-    //for UnPackaged App
-    public static string resourcesFolderPath = Path.Combine(Directory.GetCurrentDirectory(), "Strings");
-    public static Localizer Localizer { get; set; } = Localizer.GetCurrent(resourcesFolderPath);
+  InitializeComponent();
+  string resourcesFolderPath = Path.Combine(Directory.GetCurrentDirectory(), "Strings");
+
+  // For packaged app:
+  //string resourcesFolderPath = @"C:\\Projects\\Strings";
+
+  _ = Localizer.Create(resourcesFolderPath);
 }
 ```
 
 {% note warning %}
-this Helper Class only work in `UnPackaged` Mode, for `Packaged` mode you need to change `ResourcesFolderPath`
+for `Packaged` mode you need to change `ResourcesFolderPath`
 {% endnote %}
 
 we need to copy our resources to output next to `Exe` file, so copy this codes and put it in `CSProj` file:
@@ -53,34 +57,36 @@ now we need to Initialize `MainWindow`:
     </Grid>
 </Window>
 ```
+Call `InitializeWindow`:
 
 ```cs
-DynamicLanguageHelper.Localizer.InitializeWindow(Root, Content);
+public MainWindow()
+{
+    this.InitializeComponent();
+    Localizer.Get().InitializeWindow(Root, Content);
+}
 ```
 
 ## Change Language in Runtime
 
 ```cs
- DynamicLanguageHelper.Localizer.TrySetCurrentLanguage("en-US");
- // OR
- DynamicLanguageHelper.Localizer.SetCurrentLanguage("fa-IR");
+Localizer.Get().TrySetCurrentLanguage("en-US");
 ```
 
 {% note warning %}
-if you cant see translation in Pages you need to Call `RunLocalizationOnRegisteredRootElements` method in `Loaded` event in page
+if you cant see translation in Pages after Navigation you need to Call `RunLocalizationOnRegisteredRootElements` or `RunLocalization` method in `Loaded` event in page
 
 {% code lang:csharp %}
 private void DynamicLanguagePage_Loaded(object sender, Microsoft.UI.Xaml.RoutedEventArgs e)
 {
-    DynamicLanguageHelper.Localizer.RunLocalizationOnRegisteredRootElements();
+  Localizer.Get().RunLocalization(Root);
+
+  //OR
+  // Localizer.Get().RunLocalizationOnRegisteredRootElements();
 }
 {% endcode %}
 {% endnote %}
 
 for more info please see [Demo](https://github.com/ghost1372/SettingsUI)
-
-# How to Use with MVVM
-
-for more info please refer to this [Page](https://github.com/AndrewKeepCoding/AK.Toolkit)
 
 ![SettingsUI](https://raw.githubusercontent.com/ghost1372/Resources/main/SettingsUI/Samples/Localization_Demo.gif)
