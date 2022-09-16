@@ -2,7 +2,7 @@
 title: Welcome to SettingsUI
 ---
 
-Windows 11 settings page in WinUI 3 applications ported from Powertoys with useful Helper classes.
+### Experience WinUI 3 quickly and easily with the help of SettingsUI, Everything you need to develop an application is gathered in one place.
 
 # Requirements
 
@@ -45,6 +45,18 @@ Please confirm that your development environment meets the requirements before c
 Open SettingsUI.sln and Build.
 
 See the Demo app to see how to use it
+
+## Available Features
+
+- Dynamic Localization without need to restart Application
+- SystemBackdrop Helper class with the Support of `Mica, MicaAlt and Acrylic`
+- Multiple Custom Controls such as `Windows 11` Settings Page Controls
+- Extensions Methods
+- A lot of useful Helper Classes for working with Window, Application, Taskbar, Resources, Print and more
+- NavigationView Services To implement quick and easy Navigation with AutoSuggestBox and Back Button
+- Custom Styles for Some Controls such as TextBlock and Button.
+- Easy and Quick implementation of `Command` and `INotifyPropertyChanged` with `Observable` and `RelayCommand` classes.
+
 
 ![SettingsUI](https://raw.githubusercontent.com/ghost1372/Resources/main/SettingsUI/0.png)
 
