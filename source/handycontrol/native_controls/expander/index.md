@@ -2,6 +2,13 @@
 title: Expander
 ---
 
+# Styles
+
+|Name|
+|-|
+|ExpanderBaseStyle|
+|Expander.Small|
+
 # ExpanderBaseStyle
 
 Expander Expand Box The default style, which is not recommended for direct use, should always be used by other styles in the BasedOn method.

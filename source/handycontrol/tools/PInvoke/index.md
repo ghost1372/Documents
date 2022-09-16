@@ -128,6 +128,7 @@ We have a lot of WinAPI functions that You can easily use them in your applicati
 |GdipGetImageDecoders|located in Gdip|
 |GdipGetImageEncoders|located in Gdip|
 |GdipSaveImageToStream|located in Gdip|
+|GetActiveWindow||
 
 # InteropValues
 
