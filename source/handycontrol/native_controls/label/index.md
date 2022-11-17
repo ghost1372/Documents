@@ -2,6 +2,23 @@
 title: Label
 ---
 
+# Styles
+
+|Name|
+|-|
+|LabelDefault|
+|LabelDefault.Small|
+|LabelPrimary|
+|LabelPrimary.Small|
+|LabelSuccess|
+|LabelSuccess.Small|
+|LabelInfo|
+|LabelInfo.Small|
+|LabelWarning|
+|LabelWarning.Small|
+|LabelDanger|
+|LabelDanger.Small|
+
 # LabelBaseStyle
 
 The default style of the Label. which is not recommended. It should always be used by other styles based on On.

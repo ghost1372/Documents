@@ -2,6 +2,18 @@
 title: GroupBox
 ---
 
+# Styles
+
+|Name|
+|-|
+|GroupBoxBaseStyle|
+|GroupBoxOriginalBaseStyle|
+|GroupBoxTabBaseStyle|
+|GroupBox.Small|
+|GroupBoxOriginal|
+|GroupBoxTab|
+|GroupBoxTab.Small|
+
 # GroupBoxBaseStyle
 
 The default style of the GroupBox. It is not recommended to use it directly, and it should always be used by other styles as BasedOn.

@@ -27,6 +27,7 @@ public class TabControl : System.Windows.Controls.TabControl
 |IsScrollable|Whether the mouse wheel scroll is supported after the tab overflows|false||
 |ShowOverflowButton|Whether to show the drop-down button after the tab overflows|true||
 |ShowScrollButton|Whether to display scroll buttons|false||
+|CanBeClosedByMiddleButton||||
 
 # Events
 |Event|

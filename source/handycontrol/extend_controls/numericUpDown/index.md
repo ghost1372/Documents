@@ -6,7 +6,7 @@ The NumericUpDown control looks like a pair of arrow buttons and a TextBox that 
 
 ``` CS
 [TemplatePart(Name = ElementTextBox, Type = typeof(DatePickerTextBox))]
-public class DatePicker : System.Windows.Controls.DatePicker, IDataInput
+public class NumericUpDown : Control
 ```
 
 # Create NumericUpDown and set Value

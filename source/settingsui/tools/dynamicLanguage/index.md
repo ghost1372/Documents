@@ -22,17 +22,27 @@ Go to `App.cs` file and Create a new Instance of Localizer:
 public App()
 {
   InitializeComponent();
-  string resourcesFolderPath = Path.Combine(Directory.GetCurrentDirectory(), "Strings");
 
-  // For packaged app:
-  //string resourcesFolderPath = @"C:\\Projects\\Strings";
-
-  _ = Localizer.Create(resourcesFolderPath);
+  ILocalizer localizer = new LocalizerBuilder()
+            // For a packaged app:
+            //.AddResourcesStringsFolder(new LocalizerResourcesStringsFolder(@"C:/Projects/Strings"))
+            // For a non-packaged app:
+            .AddDefaultResourcesStringsFolder()
+            .AddLanguageDictionaries(
+                new List<LanguageDictionary>()
+                {
+                    new LanguageDictionary("ja")
+                    {
+                        new StringResource("ToggleSwitchHeader", "HeaderProperty", "トグルスイッチ"),
+                    }
+                })
+            .Build();
+        Localizer.Set(localizer);
 }
 ```
 
 {% note warning %}
-for `Packaged` mode you need to change `ResourcesFolderPath`
+for `Packaged` mode you need to set `AddResourcesStringsFolder(new LocalizerResourcesStringsFolder(@"C:/Projects/Strings"))`
 {% endnote %}
 
 we need to copy our resources to output next to `Exe` file, so copy this codes and put it in `CSProj` file:
@@ -70,7 +80,7 @@ public MainWindow()
 ## Change Language in Runtime
 
 ```cs
-Localizer.Get().TrySetCurrentLanguage("en-US");
+Localizer.Get().SetLanguage("en-US");
 ```
 
 {% note warning %}

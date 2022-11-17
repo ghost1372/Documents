@@ -13,6 +13,10 @@ title: TitleElement
 | TitlePlacement | Title Alignment |
 | TitleWidth | Title Width |
 | MarginOnTheLeft | Margin On The Left |
+|Padding||
+|MinHeight||
+|MinWidth||
+
 # Use Cases
 
 ## Title

@@ -24,7 +24,10 @@ public class Pagination : Control
 |PageIndex|Page Number|1||
 |MaxPageInterval|The maximum distance between the currently selected button and the left and right direction buttons (4 means 4 buttons apart, if it exceeds, it will be indicated by an ellipsis)|3||
 |IsJumpEnabled|Whether to display the jump box|false||
+|PaginationButtonStyle||||
 |AutoHiding|||||
+
+
 # Events
 |Name|Description|
 |-|-|

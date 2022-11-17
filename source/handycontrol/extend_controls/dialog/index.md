@@ -12,6 +12,8 @@ public class Dialog : ContentControl
 |Property|Description|Default Value|Remarks|
 |-|-|-|-|
 |IsClosed|Is it closed||||
+|MaskCanClose|||||
+|MaskBrush|||||
 
 # Additional attributes
 |Name|Description|

@@ -53,6 +53,7 @@ public class CheckComboBox : ListBox, IDataInput
 |CheckComboBox.Small|
 |CheckComboBoxExtend.Small|
 |CheckComboBoxPlus.Small|
+|CheckComboBoxItem.Small|
 
 # Case
 
