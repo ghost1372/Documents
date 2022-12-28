@@ -91,7 +91,7 @@ menu:
   #sitemap: /sitemap.xml || fa fa-sitemap
   #commonweal: /404/ || fa fa-heartbeat
   Home: / || fa fa-home
-  HandyControl - 3.4.3:
+  HandyControl - 3.4.4:
     default: /handycontrol/ || fa fa-h-square
     Thanks: /tnx/ || fa fa-user
     Quick start: /quick_start/ || fa fa-h-square
@@ -329,9 +329,13 @@ menu:
       UpdatableMarkupExtension: /updatableMarkupExtension/ ||
     Intellisense:
       default: /intellisense/ || fas fa-brain
-  SettingsUI - 2.2.0:
+  SettingsUI - 2.2.3:
     default: /settingsui/ || fas fa-dice-d20
     Quick start: /quick_start/ || fas fa-dice-d20
+    SettingsUI.ContextMenu:
+      default: /contextMenu/ || fas fa-brain
+    SettingsUI.SettingsControls:
+      default: /settingsControls/ || fab fa-intercom
     Controls: 
       default: /controls/ || fab fa-intercom
       CheckBoxWithDescriptionControl: /checkBoxWithDescriptionControl/ ||

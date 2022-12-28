@@ -21,7 +21,7 @@ var myenum = GeneralHelper.GetEnum<ElementTheme>("Dark");
 Check if the internet is connected or not
 
 ```cs
-GeneralHelper.IsNetworkAvailable();
+var isConnected = GeneralHelper.IsNetworkAvailable();
 ```
 
 # GetGeometry
@@ -38,7 +38,7 @@ Icon = new PathIcon { Data = myGeometry },
 
 ```cs
 var color = Application.Current.Resources["SystemAccentColor"];
-var accent = Helper.GetColorFromHex(color.ToString());
+var accent = GeneralHelper.GetColorFromHex(color.ToString());
 ```
 
 # Demo

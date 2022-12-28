@@ -6,13 +6,16 @@ title: Welcome to SettingsUI
 
 # Requirements
 
-![dotnet-require](https://img.shields.io/badge/.net-%3E%3D5.0-brightgreen) ![os-require](https://img.shields.io/badge/OS-%3E%3D%20Windows%2010%20Build%201809-orange) ![IDE-require](https://img.shields.io/badge/IDE-vs2022-red) ![csharp-require](https://img.shields.io/badge/CSharp-Latest-yellow)
+![dotnet-require](https://img.shields.io/badge/.net-%3E=6.0-brightgreen) ![os-require](https://img.shields.io/badge/OS-%3E%3D%20Windows%2010%20Build%201809-orange) ![IDE-require](https://img.shields.io/badge/IDE-vs2022-red) ![csharp-require](https://img.shields.io/badge/CSharp-Latest-yellow)
 
 # Download and Install
 
 |Nuget|Github|
 |-|-|
 |[Nuget](https://www.nuget.org/packages/SettingsUI/)|[Github](https://github.com/ghost1372/SettingsUI)
+|[Nuget](https://www.nuget.org/packages/SettingsUI.ContextMenu/)|[Github](https://github.com/ghost1372/SettingsUI)
+|[Nuget](https://www.nuget.org/packages/SettingsUI.SettingsControls/)|[Github](https://github.com/ghost1372/SettingsUI)
+
 
 {% note warning %}
 Github is generally updated every day and is relatively unsuitable for production.
@@ -28,6 +31,59 @@ After installing, add the following resource to `app.xaml`
 ```xml
 <ResourceDictionary Source="ms-appx:///SettingsUI/Themes/Generic.xaml"/>
 ```
+
+### ContextMenu
+```
+Install-Package SettingsUI.ContextMenu
+```
+
+After installing, add the following codes to `Package.appxmanifest`
+
+```xml
+<Extensions>
+    <desktop4:Extension Category="windows.fileExplorerContextMenus">
+        <desktop4:FileExplorerContextMenus>
+            <desktop5:ItemType Type="Directory"  >
+                <desktop5:Verb Id="CustomMenu" Clsid="46F650E5-9959-48D6-AC13-A9637C5B3787" />
+            </desktop5:ItemType>
+            <desktop5:ItemType Type="*"  >
+                <desktop5:Verb Id="CustomMenu" Clsid="46F650E5-9959-48D6-AC13-A9637C5B3787" />
+            </desktop5:ItemType>
+            <desktop5:ItemType Type="Directory\Background">
+                <desktop5:Verb Id="CustomMenu" Clsid="46F650E5-9959-48D6-AC13-A9637C5B3787" />
+            </desktop5:ItemType>
+        </desktop4:FileExplorerContextMenus>
+    </desktop4:Extension>
+    <com:Extension Category="windows.comServer">
+        <com:ComServer>
+            <com:SurrogateServer  DisplayName="Custome Context Menu">
+                <com:Class Id="46F650E5-9959-48D6-AC13-A9637C5B3787" Path="ContextMenuCustomHost.dll" ThreadingModel="STA"/>
+            </com:SurrogateServer>
+        </com:ComServer>
+    </com:Extension>
+    <uap3:Extension Category="windows.appExecutionAlias">
+        <uap3:AppExecutionAlias>
+            <desktop:ExecutionAlias Alias="App5.exe"/>
+        </uap3:AppExecutionAlias>
+    </uap3:Extension>
+</Extensions>
+```
+
+`change App5.exe to your project name.`
+
+read the docs to see how to use it
+
+### SettingsControls
+```
+Install-Package SettingsUI.SettingsControls
+```
+After installing, add the following resource to app.xaml
+
+```xml
+<ResourceDictionary Source="ms-appx:///SettingsUI.SettingsControls/Themes/Generic.xaml"/>
+```
+See the Demo app to see how to use it
+
 
 # Compile source code
 

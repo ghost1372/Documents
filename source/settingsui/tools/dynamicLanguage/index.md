@@ -77,6 +77,23 @@ public MainWindow()
 }
 ```
 
+now in UIElement you need to set `Uid`:
+
+```xml
+<Page
+    xmlns:loc="using:SettingsUI.Tools">
+
+<Button loc:Localizer.Uid="myButtonId"/>
+
+</Page>
+```
+
+## Get Localization in Code Behind
+
+```cs
+txt.Text = Localizer.Get().GetLocalizedStrings("myButtonId").FirstOrDefault();
+```
+
 ## Change Language in Runtime
 
 ```cs

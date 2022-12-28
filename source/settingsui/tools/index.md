@@ -21,6 +21,7 @@ public class ShellViewModel : Observable
 
 ```cs
 inherited from `ICommand`
+```
 
 ```cs
 private ICommand itemInvokedCommand;
