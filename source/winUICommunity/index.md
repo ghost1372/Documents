@@ -1,8 +1,8 @@
 ---
-title: Welcome to SettingsUI
+title: Welcome to WinUICommunity
 ---
 
-### Experience WinUI 3 quickly and easily with the help of SettingsUI, Everything you need to develop an application is gathered in one place.
+### Experience WinUI 3 quickly and easily with the help of WinUICommunity, Everything you need to develop an application is gathered in one place.
 
 # Requirements
 
@@ -12,9 +12,9 @@ title: Welcome to SettingsUI
 
 |Nuget|Github|
 |-|-|
-|[Nuget](https://www.nuget.org/packages/SettingsUI/)|[Github](https://github.com/ghost1372/SettingsUI)
-|[Nuget](https://www.nuget.org/packages/SettingsUI.ContextMenu/)|[Github](https://github.com/ghost1372/SettingsUI)
-|[Nuget](https://www.nuget.org/packages/SettingsUI.SettingsControls/)|[Github](https://github.com/ghost1372/SettingsUI)
+|[Nuget](https://www.nuget.org/packages/WinUICommunity.SettingsUI/)|[Github](https://github.com/WinUICommunity/SettingsUI)
+|[Nuget](https://www.nuget.org/packages/WinUICommunity.ShellContextMenu/)|[Github](https://github.com/WinUICommunity/ShellContextMenu)
+|[Nuget](https://www.nuget.org/packages/WinUICommunity.Common)|[Github](https://github.com/WinUICommunity/Common)|
 
 
 {% note warning %}
@@ -23,7 +23,7 @@ Github is generally updated every day and is relatively unsuitable for productio
 
 ## Install
 ```
-Install-Package SettingsUI
+Install-Package WinUICommunity.SettingsUI
 ```
 
 After installing, add the following resource to `app.xaml`
@@ -34,7 +34,7 @@ After installing, add the following resource to `app.xaml`
 
 ### ContextMenu
 ```
-Install-Package SettingsUI.ContextMenu
+Install-Package WinUICommunity.ShellContextMenu
 ```
 
 After installing, add the following codes to `Package.appxmanifest`
@@ -73,15 +73,11 @@ After installing, add the following codes to `Package.appxmanifest`
 
 read the docs to see how to use it
 
-### SettingsControls
+### Common
 ```
-Install-Package SettingsUI.SettingsControls
+Install-Package WinUICommunity.Common
 ```
-After installing, add the following resource to app.xaml
 
-```xml
-<ResourceDictionary Source="ms-appx:///SettingsUI.SettingsControls/Themes/Generic.xaml"/>
-```
 See the Demo app to see how to use it
 
 
@@ -98,7 +94,7 @@ Please confirm that your development environment meets the requirements before c
 
 {% endnote %}
 
-Open SettingsUI.sln and Build.
+Open *.sln and Build.
 
 See the Demo app to see how to use it
 

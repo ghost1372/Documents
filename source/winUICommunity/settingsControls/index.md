@@ -1,5 +1,5 @@
 ---
-title: SettingsUI.SettingsControls
+title: WinUICommunity.SettingsUI.SettingsControls
 ---
 
 {% note warning %}
@@ -7,12 +7,12 @@ ported from https://github.com/CommunityToolkit/Labs-Windows
 {% endnote %}
 
 ```
-Install-Package SettingsUI.SettingsControls
+Install-Package WinUICommunity.SettingsUI
 ```
 After installing, add the following resource to app.xaml
 
 ```xml
-<ResourceDictionary Source="ms-appx:///SettingsUI.SettingsControls/Themes/Generic.xaml"/>
+<ResourceDictionary Source="ms-appx:///SettingsUI/Themes/Generic.xaml"/>
 ```
 See the Demo app to see how to use it.
 

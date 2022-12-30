@@ -1,11 +1,11 @@
 ---
-title: SettingsUI.ContextMenu
+title: WinUICommunity.ShellContextMenu
 ---
 
 with this nuget package you can easily add a new Item in Windows 11/10 new Context Menu.
 
 ```
-Install-Package SettingsUI.ContextMenu
+Install-Package WinUICommunity.ShellContextMenu
 ```
 
 After installing, add the following codes to `Package.appxmanifest`
@@ -53,7 +53,7 @@ now Create a new `ContextMenuItem`
 
 ```cs
 
-using SettingsUI.ContextMenu;
+using WinUICommunity.ShellContextMenu;
 
 ContextMenuItem menu = new ContextMenuItem
 {

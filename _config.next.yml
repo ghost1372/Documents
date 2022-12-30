@@ -329,12 +329,12 @@ menu:
       UpdatableMarkupExtension: /updatableMarkupExtension/ ||
     Intellisense:
       default: /intellisense/ || fas fa-brain
-  SettingsUI - 2.2.3:
+  WinUICommunity - 3.0.0:
     default: /settingsui/ || fas fa-dice-d20
     Quick start: /quick_start/ || fas fa-dice-d20
-    SettingsUI.ContextMenu:
+    WinUICommunity.ShellContextMenu:
       default: /contextMenu/ || fas fa-brain
-    SettingsUI.SettingsControls:
+    WinUICommunity.SettingsUI.SettingsControls:
       default: /settingsControls/ || fab fa-intercom
     Controls: 
       default: /controls/ || fab fa-intercom
