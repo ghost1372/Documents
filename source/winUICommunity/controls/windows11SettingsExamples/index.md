@@ -12,7 +12,7 @@ title: Windows 11 Settings Examples
     ModuleTitle="Awake"
     SecondaryLinksHeader="Attribution">
     <controls:SettingsPageControl.ModuleContent>
-        <StackPanel Orientation="Vertical">
+        <StackPanel Orientation="Vertical" ChildrenTransitions="{StaticResource SettingsCardsAnimations}">
             <controls:Setting Header="Enable Awake">
                 <controls:Setting.Icon>
                     <BitmapIcon ShowAsMonochrome="False" UriSource="ms-appx:///Assets/FluentIcons/FluentIconsAwake.png"/>
@@ -118,7 +118,7 @@ title: Windows 11 Settings Examples
     ModuleTitle="Color Picker"
     SecondaryLinksHeader="Attribution">
     <controls:SettingsPageControl.ModuleContent>
-        <StackPanel x:Name="ColorPickerView" Orientation="Vertical">
+        <StackPanel x:Name="ColorPickerView" Orientation="Vertical" ChildrenTransitions="{StaticResource SettingsCardsAnimations}">
             <controls:Setting Header="Enable Color Picker">
                 <controls:Setting.Icon>
                     <BitmapIcon ShowAsMonochrome="False" UriSource="ms-appx:///Assets/FluentIcons/FluentIconsColorPicker.png"/>
@@ -353,7 +353,7 @@ public class ColorFormatModel : Observable
     ModuleImageSource="ms-appx:///Assets/Modules/FancyZones.png"
     ModuleTitle="FancyZones">
     <controls:SettingsPageControl.ModuleContent>
-        <StackPanel Orientation="Vertical">
+        <StackPanel Orientation="Vertical" ChildrenTransitions="{StaticResource SettingsCardsAnimations}">
             <controls:Setting Header="Enable FancyZones">
                 <controls:Setting.Icon>
                     <BitmapIcon ShowAsMonochrome="False" UriSource="ms-appx:///Assets/FluentIcons/FluentIconsFancyZones.png"/>
@@ -555,7 +555,7 @@ public class ColorFormatModel : Observable
                                 ModuleTitle="General"
                                 SecondaryLinksHeader="Related information">
     <controls:SettingsPageControl.ModuleContent>
-        <StackPanel Orientation="Vertical">
+        <StackPanel Orientation="Vertical" ChildrenTransitions="{StaticResource SettingsCardsAnimations}">
             <controls:SettingsGroup Margin="0,-32,0,0"
                                     Header="Version">
                 <controls:Setting Header="v0.45.0"
@@ -703,7 +703,7 @@ public class ColorFormatModel : Observable
         <Style TargetType="ListViewItem" BasedOn="{StaticResource ListViewItemSettingStyle}"/>
     </controls:SettingsPageControl.Resources>
     <controls:SettingsPageControl.ModuleContent>
-        <StackPanel>
+        <StackPanel ChildrenTransitions="{StaticResource SettingsCardsAnimations}">
             <controls:Setting Header="Enable Image Resizer">
                 <controls:Setting.Icon>
                     <BitmapIcon ShowAsMonochrome="False" UriSource="ms-appx:///Assets/FluentIcons/FluentIconsImageResizer.png"/>
@@ -1026,7 +1026,7 @@ public class ImageSize : Observable
     ModuleImageSource="ms-appx:///Assets/Modules/KBM.png"
     ModuleTitle="Keyboard Manager">
     <controls:SettingsPageControl.ModuleContent>
-        <StackPanel Orientation="Vertical">
+        <StackPanel Orientation="Vertical" ChildrenTransitions="{StaticResource SettingsCardsAnimations}">
             <controls:Setting Header="Enable Keyboard Manager">
                 <controls:Setting.Icon>
                     <BitmapIcon ShowAsMonochrome="False" UriSource="ms-appx:///Assets/FluentIcons/FluentIconsKeyboardManager.png"/>
@@ -1088,7 +1088,7 @@ public class ImageSize : Observable
     HeroImage="ms-appx:///Assets/Modules/OOBE/FileExplorer.png"
     Description="These settings allow you to manage your Windows File Explorer custom preview handlers.">
     <controls:OOBEPageControl.PageContent>
-        <StackPanel Orientation="Vertical">
+        <StackPanel Orientation="Vertical" ChildrenTransitions="{StaticResource SettingsCardsAnimations}">
             <TextBlock Text="How to enable"
                         Style="{ThemeResource OobeSubtitleStyle}" />
             <StackPanel Orientation="Horizontal" Spacing="12" Margin="0,24,0,0">
@@ -1114,7 +1114,7 @@ public class ImageSize : Observable
         <Style TargetType="ListViewItem" BasedOn="{StaticResource ListViewItemSettingStyle}"/>
     </controls:SettingsPageControl.Resources>
     <controls:SettingsPageControl.ModuleContent>
-        <StackPanel Orientation="Vertical">
+        <StackPanel Orientation="Vertical" ChildrenTransitions="{StaticResource SettingsCardsAnimations}">
             <controls:Setting Header="Enable PowerToys Run">
                 <controls:Setting.Icon>
                     <BitmapIcon ShowAsMonochrome="False" UriSource="ms-appx:///Assets/FluentIcons/FluentIconsPowerToysRun.png"/>
@@ -1243,7 +1243,7 @@ public class ImageSize : Observable
     ModuleImageSource="ms-appx:///Assets/Modules/PowerPreview.png"
     ModuleTitle="File Explorer">
     <controls:SettingsPageControl.ModuleContent>
-        <StackPanel Orientation="Vertical">
+        <StackPanel Orientation="Vertical" ChildrenTransitions="{StaticResource SettingsCardsAnimations}">
             <InfoBar
                 Title="You need to run as administrator to modify these settings."
                 IsClosable="False"
@@ -1307,7 +1307,7 @@ public class ImageSize : Observable
     ModuleTitle="PowerRename"
     SecondaryLinksHeader="Attribution">
     <controls:SettingsPageControl.ModuleContent>
-        <StackPanel HorizontalAlignment="Stretch" Orientation="Vertical">
+        <StackPanel HorizontalAlignment="Stretch" Orientation="Vertical" ChildrenTransitions="{StaticResource SettingsCardsAnimations}">
             <controls:Setting Header="Enable PowerRename">
                 <controls:Setting.Icon>
                     <BitmapIcon ShowAsMonochrome="False" UriSource="ms-appx:///Assets/FluentIcons/FluentIconsPowerRename.png"/>
@@ -1391,7 +1391,7 @@ public class ImageSize : Observable
     ModuleImageSource="ms-appx:///Assets/Modules/ShortcutGuide.png"
     ModuleTitle="Shortcut Guide">
     <controls:SettingsPageControl.ModuleContent>
-        <StackPanel Orientation="Vertical">
+        <StackPanel Orientation="Vertical" ChildrenTransitions="{StaticResource SettingsCardsAnimations}">
             <controls:Setting Header="Enable Shortcut Guide">
                 <controls:Setting.Icon>
                     <BitmapIcon ShowAsMonochrome="False" UriSource="ms-appx:///Assets/FluentIcons/FluentIconsShortcutGuide.png"/>

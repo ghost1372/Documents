@@ -329,8 +329,8 @@ menu:
       UpdatableMarkupExtension: /updatableMarkupExtension/ ||
     Intellisense:
       default: /intellisense/ || fas fa-brain
-  WinUICommunity - 3.0.0:
-    default: /settingsui/ || fas fa-dice-d20
+  WinUICommunity - 3.0.2:
+    default: /winUICommunity/ || fas fa-dice-d20
     Quick start: /quick_start/ || fas fa-dice-d20
     WinUICommunity.ShellContextMenu:
       default: /contextMenu/ || fas fa-brain

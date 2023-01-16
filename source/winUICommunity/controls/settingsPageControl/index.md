@@ -26,7 +26,7 @@ public sealed partial class SettingsPageControl : UserControl
                                 ModuleTitle="General"
                                 SecondaryLinksHeader="Related information">
     <controls:SettingsPageControl.ModuleContent>
-        <StackPanel Orientation="Vertical">
+        <StackPanel Orientation="Vertical" ChildrenTransitions="{StaticResource SettingsCardsAnimations}">
             <!-- Settings Here -->
         </StackPanel>
     </controls:SettingsPageControl.ModuleContent>

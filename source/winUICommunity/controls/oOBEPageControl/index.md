@@ -22,7 +22,7 @@ public sealed partial class OOBEPageControl : UserControl
     HeroImage="ms-appx:///Assets/Modules/OOBE/FileExplorer.png"
     Description="These settings allow you to manage your Windows File Explorer custom preview handlers.">
     <controls:OOBEPageControl.PageContent>
-        <StackPanel Orientation="Vertical">
+        <StackPanel Orientation="Vertical" ChildrenTransitions="{StaticResource SettingsCardsAnimations}">
             <TextBlock Text="How to enable"
                         Style="{ThemeResource OobeSubtitleStyle}" />
             <StackPanel Orientation="Horizontal" Spacing="12" Margin="0,24,0,0">
