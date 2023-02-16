@@ -8,6 +8,7 @@ The Localizer helps you to localize your app.
 - You (users) can edit localized strings even after deployment
 - You (users) can add new languages even after deployment
 - Use the starndard Resources.resw
+- Support Both Packaged and UnPackaged
 
 # Quick Start
 Create your resources in this format:
@@ -16,65 +17,73 @@ Create your resources in this format:
 
 `Strings\fa-IR\Resources.resw`
 
-Go to `App.cs` file and Create a new Instance of Localizer:
+Go to `App.cs` file and Copy `InitializeLocalizer` method
 
 ```cs
-public App()
-{
-  InitializeComponent();
 
-  ILocalizer localizer = new LocalizerBuilder()
-            // For a packaged app:
-            //.AddResourcesStringsFolder(new LocalizerResourcesStringsFolder(@"C:/Projects/Strings"))
-            // For a non-packaged app:
-            .AddDefaultResourcesStringsFolder()
-            .AddLanguageDictionaries(
-                new List<LanguageDictionary>()
-                {
-                    new LanguageDictionary("ja")
-                    {
-                        new StringResource("ToggleSwitchHeader", "HeaderProperty", "トグルスイッチ"),
-                    }
-                })
-            .Build();
-        Localizer.Set(localizer);
+private static string StringsFolderPath { get; set; } = string.Empty;
+
+private async Task InitializeLocalizer(params string[] languages)
+{
+    // Initialize a "Strings" folder in the "LocalFolder" for the packaged app.
+    if (ApplicationHelper.IsPackaged)
+    {
+        // Create string resources file from app resources if doesn't exists.
+        StorageFolder localFolder = ApplicationData.Current.LocalFolder;
+        StorageFolder stringsFolder = await localFolder.CreateFolderAsync(
+          "Strings",
+            CreationCollisionOption.OpenIfExists);
+        string resourceFileName = "Resources.resw";
+        foreach (var item in languages)
+        {
+            await LocalizerBuilder.CreateStringResourceFileIfNotExists(stringsFolder, item, resourceFileName);
+        }
+
+        StringsFolderPath = stringsFolder.Path;
+    }
+    else
+    {
+        // Initialize a "Strings" folder in the executables folder.
+        StringsFolderPath = Path.Combine(Directory.GetCurrentDirectory(), "Strings");
+        //StorageFolder localFolder = await StorageFolder.GetFolderFromPathAsync(Directory.GetCurrentDirectory());
+        var stringsFolder = await StorageFolder.GetFolderFromPathAsync(StringsFolderPath);
+    }
+
+
+    ILocalizer localizer = await new LocalizerBuilder()
+        .AddStringResourcesFolderForLanguageDictionaries(StringsFolderPath)
+        .SetOptions(options =>
+        {
+            options.DefaultLanguage = "en-US";
+            options.UseUidWhenLocalizedStringNotFound = true;
+        })
+        .Build();
 }
 ```
 
-{% note warning %}
-for `Packaged` mode you need to set `AddResourcesStringsFolder(new LocalizerResourcesStringsFolder(@"C:/Projects/Strings"))`
-{% endnote %}
+now we need to call `InitializeLocalizer` in `OnLaunched` method:
+
+```cs
+
+protected override async void OnLaunched(Microsoft.UI.Xaml.LaunchActivatedEventArgs args)
+{
+    m_window = new MainWindow();
+    
+    await InitializeLocalizer("fa-IR", "en-US");
+
+    m_window.Activate();
+}
+```
 
 we need to copy our resources to output next to `Exe` file, so copy this codes and put it in `CSProj` file:
 
 ```xml
 <!-- Copy the String folder to output directory -->
-  <Target Name="CopyStringResources" AfterTargets="Build">
-    <ItemGroup>
-      <StringResources Include="$(ProjectDir)Strings\**\*.*" />
-    </ItemGroup>
-    <Copy SourceFiles="@(StringResources)" DestinationFiles="$(OutDir)Strings\%(RecursiveDir)%(Filename)%(Extension)" />
-  </Target>
-```
-
-now we need to Initialize `MainWindow`:
-
-```xml
-<!-- in MainWindow set Grid name to Root -->
-<Window>
-    <Grid Name="Root">
-    ...
-    </Grid>
-</Window>
-```
-Call `InitializeWindow`:
-
-```cs
-public MainWindow()
-{
-    this.InitializeComponent();
-    Localizer.Get().InitializeWindow(Root, Content);
-}
+<ItemGroup>
+  <Content Include="Strings\**\*.resw">
+    <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+  </Content>
+</ItemGroup>
 ```
 
 now in UIElement you need to set `Uid`:
@@ -99,20 +108,6 @@ txt.Text = Localizer.Get().GetLocalizedStrings("myButtonId").FirstOrDefault();
 ```cs
 Localizer.Get().SetLanguage("en-US");
 ```
-
-{% note warning %}
-if you cant see translation in Pages after Navigation you need to Call `RunLocalizationOnRegisteredRootElements` or `RunLocalization` method in `Loaded` event in page
-
-{% code lang:csharp %}
-private void DynamicLanguagePage_Loaded(object sender, Microsoft.UI.Xaml.RoutedEventArgs e)
-{
-  Localizer.Get().RunLocalization(Root);
-
-  //OR
-  // Localizer.Get().RunLocalizationOnRegisteredRootElements();
-}
-{% endcode %}
-{% endnote %}
 
 for more info please see [Demo](https://github.com/ghost1372/SettingsUI)
 

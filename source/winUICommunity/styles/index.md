@@ -219,6 +219,7 @@ public class ColorFormatModel : Observable
 |Name|
 |-|
 |GridPanel|
+|GridCardPanel|
 
 ```xml
 <Grid Style="{ThemeResource GridPanel}">
@@ -226,4 +227,68 @@ public class ColorFormatModel : Observable
 </Grid>
 ```
 
+```xml
+<Grid Style="{ThemeResource GridCardPanel}">
+
+</Grid>
+```
+
 ![SettingsUI](https://raw.githubusercontent.com/ghost1372/Resources/main/SettingsUI/Samples/GridPanel.png)
+
+
+# TabViewItem
+|Name|
+|-|
+|TabViewItemRounded|
+
+```xml
+<Grid>
+    <Grid.Resources>
+        <Style TargetType="TabViewItem" BasedOn="{StaticResource TabViewItemRounded}"/>
+    </Grid.Resources>
+    
+    <TabView>
+        <TabViewItem Header="Settings">
+            <TabViewItem.IconSource>
+                <SymbolIconSource Symbol="Setting"/>
+            </TabViewItem.IconSource>
+            
+        </TabViewItem>
+        <TabViewItem Header="History">
+            <TabViewItem.IconSource>
+                <SymbolIconSource Symbol="PostUpdate"/>
+            </TabViewItem.IconSource>
+        </TabViewItem>
+        <TabViewItem Header="Download">
+            <TabViewItem.IconSource>
+                <SymbolIconSource Symbol="Download"/>
+            </TabViewItem.IconSource>
+        </TabViewItem>
+    </TabView>
+</Grid>
+```
+or
+
+```xml
+<TabView>
+    <TabViewItem Header="Settings" Style="{ThemeResource TabViewItemRounded}">
+        <TabViewItem.IconSource>
+            <SymbolIconSource Symbol="Setting"/>
+        </TabViewItem.IconSource>
+        
+    </TabViewItem>
+    <TabViewItem Header="History" Style="{ThemeResource TabViewItemRounded}">
+        <TabViewItem.IconSource>
+            <SymbolIconSource Symbol="PostUpdate"/>
+        </TabViewItem.IconSource>
+    </TabViewItem>
+    <TabViewItem Header="Download" Style="{ThemeResource TabViewItemRounded}">
+        <TabViewItem.IconSource>
+            <SymbolIconSource Symbol="Download"/>
+        </TabViewItem.IconSource>
+    </TabViewItem>
+</TabView>
+
+```
+
+![SettingsUI](https://raw.githubusercontent.com/ghost1372/Resources/main/SettingsUI/Samples/TabViewItemRounded.png)
