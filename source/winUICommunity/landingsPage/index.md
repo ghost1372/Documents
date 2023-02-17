@@ -341,4 +341,114 @@ private void mainLandingsPage_OnItemClick(object sender, RoutedEventArgs e)
 }
 ```
 
+## Enable/Disable Items based on Page Exist
+if you want to control items enable/disable you can do this in 2 way (default is `CheckBasedOnIncludedInBuildProperty`):
+
+### CheckBasedOnIncludedInBuildProperty
+if you choose CheckBasedOnIncludedInBuildProperty, you can simply enable/disable item in `ControlInfoData.json` file just set `IncludedInBuild` to `true` or `false`.
+
+### RealCheckBasedOnUniqeIdPath
+
+if you want the existence of the page to be checked for real, you should use `RealCheckBasedOnUniqeIdPath`, in this case IncludedInBuild property will be ignored
+
+```cs
+mainLandingsPage.GetControlInfoDataAsync("DataModel/ControlInfoData.json", IncludedInBuildMode.RealCheckBasedOnUniqeIdPath);
+```
+
+now you should edit `ControlInfoData.json`:
+first, you should specify application namespace in `ApiNamespace` section
+
+second, you should write your page full path in `UniqueId`
+
+example:
+we have a project called  `TvTime`, and our views is located in `TvTime\Views\SeriesPage.xaml`
+so our `ApiNamespace` is = `TvTime`
+and our  `UniqueId` is = `TvTime.Views.SeriesPage`
+
+```json
+{
+  "Groups": [
+    {
+      "UniqueId": "TvTime",
+      "Title": "TvTime pages",
+      "ApiNamespace": "",
+      "Subtitle": "",
+      "ImagePath": "",
+      "ImageIconPath": "",
+      "Description": "",
+      "IsSpecialSection": false,
+      "Items": [
+        {
+          "UniqueId": "TvTime.Views.AnimesPage",
+          "Title": "Anime",
+          "ApiNamespace": "TvTime",
+          "Subtitle": "Search among anime and download the desired anime",
+          "ImagePath": "ms-appx:///Assets/Images/anime.png",
+          "ImageIconPath": "ms-appx:///Assets/Images/anime.png",
+          "Description": "",
+          "Content": "",
+          "IsNew": false,
+          "IsUpdated": false,
+          "IsPreview": true,
+          "HideSourceCodeAndRelatedControls": true,
+          "Docs": [],
+          "RelatedControls": []
+        },
+        {
+          "UniqueId": "TvTime.Views.MoviesPage",
+          "Title": "Movies",
+          "ApiNamespace": "TvTime",
+          "Subtitle": "Search among Movies and download the desired movie",
+          "ImagePath": "ms-appx:///Assets/Images/movie.png",
+          "ImageIconPath": "ms-appx:///Assets/Images/movie.png",
+          "Description": "",
+          "Content": "",
+          "IsNew": true,
+          "IsUpdated": true,
+          "IsPreview": false,
+          "HideSourceCodeAndRelatedControls": true,
+          "Docs": [],
+          "RelatedControls": []
+        },
+        {
+          "UniqueId": "TvTime.Views.SeriesPage",
+          "Title": "Series",
+          "ApiNamespace": "TvTime",
+          "Subtitle": "Search among Series and download the desired series",
+          "ImagePath": "ms-appx:///Assets/Images/series.png",
+          "ImageIconPath": "ms-appx:///Assets/Images/series.png",
+          "Description": "",
+          "Content": "",
+          "IsNew": true,
+          "IsUpdated": true,
+          "IsPreview": false,
+          "HideSourceCodeAndRelatedControls": true,
+          "Docs": [],
+          "RelatedControls": []
+        },
+        {
+          "UniqueId": "TvTime.Views.ServersPage",
+          "Title": "Servers",
+          "ApiNamespace": "TvTime",
+          "Subtitle": "Add, Update or Remove Servers",
+          "ImagePath": "ms-appx:///Assets/Images/server.png",
+          "ImageIconPath": "ms-appx:///Assets/Images/server.png",
+          "Description": "",
+          "Content": "",
+          "IsNew": true,
+          "IsUpdated": true,
+          "IsPreview": false,
+          "HideSourceCodeAndRelatedControls": true,
+          "Docs": [],
+          "RelatedControls": []
+        }
+      ]
+    }
+  ]
+}
+
+
+```
+
+
 ![LandingsPage](https://raw.githubusercontent.com/ghost1372/Resources/main/LandingsPage/0.png)
