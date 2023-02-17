@@ -336,8 +336,9 @@ private void mainLandingsPage_OnItemClick(object sender, RoutedEventArgs e)
 {
     var args = (ItemClickEventArgs)e;
     var item = (ControlInfoDataItem)args.ClickedItem;
+    Type pageType = Type.GetType(item.UniqueId);
 
-    NavigateToPage(item.UniqueId);
+    NavigateToPage(pageType);
 }
 ```
 
