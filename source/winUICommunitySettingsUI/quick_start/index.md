@@ -7,8 +7,6 @@ title: Quick start
 |Nuget|Github|
 |-|-|
 |[WinUICommunity.SettingsUI](https://www.nuget.org/packages/WinUICommunity.SettingsUI/)|[Github](https://github.com/WinUICommunity/SettingsUI)
-|[WinUICommunity.ShellContextMenu](https://www.nuget.org/packages/WinUICommunity.ShellContextMenu/)|[Github](https://github.com/WinUICommunity/ShellContextMenu)
-|[WinUICommunity.Common](https://www.nuget.org/packages/WinUICommunity.Common)|[Github](https://github.com/WinUICommunity/Common)|
 
 
 {% note warning %}

@@ -14,6 +14,7 @@ public sealed partial class OOBEPageControl : UserControl
 |Description|
 |HeroImage|
 |PageContent|
+|HeroImageHeight|
 
 # Example
 

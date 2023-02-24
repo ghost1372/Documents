@@ -1,36 +1,30 @@
 ---
-title: WinUICommunity.LandingsPage
+title: MainLandingsPage
 ---
 
-Create a landing page in the style of WinUI 3 and WinUI-Gallery very quickly and easily
+in this page we can load only items that is tagged as IsNew, IsUpdated and IsPreview.
 
-{% note warning %}
-ported from https://github.com/microsoft/WinUI-Gallery
-{% endnote %}
+# Events
 
-```
-Install-Package WinUICommunity.LandingsPage
-```
-After installing, add the following resource to app.xaml
+|Name|
+|-|
+|OnItemClick|
 
-```xml
-xmlns:themes="using:WinUICommunity.LandingsPage.Themes"
+# Available Properties
 
-<ResourceDictionary Source="ms-appx:///LandingsPage/Themes/Generic.xaml"/>
-<themes:ItemTemplates/>
-```
-See the Demo app to see how to use it.
+|Name|
+|-|
+|HeaderText|
+|HeaderSubtitleText|
+|HeaderContent|
+|HeaderImage|
+|HeaderImageHeight|
+|HeaderMargin|
+|FooterContent|
+|FooterHeight|
+|FooterMargin|
 
-## Dependencies
-
-This package is based on the following packages
-
-- CommunityToolkit.WinUI.UI
-- CommunityToolkit.WinUI.UI.Animations
-- Microsoft.Graphics.Win2D
-
-# LandingsPage
-
+# Simple Use
 first add:
 
 ```xml
@@ -41,9 +35,9 @@ then use MainLandingsPage:
 
 ```xml
 <controls:MainLandingsPage x:Name="mainLandingsPage" Loaded="mainLandingsPage_Loaded"
-                        HomePageHeaderImage="ms-appx:///Assets/GalleryHeaderImage.png"
-                        Title="Demo App"
-                        Description="Based On WinAppSDK 1.2"
+                        HeaderImage="ms-appx:///Assets/GalleryHeaderImage.png"
+                        HeaderText="Demo App"
+                        HeaderSubtitleText="Based On WinAppSDK 1.2"
                         OnItemClick="mainLandingsPage_OnItemClick">
     <controls:MainLandingsPage.HeaderContent>
         <StackPanel Orientation="Horizontal" Spacing="10">
@@ -81,10 +75,25 @@ then use MainLandingsPage:
             </controls:HeaderTile>
         </StackPanel>
     </controls:MainLandingsPage.HeaderContent>
+
+    <controls:MainLandingsPage.FooterContent>
+        <StackPanel>
+            <TextBlock x:Name="LearnMore" Text="Learn More" Foreground="{ThemeResource ApplicationForegroundThemeBrush}" Style="{StaticResource SubtitleTextBlockStyle}" Margin="0,0,0,12" />
+            <HyperlinkButton Content="Developer Center" NavigateUri="https://developer.microsoft.com/en-us/windows/"/>
+            <HyperlinkButton Content="App Code Samples" NavigateUri="https://docs.microsoft.com/en-us/windows/apps/get-started/samples"/>
+            <HyperlinkButton Content="Windows Template Studio" NavigateUri="https://github.com/microsoft/WindowsTemplateStudio"/>
+        </StackPanel>
+    </controls:MainLandingsPage.FooterContent>
 </controls:MainLandingsPage>
 ```
-if you want to load items to gridview, you need to Create a folder for example `DataModel` then add a new json file `ControlInfoData.json`:
-`DataModel\ControlInfoData.json` note: `(Set BuildAction to Content)`
+
+# Load Items from Json File
+if you want to load items to a gridview, you need to Create a folder for example `DataModel` then add a new json file `ControlInfoData.json`:
+`DataModel\ControlInfoData.json`
+
+{% note warning %}
+Set BuildAction to Content, if you are in a Unpackaged Mode, set CopyToOutput to True
+{% endnote %}
 
 ```json
 {
@@ -92,38 +101,50 @@ if you want to load items to gridview, you need to Create a folder for example `
     {
       "UniqueId": "Features",
       "Title": "Features pages",
+      "SecondaryTitle": "",
       "ApiNamespace": "",
       "Subtitle": "",
       "ImagePath": "",
       "ImageIconPath": "",
       "Description": "",
-      "IsSpecialSection": true,
+      "IsSpecialSection": false,
+      "HideGroup": false,
+      "IsSingleGroup": false,
+      "IsExpanded" : false,
       "Items": [
         {
           "UniqueId": "WinUICommunity.DemoApp.Pages.ApplicationDataContainerPage",
           "Title": "ApplicationDataContainer",
-          "ApiNamespace": "",
+          "SecondaryTitle": "Test SecondaryTitle",
+          "ApiNamespace": "DemoApp",
           "Subtitle": "you can use ApplicationDataContainerHelper for saving and loading application settings.",
           "ImagePath": "ms-appx:///Assets/Modules/PT.png",
           "ImageIconPath": "ms-appx:///Assets/Modules/PT.png",
-          "Description": "",
+          "Description": "test description",
           "Content": "",
           "IsNew": false,
           "IsUpdated": true,
+          "IsPreview": false,
           "IncludedInBuild": true,
-          "HideSourceCodeAndRelatedControls": true,
+          "HideItem": false,
+          "HideSourceCodeAndRelatedControls": false,
           "Docs": [
             {
               "Title": "ApplicationDataContainerPage",
               "Uri": "https://ghost1372.github.io/winUICommunity/helpers/applicationDataContainerHelper/"
             }
           ],
-          "RelatedControls": []
+          "RelatedControls": [
+            "AppBarToggleButton",
+            "AppBarSeparator",
+            "CommandBar"
+          ]
         },
         {
-          "UniqueId": "AppNotificationPage",
+          "UniqueId": "WinUICommunity.DemoApp.Pages.AppNotificationPage",
           "Title": "App Notification",
-          "ApiNamespace": "",
+          "SecondaryTitle": "Test SecondaryTitle",
+          "ApiNamespace": "DemoApp",
           "Subtitle": "you can use AppNotificationPage for Sending Toast Notification.",
           "ImagePath": "ms-appx:///Assets/Modules/PT.png",
           "ImageIconPath": "ms-appx:///Assets/Modules/PT.png",
@@ -133,6 +154,7 @@ if you want to load items to gridview, you need to Create a folder for example `
           "IsUpdated": false,
           "IsPreview": false,
           "IncludedInBuild": true,
+          "HideItem": false,
           "HideSourceCodeAndRelatedControls": true,
           "Docs": [
             {
@@ -145,7 +167,8 @@ if you want to load items to gridview, you need to Create a folder for example `
         {
           "UniqueId": "WinUICommunity.DemoApp.Pages.CheckUpdatePage",
           "Title": "Check Update",
-          "ApiNamespace": "",
+          "ApiNamespace": "DemoApp",
+          "SecondaryTitle": "Test SecondaryTitle",
           "Subtitle": "you can use UpdateHelper for checking application updates from github release page.",
           "ImagePath": "ms-appx:///Assets/Modules/PT.png",
           "ImageIconPath": "ms-appx:///Assets/Modules/PT.png",
@@ -155,6 +178,7 @@ if you want to load items to gridview, you need to Create a folder for example `
           "IsUpdated": true,
           "IsPreview": false,
           "IncludedInBuild": true,
+          "HideItem": false,
           "HideSourceCodeAndRelatedControls": true,
           "Docs": [
             {
@@ -167,7 +191,8 @@ if you want to load items to gridview, you need to Create a folder for example `
         {
           "UniqueId": "WinUICommunity.DemoApp.Pages.CommandObservablePage",
           "Title": "Observable and RelayCommand",
-          "ApiNamespace": "",
+          "ApiNamespace": "DemoApp",
+          "SecondaryTitle": "Test SecondaryTitle",
           "Subtitle": "Observable: inherited from INotifyPropertyChanged. - RelayCommand: inherited from ICommand.",
           "ImagePath": "ms-appx:///Assets/Modules/PT.png",
           "ImageIconPath": "ms-appx:///Assets/Modules/PT.png",
@@ -177,6 +202,7 @@ if you want to load items to gridview, you need to Create a folder for example `
           "IsUpdated": true,
           "IsPreview": false,
           "IncludedInBuild": true,
+          "HideItem": false,
           "HideSourceCodeAndRelatedControls": true,
           "Docs": [],
           "RelatedControls": []
@@ -184,7 +210,8 @@ if you want to load items to gridview, you need to Create a folder for example `
         {
           "UniqueId": "WinUICommunity.DemoApp.Pages.ContentDialogPage",
           "Title": "Content Dialog",
-          "ApiNamespace": "",
+          "ApiNamespace": "DemoApp",
+          "SecondaryTitle": "Test SecondaryTitle",
           "Subtitle": "With the help of ShowAsyncQueue extension you can open multiple ContentDialogs.",
           "ImagePath": "ms-appx:///Assets/Modules/PT.png",
           "ImageIconPath": "ms-appx:///Assets/Modules/PT.png",
@@ -194,6 +221,7 @@ if you want to load items to gridview, you need to Create a folder for example `
           "IsUpdated": true,
           "IsPreview": false,
           "IncludedInBuild": true,
+          "HideItem": false,
           "HideSourceCodeAndRelatedControls": true,
           "Docs": [],
           "RelatedControls": []
@@ -201,7 +229,8 @@ if you want to load items to gridview, you need to Create a folder for example `
         {
           "UniqueId": "WinUICommunity.DemoApp.Pages.DynamicLanguagePage",
           "Title": "Dynamic Language",
-          "ApiNamespace": "",
+          "ApiNamespace": "DemoApp",
+          "SecondaryTitle": "Test SecondaryTitle",
           "Subtitle": "With the help of DynamicLanguage you can create a dynamic multi language app.",
           "ImagePath": "ms-appx:///Assets/Modules/PT.png",
           "ImageIconPath": "ms-appx:///Assets/Modules/PT.png",
@@ -211,6 +240,7 @@ if you want to load items to gridview, you need to Create a folder for example `
           "IsUpdated": true,
           "IsPreview": false,
           "IncludedInBuild": true,
+          "HideItem": false,
           "HideSourceCodeAndRelatedControls": true,
           "Docs": [
             {
@@ -223,7 +253,8 @@ if you want to load items to gridview, you need to Create a folder for example `
         {
           "UniqueId": "WinUICommunity.DemoApp.Pages.InlineAutoCompleteTextBoxPage",
           "Title": "Inline AutoCompleteTextBox",
-          "ApiNamespace": "",
+          "ApiNamespace": "DemoApp",
+          "SecondaryTitle": "Test SecondaryTitle",
           "Subtitle": "Inline AutoCompleteTextBox",
           "ImagePath": "ms-appx:///Assets/Modules/PT.png",
           "ImageIconPath": "ms-appx:///Assets/Modules/PT.png",
@@ -233,6 +264,7 @@ if you want to load items to gridview, you need to Create a folder for example `
           "IsUpdated": true,
           "IsPreview": false,
           "IncludedInBuild": true,
+          "HideItem": false,
           "HideSourceCodeAndRelatedControls": true,
           "Docs": [
             {
@@ -245,7 +277,8 @@ if you want to load items to gridview, you need to Create a folder for example `
         {
           "UniqueId": "WinUICommunity.DemoApp.Pages.SettingsControls",
           "Title": "Settings Controls",
-          "ApiNamespace": "",
+          "ApiNamespace": "DemoApp",
+          "SecondaryTitle": "Test SecondaryTitle",
           "Subtitle": "SettingsControls from Labs",
           "ImagePath": "ms-appx:///Assets/Modules/PT.png",
           "ImageIconPath": "ms-appx:///Assets/Modules/PT.png",
@@ -255,6 +288,7 @@ if you want to load items to gridview, you need to Create a folder for example `
           "IsUpdated": false,
           "IsPreview": false,
           "IncludedInBuild": true,
+          "HideItem": false,
           "HideSourceCodeAndRelatedControls": true,
           "Docs": [
             {
@@ -267,7 +301,8 @@ if you want to load items to gridview, you need to Create a folder for example `
         {
           "UniqueId": "WinUICommunity.DemoApp.Pages.SystemBackdropsPage",
           "Title": "SystemBackdrops",
-          "ApiNamespace": "",
+          "ApiNamespace": "DemoApp",
+          "SecondaryTitle": "Test SecondaryTitle",
           "Subtitle": "you can use SystemBackdropsHelper for accessing Mica and Acrylic Effect for your Window.",
           "ImagePath": "ms-appx:///Assets/Modules/PT.png",
           "ImageIconPath": "ms-appx:///Assets/Modules/PT.png",
@@ -277,6 +312,7 @@ if you want to load items to gridview, you need to Create a folder for example `
           "IsUpdated": true,
           "IsPreview": false,
           "IncludedInBuild": true,
+          "HideItem": false,
           "HideSourceCodeAndRelatedControls": true,
           "Docs": [
             {
@@ -294,13 +330,18 @@ if you want to load items to gridview, you need to Create a folder for example `
       "ApiNamespace": "",
       "Subtitle": "",
       "ImagePath": "",
+      "SecondaryTitle": "Test SecondaryTitle",
       "ImageIconPath": "",
       "Description": "",
+      "HideGroup": false,
+      "IsSingleGroup": false,
+      "IsExpanded" : false,
       "Items": [
         {
           "UniqueId": "WinUICommunity.DemoApp.Pages.OobePage",
           "Title": "Oobe Page",
-          "ApiNamespace": "",
+          "ApiNamespace": "DemoApp",
+          "SecondaryTitle": "Test SecondaryTitle",
           "Subtitle": "Settings Page with a Hero Image",
           "ImagePath": "ms-appx:///Assets/Modules/PT.png",
           "ImageIconPath": "ms-appx:///Assets/Modules/PT.png",
@@ -310,6 +351,7 @@ if you want to load items to gridview, you need to Create a folder for example `
           "IsUpdated": true,
           "IsPreview": false,
           "IncludedInBuild": true,
+          "HideItem": false,
           "Docs": [],
           "RelatedControls": []
         }
@@ -320,12 +362,66 @@ if you want to load items to gridview, you need to Create a folder for example `
 
 ```
 
+## Available Properties in Json (Groups)
+|Name|Example|Detail|
+|-|-|-|
+|UniqueId|WinUICommunity.DemoApp.Pages.ApplicationDataContainerPage|Full address to a Page in Project|
+|Title|Features pages|Top Level Menu Item|
+|SecondaryTitle|anything||
+|ApiNamespace|WinUICommunity.DemoApp|Application Namespace|
+|Subtitle|anything||
+|ImagePath|ms-appx:///Assets/Modules/PT.png||
+|ImageIconPath|ms-appx:///Assets/Modules/PT.png||
+|Description|anything||
+|IsSpecialSection|false||
+|HideGroup|false|Hide or Show a Group with Items|
+|IsSingleGroup|false|If it is true and there is only one group, all items of the group will be added directly to the NavigationView|
+|IsExpanded|true|If it is true NavigationViewItem will be expanded|
+|Items||See Below|
+
+## Available Properties in Json (Items)
+|Name|Example|Detail|
+|-|-|-|
+|UniqueId|WinUICommunity.DemoApp.Pages.ApplicationDataContainerPage|Full address to a Page in Project|
+|Title|Features pages|Top Level Menu Item|
+|SecondaryTitle|anything||
+|ApiNamespace|WinUICommunity.DemoApp|Application Namespace|
+|Subtitle|anything||
+|ImagePath|ms-appx:///Assets/Modules/PT.png||
+|ImageIconPath|ms-appx:///Assets/Modules/PT.png||
+|Description|anything||
+|Content|anything||
+|IsNew|true|if set true you can filter items based on new items|
+|IsUpdated|true|if set true you can filter items based on updated items|
+|IsPreview|true|if set true you can filter items based on preview items|
+|IncludedInBuild|false|if set true item will be enabled|
+|HideItem|false|if set true item will be hide|
+|HideSourceCodeAndRelatedControls|true|under development|
+|Docs||See Below|
+|RelatedControls||See Below|
+
+{% note warning %}
+only one of this proeprties, `IsNew`, `IsUpdated` and `IsPreview` should be set to `true`
+{% endnote %}
+
+## Available Properties in Json (Docs)
+|Name|Example|Detail|
+|-|-|-|
+|Title|anything||
+|Uri|https://ghost1372.github.io||
+
+
+## Available Properties in Json (RelatedControls)
+|Name|Example|Detail|
+|-|-|-|
+||anything|use like string in between ""|
+
 now you need to load items:
 
 ```cs
 private void mainLandingsPage_Loaded(object sender, RoutedEventArgs e)
 {
-    mainLandingsPage.GetControlInfoDataAsync("DataModel/ControlInfoData.json");
+    mainLandingsPage.GetDataAsync("DataModel/ControlInfoData.json");
 }
 ```
 
@@ -343,17 +439,17 @@ private void mainLandingsPage_OnItemClick(object sender, RoutedEventArgs e)
 ```
 
 ## Enable/Disable Items based on Page Exist
-if you want to control items enable/disable you can do this in 2 way (default is `CheckBasedOnIncludedInBuildProperty`):
+if you want to control items enable/disable, you can do this in 2 way (default is `CheckBasedOnIncludedInBuildProperty`):
 
 ### CheckBasedOnIncludedInBuildProperty
-if you choose CheckBasedOnIncludedInBuildProperty, you can simply enable/disable item in `ControlInfoData.json` file just set `IncludedInBuild` to `true` or `false`.
+if you choose CheckBasedOnIncludedInBuildProperty, you can simply enable/disable items in `ControlInfoData.json` file just set `IncludedInBuild` to `true` or `false`.
 
 ### RealCheckBasedOnUniqeIdPath
 
-if you want the existence of the page to be checked for real, you should use `RealCheckBasedOnUniqeIdPath`, in this case IncludedInBuild property will be ignored
+if you want the existence of the page to be checked for real, you should use `RealCheckBasedOnUniqeIdPath`, in this case `IncludedInBuild` property will be ignored
 
 ```cs
-mainLandingsPage.GetControlInfoDataAsync("DataModel/ControlInfoData.json", IncludedInBuildMode.RealCheckBasedOnUniqeIdPath);
+mainLandingsPage.GetDataAsync("DataModel/ControlInfoData.json", IncludedInBuildMode.RealCheckBasedOnUniqeIdPath);
 ```
 
 now you should edit `ControlInfoData.json`:
@@ -378,6 +474,9 @@ and our  `UniqueId` is = `TvTime.Views.SeriesPage`
       "ImageIconPath": "",
       "Description": "",
       "IsSpecialSection": false,
+      "HideGroup": false,
+      "IsSingleGroup": false,
+      "IsExpanded" : false,
       "Items": [
         {
           "UniqueId": "TvTime.Views.AnimesPage",
@@ -391,6 +490,7 @@ and our  `UniqueId` is = `TvTime.Views.SeriesPage`
           "IsNew": false,
           "IsUpdated": false,
           "IsPreview": true,
+          "HideItem": false,
           "HideSourceCodeAndRelatedControls": true,
           "Docs": [],
           "RelatedControls": []
@@ -407,6 +507,7 @@ and our  `UniqueId` is = `TvTime.Views.SeriesPage`
           "IsNew": true,
           "IsUpdated": true,
           "IsPreview": false,
+          "HideItem": false,
           "HideSourceCodeAndRelatedControls": true,
           "Docs": [],
           "RelatedControls": []
@@ -423,6 +524,7 @@ and our  `UniqueId` is = `TvTime.Views.SeriesPage`
           "IsNew": true,
           "IsUpdated": true,
           "IsPreview": false,
+          "HideItem": false,
           "HideSourceCodeAndRelatedControls": true,
           "Docs": [],
           "RelatedControls": []
@@ -439,6 +541,7 @@ and our  `UniqueId` is = `TvTime.Views.SeriesPage`
           "IsNew": true,
           "IsUpdated": true,
           "IsPreview": false,
+          "HideItem": false,
           "HideSourceCodeAndRelatedControls": true,
           "Docs": [],
           "RelatedControls": []
