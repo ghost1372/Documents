@@ -331,7 +331,7 @@ menu:
       default: /intellisense/ || fas fa-brain
   WinUICommunity:
     default: /winUICommunity/ || fas fa-dice-d20
-  WinUICommunity.SettingsUI - 3.1.0:
+  WinUICommunity.SettingsUI - 3.1.1:
     default: /winUICommunitySettingsUI/ || fas fa-dice-d20
     Quick start: /quick_start/ || fas fa-dice-d20
     Controls: 
@@ -350,7 +350,7 @@ menu:
       default: /settingsControls/ || fab fa-intercom
     Styles: 
       default: /styles/ || fas fa-palette
-  WinUICommunity.LandingsPage - 1.3.0:
+  WinUICommunity.LandingsPage - 1.3.3:
       default: /winUICommunityLandingsPage/ || fab fa-intercom
       AllLandingsPage: /allLandingsPage/ ||
       HeaderTile: /headerTile/ ||
@@ -361,7 +361,7 @@ menu:
       SectionPage: /sectionPage/ ||
   WinUICommunity.ShellContextMenu - 3.1.0:
       default: /winUICommunityShellContextMenu/ || fas fa-brain
-  WinUICommunity.Common - 3.2.0:
+  WinUICommunity.Common - 3.2.2:
       default: /winUICommunityCommon/ || fas fa-tools
       Extensions: 
         default: /extensions/ || fas fa-tools

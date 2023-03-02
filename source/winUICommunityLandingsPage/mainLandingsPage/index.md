@@ -378,6 +378,7 @@ Set BuildAction to Content, if you are in a Unpackaged Mode, set CopyToOutput to
 |IsSingleGroup|false|If it is true and there is only one group, all items of the group will be added directly to the NavigationView|
 |IsExpanded|true|If it is true NavigationViewItem will be expanded|
 |Items||See Below|
+|InfoBadge||See Below|
 
 ## Available Properties in Json (Items)
 |Name|Example|Detail|
@@ -399,9 +400,10 @@ Set BuildAction to Content, if you are in a Unpackaged Mode, set CopyToOutput to
 |HideSourceCodeAndRelatedControls|true|under development|
 |Docs||See Below|
 |RelatedControls||See Below|
+|InfoBadge||See Below|
 
 {% note warning %}
-only one of this proeprties, `IsNew`, `IsUpdated` and `IsPreview` should be set to `true`
+only one of this proeprties `IsNew`, `IsUpdated` and `IsPreview` can be `true`
 {% endnote %}
 
 ## Available Properties in Json (Docs)
@@ -415,6 +417,20 @@ only one of this proeprties, `IsNew`, `IsUpdated` and `IsPreview` should be set 
 |Name|Example|Detail|
 |-|-|-|
 ||anything|use like string in between ""|
+
+## InfoBadge
+|Name|Default|Detail|
+|-|-|-|
+|BadgeValue|null|you should set an integer value like: 10 in a string format (we convert string to int internally) also you should set `BadgeStyle` to one of the `AttentionValueInfoBadgeStyle, InformationalValueInfoBadgeStyle, SuccessValueInfoBadgeStyle, CautionValueInfoBadgeStyle, CriticalValueInfoBadgeStyle`|
+|BadgeStyle|AttentionValueInfoBadgeStyle|`AttentionDotInfoBadgeStyle, AttentionIconInfoBadgeStyle, AttentionValueInfoBadgeStyle, InformationalDotInfoBadgeStyle, InformationalIconInfoBadgeStyle, InformationalValueInfoBadgeStyle, SuccessDotInfoBadgeStyle, SuccessIconInfoBadgeStyle, SuccessValueInfoBadgeStyle, CautionDotInfoBadgeStyle, CautionIconInfoBadgeStyle, CautionValueInfoBadgeStyle, CriticalDotInfoBadgeStyle, CriticalIconInfoBadgeStyle, CriticalValueInfoBadgeStyle`you should set correct style if you want to use BadgeValue or Icon or Dot|
+|HideNavigationViewInfoBadge|false||
+|BadgeSymbolIcon|null|for example: `Sync` , we will convert your string to Symbol so please write correct symbol name|
+|BadgeBitmapIcon|null|for example: `ms-appx:///Assets/Modules/PT.png` you should set BadgeStyle to one of the AttentionIconInfoBadgeStyle, InformationalIconInfoBadgeStyle, SuccessIconInfoBadgeStyle, CautionIconInfoBadgeStyle, CriticalIconInfoBadgeStyle |
+|BadgeFontIconGlyph|null|for example: `E710` , you should set BadgeStyle to one of the AttentionIconInfoBadgeStyle, InformationalIconInfoBadgeStyle, SuccessIconInfoBadgeStyle, CautionIconInfoBadgeStyle, CriticalIconInfoBadgeStyle |
+|BadgeFontIconFontName|null|if you are using `BadgeFontIconGlyph` you can set FontName for using glyphs|
+|HideBadge|false||
+|BadgeWidth|||
+|BadgeHeight|||
 
 now you need to load items:
 
