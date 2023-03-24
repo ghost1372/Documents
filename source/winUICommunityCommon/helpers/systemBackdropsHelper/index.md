@@ -4,16 +4,16 @@ title: SystemBackdropsHelper
 
 you can use `SystemBackdropsHelper` for accessing Mica and Acrylic Effect for your Window.
 
-# ThemeHelper
+# ThemeManager
 
-if you want to Mica/Acrylic effect change with Windows/Application theme (Dark/Light Mode) you can use `ThemeHelper`:
+if you want to Mica/Acrylic effect change with Windows/Application theme (Dark/Light Mode) you can use `ThemeManager`:
 
 ```cs
-ThemeHelper.Initialize(window, BackdropType.Mica);
+ThemeManager.Initialize(window, BackdropType.Mica);
 ```
 
 {% note info %}
-for more info, please see [here](https://ghost1372.github.io/settingsui/helpers/themeHelper/)
+for more info, please see [here](https://ghost1372.github.io/winUICommunityCommon/tools/themeManager/)
 {% endnote %}
 
 # Using Without ThemeHelper
