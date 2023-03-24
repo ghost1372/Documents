@@ -19,6 +19,7 @@ public class RunningBlock : ContentControl
 |Duration|The time required to roll a cycle|5s||
 |Speed|Scrolling speed|NaN|If a value is set, it will override the value of Duration|
 |IsRunning|Is it rolling|true||
+|RunningDirection||||
 |AutoReverse|Whether to reverse the scrolling|false|||
 
 # Case

@@ -16,6 +16,7 @@ title: TitleElement
 |Padding||
 |MinHeight||
 |MinWidth||
+|MarginOnTheTop||
 
 # Use Cases
 

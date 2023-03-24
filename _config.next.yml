@@ -91,7 +91,7 @@ menu:
   #sitemap: /sitemap.xml || fa fa-sitemap
   #commonweal: /404/ || fa fa-heartbeat
   Home: / || fa fa-home
-  HandyControl - 3.4.4:
+  HandyControl - 3.4.5:
     default: /handycontrol/ || fa fa-h-square
     Thanks: /tnx/ || fa fa-user
     Quick start: /quick_start/ || fa fa-h-square
@@ -121,6 +121,7 @@ menu:
       ImageAttach: /imageAttach/ ||
       InfoElement: /infoElement/ ||
       LinkElement : /linkElement/ ||
+      ListBoxAttach: /listboxAttach/ ||
       MenuAttach: /menuAttach/ ||
       MenuTopLineAttach: /menuTopLineAttach/ ||
       PanelElement: /panelElement/ ||
@@ -131,6 +132,7 @@ menu:
       TextBlockAttach : /textBlockAttach/ ||
       TipElement: /tipElement/ ||
       TitleElement: /titleElement/ ||
+      ToggleButtonAttach: /toggleButtonAttach/ ||
       VisualElement: /visualElement/ ||
       WindowAttach: /windowAttach/ ||
     Native control:
@@ -331,7 +333,7 @@ menu:
       default: /intellisense/ || fas fa-brain
   WinUICommunity:
     default: /winUICommunity/ || fas fa-dice-d20
-  WinUICommunity.SettingsUI - 3.1.1:
+  WinUICommunity.SettingsUI - 3.2.3:
     default: /winUICommunitySettingsUI/ || fas fa-dice-d20
     Quick start: /quick_start/ || fas fa-dice-d20
     Controls: 
@@ -350,7 +352,7 @@ menu:
       default: /settingsControls/ || fab fa-intercom
     Styles: 
       default: /styles/ || fas fa-palette
-  WinUICommunity.LandingsPage - 1.3.3:
+  WinUICommunity.LandingsPage - 1.3.6:
       default: /winUICommunityLandingsPage/ || fab fa-intercom
       AllLandingsPage: /allLandingsPage/ ||
       HeaderTile: /headerTile/ ||
@@ -359,9 +361,9 @@ menu:
       MainLandingsPage: /mainLandingsPage/ ||
       PageHeader: /pageHeader/ ||
       SectionPage: /sectionPage/ ||
-  WinUICommunity.ShellContextMenu - 3.1.0:
+  WinUICommunity.ShellContextMenu - 3.1.2:
       default: /winUICommunityShellContextMenu/ || fas fa-brain
-  WinUICommunity.Common - 3.2.2:
+  WinUICommunity.Common - 3.2.6:
       default: /winUICommunityCommon/ || fas fa-tools
       Extensions: 
         default: /extensions/ || fas fa-tools
@@ -391,6 +393,7 @@ menu:
       tools:
         default: /tools/ || fas fa-tools
         DynamicLanguage: /dynamicLanguage/ ||
+        ThemeManager: /themeManager/ ||
 
 
 

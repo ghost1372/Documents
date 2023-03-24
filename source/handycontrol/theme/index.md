@@ -146,6 +146,15 @@ ThemeManager.Current.SystemThemeChanged += OnSystemThemeChanged;
 ![Themes](https://user-images.githubusercontent.com/9213496/104836729-20619600-58c5-11eb-8d53-4b0485363016.gif)
 
 
+# Change Application Theme with System (App) Theme Change
+If `UsingSystemAppTheme` is enabled in `Xaml (ThemeResources)` or `C# code (ThemeManager)` (default is `false`), By changing the Windows App theme (Light/Dark), the theme of the program also changes automatically.
+
+## Xaml
+```xml
+<hc:ThemeResources UsingSystemAppTheme="true"/>
+```
+
+
 # ThemeDictionaries (Override predefined colors)
 You can overwrite predefined resources in ThemeDictionaries, Note that you need to know the resource key to override it.
 also you can change your colors and styles according to the theme of the program.
@@ -180,5 +189,19 @@ See <ins>**[here](https://ghost1372.github.io/handycontrol/theme/colorPreset/)**
 # Enable IntelliSense for XAML resources
 See <ins>**[here](https://ghost1372.github.io/handycontrol/intellisense/)**</ins>
 
+
+# Theme Changing Animation
+
+When you are changing the theme, call the `AnimateTheme` before and after the Theme Changing:
+
+
+```cs
+ThemeAnimationHelper.AnimateTheme(HandyControlDemo.MainWindow.Instance, ThemeAnimationHelper.SlideDirection.Top, 0.3, 1, 0.5);
+
+ThemeManager.Current.ApplicationTheme = ApplicationTheme.Dark;
+
+ThemeAnimationHelper.AnimateTheme(HandyControlDemo.MainWindow.Instance, ThemeAnimationHelper.SlideDirection.Bottom, 0.3, 0.5, 1);
+
+```
 
 ![Themes](https://user-images.githubusercontent.com/9213496/101981825-d1509180-3c84-11eb-9dd9-61911ce84d1b.gif)

@@ -30,6 +30,7 @@ public class Dialog : ContentControl
 | Unregister(string, Panel) | Unregister the message mark for the specified element |
 | Unregister(Panel) | Unregister if the element is registered with a message mark |
 | Unregister(string) | Unregister if the message is marked with the corresponding element |
+| Close||
 
 # Case
 ## Basic usage

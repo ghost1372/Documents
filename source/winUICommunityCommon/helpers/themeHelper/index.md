@@ -4,6 +4,10 @@ title: ThemeHelper
 
 You can simplify the operation of saving, retrieving and selecting the Application theme. All operations are performed automatically.
 
+{% note warning %}
+ThemeHelper is Deprecated, please use new ThemeManager [here](https://ghost1372.github.io/winUICommunityCommon/tools/themeManager)
+{% endnote %}
+
 first of all, `Initialize` ThemeHelper (Theme retrieving is done automatically by the Initialize method):
 
 # Initialize
@@ -113,4 +117,4 @@ ThemeHelper.ChangeTheme(ElementTheme.Dark);
 ```
 
 # Demo
-you can run [demo](https://github.com/ghost1372/SettingsUI) and see this feature.
+you can run [demo](https://github.com/WinUICommunity/DemoApp) and see this feature.

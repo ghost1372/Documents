@@ -72,11 +72,6 @@ You can add Headers and Placeholders to the DatePicker to indicate to the user w
 | DisplayDateTime | Get or set the date to be displayed |
 | IsDropDownOpen | Gets or sets a value indicating whether the drop-down is on or off Calendar |
 | Text | Get the text displayed by **DateTimePicker**, or set the selected date and time |
-| VerifyFunc | Get or Set Data Validation Delegation |
-| IsError | Get or set whether the data is wrong |
-| ErrorStr | Get or Set Error Alert |
-| TextType | Get or Set Text Type |
-| ShowClearButton | Gets or sets whether to show the clear button |
 |SelectionTextBrush||
 |SelectionOpacity||
 |SelectionBrush||

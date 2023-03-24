@@ -86,17 +86,7 @@ You can add Headers and Placeholders to the DatePicker to indicate to the user w
 | DisplayTime | Get or set the time to be displayed |
 | IsDropDownOpen | Gets or sets a value that indicates whether the pull-down clock is turned on or off |
 | Text | Get the text displayed by ** TimePicker ** or set the selected time |
-| VerifyFunc | Get or Set Data Validation Delegation |
-| IsError | Get or set whether the data is wrong |
-| ErrorStr | Get or Set Error Alert |
-| TextType | Get or Set Text Type |
-| ShowClearButton | Gets or sets whether to show the clear button |
 |SelectionTextBrush||
 |SelectionOpacity||
 |SelectionBrush||
 |CaretBrushProperty||
-
-# Method
-| Method | Description |
-| ---------------- | ------------------ |
-| VerifyData () | Verify Data |

@@ -15,7 +15,7 @@ public class ToggleBlock : Control
 |CheckedContent|The content displayed when selected|||
 |UnCheckedContent|The content displayed when unchecked|||
 |IndeterminateContent|The content displayed when the selected state is unknown||||
-
+|ToggleGesture|||||
 # Case
 
 ```xml

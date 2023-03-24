@@ -271,3 +271,93 @@ You can use the property `TabStripPlacement` to set the position of the header t
     <TabItem Header="Test" Style={StaticResource TabItemTransparentStyle}>
 </TabControl>
 ```
+
+# TabControlSliding
+# TabItemSliding
+
+```xaml
+<TabControl SelectedIndex="3" Style="{StaticResource TabControlSliding}">
+    <TabItem Header="Title" HeaderStringFormat="{}{0}1">
+        <Border>
+            <TextBlock Style="{StaticResource TextBlockLargeBold}">
+                <Run Text="Text" />
+                <Run Text="1" />
+            </TextBlock>
+        </Border>
+    </TabItem>
+    <TabItem Header="Title" HeaderStringFormat="{}{0}22" IsEnabled="False">
+        <Border>
+            <TextBlock Style="{StaticResource TextBlockLargeBold}">
+                <Run Text="Text" />
+                <Run Text="2" />
+            </TextBlock>
+        </Border>
+    </TabItem>
+    <TabItem Header="Title" HeaderStringFormat="{}{0}333">
+        <Border>
+            <TextBlock Style="{StaticResource TextBlockLargeBold}">
+                <Run Text="Text" />
+                <Run Text="3" />
+            </TextBlock>
+        </Border>
+    </TabItem>
+    <TabItem Header="Title" HeaderStringFormat="{}{0}4444">
+        <Border>
+            <TextBlock Style="{StaticResource TextBlockLargeBold}">
+                <Run Text="Text" />
+                <Run Text="4" />
+            </TextBlock>
+        </Border>
+    </TabItem>
+    <TabItem Header="Title" HeaderStringFormat="{}{0}55555">
+        <Border>
+            <TextBlock Style="{StaticResource TextBlockLargeBold}">
+                <Run Text="Text" />
+                <Run Text="5" />
+            </TextBlock>
+        </Border>
+    </TabItem>
+</TabControl>
+<TabControl Style="{StaticResource TabControlSliding}" TabStripPlacement="Bottom">
+    <TabItem Header="Title" HeaderStringFormat="{}{0}1">
+        <Border>
+            <TextBlock Style="{StaticResource TextBlockLargeBold}">
+                <Run Text="Text" />
+                <Run Text="1" />
+            </TextBlock>
+        </Border>
+    </TabItem>
+    <TabItem Header="Title" HeaderStringFormat="{}{0}22" IsEnabled="False">
+        <Border>
+            <TextBlock Style="{StaticResource TextBlockLargeBold}">
+                <Run Text="Text" />
+                <Run Text="2" />
+            </TextBlock>
+        </Border>
+    </TabItem>
+    <TabItem Header="Title" HeaderStringFormat="{}{0}333">
+        <Border>
+            <TextBlock Style="{StaticResource TextBlockLargeBold}">
+                <Run Text="Text" />
+                <Run Text="3" />
+            </TextBlock>
+        </Border>
+    </TabItem>
+    <TabItem Header="Title" HeaderStringFormat="{}{0}4444">
+        <Border>
+            <TextBlock Style="{StaticResource TextBlockLargeBold}">
+                <Run Text="Text" />
+                <Run Text="4" />
+            </TextBlock>
+        </Border>
+    </TabItem>
+    <TabItem Header="Title" HeaderStringFormat="{}{0}55555">
+        <Border>
+            <TextBlock Style="{StaticResource TextBlockLargeBold}">
+                <Run Text="Text" />
+                <Run Text="5" />
+            </TextBlock>
+        </Border>
+    </TabItem>
+</TabControl>
+```

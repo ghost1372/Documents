@@ -59,11 +59,6 @@ You can add Headers and Placeholders to the PasswordBox to indicate to the user 
 | ShowEyeButton | Get or set whether to show an "eye" button. Click to display the password. |
 | ShowPassword | Get or set whether to show the password. |
 | Text | Get the text displayed by **TimePicker**, or set the selected time |
-| VerifyFunc | Get or Set Data Validation Delegation |
-| IsError | Get or set whether the data is wrong |
-| ErrorStr | Get or Set Error Alert |
-| TextType | Get or Set Text Type |
-| ShowClearButton | Gets or sets whether to show the clear button |
 | SelectionOpacity | |
 | CaretBrush | |
 | SelectionTextBrush | |

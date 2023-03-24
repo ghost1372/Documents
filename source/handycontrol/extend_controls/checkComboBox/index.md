@@ -13,11 +13,6 @@ public class CheckComboBox : ListBox, IDataInput
 # Attributes
 |Property|Description|Default Value|Remarks|
 |-|-|-|-|
-|VerifyFunc|Data Verification Delegation|||
-|IsError|Is the data wrong|false||
-|ErrorStr|Error prompt|||
-|TextType|Text Type|||
-|ShowClearButton|Whether to show the clear button|false||
 |MaxDropDownHeight|The maximum height of the drop-down content|||
 |IsDropDownOpen|Whether the drop-down box is expanded|false||
 |TagStyle|Check mark style|||
@@ -35,11 +30,6 @@ public class CheckComboBox : ListBox, IDataInput
 |TitleElement.TitlePlacement|Title Alignment|TitlePlacementType.Top||
 |TitleElement.TitleWidth|TitleWidth|120||
 |DropDownElement.ConsistentWidth|Whether the drop-down content is the same as the width of the drop-down box|false|||
-
-# Method
-|Method|Description|Remarks|
-|-|-|-|
-|VerifyData|Verify Data|Verification can be triggered manually|
 
 # Style
 |Style|Description|
