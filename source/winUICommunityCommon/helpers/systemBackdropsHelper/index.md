@@ -16,7 +16,7 @@ ThemeManager.Initialize(window, BackdropType.Mica);
 for more info, please see [here](https://ghost1372.github.io/winUICommunityCommon/tools/themeManager/)
 {% endnote %}
 
-# Using Without ThemeHelper
+# Using Without ThemeManager
 you can use `SystemBackdropsHelper`
 
 ```cs
