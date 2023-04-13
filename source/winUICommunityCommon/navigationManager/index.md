@@ -7,6 +7,7 @@ Easily implement a `NavigationView` With/Without `Json` file (we read navigation
 # NavigationViewOptions
 
 |Name|Default|Remark|
+|-|-|-|
 |DefaultPage|null|if you set DefaultPage, after running application, automatically navigate to this page|
 |SettingsPage|null|if you set SettingsPage, when user click on Settings Button, will be navigated to settingsPage|
 |JsonOptions|null|if you want to use json file use this option|

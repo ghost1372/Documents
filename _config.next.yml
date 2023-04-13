@@ -333,7 +333,42 @@ menu:
       default: /intellisense/ || fas fa-brain
   WinUICommunity:
     default: /winUICommunity/ || fas fa-dice-d20
-  WinUICommunity.SettingsUI - 4.0.0:
+  Common - 4.0.0:
+    default: /winUICommunityCommon/ || fas fa-tools
+    DynamicLanguage: /dynamicLanguage/ || fas fa-tools
+    Extensions: 
+      default: /extensions/ || fas fa-tools
+    Helpers: 
+      default: /helpers/ || fas fa-tools
+      ApplicationHelper: /applicationHelper/ ||
+      AppNotification: /appNotification/ ||
+      AutoSuggestBoxHelper: /autoSuggestBoxHelper/ ||
+      INIHelper: /iniHelper/ ||
+      OSVersionHelper: /osVersionHelper/ ||
+      PrintHelper: /printHelper/ ||
+      ResourceHelper: /resourceHelper/ ||
+      TaskbarHelper: /taskbarHelper/ ||
+      TitleBarHelper: /titleBarHelper/ ||
+      UpdateHelper: /updateHelper/ ||
+      VersionHelper: /versionHelper/ ||
+      VisualHelper: /visualHelper/ ||
+      WindowHelper: /windowHelper/ ||
+    NavigationManager: /navigationManager/ || fas fa-tools
+    Services: 
+      default: /services/ || fas fa-tools
+    ThemeManager: /themeManager/ || fas fa-tools
+    tools:
+      default: /tools/ || fas fa-tools
+  LandingsPage - 2.0.0:
+      default: /winUICommunityLandingsPage/ || fab fa-intercom
+      AllLandingsPage: /allLandingsPage/ ||
+      HeaderTile: /headerTile/ ||
+      ItemPage: /itemPage/ ||
+      ItemsPageBase: /itemsPageBase/ ||
+      MainLandingsPage: /mainLandingsPage/ ||
+      PageHeader: /pageHeader/ ||
+      SectionPage: /sectionPage/ ||
+  SettingsUI - 4.0.0:
     default: /winUICommunitySettingsUI/ || fas fa-dice-d20
     Quick start: /quick_start/ || fas fa-dice-d20
     Controls: 
@@ -352,43 +387,9 @@ menu:
       default: /settingsControls/ || fab fa-intercom
     Styles: 
       default: /styles/ || fas fa-palette
-  WinUICommunity.LandingsPage - 2.0.0:
-      default: /winUICommunityLandingsPage/ || fab fa-intercom
-      AllLandingsPage: /allLandingsPage/ ||
-      HeaderTile: /headerTile/ ||
-      ItemPage: /itemPage/ ||
-      ItemsPageBase: /itemsPageBase/ ||
-      MainLandingsPage: /mainLandingsPage/ ||
-      PageHeader: /pageHeader/ ||
-      SectionPage: /sectionPage/ ||
-  WinUICommunity.ShellContextMenu - 4.0.0:
+  ShellContextMenu - 4.0.0:
       default: /winUICommunityShellContextMenu/ || fas fa-brain
-  WinUICommunity.Common - 4.0.0:
-      default: /winUICommunityCommon/ || fas fa-tools
-      Extensions: 
-        default: /extensions/ || fas fa-tools
-      Helpers: 
-        default: /helpers/ || fas fa-tools
-        ApplicationHelper: /applicationHelper/ ||
-        AppNotification: /appNotification/ ||
-        AutoSuggestBoxHelper: /autoSuggestBoxHelper/ ||
-        INIHelper: /iniHelper/ ||
-        NavigationManager: /navigationManager/ ||
-        OSVersionHelper: /osVersionHelper/ ||
-        PrintHelper: /printHelper/ ||
-        ResourceHelper: /resourceHelper/ ||
-        TaskbarHelper: /taskbarHelper/ ||
-        TitleBarHelper: /titleBarHelper/ ||
-        UpdateHelper: /updateHelper/ ||
-        VersionHelper: /versionHelper/ ||
-        VisualHelper: /visualHelper/ ||
-        WindowHelper: /windowHelper/ ||
-      Services: 
-        default: /services/ || fas fa-tools
-      tools:
-        default: /tools/ || fas fa-tools
-        DynamicLanguage: /dynamicLanguage/ ||
-        ThemeManager: /themeManager/ ||
+        
 
 
 
@@ -411,7 +412,7 @@ sidebar:
   # Manual define the sidebar width. If commented, will be default for:
   # Muse | Mist: 320
   # Pisces | Gemini: 240
-  width: 350
+  width: 270
 
   # Sidebar Display (only for Muse | Mist), available values:
   #  - post    expand on posts automatically. Default.
