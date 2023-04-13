@@ -6,6 +6,7 @@ We've made it easy to use the  [customized Windows title bar](https://docs.micro
 
 ![SettingsUI](https://raw.githubusercontent.com/ghost1372/Resources/main/SettingsUI/Samples/TitleBar.png)
 
+# TitleBar in Window
 first add following xaml in your MainWindow:
 
 ```xml
@@ -45,12 +46,45 @@ first add following xaml in your MainWindow:
 </Grid>
 ```
 
-now you can Initialize title bar:
+now you can Initialize titlebar:
 ```cs
 public MainWindow()
 {
     this.InitializeComponent();
-    TitleBarHelper.Initialize(this, TitleTextBlock, AppTitleBar, LeftPaddingColumn, IconColumn, TitleColumn, LeftDragColumn, SearchColumn, RightDragColumn, RightPaddingColumn);
+    var titleBarHelper = new TitleBarHelper(this, TitleTextBlock, AppTitleBar, LeftPaddingColumn, IconColumn, TitleColumn, LeftDragColumn, SearchColumn, RightDragColumn, RightPaddingColumn);
+}
+```
+
+# TabView with TitleBar
+use TabView in TitleBar
+
+```xml
+<Grid>
+    <TabView x:Name="tabView">
+        <TabView.TabStripFooter>
+            <Grid x:Name="CustomDragRegion"
+                  IsHitTestVisible="False" />
+        </TabView.TabStripFooter>
+        <TabView.TabItems>
+            <TabViewItem Header="TabItem1"
+                         IsClosable="False">
+                <TextBlock Text="Item 1"></TextBlock>
+            </TabViewItem>
+            <TabViewItem Header="TabItem2">
+                <Button x:Name="myButton">Click Me</Button>
+            </TabViewItem>
+            <TabViewItem Header="TabItem3"></TabViewItem>
+            <TabViewItem Header="TabItem4"></TabViewItem>
+        </TabView.TabItems>
+    </TabView>
+</Grid>
+```
+now you can Initialize titlebar:
+```cs
+public MainWindow()
+{
+    this.InitializeComponent();
+    var titleBarHelper = new TitleBarHelper(this, tabView, CustomDragRegion);
 }
 ```
 
