@@ -19,6 +19,15 @@ ContentDialog dialog = new ContentDialog()
 var result = await dialog.ShowAsyncQueue();
 ```
 
+# ShowAsyncDraggable
+# ShowAsyncQueueDraggable
+
 # DependencyObjectExtensions
 
 # FrameworkElementExtensions
+
+# DictionaryExtensions
+
+# ListExtensions
+
+# MergedDictionariesExtensions

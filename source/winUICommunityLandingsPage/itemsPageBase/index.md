@@ -24,8 +24,7 @@ in this example we use ItemsPageBase class for creating a LandingsPage
     x:Class="WinUICommunity.LandingsPage.Controls.MainLandingsPage"
     xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-    xmlns:controls="using:WinUICommunity.LandingsPage.Controls"
-    xmlns:data="using:WinUICommunity.Shared.DataModel"
+    xmlns:controls="using:WinUICommunity"
     HighContrastAdjustment="None"
     NavigationCacheMode="Enabled">
 
@@ -143,7 +142,7 @@ in this example we use ItemsPageBase class for creating a LandingsPage
             <GridView.GroupStyle>
                 <GroupStyle>
                     <GroupStyle.HeaderTemplate>
-                        <DataTemplate x:DataType="data:GroupInfoList">
+                        <DataTemplate x:DataType="controls:GroupInfoList">
                             <TextBlock
                                 x:Name="pageSubtitle"
                                 Margin="4,32,0,0"

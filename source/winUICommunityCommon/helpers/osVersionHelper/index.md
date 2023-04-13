@@ -8,8 +8,10 @@ title: OSVersionHelper
 |-|
 |IsWindows10_1809|
 |IsWindows10_1809_OrGreater|
-|IsWindows11|
-|IsWindows11_OrGreater| 
+|IsWindows11_22000|
+|IsWindows11_22000_OrGreater|
+|IsWindows11_22621|
+|IsWindows11_22621_OrGreater|
 
 ```cs
 var getOSVersion = OSVersionHelper.GetOSVersion();

@@ -1,77 +1,98 @@
 ---
-title: NavigationViewHelper With Json
+title: NavigationManager
 ---
 
-Easily implement a `NavigationView` with `Json` file (we read navigationview items from a json file)
+Easily implement a `NavigationView` With/Without `Json` file (we read navigationview items from a json file)
 
-# Related Classes
-|Name|
-|-|
-|NavigationArgs|
-|NavigationExtension|
-|NavigationHelper|
-|NavigationViewHelper|
+# NavigationViewOptions
 
-## Available Builder Methods
+|Name|Default|Remark|
+|DefaultPage|null|if you set DefaultPage, after running application, automatically navigate to this page|
+|SettingsPage|null|if you set SettingsPage, when user click on Settings Button, will be navigated to settingsPage|
+|JsonOptions|null|if you want to use json file use this option|
+|EventsOptions|EventsOptions.BuiltIn|if you wan to use your custom events (TextChanged, QuerySubmitted, and etc.) select `Custom` option|
 
-- WithAutoSuggestBox
-- WithDefaultPage
-- WithIncludedInBuildMode
-- WithSettingsPage
-- WithMenuFlyout
-- WithInfoBadge
-
-{% note info %}
-Access methods with `GetCurrent`
-
-`NavigationViewHelper.GetCurrent().Navigate`
-{% endnote %}
+# `NavigationView` with `Back` button and `AutoSuggestBox`
+in this case we create a NavigationView with a Back button and a AutoSuggestBox 
 
 ```xml
-xmlns:data="using:WinUICommunity.Shared.DataModel"
+xmlns:wuc="using:WinUICommunity"
+
+<NavigationView
+    x:Name="navigationView">
+    <NavigationView.AutoSuggestBox>
+        <AutoSuggestBox Name="autoSuggestBox" QueryIcon="Find" PlaceholderText="Search" />
+    </NavigationView.AutoSuggestBox>
+    <NavigationView.MenuItems>
+        <NavigationViewItem
+            Margin="0,0,12,0"
+            wuc:NavHelper.NavigateTo="views:GeneralPage"
+            Content="General"/>
+
+        <NavigationViewItem
+            Margin="0,0,12,0"
+            wuc:NavHelper.NavigateTo="views:AwakePage"
+            Content="General"/>
+
+        <NavigationViewItem
+            Margin="0,0,12,0"
+            wuc:NavHelper.NavigateTo="views:FancyZonesPage"
+            Content="General"/>
+    </NavigationView.MenuItems>
+    <Frame x:Name="shellFrame"/>
+</NavigationView>
+``` 
+
+```cs
+public NavigationManager Nav { get; set; }
+
+Nav = new NavigationManager(navigationView, 
+                new NavigationViewOptions { 
+                    DefaultPage = typeof(Home), 
+                    SettingsPage = typeof(SettingsPage)
+                }, rootFrame, autoSuggestBox);
+```
+
+![SettingsUI](https://raw.githubusercontent.com/ghost1372/Resources/main/SettingsUI/Samples/NavigationViewHelper.gif)
+
+# `NavigationView` with `Json file`, `Back` button and `AutoSuggestBox`
+```xml
+xmlns:data="using:WinUICommunity"
 
 <NavigationView
     x:Name="NavigationViewControl"
-    Canvas.ZIndex="0"
     IsTabStop="False"
     PaneDisplayMode="Left"
-    SelectionChanged="OnNavigationViewSelectionChanged"
     IsTitleBarAutoPaddingEnabled="True">
     <NavigationView.AutoSuggestBox>
         <AutoSuggestBox
-            x:Name="controlsSearchBox"
-            MinWidth="200"
-            VerticalAlignment="Center"
-            x:FieldModifier="public"
-            QuerySubmitted="controlsSearchBox_QuerySubmitted"
-            KeyboardAcceleratorPlacementMode="Hidden"
-            PlaceholderText="Search"
-            QueryIcon="Find">
-            <AutoSuggestBox.ItemTemplate>
-                <DataTemplate x:DataType="data:ControlInfoDataItem">
-                    <Grid AutomationProperties.Name="{x:Bind Title}" ColumnSpacing="12">
-                        <Grid.ColumnDefinitions>
-                            <ColumnDefinition Width="16" />
-                            <ColumnDefinition Width="*" />
-                        </Grid.ColumnDefinitions>
-                        <Image Source="{x:Bind ImagePath}" />
-                        <TextBlock Grid.Column="1" Text="{x:Bind Title}" />
-                    </Grid>
-                </DataTemplate>
-            </AutoSuggestBox.ItemTemplate>
+        x:Name="controlsSearchBox"
+        PlaceholderText="Search"
+        QueryIcon="Find">
         </AutoSuggestBox>
     </NavigationView.AutoSuggestBox>
-
-    <Frame
-        x:Name="rootFrame"/>
+    <Frame x:Name="rootFrame"/>
 </NavigationView>
 ```
+
+```cs
+public NavigationManager Nav { get; set; }
+Nav = new NavigationManager(NavigationViewControl, new NavigationViewOptions
+            {
+                DefaultPage = typeof(MoviePage),
+                SettingsPage = typeof(SettingsPage),
+                JsonOptions = new JsonOptions
+                {
+                    JsonFilePath = "DataModel/ControlInfoData.json"
+                }
+            }, rootFrame, controlsSearchBox);
+```
+
 now create a new `json` file (`ControlInfoData.json`) in a folder called `DataModel`:
 
 {% note warning %}
-- Set BuildAction for `ControlInfoData.json` to `Content` and if you are in a Unpackaged app, also set Copy To Output to Always
+- Set BuildAction for `ControlInfoData.json` to `Content` and if you are in a Unpackaged app, also set `CopyToOutput` to `Always`
 {% endnote %}
-
 
 ```xml
 DataModel\ControlInfoData.json
@@ -345,83 +366,36 @@ this is a json file content:
 }
 
 ```
-
+{% note info %}
+you can set `ApiNamespace` to `""`: `"ApiNamespace": ""`, in this way we will find your application Namespace.
+{% endnote %}
 
 - UniqueId
 this is your pages full address, for example: `WinUICommunity.DemoApp.Pages.ApplicationDataContainerPage`
 - ApiNamespace
 this is your apps namespace, for example: `WinUICommunity.DemoApp`
 
-create `Loaded` Event and Initialize NavigationView
-```cs
-public NavigationViewFromJson()
-{
-    this.InitializeComponent();
-    Loaded += NavigationViewFromJson_Loaded;
-}
-
-private void NavigationViewFromJson_Loaded(object sender, RoutedEventArgs e)
-{
-    NavigationViewHelper.GetCurrent().
-        .WithAutoSuggestBox(controlsSearchBox)
-        .Build("DataModel/ControlInfoData.json", rootFrame, NavigationViewControl);
-}
-
-private void controlsSearchBox_QuerySubmitted(AutoSuggestBox sender, AutoSuggestBoxQuerySubmittedEventArgs args)
-{
-    NavigationViewHelper.GetCurrent().AutoSuggestBoxQuerySubmitted(args, typeof(ItemPage));
-    // OR
-    // if (args.ChosenSuggestion != null && args.ChosenSuggestion is ControlInfoDataItem)
-    // {
-    //    var infoDataItem = args.ChosenSuggestion as ControlInfoDataItem;
-    //    var hasChangedSelection = NavigationViewHelper.GetCurrent().EnsureItemIsVisibleInNavigation(infoDataItem.Title);
-
-        // In case the menu selection has changed, it means that it has triggered
-        // the selection changed event, that will navigate to the page already
-    //    if (!hasChangedSelection)
-    //    {
-    //        NavigationViewHelper.GetCurrent().Navigate(typeof(ItemPage), infoDataItem.UniqueId);
-    //    }
-    }
-}
-
-public void Navigate(Type type)
-{
-    NavigationViewHelper.GetCurrent().Navigate(type);
-}
-
-private void OnNavigationViewSelectionChanged(Microsoft.UI.Xaml.Controls.NavigationView sender, Microsoft.UI.Xaml.Controls.NavigationViewSelectionChangedEventArgs args)
-{
-    NavigationViewHelper.GetCurrent().OnNavigationViewSelectionChanged(args, typeof(TvTimeSectionPage), typeof(ItemPage));
-    // OR
-    //if (!args.IsSettingsSelected)
-   // {
-   //     var selectedItem = args.SelectedItemContainer;
-   //     if (selectedItem.DataContext is ControlInfoDataGroup)
-   //     {
-   //         var itemId = ((ControlInfoDataGroup)selectedItem.DataContext).UniqueId;
-   //         NavigationViewHelper.GetCurrent().Navigate(typeof(myApp.SectionPage), itemId);
-   //     }
-   //     else if (selectedItem.DataContext is ControlInfoDataItem)
-   //     {
-   //         var item = (ControlInfoDataItem)selectedItem.DataContext;
-   //         NavigationViewHelper.GetCurrent().Navigate(typeof(ItemPage), item.UniqueId);
-   //     }
-   // }
-}
-```
 {% note warning %}
-for Navigate to a Page we used Built-in Host pages such as, ItemPage and SectionPage. you can use only UniqueId to navigate your pages or create a custom host page.
+for Navigating to a Page we used Built-in Host pages such as, ItemPage and SectionPage. you can use only UniqueId to navigate your pages or create a custom host page.
 {% endnote %}
 
-also this is SectionPage:
+# SectionPage, ItemPage
+if you have `LandingsPage` package installed, you can use built-in Pages:
+```cs
+JsonOptions = new JsonOptions
+                {
+                    SectionPage = typeof(SectionPage),
+                    ItemPage = typeof(ItemPage)
+                }
+```
+or you can customize it:
 
 ```xml
 <Page
     x:Class="WinUICommunity.DemoApp.Pages.SectionPage"
     xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-    xmlns:controls="using:WinUICommunity.LandingsPage.Controls">
+    xmlns:controls="using:WinUICommunity">
 
     <controls:SectionPage x:Name="sectionPage" OnItemClick="SectionPage_OnItemClick"/>
 </Page>
@@ -446,12 +420,13 @@ public sealed partial class SectionPage : Page
     {
         var args = (ItemClickEventArgs)e;
         var item = (ControlInfoDataItem)args.ClickedItem;
-        WinUICommunity.Common.Helpers.NavigationViewHelper.GetCurrent().Navigate(typeof(ItemPage), item.UniqueId);
+        Nav.Navigate(typeof(ItemPage), item.UniqueId);
     }
 }
 ```
-# WithInfoBadge
-if you want to use a `InfoBadge` in a NavigationViewItem you should first use `WithInfoBadge` then you should modify your `ControlInfoData.json` file and add `InfoBadge` attribute:
+
+## HasInfoBadge
+if you want to use a `InfoBadge` in a NavigationViewItem you should first use `HasInfoBadge` then you should modify your `ControlInfoData.json` file and add `InfoBadge` attribute:
 
 ## Available Properties in Json (Groups)
 |Name|Example|Detail|
@@ -494,7 +469,7 @@ if you want to use a `InfoBadge` in a NavigationViewItem you should first use `W
 |InfoBadge||See Below|
 
 {% note warning %}
-only one of this proeprties `IsNew`, `IsUpdated` and `IsPreview` can be `true`
+only one of this proeprties `IsNew`, `IsUpdated` and `IsPreview` can be set to `true`
 {% endnote %}
 
 ## Available Properties in Json (Docs)

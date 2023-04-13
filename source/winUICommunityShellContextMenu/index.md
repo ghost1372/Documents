@@ -53,7 +53,7 @@ now Create a new `ContextMenuItem`
 
 ```cs
 
-using WinUICommunity.ShellContextMenu;
+using WinUICommunity;
 
 ContextMenuItem menu = new ContextMenuItem
 {

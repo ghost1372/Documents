@@ -28,7 +28,7 @@ in this page we can load only items that is tagged as IsNew, IsUpdated and IsPre
 first add:
 
 ```xml
-xmlns:controls="using:WinUICommunity.LandingsPage.Controls"
+xmlns:controls="using:WinUICommunity"
 ```
 
 then use MainLandingsPage:
@@ -404,6 +404,10 @@ Set BuildAction to Content, if you are in a Unpackaged Mode, set CopyToOutput to
 
 {% note warning %}
 only one of this proeprties `IsNew`, `IsUpdated` and `IsPreview` can be `true`
+{% endnote %}
+
+{% note info %}
+ApiNamespace can be set to empty `("ApiNamespace": "")` , in this way we will find application namespace.
 {% endnote %}
 
 ## Available Properties in Json (Docs)

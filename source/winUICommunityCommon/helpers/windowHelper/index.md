@@ -27,12 +27,6 @@ WindowHelper.MaxWindowWidth = 800;
 WindowHelper.MaxWindowHeight = 600;
 ```
 
-# GetAppWindowForCurrentWindow
-you can get AppWindow for Current Window:
-```cs
-var appWindow = WindowHelper.GetAppWindowForCurrentWindow(window);
-```
-
 # GetWindowHandleForCurrentWindow
 
 ```cs

@@ -19,7 +19,7 @@ first add a SectionPage in a Page:
     x:Class="WinUICommunity.DemoApp.Pages.SectionPage"
     xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-    xmlns:controls="using:WinUICommunity.LandingsPage.Controls">
+    xmlns:controls="using:WinUICommunity">
 
     <controls:SectionPage x:Name="sectionPage" OnItemClick="SectionPage_OnItemClick"/>
 </Page>

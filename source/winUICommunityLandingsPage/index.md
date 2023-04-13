@@ -14,10 +14,10 @@ Install-Package WinUICommunity.LandingsPage
 After installing, add the following resource to app.xaml
 
 ```xml
-xmlns:themes="using:WinUICommunity.LandingsPage.Themes"
+xmlns:winui="using:WinUICommunity"
 
 <ResourceDictionary Source="ms-appx:///LandingsPage/Themes/Generic.xaml"/>
-<themes:ItemTemplates/>
+<winui:ItemTemplates/>
 ```
 See the Demo app to see how to use it.
 

@@ -333,7 +333,7 @@ menu:
       default: /intellisense/ || fas fa-brain
   WinUICommunity:
     default: /winUICommunity/ || fas fa-dice-d20
-  WinUICommunity.SettingsUI - 3.2.3:
+  WinUICommunity.SettingsUI - 4.0.0:
     default: /winUICommunitySettingsUI/ || fas fa-dice-d20
     Quick start: /quick_start/ || fas fa-dice-d20
     Controls: 
@@ -352,7 +352,7 @@ menu:
       default: /settingsControls/ || fab fa-intercom
     Styles: 
       default: /styles/ || fas fa-palette
-  WinUICommunity.LandingsPage - 1.3.6:
+  WinUICommunity.LandingsPage - 2.0.0:
       default: /winUICommunityLandingsPage/ || fab fa-intercom
       AllLandingsPage: /allLandingsPage/ ||
       HeaderTile: /headerTile/ ||
@@ -361,28 +361,23 @@ menu:
       MainLandingsPage: /mainLandingsPage/ ||
       PageHeader: /pageHeader/ ||
       SectionPage: /sectionPage/ ||
-  WinUICommunity.ShellContextMenu - 3.1.2:
+  WinUICommunity.ShellContextMenu - 4.0.0:
       default: /winUICommunityShellContextMenu/ || fas fa-brain
-  WinUICommunity.Common - 3.2.6:
+  WinUICommunity.Common - 4.0.0:
       default: /winUICommunityCommon/ || fas fa-tools
       Extensions: 
         default: /extensions/ || fas fa-tools
       Helpers: 
         default: /helpers/ || fas fa-tools
-        ApplicationDataContainerHelper: /applicationDataContainerHelper/ ||
         ApplicationHelper: /applicationHelper/ ||
         AppNotification: /appNotification/ ||
         AutoSuggestBoxHelper: /autoSuggestBoxHelper/ ||
-        GeneralHelper: /generalHelper/ ||
-        NavigationViewHelper: /navigationViewHelper/ ||
-        NavigationViewHelper With Json: /navigationViewHelperJson/ ||
+        INIHelper: /iniHelper/ ||
+        NavigationManager: /navigationManager/ ||
         OSVersionHelper: /osVersionHelper/ ||
         PrintHelper: /printHelper/ ||
         ResourceHelper: /resourceHelper/ ||
-        StorageFileHelper: /storageFileHelper/ ||
-        SystemBackdropsHelper: /systemBackdropsHelper/ ||
         TaskbarHelper: /taskbarHelper/ ||
-        ThemeHelper: /themeHelper/ ||
         TitleBarHelper: /titleBarHelper/ ||
         UpdateHelper: /updateHelper/ ||
         VersionHelper: /versionHelper/ ||

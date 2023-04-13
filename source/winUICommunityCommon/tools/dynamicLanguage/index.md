@@ -90,7 +90,7 @@ now in UIElement you need to set `Uid`:
 
 ```xml
 <Page
-    xmlns:loc="using:SettingsUI.Tools">
+    xmlns:loc="using:WinUICommunity">
 
 <Button loc:Localizer.Uid="myButtonId"/>
 
