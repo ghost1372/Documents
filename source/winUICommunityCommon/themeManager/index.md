@@ -268,7 +268,7 @@ copy this xaml in your page:
 ```
 now call `OnBackdropComboBoxSelectionChanged` method for changing and saving application theme:
 ```cs
-private void cmbcmbBackdrop_SelectionChanged(object sender, SelectionChangedEventArgs e)
+private void cmbBackdrop_SelectionChanged(object sender, SelectionChangedEventArgs e)
 {
     (Application.Current as App).themeManager.OnBackdropComboBoxSelectionChanged(sender);
 }
