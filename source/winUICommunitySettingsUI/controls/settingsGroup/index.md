@@ -13,26 +13,22 @@ title: SettingsGroup
 
 ```xml
 <controls:SettingsGroup Header="Behavior">
-    <controls:Setting Header="Keep screen on">
-        <controls:Setting.Icon>
+    <controls:SettingsCard Header="Keep screen on">
+        <controls:SettingsCard.HeaderIcon>
             <SymbolIcon Symbol="SetLockScreen"/>
-        </controls:Setting.Icon>
-        <controls:Setting.ActionContent>
-            <ToggleSwitch/>
-        </controls:Setting.ActionContent>
-    </controls:Setting>
-    <controls:Setting Header="Auto Download">
-        <controls:Setting.Icon>
+        </controls:SettingsCard.HeaderIcon>
+        <ToggleSwitch/>
+    </controls:SettingsCard>
+    <controls:SettingsCard Header="Auto Download">
+        <controls:SettingsCard.HeaderIcon>
             <SymbolIcon Symbol="Download"/>
-        </controls:Setting.Icon>
-        <controls:Setting.ActionContent>
-            <ToggleSwitch/>
-        </controls:Setting.ActionContent>
-    </controls:Setting>
+        </controls:SettingsCard.HeaderIcon>
+        <ToggleSwitch/>
+    </controls:SettingsCard>
 </controls:SettingsGroup>
 ```
 
 # Demo
-you can run [demo](https://github.com/ghost1372/SettingsUI) and see this feature.
+you can run [demo](https://github.com/WinUICommunity/SettingsUI) and see this feature.
 
 ![SettingsUI](https://raw.githubusercontent.com/ghost1372/Resources/main/SettingsUI/Samples/SettingsGroup.png)

@@ -5,37 +5,33 @@ title: Windows 11 Settings Examples
 # Awake Page
 
 ```xml
-<controls:SettingsPageControl
+<wuc:SettingsPageControl
     IsTabStop="False"
     ModuleDescription="A convenient way to keep your PC awake on-demand."
     ModuleImageSource="ms-appx:///Assets/Modules/Awake.png"
     ModuleTitle="Awake"
     SecondaryLinksHeader="Attribution">
-    <controls:SettingsPageControl.ModuleContent>
+    <wuc:SettingsPageControl.ModuleContent>
         <StackPanel Orientation="Vertical" ChildrenTransitions="{StaticResource SettingsCardsAnimations}">
-            <controls:Setting Header="Enable Awake">
-                <controls:Setting.Icon>
+            <wuc:SettingsCard Header="Enable Awake">
+                <wuc:SettingsCard.HeaderIcon>
                     <BitmapIcon ShowAsMonochrome="False" UriSource="ms-appx:///Assets/FluentIcons/FluentIconsAwake.png"/>
-                </controls:Setting.Icon>
-                <controls:Setting.ActionContent>
-                    <ToggleSwitch HorizontalAlignment="Right"/>
-                </controls:Setting.ActionContent>
-            </controls:Setting>
+                </wuc:SettingsCard.HeaderIcon>
+                <ToggleSwitch HorizontalAlignment="Right"/>
+            </wuc:SettingsCard>
 
-            <controls:SettingsGroup Header="Behavior">
-                <controls:Setting Header="Keep screen on" Icon="&#xE7FB;">
-                    <controls:Setting.ActionContent>
-                        <ToggleSwitch/>
-                    </controls:Setting.ActionContent>
-                </controls:Setting>
-                <controls:SettingExpander IsEnabled="False" IsExpanded="True">
-                    <controls:SettingExpander.Header>
-                        <controls:Setting
+            <wuc:SettingsGroup Header="Behavior">
+                <wuc:SettingsCard Header="Keep screen on" HeaderIcon="&#xE7FB;">
+                    <ToggleSwitch/>
+                </wuc:SettingsCard>
+                <wuc:SettingsExpander IsEnabled="False" IsExpanded="True">
+                    <wuc:SettingsExpander.Header>
+                        <wuc:SettingsCard
                             Header="Mode"
-                            Icon="&#xEC4E;"
+                            HeaderIcon="&#xEC4E;"
                             Style="{StaticResource ExpanderHeaderSettingStyle}"/>
-                    </controls:SettingExpander.Header>
-                    <controls:SettingExpander.Content>
+                    </wuc:SettingsExpander.Header>
+                    <wuc:SettingsExpander.Content>
                         <StackPanel Padding="56,16,16,24" Spacing="12">
                             <RadioButton>
                                 <RadioButton.Content>
@@ -89,19 +85,19 @@ title: Windows 11 Settings Examples
                                 </StackPanel>
                             </StackPanel>
                         </StackPanel>
-                    </controls:SettingExpander.Content>
-                </controls:SettingExpander>
-            </controls:SettingsGroup>
+                    </wuc:SettingsExpander.Content>
+                </wuc:SettingsExpander>
+            </wuc:SettingsGroup>
         </StackPanel>
-    </controls:SettingsPageControl.ModuleContent>
+    </wuc:SettingsPageControl.ModuleContent>
 
-    <controls:SettingsPageControl.PrimaryLinks>
-        <controls:PageLink Link="https://aka.ms/PowerToysOverview_Awake" Text="Learn more about Awake"/>
-    </controls:SettingsPageControl.PrimaryLinks>
-    <controls:SettingsPageControl.SecondaryLinks>
-        <controls:PageLink Link="https://Awake.den.dev" Text="Den Delimarsky's Awake"/>
-    </controls:SettingsPageControl.SecondaryLinks>
-</controls:SettingsPageControl>
+    <wuc:SettingsPageControl.PrimaryLinks>
+        <wuc:PageLink Link="https://aka.ms/PowerToysOverview_Awake" Text="Learn more about Awake"/>
+    </wuc:SettingsPageControl.PrimaryLinks>
+    <wuc:SettingsPageControl.SecondaryLinks>
+        <wuc:PageLink Link="https://Awake.den.dev" Text="Den Delimarsky's Awake"/>
+    </wuc:SettingsPageControl.SecondaryLinks>
+</wuc:SettingsPageControl>
 ```
 
 ![SettingsUI](https://raw.githubusercontent.com/ghost1372/Resources/main/SettingsUI/Samples/Awake_Demo.png)
@@ -112,31 +108,29 @@ title: Windows 11 Settings Examples
 <Page.Resources>
     <Style TargetType="ListViewItem" BasedOn="{StaticResource ListViewItemSettingStyle}"/>
 </Page.Resources>
-<controls:SettingsPageControl
+<wuc:SettingsPageControl
     ModuleDescription="Quick and simple system-wide color picker."
     ModuleImageSource="ms-appx:///Assets/Modules/ColorPicker.png"
     ModuleTitle="Color Picker"
     SecondaryLinksHeader="Attribution">
-    <controls:SettingsPageControl.ModuleContent>
+    <wuc:SettingsPageControl.ModuleContent>
         <StackPanel x:Name="ColorPickerView" Orientation="Vertical" ChildrenTransitions="{StaticResource SettingsCardsAnimations}">
-            <controls:Setting Header="Enable Color Picker">
-                <controls:Setting.Icon>
+            <wuc:SettingsCard Header="Enable Color Picker">
+                <wuc:SettingsCard.HeaderIcon>
                     <BitmapIcon ShowAsMonochrome="False" UriSource="ms-appx:///Assets/FluentIcons/FluentIconsColorPicker.png"/>
-                </controls:Setting.Icon>
-                <controls:Setting.ActionContent>
-                    <ToggleSwitch/>
-                </controls:Setting.ActionContent>
-            </controls:Setting>
+                </wuc:SettingsCard.HeaderIcon>
+                <ToggleSwitch/>
+            </wuc:SettingsCard>
 
-            <controls:SettingsGroup Header="Shortcut">
-                <controls:SettingExpander IsExpanded="True">
-                    <controls:SettingExpander.Header>
-                        <controls:Setting
+            <wuc:SettingsGroup Header="Shortcut">
+                <wuc:SettingsExpander IsExpanded="True">
+                    <wuc:SettingsExpander.Header>
+                        <wuc:SettingsCard
                             Header="Activation behavior"
-                            Icon="&#xEC4E;"
+                            HeaderIcon="&#xEC4E;"
                             Style="{StaticResource ExpanderHeaderSettingStyle}"/>
-                    </controls:SettingExpander.Header>
-                    <controls:SettingExpander.Content>
+                    </wuc:SettingsExpander.Header>
+                    <wuc:SettingsExpander.Content>
                         <StackPanel Padding="56,16,16,24" Spacing="12">
                             <RadioButton GroupName="ColorPickerActivationAction">
                                 <RadioButton.Content>
@@ -156,36 +150,32 @@ title: Windows 11 Settings Examples
                                 </RadioButton.Content>
                             </RadioButton>
                         </StackPanel>
-                    </controls:SettingExpander.Content>
-                </controls:SettingExpander>
-            </controls:SettingsGroup>
+                    </wuc:SettingsExpander.Content>
+                </wuc:SettingsExpander>
+            </wuc:SettingsGroup>
 
-            <controls:SettingsGroup Header="Picker behavior">
-                <controls:Setting
+            <wuc:SettingsGroup Header="Picker behavior">
+                <wuc:SettingsCard
                     Description="This format will be copied to your clipboard"
                     Header="Default color format"
-                    Icon="&#xEF3C;">
-                    <controls:Setting.ActionContent>
-                        <ComboBox
+                    HeaderIcon="&#xEF3C;">
+                    <ComboBox
                             MinWidth="{StaticResource SettingActionControlMinWidth}"
                             HorizontalAlignment="Left"
                             DisplayMemberPath="Value"/>
-                    </controls:Setting.ActionContent>
-                </controls:Setting>
+                </wuc:SettingsCard>
 
-                <controls:Setting Description="This will show the name of the color when picking a color" Header="Show color name">
-                    <controls:Setting.ActionContent>
-                        <ToggleSwitch/>
-                    </controls:Setting.ActionContent>
-                </controls:Setting>
-            </controls:SettingsGroup>
+                <wuc:SettingsCard Description="This will show the name of the color when picking a color" Header="Show color name">
+                    <ToggleSwitch/>
+                </wuc:SettingsCard>
+            </wuc:SettingsGroup>
 
-            <controls:SettingsGroup Header="Editor">
-                <controls:Setting
+            <wuc:SettingsGroup Header="Editor">
+                <wuc:SettingsCard
                     x:Name="ColorFormatsSetting"
                     Description="Select which color formats (and in what order) should show up in the editor"
                     Header="Color formats"
-                    Icon="&#xE14C;"/>
+                    HeaderIcon="&#xE14C;"/>
                 <ListView
                     HorizontalAlignment="Stretch"
                     AutomationProperties.Name="{Binding ElementName=ColorFormatsSetting, Path=Header}"
@@ -253,19 +243,19 @@ title: Windows 11 Settings Examples
                         </DataTemplate>
                     </ListView.ItemTemplate>
                 </ListView>
-            </controls:SettingsGroup>
+            </wuc:SettingsGroup>
         </StackPanel>
 
-    </controls:SettingsPageControl.ModuleContent>
+    </wuc:SettingsPageControl.ModuleContent>
 
-    <controls:SettingsPageControl.PrimaryLinks>
-        <controls:PageLink Link="https://aka.ms/PowerToysOverview_ColorPicker" Text="Learn more about Color Picker"/>
-    </controls:SettingsPageControl.PrimaryLinks>
-    <controls:SettingsPageControl.SecondaryLinks>
-        <controls:PageLink Link="https://github.com/martinchrzan/ColorPicker/" Text="Martin Chrzan's Color Picker"/>
-        <controls:PageLink Link="https://medium.com/@Niels9001/a-fluent-color-meter-for-powertoys-20407ededf0c" Text="Niels Laute's UX concept"/>
-    </controls:SettingsPageControl.SecondaryLinks>
-</controls:SettingsPageControl>
+    <wuc:SettingsPageControl.PrimaryLinks>
+        <wuc:PageLink Link="https://aka.ms/PowerToysOverview_ColorPicker" Text="Learn more about Color Picker"/>
+    </wuc:SettingsPageControl.PrimaryLinks>
+    <wuc:SettingsPageControl.SecondaryLinks>
+        <wuc:PageLink Link="https://github.com/martinchrzan/ColorPicker/" Text="Martin Chrzan's Color Picker"/>
+        <wuc:PageLink Link="https://medium.com/@Niels9001/a-fluent-color-meter-for-powertoys-20407ededf0c" Text="Niels Laute's UX concept"/>
+    </wuc:SettingsPageControl.SecondaryLinks>
+</wuc:SettingsPageControl>
 ```
 
 ```cs
@@ -348,67 +338,62 @@ public class ColorFormatModel : Observable
 # FancyZones Page
 
 ```xml
-<controls:SettingsPageControl
+<wuc:SettingsPageControl
     ModuleDescription="Create window layouts to help make multi-tasking easy."
     ModuleImageSource="ms-appx:///Assets/Modules/FancyZones.png"
     ModuleTitle="FancyZones">
-    <controls:SettingsPageControl.ModuleContent>
+    <wuc:SettingsPageControl.ModuleContent>
         <StackPanel Orientation="Vertical" ChildrenTransitions="{StaticResource SettingsCardsAnimations}">
-            <controls:Setting Header="Enable FancyZones">
-                <controls:Setting.Icon>
+            <wuc:SettingsCard Header="Enable FancyZones">
+                <wuc:SettingsCard.HeaderIcon>
                     <BitmapIcon ShowAsMonochrome="False" UriSource="ms-appx:///Assets/FluentIcons/FluentIconsFancyZones.png"/>
-                </controls:Setting.Icon>
-                <controls:Setting.ActionContent>
-                    <ToggleSwitch/>
-                </controls:Setting.ActionContent>
-            </controls:Setting>
+                </wuc:SettingsCard.HeaderIcon>
+                <ToggleSwitch/>
+            </wuc:SettingsCard>
 
-            <controls:SettingsGroup Header="Editor">
+            <wuc:SettingsGroup Header="Editor">
                 <Button Style="{StaticResource SettingButtonStyle}">
-                    <controls:Setting
+                    <wuc:SettingsCard
                         Description="Set and manage your layouts"
                         Header="Launch layout editor"
-                        Icon="&#xF246;"
+                        HeaderIcon="&#xF246;"
                         Style="{StaticResource ExpanderHeaderSettingStyle}">
-                        <controls:Setting.ActionContent>
-                            <FontIcon FontFamily="{ThemeResource SymbolThemeFontFamily}" Glyph="&#xE2B4;"/>
-                        </controls:Setting.ActionContent>
-                    </controls:Setting>
+                        <FontIcon FontFamily="{ThemeResource SymbolThemeFontFamily}" Glyph="&#xE2B4;"/>
+
+                    </wuc:SettingsCard>
                 </Button>
 
-                <controls:SettingExpander IsExpanded="True">
-                    <controls:SettingExpander.Header>
-                        <controls:Setting
+                <wuc:SettingsExpander IsExpanded="True">
+                    <wuc:SettingsExpander.Header>
+                        <wuc:SettingsCard
                             Header="Activation shortcut"
-                            Icon="&#xEDA7;"
+                            HeaderIcon="&#xEDA7;"
                             Style="{StaticResource ExpanderHeaderSettingStyle}"/>
-                    </controls:SettingExpander.Header>
+                    </wuc:SettingsExpander.Header>
 
-                    <controls:SettingExpander.Content>
+                    <wuc:SettingsExpander.Content>
                         <StackPanel>
-                            <controls:Setting
+                            <wuc:SettingsCard
                                 Description="When using multiple screens, the editor will launch on the screen where the mouse cursor is"
                                 Header="Launch editor where mouse cursor is"
                                 Style="{StaticResource ExpanderContentSettingStyle}">
-                                <controls:Setting.ActionContent>
-                                    <ToggleSwitch/>
-                                </controls:Setting.ActionContent>
-                            </controls:Setting>
+                                <ToggleSwitch/>
+                            </wuc:SettingsCard>
                         </StackPanel>
-                    </controls:SettingExpander.Content>
-                </controls:SettingExpander>
-            </controls:SettingsGroup>
+                    </wuc:SettingsExpander.Content>
+                </wuc:SettingsExpander>
+            </wuc:SettingsGroup>
 
-            <controls:SettingsGroup Header="Zones">
-                <controls:SettingExpander IsExpanded="True">
-                    <controls:SettingExpander.Header>
-                        <controls:Setting
+            <wuc:SettingsGroup Header="Zones">
+                <wuc:SettingsExpander IsExpanded="True">
+                    <wuc:SettingsExpander.Header>
+                        <wuc:SettingsCard
                             Description="Manage how zones behave when using FancyZones"
                             Header="Zone behaviors"
-                            Icon="&#xE620;"
+                            HeaderIcon="&#xE620;"
                             Style="{StaticResource ExpanderHeaderSettingStyle}"/>
-                    </controls:SettingExpander.Header>
-                    <controls:SettingExpander.Content>
+                    </wuc:SettingsExpander.Header>
+                    <wuc:SettingsExpander.Content>
                         <StackPanel>
                             <CheckBox Margin="{StaticResource ExpanderSettingMargin}" Content="Hold Shift key to activate zones while dragging"/>
                             <Rectangle Style="{StaticResource ExpanderSeparatorStyle}"/>
@@ -416,41 +401,37 @@ public class ColorFormatModel : Observable
                             <Rectangle Style="{StaticResource ExpanderSeparatorStyle}"/>
                             <CheckBox Margin="{StaticResource ExpanderSettingMargin}" Content="Show zones on all monitors while dragging a window"/>
                             <Rectangle Style="{StaticResource ExpanderSeparatorStyle}"/>
-                            <controls:Setting Header="When multiple zones overlap" Style="{StaticResource ExpanderContentSettingStyle}">
-                                <controls:Setting.ActionContent>
-                                    <ComboBox MinWidth="{StaticResource SettingActionControlMinWidth}">
-                                        <ComboBoxItem Content="Activate the smallest zone by area"/>
-                                        <ComboBoxItem Content="Activate the largest zone by area"/>
-                                        <ComboBoxItem Content="Split the overlapped area into multiple activation targets"/>
-                                        <ComboBoxItem Content="Activate the zone whose center is closest to the cursor"/>
-                                    </ComboBox>
-                                </controls:Setting.ActionContent>
-                            </controls:Setting>
+                            <wuc:SettingsCard Header="When multiple zones overlap" Style="{StaticResource ExpanderContentSettingStyle}">
+                                <ComboBox MinWidth="{StaticResource SettingActionControlMinWidth}">
+                                    <ComboBoxItem Content="Activate the smallest zone by area"/>
+                                    <ComboBoxItem Content="Activate the largest zone by area"/>
+                                    <ComboBoxItem Content="Split the overlapped area into multiple activation targets"/>
+                                    <ComboBoxItem Content="Activate the zone whose center is closest to the cursor"/>
+                                </ComboBox>
+                            </wuc:SettingsCard>
 
-                            <controls:Setting Header="Zone opacity" Style="{StaticResource ExpanderContentSettingStyle}">
-                                <controls:Setting.ActionContent>
-                                    <Slider
+                            <wuc:SettingsCard Header="Zone opacity" Style="{StaticResource ExpanderContentSettingStyle}">
+                                <Slider
                                         MinWidth="{StaticResource SettingActionControlMinWidth}"
                                         HorizontalAlignment="Right"
                                         Maximum="100"
                                         Minimum="0"/>
-                                </controls:Setting.ActionContent>
-                            </controls:Setting>
+                            </wuc:SettingsCard>
                         </StackPanel>
-                    </controls:SettingExpander.Content>
-                </controls:SettingExpander>
-            </controls:SettingsGroup>
+                    </wuc:SettingsExpander.Content>
+                </wuc:SettingsExpander>
+            </wuc:SettingsGroup>
 
-            <controls:SettingsGroup Header="Windows">
-                <controls:SettingExpander IsExpanded="True">
-                    <controls:SettingExpander.Header>
-                        <controls:Setting
+            <wuc:SettingsGroup Header="Windows">
+                <wuc:SettingsExpander IsExpanded="True">
+                    <wuc:SettingsExpander.Header>
+                        <wuc:SettingsCard
                             Description="Manage how windows behave when using FancyZones"
                             Header="Window behavior"
-                            Icon="&#xE737;"
+                            HeaderIcon="&#xE737;"
                             Style="{StaticResource ExpanderHeaderSettingStyle}"/>
-                    </controls:SettingExpander.Header>
-                    <controls:SettingExpander.Content>
+                    </wuc:SettingsExpander.Header>
+                    <wuc:SettingsExpander.Content>
                         <StackPanel>
                             <CheckBox Margin="{StaticResource ExpanderSettingMargin}" Content="Keep windows in their zones when the screen resolution changes"/>
                             <Rectangle Style="{StaticResource ExpanderSeparatorStyle}"/>
@@ -458,23 +439,21 @@ public class ColorFormatModel : Observable
                             <Rectangle Style="{StaticResource ExpanderSeparatorStyle}"/>
                             <CheckBox Margin="{StaticResource ExpanderSettingMargin}" Content="Move newly created windows to their last known zone"/>
                         </StackPanel>
-                    </controls:SettingExpander.Content>
-                </controls:SettingExpander>
+                    </wuc:SettingsExpander.Content>
+                </wuc:SettingsExpander>
 
-                <controls:SettingExpander IsExpanded="True">
-                    <controls:SettingExpander.Header>
-                        <controls:Setting
+                <wuc:SettingsExpander IsExpanded="True">
+                    <wuc:SettingsExpander.Header>
+                        <wuc:SettingsCard
                             Description="This overrides the Windows Snap shortcut (Win + arrow) to move windows between zones"
                             Header="Override windows snap"
-                            Icon="&#xE145;"
+                            HeaderIcon="&#xE145;"
                             Style="{StaticResource ExpanderHeaderSettingStyle}">
-                            <controls:Setting.ActionContent>
                                 <ToggleSwitch/>
-                            </controls:Setting.ActionContent>
-                        </controls:Setting>
-                    </controls:SettingExpander.Header>
+                            </wuc:SettingsCard>
+                    </wuc:SettingsExpander.Header>
 
-                    <controls:SettingExpander.Content>
+                    <wuc:SettingsExpander.Content>
                         <StackPanel>
                             <RadioButton
                                 Margin="{StaticResource ExpanderSettingMargin}"
@@ -487,42 +466,40 @@ public class ColorFormatModel : Observable
                             <Rectangle Style="{StaticResource ExpanderSeparatorStyle}"/>
                             <CheckBox Margin="56,8,16,8" Content="Move windows between zones across all monitors"/>
                         </StackPanel>
-                    </controls:SettingExpander.Content>
-                </controls:SettingExpander>
-            </controls:SettingsGroup>
+                    </wuc:SettingsExpander.Content>
+                </wuc:SettingsExpander>
+            </wuc:SettingsGroup>
 
-            <controls:SettingsGroup Header="Layouts">
-                <controls:SettingExpander IsExpanded="True">
-                    <controls:SettingExpander.Header>
-                        <controls:Setting
+            <wuc:SettingsGroup Header="Layouts">
+                <wuc:SettingsExpander IsExpanded="True">
+                    <wuc:SettingsExpander.Header>
+                        <wuc:SettingsCard
                             Description="You can configure layout-specific shortcuts in the editor"
                             Header="Enable quick layout switch"
-                            Icon="&#xE737;"
+                            HeaderIcon="&#xE737;"
                             Style="{StaticResource ExpanderHeaderSettingStyle}">
-                            <controls:Setting.ActionContent>
-                                <ToggleSwitch/>
-                            </controls:Setting.ActionContent>
-                        </controls:Setting>
-                    </controls:SettingExpander.Header>
+                            <ToggleSwitch/>
+                            </wuc:SettingsCard>
+                    </wuc:SettingsExpander.Header>
 
-                    <controls:SettingExpander.Content>
+                    <wuc:SettingsExpander.Content>
                         <StackPanel>
                             <CheckBox Margin="{StaticResource ExpanderSettingMargin}" Content="Flash zones when switching layout"/>
                         </StackPanel>
-                    </controls:SettingExpander.Content>
-                </controls:SettingExpander>
-            </controls:SettingsGroup>
+                    </wuc:SettingsExpander.Content>
+                </wuc:SettingsExpander>
+            </wuc:SettingsGroup>
 
-            <controls:SettingsGroup Header="Excluded apps">
-                <controls:SettingExpander IsExpanded="True">
-                    <controls:SettingExpander.Header>
-                        <controls:Setting
+            <wuc:SettingsGroup Header="Excluded apps">
+                <wuc:SettingsExpander IsExpanded="True">
+                    <wuc:SettingsExpander.Header>
+                        <wuc:SettingsCard
                             Description="Excludes an application from snapping to zones and will only react to Windows Snap - add one application name per line"
                             Header="Exclude apps"
-                            Icon="&#xE103;"
+                            HeaderIcon="&#xE103;"
                             Style="{StaticResource ExpanderHeaderSettingStyle}"/>
-                    </controls:SettingExpander.Header>
-                    <controls:SettingExpander.Content>
+                    </wuc:SettingsExpander.Header>
+                    <wuc:SettingsExpander.Content>
                         <TextBox
                             MinWidth="240"
                             MinHeight="160"
@@ -533,16 +510,16 @@ public class ColorFormatModel : Observable
                             ScrollViewer.VerticalScrollBarVisibility="Visible"
                             ScrollViewer.VerticalScrollMode="Enabled"
                             TextWrapping="Wrap"/>
-                    </controls:SettingExpander.Content>
-                </controls:SettingExpander>
-            </controls:SettingsGroup>
+                    </wuc:SettingsExpander.Content>
+                </wuc:SettingsExpander>
+            </wuc:SettingsGroup>
         </StackPanel>
-    </controls:SettingsPageControl.ModuleContent>
+    </wuc:SettingsPageControl.ModuleContent>
 
-    <controls:SettingsPageControl.PrimaryLinks>
-        <controls:PageLink Link="https://aka.ms/PowerToysOverview_FancyZones" Text="Learn more about FancyZones"/>
-    </controls:SettingsPageControl.PrimaryLinks>
-</controls:SettingsPageControl>
+    <wuc:SettingsPageControl.PrimaryLinks>
+        <wuc:PageLink Link="https://aka.ms/PowerToysOverview_FancyZones" Text="Learn more about FancyZones"/>
+    </wuc:SettingsPageControl.PrimaryLinks>
+</wuc:SettingsPageControl>
 ```
 
 ![SettingsUI](https://raw.githubusercontent.com/ghost1372/Resources/main/SettingsUI/Samples/FancyZones_Demo.png)
@@ -550,17 +527,17 @@ public class ColorFormatModel : Observable
 # General Page
 
 ```xml
-<controls:SettingsPageControl ModuleDescription="Microsoft PowerToys is a set of utilities for power users to tune and streamline their Windows experience for greater productivity. Made with 💗 by Microsoft and the PowerToys community."
+<wuc:SettingsPageControl ModuleDescription="Microsoft PowerToys is a set of utilities for power users to tune and streamline their Windows experience for greater productivity. Made with 💗 by Microsoft and the PowerToys community."
                                 ModuleImageSource="ms-appx:///Assets/Modules/PT.png"
                                 ModuleTitle="General"
                                 SecondaryLinksHeader="Related information">
-    <controls:SettingsPageControl.ModuleContent>
+    <wuc:SettingsPageControl.ModuleContent>
         <StackPanel Orientation="Vertical" ChildrenTransitions="{StaticResource SettingsCardsAnimations}">
-            <controls:SettingsGroup Margin="0,-32,0,0"
+            <wuc:SettingsGroup Margin="0,-32,0,0"
                                     Header="Version">
-                <controls:Setting Header="v0.45.0"
-                                    Icon="&#xE117;">
-                    <controls:Setting.Description>
+                <wuc:SettingsCard Header="v0.45.0"
+                                    HeaderIcon="&#xE117;">
+                    <wuc:SettingsCard.Description>
                         <StackPanel Orientation="Vertical">
                             <TextBlock Style="{StaticResource SecondaryTextStyle}">
                                 <Run Text="Last Checked" />
@@ -570,92 +547,79 @@ public class ColorFormatModel : Observable
                                                 Content="Release notes"
                                                 NavigateUri="https://github.com/microsoft/PowerToys/releases/" />
                         </StackPanel>
-                    </controls:Setting.Description>
-                    <controls:Setting.ActionContent>
-                        <StackPanel VerticalAlignment="Center"
+                    </wuc:SettingsCard.Description>
+                    <StackPanel VerticalAlignment="Center"
                                     Orientation="Horizontal"
                                     Spacing="18">
-                            <ProgressRing Width="24"
+                        <ProgressRing Width="24"
                                             Height="24" />
-                            <TextBlock VerticalAlignment="Center"
+                        <TextBlock VerticalAlignment="Center"
                                         FontWeight="SemiBold"
                                         Foreground="{ThemeResource TextFillColorSecondaryBrush}"
                                         Text="Checking For Updates" />
-                            <Button HorizontalAlignment="Right"
+                        <Button HorizontalAlignment="Right"
                                     Content="Check For Updates" />
-                        </StackPanel>
-                    </controls:Setting.ActionContent>
-                </controls:Setting>
+                    </StackPanel>
+                </wuc:SettingsCard>
 
                 <InfoBar Title="Up To Date"
                             IsClosable="False"
                             IsOpen="True"
                             Severity="Success" />
 
-                <controls:Setting Margin="0,-6,0,0"
+                <wuc:SettingsCard Margin="0,-6,0,0"
                                     Description="Except on metered conections"
                                     Header="Download updates automatically">
                     <ToggleSwitch />
-                </controls:Setting>
-            </controls:SettingsGroup>
-            <controls:SettingsGroup Header="Administrator mode">
-                <controls:SettingExpander IsExpanded="True">
-                    <controls:SettingExpander.Header>
-                        <controls:Setting Description="Running as user"
+                </wuc:SettingsCard>
+            </wuc:SettingsGroup>
+            <wuc:SettingsGroup Header="Administrator mode">
+                <wuc:SettingsExpander IsExpanded="True">
+                    <wuc:SettingsExpander.Header>
+                        <wuc:SettingsCard Description="Running as user"
                                             Header="Administrator mode"
-                                            Icon="&#xE1A7;"
+                                            HeaderIcon="&#xE1A7;"
                                             Style="{StaticResource ExpanderHeaderSettingStyle}">
-                            <controls:Setting.ActionContent>
-                                <Button Content="Restart Demo as administrator" />
-                            </controls:Setting.ActionContent>
-                        </controls:Setting>
-                    </controls:SettingExpander.Header>
-                    <controls:SettingExpander.Content>
+                            <Button Content="Restart Demo as administrator" />
+                        </wuc:SettingsCard>
+                    </wuc:SettingsExpander.Header>
+                    <wuc:SettingsExpander.Content>
                         <StackPanel Orientation="Vertical">
-                            <controls:Setting Header="Always run as administrator"
+                            <wuc:SettingsCard Header="Always run as administrator"
                                                 IsEnabled="False"
                                                 Style="{StaticResource ExpanderContentSettingStyle}">
-                                <controls:Setting.Description>
+                                <wuc:SettingsCard.Description>
                                     <HyperlinkButton Content="Learn more about administrator mode"
                                                         NavigateUri="https://aka.ms/powertoysDetectedElevatedHelp" />
-                                </controls:Setting.Description>
+                                </wuc:SettingsCard.Description>
 
-                                <!--  This causes an error  -->
-
-                                <!--<controls:Setting.ActionContent>
-                                    <ToggleSwitch/>
-                                </controls:Setting.ActionContent>-->
-                            </controls:Setting>
+                            </wuc:SettingsCard>
                             <InfoBar Title="You need to run as administrator to use this setting."
                                         IsClosable="False"
                                         IsOpen="True"
                                         Severity="Warning" />
                         </StackPanel>
-                    </controls:SettingExpander.Content>
-                </controls:SettingExpander>
-            </controls:SettingsGroup>
-            <controls:SettingsGroup Header="Appearance &amp; behavior">
-                <controls:Setting Header="Choose a mode"
-                                    Icon="&#xE771;">
-                    <controls:Setting.Description>
+                    </wuc:SettingsExpander.Content>
+                </wuc:SettingsExpander>
+            </wuc:SettingsGroup>
+            <wuc:SettingsGroup Header="Appearance &amp; behavior">
+                <wuc:SettingsCard Header="Choose a mode"
+                                    HeaderIcon="&#xE771;">
+                    <wuc:SettingsCard.Description>
                         <HyperlinkButton Content="Windows color settings" />
-                    </controls:Setting.Description>
-                    <controls:Setting.ActionContent>
-                        <ComboBox MinWidth="{StaticResource SettingActionControlMinWidth}"
+                    </wuc:SettingsCard.Description>
+                    <ComboBox MinWidth="{StaticResource SettingActionControlMinWidth}"
                                     SelectedIndex="2">
-                            <ComboBoxItem Content="Dark" />
-                            <ComboBoxItem Content="Light" />
-                            <ComboBoxItem Content="Default" />
-                        </ComboBox>
-                    </controls:Setting.ActionContent>
-                </controls:Setting>
-                <controls:Setting Description="Demo will launch automatically"
+                        <ComboBoxItem Content="Dark" />
+                        <ComboBoxItem Content="Light" />
+                        <ComboBoxItem Content="Default" />
+                    </ComboBox>
+                </wuc:SettingsCard>
+                <wuc:SettingsCard Description="Demo will launch automatically"
                                     Header="Run at startUp">
-                    <controls:Setting.ActionContent>
-                        <ToggleSwitch />
-                    </controls:Setting.ActionContent>
-                </controls:Setting>
-            </controls:SettingsGroup>
+                    <ToggleSwitch />
+                </wuc:SettingsCard>
+            </wuc:SettingsGroup>
             <CheckBox Name="check"
                         Margin="56,0,40,16"
                         AutomationProperties.Name="{Binding ElementName=IncludeInGlobalResultTitle, Path=Text}">
@@ -663,30 +627,30 @@ public class ColorFormatModel : Observable
                     <TextBlock x:Name="IncludeInGlobalResultTitle"
                                 Margin="0,10,0,0"
                                 Text="Include in global result" />
-                    <controls:IsEnabledTextBlock FontSize="{StaticResource SecondaryTextFontSize}"
+                    <wuc:IsEnabledTextBlock FontSize="{StaticResource SecondaryTextFontSize}"
                                                     IsEnabled="{Binding ElementName=check, Path=IsChecked}"
                                                     Text="Show results on queries without direct activation command" />
                 </StackPanel>
             </CheckBox>
         </StackPanel>
-    </controls:SettingsPageControl.ModuleContent>
-    <controls:SettingsPageControl.PrimaryLinks>
-        <controls:PageLink Link="https://aka.ms/powertoys"
+    </wuc:SettingsPageControl.ModuleContent>
+    <wuc:SettingsPageControl.PrimaryLinks>
+        <wuc:PageLink Link="https://aka.ms/powertoys"
                             Text="Documentation" />
-        <controls:PageLink Link="https://aka.ms/powertoys"
+        <wuc:PageLink Link="https://aka.ms/powertoys"
                             Text="GitHub repository" />
-        <controls:PageLink Link="https://aka.ms/powerToysReportBug"
+        <wuc:PageLink Link="https://aka.ms/powerToysReportBug"
                             Text="Report a bug" />
-        <controls:PageLink Link="https://aka.ms/powerToysRequestFeature"
+        <wuc:PageLink Link="https://aka.ms/powerToysRequestFeature"
                             Text="Request a feature" />
-    </controls:SettingsPageControl.PrimaryLinks>
-    <controls:SettingsPageControl.SecondaryLinks>
-        <controls:PageLink Link="http://go.microsoft.com/fwlink/?LinkId=521839"
+    </wuc:SettingsPageControl.PrimaryLinks>
+    <wuc:SettingsPageControl.SecondaryLinks>
+        <wuc:PageLink Link="http://go.microsoft.com/fwlink/?LinkId=521839"
                             Text="Privacy statement" />
-        <controls:PageLink Link="https://github.com/microsoft/PowerToys/blob/master/NOTICE.md"
+        <wuc:PageLink Link="https://github.com/microsoft/PowerToys/blob/master/NOTICE.md"
                             Text="Open-source notice" />
-    </controls:SettingsPageControl.SecondaryLinks>
-</controls:SettingsPageControl>
+    </wuc:SettingsPageControl.SecondaryLinks>
+</wuc:SettingsPageControl>
 ```
 
 ![SettingsUI](https://raw.githubusercontent.com/ghost1372/Resources/main/SettingsUI/Samples/General_Demo.png)
@@ -694,31 +658,24 @@ public class ColorFormatModel : Observable
 # ImageResizer Page
 
 ```xml
-<controls:SettingsPageControl
+<wuc:SettingsPageControl
     ModuleDescription="Lets you resize images by right-clicking."
     ModuleImageSource="ms-appx:///Assets/Modules/ImageResizer.png"
     ModuleTitle="Image Resizer"
     SecondaryLinksHeader="Attribution">
-    <controls:SettingsPageControl.Resources>
-        <Style TargetType="ListViewItem" BasedOn="{StaticResource ListViewItemSettingStyle}"/>
-    </controls:SettingsPageControl.Resources>
-    <controls:SettingsPageControl.ModuleContent>
+    <wuc:SettingsPageControl.ModuleContent>
         <StackPanel ChildrenTransitions="{StaticResource SettingsCardsAnimations}">
-            <controls:Setting Header="Enable Image Resizer">
-                <controls:Setting.Icon>
+            <wuc:SettingsCard Header="Enable Image Resizer">
+                <wuc:SettingsCard.HeaderIcon>
                     <BitmapIcon ShowAsMonochrome="False" UriSource="ms-appx:///Assets/FluentIcons/FluentIconsImageResizer.png"/>
-                </controls:Setting.Icon>
-                <controls:Setting.ActionContent>
+                </wuc:SettingsCard.HeaderIcon>
                     <ToggleSwitch/>
-                </controls:Setting.ActionContent>
-            </controls:Setting>
+                </wuc:SettingsCard>
 
-            <controls:SettingsGroup Header="Image sizes">
-                <controls:Setting Header="Image sizes" Icon="&#xE2B2;">
-                    <controls:Setting.ActionContent>
-                        <Button Content="Add a size" Style="{ThemeResource AccentButtonStyle}"/>
-                    </controls:Setting.ActionContent>
-                </controls:Setting>
+            <wuc:SettingsGroup Header="Image sizes">
+                <wuc:SettingsCard Header="Image sizes" HeaderIcon="&#xE2B2;">
+                    <Button Content="Add a size" Style="{ThemeResource AccentButtonStyle}"/>
+                </wuc:SettingsCard>
                 <ListView
                     ItemsSource="{x:Bind Sizes, Mode=TwoWay}"
                     ScrollViewer.HorizontalScrollBarVisibility="Auto"
@@ -861,66 +818,57 @@ public class ColorFormatModel : Observable
                         </DataTemplate>
                     </ListView.ItemTemplate>
                 </ListView>
-            </controls:SettingsGroup>
-            <controls:SettingsGroup Header="Encoding">
-                <controls:Setting Header="Fallback encoder">
-                    <controls:Setting.ActionContent>
-                        <ComboBox MinWidth="{StaticResource SettingActionControlMinWidth}" SelectedIndex="2">
-                            <ComboBoxItem Content="PNG encoder"/>
-                            <ComboBoxItem Content="BMP encoder"/>
-                            <ComboBoxItem Content="JPEG encoder"/>
-                            <ComboBoxItem Content="TIFF encoder"/>
-                        </ComboBox>
-                    </controls:Setting.ActionContent>
-                </controls:Setting>
-                <controls:Setting Header="JPEG quality level">
-                    <controls:Setting.ActionContent>
-                        <NumberBox
+            </wuc:SettingsGroup>
+            <wuc:SettingsGroup Header="Encoding">
+                <wuc:SettingsCard Header="Fallback encoder">
+                    <ComboBox MinWidth="{StaticResource SettingActionControlMinWidth}" SelectedIndex="2">
+                        <ComboBoxItem Content="PNG encoder"/>
+                        <ComboBoxItem Content="BMP encoder"/>
+                        <ComboBoxItem Content="JPEG encoder"/>
+                        <ComboBoxItem Content="TIFF encoder"/>
+                    </ComboBox>
+                </wuc:SettingsCard>
+                <wuc:SettingsCard Header="JPEG quality level">
+                    <NumberBox
                             MinWidth="{StaticResource SettingActionControlMinWidth}"
                             HorizontalAlignment="Right"
                             Maximum="100"
                             Minimum="0"
                             SpinButtonPlacementMode="Compact"
                             Value="90"/>
-                    </controls:Setting.ActionContent>
-                </controls:Setting>
+                </wuc:SettingsCard>
 
-                <controls:Setting Header="PNG interlacing">
-                    <controls:Setting.ActionContent>
-                        <ComboBox MinWidth="{StaticResource SettingActionControlMinWidth}" SelectedIndex="0">
-                            <ComboBoxItem Content="Default"/>
-                            <ComboBoxItem Content="On"/>
-                            <ComboBoxItem Content="Off"/>
-                        </ComboBox>
-                    </controls:Setting.ActionContent>
-                </controls:Setting>
+                <wuc:SettingsCard Header="PNG interlacing">
+                    <ComboBox MinWidth="{StaticResource SettingActionControlMinWidth}" SelectedIndex="0">
+                        <ComboBoxItem Content="Default"/>
+                        <ComboBoxItem Content="On"/>
+                        <ComboBoxItem Content="Off"/>
+                    </ComboBox>
+                </wuc:SettingsCard>
 
-                <controls:Setting Header="TIFF compression">
-                    <controls:Setting.ActionContent>
-                        <ComboBox MinWidth="{StaticResource SettingActionControlMinWidth}" SelectedIndex="0">
-                            <ComboBoxItem Content="Default"/>
-                            <ComboBoxItem Content="None"/>
-                            <ComboBoxItem Content="CCITT3"/>
-                            <ComboBoxItem Content="CCITT4"/>
-                            <ComboBoxItem Content="LZW"/>
-                        </ComboBox>
-                    </controls:Setting.ActionContent>
-                </controls:Setting>
-            </controls:SettingsGroup>
-            <controls:SettingsGroup Header="File">
-                <controls:SettingExpander IsExpanded="True">
-                    <controls:SettingExpander.Header>
-                        <controls:Setting Header="Filename format" Style="{StaticResource ExpanderHeaderSettingStyle}">
-                            <controls:Setting.ActionContent>
-                                <StackPanel Orientation="Horizontal" Spacing="4">
-                                    <TextBox
+                <wuc:SettingsCard Header="TIFF compression">
+                    <ComboBox MinWidth="{StaticResource SettingActionControlMinWidth}" SelectedIndex="0">
+                        <ComboBoxItem Content="Default"/>
+                        <ComboBoxItem Content="None"/>
+                        <ComboBoxItem Content="CCITT3"/>
+                        <ComboBoxItem Content="CCITT4"/>
+                        <ComboBoxItem Content="LZW"/>
+                    </ComboBox>
+                </wuc:SettingsCard>
+            </wuc:SettingsGroup>
+            <wuc:SettingsGroup Header="File">
+                <wuc:SettingsExpander IsExpanded="True">
+                    <wuc:SettingsExpander.Header>
+                        <wuc:SettingsCard Header="Filename format" Style="{StaticResource ExpanderHeaderSettingStyle}">
+                            <StackPanel Orientation="Horizontal" Spacing="4">
+                                <TextBox
                                         MinWidth="{StaticResource SettingActionControlMinWidth}"
                                         HorizontalAlignment="Right"
                                         Header="Example: %1 (%2)"/>
-                                    <Button Content="&#xE946;" FontFamily="{ThemeResource SymbolThemeFontFamily}">
-                                        <Button.Flyout>
-                                            <Flyout>
-                                                <TextBlock x:Name="FileFormatTextBlock">
+                                <Button Content="&#xE946;" FontFamily="{ThemeResource SymbolThemeFontFamily}">
+                                    <Button.Flyout>
+                                        <Flyout>
+                                            <TextBlock x:Name="FileFormatTextBlock">
                                                     <Run Text="The following parameters can be used:"/>
                                                     <LineBreak/>
                                                     <LineBreak/>
@@ -934,29 +882,28 @@ public class ColorFormatModel : Observable
                                                     <LineBreak/>
                                                     <Run FontWeight="Bold" Text="%3"/>
                                                     <Run Text=" - "/>
-                                                </TextBlock>
-                                            </Flyout>
-                                        </Button.Flyout>
-                                    </Button>
-                                </StackPanel>
-                            </controls:Setting.ActionContent>
-                        </controls:Setting>
-                    </controls:SettingExpander.Header>
-                    <controls:SettingExpander.Content>
+                                            </TextBlock>
+                                        </Flyout>
+                                    </Button.Flyout>
+                                </Button>
+                            </StackPanel>
+                        </wuc:SettingsCard>
+                    </wuc:SettingsExpander.Header>
+                    <wuc:SettingsExpander.Content>
                         <CheckBox Margin="16,8,0,8" Content="Use original date modified"/>
-                    </controls:SettingExpander.Content>
-                </controls:SettingExpander>
-            </controls:SettingsGroup>
+                    </wuc:SettingsExpander.Content>
+                </wuc:SettingsExpander>
+            </wuc:SettingsGroup>
         </StackPanel>
-    </controls:SettingsPageControl.ModuleContent>
+    </wuc:SettingsPageControl.ModuleContent>
 
-    <controls:SettingsPageControl.PrimaryLinks>
-        <controls:PageLink Link="https://aka.ms/PowerToysOverview_ImageResizer" Text="Learn more about Image Resizer"/>
-    </controls:SettingsPageControl.PrimaryLinks>
-    <controls:SettingsPageControl.SecondaryLinks>
-        <controls:PageLink Link="https://github.com/bricelam/ImageResizer/" Text="Brice Lambson's ImageResizer"/>
-    </controls:SettingsPageControl.SecondaryLinks>
-</controls:SettingsPageControl>
+    <wuc:SettingsPageControl.PrimaryLinks>
+        <wuc:PageLink Link="https://aka.ms/PowerToysOverview_ImageResizer" Text="Learn more about Image Resizer"/>
+    </wuc:SettingsPageControl.PrimaryLinks>
+    <wuc:SettingsPageControl.SecondaryLinks>
+        <wuc:PageLink Link="https://github.com/bricelam/ImageResizer/" Text="Brice Lambson's ImageResizer"/>
+    </wuc:SettingsPageControl.SecondaryLinks>
+</wuc:SettingsPageControl>
 ```
 
 ```cs
@@ -1021,62 +968,55 @@ public class ImageSize : Observable
 # KeyboardManager Page
 
 ```xml
-<controls:SettingsPageControl
+<wuc:SettingsPageControl
     ModuleDescription="Reconfigure your keyboard by remapping keys and shortcuts"
     ModuleImageSource="ms-appx:///Assets/Modules/KBM.png"
     ModuleTitle="Keyboard Manager">
-    <controls:SettingsPageControl.ModuleContent>
+    <wuc:SettingsPageControl.ModuleContent>
         <StackPanel Orientation="Vertical" ChildrenTransitions="{StaticResource SettingsCardsAnimations}">
-            <controls:Setting Header="Enable Keyboard Manager">
-                <controls:Setting.Icon>
+            <wuc:SettingsCard Header="Enable Keyboard Manager">
+                <wuc:SettingsCard.HeaderIcon>
                     <BitmapIcon ShowAsMonochrome="False" UriSource="ms-appx:///Assets/FluentIcons/FluentIconsKeyboardManager.png"/>
-                </controls:Setting.Icon>
-                <controls:Setting.ActionContent>
-                    <ToggleSwitch/>
-                </controls:Setting.ActionContent>
-                <controls:Setting.Description>
+                </wuc:SettingsCard.HeaderIcon>
+                <ToggleSwitch/>
+                <wuc:SettingsCard.Description>
                     <HyperlinkButton NavigateUri="https://aka.ms/powerToysCannotRemapKeys">
                         <TextBlock FontWeight="SemiBold" Text="Learn more about remapping limitations"/>
                     </HyperlinkButton>
-                </controls:Setting.Description>
-            </controls:Setting>
+                </wuc:SettingsCard.Description>
+            </wuc:SettingsCard>
 
-            <controls:SettingsGroup Header="Keys" IsEnabled="False">
+            <wuc:SettingsGroup Header="Keys" IsEnabled="False">
 
                 <Button Style="{StaticResource SettingButtonStyle}">
-                    <controls:Setting
+                    <wuc:SettingsCard
                         Description="Remap keys to other keys or shortcuts"
                         Header="Remap a key"
-                        Icon="&#xE92E;"
+                        HeaderIcon="&#xE92E;"
                         Style="{StaticResource ExpanderHeaderSettingStyle}">
-                        <controls:Setting.ActionContent>
-                            <FontIcon FontFamily="{ThemeResource SymbolThemeFontFamily}" Glyph="&#xE8A7;"/>
-                        </controls:Setting.ActionContent>
-                    </controls:Setting>
+                        <FontIcon FontFamily="{ThemeResource SymbolThemeFontFamily}" Glyph="&#xE8A7;"/>
+                    </wuc:SettingsCard>
                 </Button>
 
-            </controls:SettingsGroup>
+            </wuc:SettingsGroup>
 
-            <controls:SettingsGroup Header="Shortcuts" IsEnabled="False">
+            <wuc:SettingsGroup Header="Shortcuts" IsEnabled="False">
                 <Button Style="{StaticResource SettingButtonStyle}">
-                    <controls:Setting
+                    <wuc:SettingsCard
                         Description="Remap shortcuts to other shortcuts or keys for all or specific applications"
                         Header="Remap a shortcut"
-                        Icon="&#xE92E;"
+                        HeaderIcon="&#xE92E;"
                         Style="{StaticResource ExpanderHeaderSettingStyle}">
-                        <controls:Setting.ActionContent>
-                            <FontIcon FontFamily="{ThemeResource SymbolThemeFontFamily}" Glyph="&#xE8A7;"/>
-                        </controls:Setting.ActionContent>
-                    </controls:Setting>
+                        <FontIcon FontFamily="{ThemeResource SymbolThemeFontFamily}" Glyph="&#xE8A7;"/>
+                    </wuc:SettingsCard>
                 </Button>
-            </controls:SettingsGroup>
+            </wuc:SettingsGroup>
         </StackPanel>
-    </controls:SettingsPageControl.ModuleContent>
-    <controls:SettingsPageControl.PrimaryLinks>
-        <controls:PageLink Link="https://aka.ms/PowerToysOverview_KeyboardManager" Text="Learn more about Keyboard Manager"/>
-    </controls:SettingsPageControl.PrimaryLinks>
-</controls:SettingsPageControl>
-
+    </wuc:SettingsPageControl.ModuleContent>
+    <wuc:SettingsPageControl.PrimaryLinks>
+        <wuc:PageLink Link="https://aka.ms/PowerToysOverview_KeyboardManager" Text="Learn more about Keyboard Manager"/>
+    </wuc:SettingsPageControl.PrimaryLinks>
+</wuc:SettingsPageControl>
 ```
 ![SettingsUI](https://raw.githubusercontent.com/ghost1372/Resources/main/SettingsUI/Samples/KeyboardManager_Demo.png)
 
@@ -1084,10 +1024,10 @@ public class ImageSize : Observable
 # OOBE Page
 
 ```xml
-<controls:OOBEPageControl Title="FileExplorer Preview"
+<wuc:OOBEPageControl Title="FileExplorer Preview"
     HeroImage="ms-appx:///Assets/Modules/OOBE/FileExplorer.png"
     Description="These settings allow you to manage your Windows File Explorer custom preview handlers.">
-    <controls:OOBEPageControl.PageContent>
+    <wuc:OOBEPageControl.PageContent>
         <StackPanel Orientation="Vertical" ChildrenTransitions="{StaticResource SettingsCardsAnimations}">
             <TextBlock Text="How to enable"
                         Style="{ThemeResource OobeSubtitleStyle}" />
@@ -1098,109 +1038,97 @@ public class ImageSize : Observable
                 </HyperlinkButton>
             </StackPanel>
         </StackPanel>
-    </controls:OOBEPageControl.PageContent>
-</controls:OOBEPageControl>
+    </wuc:OOBEPageControl.PageContent>
+</wuc:OOBEPageControl>
 ```
 ![SettingsUI](https://raw.githubusercontent.com/ghost1372/Resources/main/SettingsUI/Samples/OOBE_Demo.png)
 
 # PowerLauncher Page
 ```xml
-<controls:SettingsPageControl
+<wuc:SettingsPageControl
     ModuleDescription="A quick launcher that has additional capabilities without sacrificing performance."
     ModuleImageSource="ms-appx:///Assets/Modules/PowerLauncher.png"
     ModuleTitle="PowerToys Run"
     SecondaryLinksHeader="Attribution">
-    <controls:SettingsPageControl.Resources>
-        <Style TargetType="ListViewItem" BasedOn="{StaticResource ListViewItemSettingStyle}"/>
-    </controls:SettingsPageControl.Resources>
-    <controls:SettingsPageControl.ModuleContent>
+    <wuc:SettingsPageControl.ModuleContent>
         <StackPanel Orientation="Vertical" ChildrenTransitions="{StaticResource SettingsCardsAnimations}">
-            <controls:Setting Header="Enable PowerToys Run">
-                <controls:Setting.Icon>
+            <wuc:SettingsCard Header="Enable PowerToys Run">
+                <wuc:SettingsCard.HeaderIcon>
                     <BitmapIcon ShowAsMonochrome="False" UriSource="ms-appx:///Assets/FluentIcons/FluentIconsPowerToysRun.png"/>
-                </controls:Setting.Icon>
-                <controls:Setting.ActionContent>
-                    <ToggleSwitch/>
-                </controls:Setting.ActionContent>
-            </controls:Setting>
-            <controls:SettingsGroup Header="Shortcut">
-                <controls:SettingExpander IsExpanded="True">
-                    <controls:SettingExpander.Header>
-                        <controls:Setting
+                </wuc:SettingsCard.HeaderIcon>
+                <ToggleSwitch/>
+
+            </wuc:SettingsCard>
+            <wuc:SettingsGroup Header="Shortcut">
+                <wuc:SettingsExpander IsExpanded="True">
+                    <wuc:SettingsExpander.Header>
+                        <wuc:SettingsCard
                             Description="Customize the keyboard shortcut to activate this module"
                             Header="Activation shortcut"
-                            Icon="&#xEDA7;"
+                            HeaderIcon="&#xEDA7;"
                             Style="{StaticResource ExpanderHeaderSettingStyle}"/>
-                    </controls:SettingExpander.Header>
-                    <controls:SettingExpander.Content>
+                    </wuc:SettingsExpander.Header>
+                    <wuc:SettingsExpander.Content>
                         <StackPanel>
                             <CheckBox Margin="{StaticResource ExpanderSettingMargin}" Content="Ignore shortcuts in fullscreen mode"/>
                         </StackPanel>
-                    </controls:SettingExpander.Content>
-                </controls:SettingExpander>
-            </controls:SettingsGroup>
+                    </wuc:SettingsExpander.Content>
+                </wuc:SettingsExpander>
+            </wuc:SettingsGroup>
 
-            <controls:SettingsGroup Header="Search &amp; results">
-                <controls:SettingExpander IsExpanded="True">
-                    <controls:SettingExpander.Header>
-                        <controls:Setting
+            <wuc:SettingsGroup Header="Search &amp; results">
+                <wuc:SettingsExpander IsExpanded="True">
+                    <wuc:SettingsExpander.Header>
+                        <wuc:SettingsCard
                             Header="Maximum number of results"
-                            Icon="&#xE721;"
+                            HeaderIcon="&#xE721;"
                             Style="{StaticResource ExpanderHeaderSettingStyle}">
-                            <controls:Setting.ActionContent>
-                                <NumberBox
+                            <NumberBox
                                     MinWidth="{StaticResource SettingActionControlMinWidth}"
                                     Minimum="1"
                                     SpinButtonPlacementMode="Compact"
                                     Value="4"/>
-                            </controls:Setting.ActionContent>
-                        </controls:Setting>
-                    </controls:SettingExpander.Header>
-                    <controls:SettingExpander.Content>
+                        </wuc:SettingsCard>
+                    </wuc:SettingsExpander.Header>
+                    <wuc:SettingsExpander.Content>
                         <CheckBox Margin="{StaticResource ExpanderSettingMargin}" Content="Clear the previous query on launch"/>
-                    </controls:SettingExpander.Content>
-                </controls:SettingExpander>
-            </controls:SettingsGroup>
+                    </wuc:SettingsExpander.Content>
+                </wuc:SettingsExpander>
+            </wuc:SettingsGroup>
 
-            <controls:SettingsGroup Header="Position &amp; appearance">
-                <controls:Setting
+            <wuc:SettingsGroup Header="Position &amp; appearance">
+                <wuc:SettingsCard
                     Description="If multiple monitors are in use, PowerToys Run can be launched on the desired monitor"
                     Header="Preferred monitor position"
-                    Icon="&#xE18C;">
-                    <controls:Setting.ActionContent>
-                        <ComboBox MinWidth="{StaticResource SettingActionControlMinWidth}" SelectedIndex="0">
-                            <ComboBoxItem Content="Monitor with mouse cursor"/>
-                            <ComboBoxItem Content="Primary monitor"/>
-                            <ComboBoxItem Content="Monitor with focused window"/>
-                        </ComboBox>
-                    </controls:Setting.ActionContent>
-                </controls:Setting>
+                    HeaderIcon="&#xE18C;">
+                    <ComboBox MinWidth="{StaticResource SettingActionControlMinWidth}" SelectedIndex="0">
+                        <ComboBoxItem Content="Monitor with mouse cursor"/>
+                        <ComboBoxItem Content="Primary monitor"/>
+                        <ComboBoxItem Content="Monitor with focused window"/>
+                    </ComboBox>
+                </wuc:SettingsCard>
 
-                <controls:Setting Header="Choose a mode" Icon="&#xE771;">
-                    <controls:Setting.Description>
+                <wuc:SettingsCard Header="Choose a mode" HeaderIcon="&#xE771;">
+                    <wuc:SettingsCard.Description>
                         <HyperlinkButton Content="Windows color settings"/>
-                    </controls:Setting.Description>
-                    <controls:Setting.ActionContent>
-                        <ComboBox MinWidth="{StaticResource SettingActionControlMinWidth}" SelectedIndex="0">
-                            <ComboBoxItem Content="Dark"/>
-                            <ComboBoxItem Content="Light"/>
-                            <ComboBoxItem Content="Default"/>
-                        </ComboBox>
-                    </controls:Setting.ActionContent>
-                </controls:Setting>
-            </controls:SettingsGroup>
-            <controls:SettingsGroup Header="Plugins">
-                <controls:Setting
+                    </wuc:SettingsCard.Description>
+                    <ComboBox MinWidth="{StaticResource SettingActionControlMinWidth}" SelectedIndex="0">
+                        <ComboBoxItem Content="Dark"/>
+                        <ComboBoxItem Content="Light"/>
+                        <ComboBoxItem Content="Default"/>
+                    </ComboBox>
+                    </wuc:SettingsCard>
+            </wuc:SettingsGroup>
+            <wuc:SettingsGroup Header="Plugins">
+                <wuc:SettingsCard
                     Description="You can include or remove each plugin from the global results, change the direct activation phrase and configure additional options"
                     Header="Plugins"
-                    Icon="&#xEA86;">
-                    <controls:Setting.ActionContent>
-                        <AutoSuggestBox
+                    HeaderIcon="&#xEA86;">
+                    <AutoSuggestBox
                             MinWidth="{StaticResource SettingActionControlMinWidth}"
                             PlaceholderText="Search this list"
                             QueryIcon="Find"/>
-                    </controls:Setting.ActionContent>
-                </controls:Setting>
+                </wuc:SettingsCard>
                 <InfoBar
                     Title="PowerToys Run can't provide any results without plugins"
                     IsClosable="False"
@@ -1221,28 +1149,28 @@ public class ImageSize : Observable
                 </StackPanel>
 
                 <ListView IsItemClickEnabled="False" SelectionMode="None"/>
-            </controls:SettingsGroup>
+            </wuc:SettingsGroup>
         </StackPanel>
 
-    </controls:SettingsPageControl.ModuleContent>
-    <controls:SettingsPageControl.PrimaryLinks>
-        <controls:PageLink Link="https://aka.ms/PowerToysOverview_PowerToysRun" Text="Learn more about PowerToys Run"/>
-    </controls:SettingsPageControl.PrimaryLinks>
-    <controls:SettingsPageControl.SecondaryLinks>
-        <controls:PageLink Link="https://github.com/Wox-launcher/Wox/" Text="Wox"/>
-        <controls:PageLink Link="https://github.com/betsegaw/windowwalker/" Text="Beta Tadele's Window Walker"/>
-    </controls:SettingsPageControl.SecondaryLinks>
-</controls:SettingsPageControl>
+    </wuc:SettingsPageControl.ModuleContent>
+    <wuc:SettingsPageControl.PrimaryLinks>
+        <wuc:PageLink Link="https://aka.ms/PowerToysOverview_PowerToysRun" Text="Learn more about PowerToys Run"/>
+    </wuc:SettingsPageControl.PrimaryLinks>
+    <wuc:SettingsPageControl.SecondaryLinks>
+        <wuc:PageLink Link="https://github.com/Wox-launcher/Wox/" Text="Wox"/>
+        <wuc:PageLink Link="https://github.com/betsegaw/windowwalker/" Text="Beta Tadele's Window Walker"/>
+    </wuc:SettingsPageControl.SecondaryLinks>
+</wuc:SettingsPageControl>
 ```
 ![SettingsUI](https://raw.githubusercontent.com/ghost1372/Resources/main/SettingsUI/Samples/Powertoys_Demo.png)
 
 # PowerPreview Page
 ```xml
-<controls:SettingsPageControl
+<wuc:SettingsPageControl
     ModuleDescription="These settings allow you to manage your Windows File Explorer custom preview handlers."
     ModuleImageSource="ms-appx:///Assets/Modules/PowerPreview.png"
     ModuleTitle="File Explorer">
-    <controls:SettingsPageControl.ModuleContent>
+    <wuc:SettingsPageControl.ModuleContent>
         <StackPanel Orientation="Vertical" ChildrenTransitions="{StaticResource SettingsCardsAnimations}">
             <InfoBar
                 Title="You need to run as administrator to modify these settings."
@@ -1256,195 +1184,164 @@ public class ImageSize : Observable
                 IsOpen="True"
                 Severity="Informational"/>
 
-            <controls:SettingsGroup Header="Preview Pane">
-                <controls:Setting Header="Enable SVG (.svg) preview" Icon="&#xE91B;">
-                    <controls:Setting.ActionContent>
-                        <ToggleSwitch/>
-                    </controls:Setting.ActionContent>
-                </controls:Setting>
-
-                <controls:Setting Header="Enable Markdown (.md) preview" Icon="&#xE943;">
-                    <controls:Setting.ActionContent>
-                        <ToggleSwitch/>
-                    </controls:Setting.ActionContent>
-                </controls:Setting>
-
-                <controls:Setting Header="Enable PDF (.pdf) preview" Icon="&#xEA90;">
-                    <controls:Setting.ActionContent>
-                        <ToggleSwitch/>
-                    </controls:Setting.ActionContent>
-                </controls:Setting>
-            </controls:SettingsGroup>
-
-            <controls:SettingsGroup Header="Icon Preview">
+            <wuc:SettingsGroup Header="Preview Pane">
+                <wuc:SettingsCard Header="Enable SVG (.svg) preview" HeaderIcon="&#xE91B;">
+                    <ToggleSwitch/>
+                </wuc:SettingsCard>
+                <wuc:SettingsCard Header="Enable Markdown (.md) preview" HeaderIcon="&#xE943;">
+                    <ToggleSwitch/>
+                </wuc:SettingsCard>
+                    <wuc:SettingsCard Header="Enable PDF (.pdf) preview" HeaderIcon="&#xEA90;">
+                    <ToggleSwitch/>
+                </wuc:SettingsCard>
+            </wuc:SettingsGroup>
+            <wuc:SettingsGroup Header="Icon Preview">
                 <InfoBar
                     Title="A reboot may be required for changes to these settings to take effect"
                     IsClosable="False"
                     IsOpen="True"
                     Severity="Informational"/>
-                <controls:Setting Header="Enable SVG (.svg) thumbnails" Icon="&#xE91B;">
-                    <controls:Setting.ActionContent>
-                        <ToggleSwitch/>
-                    </controls:Setting.ActionContent>
-                </controls:Setting>
-            </controls:SettingsGroup>
+                <wuc:SettingsCard Header="Enable SVG (.svg) thumbnails" HeaderIcon="&#xE91B;">
+                    <ToggleSwitch/>
+                </wuc:SettingsCard>
+            </wuc:SettingsGroup>
         </StackPanel>
-    </controls:SettingsPageControl.ModuleContent>
+    </wuc:SettingsPageControl.ModuleContent>
 
-    <controls:SettingsPageControl.PrimaryLinks>
-        <controls:PageLink Link="https://aka.ms/PowerToysOverview_FileExplorerAddOns" Text="Learn more about File Explorer add-ons"/>
-    </controls:SettingsPageControl.PrimaryLinks>
-</controls:SettingsPageControl>
+    <wuc:SettingsPageControl.PrimaryLinks>
+        <wuc:PageLink Link="https://aka.ms/PowerToysOverview_FileExplorerAddOns" Text="Learn more about File Explorer add-ons"/>
+    </wuc:SettingsPageControl.PrimaryLinks>
+</wuc:SettingsPageControl>
 ```
 
 ![SettingsUI](https://raw.githubusercontent.com/ghost1372/Resources/main/SettingsUI/Samples/FileExplorer_Demo.png)
 
 # PowerRename Page
 ```xml
-<controls:SettingsPageControl
+<wuc:SettingsPageControl
     ModuleDescription="A Windows Shell extension for more advanced bulk renaming using search and replace or regular expressions."
     ModuleImageSource="ms-appx:///Assets/Modules/PowerRename.png"
     ModuleTitle="PowerRename"
     SecondaryLinksHeader="Attribution">
-    <controls:SettingsPageControl.ModuleContent>
+    <wuc:SettingsPageControl.ModuleContent>
         <StackPanel HorizontalAlignment="Stretch" Orientation="Vertical" ChildrenTransitions="{StaticResource SettingsCardsAnimations}">
-            <controls:Setting Header="Enable PowerRename">
-                <controls:Setting.Icon>
+            <wuc:SettingsCard Header="Enable PowerRename">
+                <wuc:SettingsCard.HeaderIcon>
                     <BitmapIcon ShowAsMonochrome="False" UriSource="ms-appx:///Assets/FluentIcons/FluentIconsPowerRename.png"/>
-                </controls:Setting.Icon>
-                <controls:Setting.ActionContent>
+                </wuc:SettingsCard.HeaderIcon>
+                <ToggleSwitch/>
+            </wuc:SettingsCard>
+
+            <wuc:SettingsGroup Header="Shell integration">
+                <wuc:SettingsCard Header="Show icon on context menu">
                     <ToggleSwitch/>
-                </controls:Setting.ActionContent>
-            </controls:Setting>
+                </wuc:SettingsCard>
 
-            <controls:SettingsGroup Header="Shell integration">
-                <controls:Setting Header="Show icon on context menu">
-                    <controls:Setting.ActionContent>
-                        <ToggleSwitch/>
-                    </controls:Setting.ActionContent>
-                </controls:Setting>
+                <wuc:SettingsCard Description="Press Shift + right-click on files to open the extended menu" Header="Appear only in extended context menu">
+                    <ToggleSwitch/>
+                </wuc:SettingsCard>
+            </wuc:SettingsGroup>
 
-                <controls:Setting Description="Press Shift + right-click on files to open the extended menu" Header="Appear only in extended context menu">
-                    <controls:Setting.ActionContent>
-                        <ToggleSwitch/>
-                    </controls:Setting.ActionContent>
-                </controls:Setting>
-            </controls:SettingsGroup>
-
-            <controls:SettingsGroup Header="Auto-complete">
-                <controls:SettingExpander IsExpanded="True">
-                    <controls:SettingExpander.Header>
-                        <controls:Setting Header="Enable auto-complete for the search and replace fields" Style="{StaticResource ExpanderHeaderSettingStyle}">
-                            <controls:Setting.ActionContent>
-                                <ToggleSwitch/>
-                            </controls:Setting.ActionContent>
-                        </controls:Setting>
-                    </controls:SettingExpander.Header>
-                    <controls:SettingExpander.Content>
+            <wuc:SettingsGroup Header="Auto-complete">
+                <wuc:SettingsExpander IsExpanded="True">
+                    <wuc:SettingsExpander.Header>
+                        <wuc:SettingsCard Header="Enable auto-complete for the search and replace fields" Style="{StaticResource ExpanderHeaderSettingStyle}">
+                            <ToggleSwitch/>
+                        </wuc:SettingsCard>
+                    </wuc:SettingsExpander.Header>
+                    <wuc:SettingsExpander.Content>
                         <StackPanel HorizontalAlignment="Stretch">
-                            <controls:Setting Header="Maximum number of items" Style="{StaticResource ExpanderContentSettingStyle}">
-                                <controls:Setting.ActionContent>
-                                    <NumberBox
+                            <wuc:SettingsCard Header="Maximum number of items" Style="{StaticResource ExpanderContentSettingStyle}">
+                                <NumberBox
                                         MinWidth="{StaticResource SettingActionControlMinWidth}"
                                         HorizontalAlignment="Left"
                                         Maximum="20"
                                         Minimum="0"
                                         SpinButtonPlacementMode="Compact"
                                         Value="10"/>
-                                </controls:Setting.ActionContent>
-                            </controls:Setting>
+                            </wuc:SettingsCard>
                         </StackPanel>
-                    </controls:SettingExpander.Content>
-                </controls:SettingExpander>
-                <controls:Setting Header="Show recently used strings">
-                    <controls:Setting.ActionContent>
-                        <ToggleSwitch/>
-                    </controls:Setting.ActionContent>
-                </controls:Setting>
-            </controls:SettingsGroup>
+                    </wuc:SettingsExpander.Content>
+                </wuc:SettingsExpander>
+                <wuc:SettingsCard Header="Show recently used strings">
+                    <ToggleSwitch/>
+                </wuc:SettingsCard>
+            </wuc:SettingsGroup>
 
-            <controls:SettingsGroup Header="Behavior">
-                <controls:Setting Description="Provides extended features but may use different regex syntax" Header="Use Boost library">
-                    <controls:Setting.ActionContent>
-                        <ToggleSwitch/>
-                    </controls:Setting.ActionContent>
-                </controls:Setting>
-            </controls:SettingsGroup>
+            <wuc:SettingsGroup Header="Behavior">
+                <wuc:SettingsCard Description="Provides extended features but may use different regex syntax" Header="Use Boost library">
+                    <ToggleSwitch/>
+                </wuc:SettingsCard>
+            </wuc:SettingsGroup>
         </StackPanel>
-    </controls:SettingsPageControl.ModuleContent>
+    </wuc:SettingsPageControl.ModuleContent>
 
-    <controls:SettingsPageControl.PrimaryLinks>
-        <controls:PageLink Link="https://aka.ms/PowerToysOverview_PowerRename" Text="Learn more about PowerRename"/>
-    </controls:SettingsPageControl.PrimaryLinks>
-    <controls:SettingsPageControl.SecondaryLinks>
-        <controls:PageLink Link="https://github.com/chrdavis/SmartRename" Text="Chris Davis's SmartRenamer"/>
-    </controls:SettingsPageControl.SecondaryLinks>
-</controls:SettingsPageControl>
+    <wuc:SettingsPageControl.PrimaryLinks>
+        <wuc:PageLink Link="https://aka.ms/PowerToysOverview_PowerRename" Text="Learn more about PowerRename"/>
+    </wuc:SettingsPageControl.PrimaryLinks>
+    <wuc:SettingsPageControl.SecondaryLinks>
+        <wuc:PageLink Link="https://github.com/chrdavis/SmartRename" Text="Chris Davis's SmartRenamer"/>
+    </wuc:SettingsPageControl.SecondaryLinks>
+</wuc:SettingsPageControl>
 ```
 
 ![SettingsUI](https://raw.githubusercontent.com/ghost1372/Resources/main/SettingsUI/Samples/PowerRename_Demo.png)
 
 # ShortcutGuid Page
 ```xml
-<controls:SettingsPageControl
+<wuc:SettingsPageControl
     ModuleDescription="Shows a help overlay with Windows shortcuts when the Windows key is pressed."
     ModuleImageSource="ms-appx:///Assets/Modules/ShortcutGuide.png"
     ModuleTitle="Shortcut Guide">
-    <controls:SettingsPageControl.ModuleContent>
+    <wuc:SettingsPageControl.ModuleContent>
         <StackPanel Orientation="Vertical" ChildrenTransitions="{StaticResource SettingsCardsAnimations}">
-            <controls:Setting Header="Enable Shortcut Guide">
-                <controls:Setting.Icon>
+            <wuc:SettingsCard Header="Enable Shortcut Guide">
+                <wuc:SettingsCard.HeaderIcon>
                     <BitmapIcon ShowAsMonochrome="False" UriSource="ms-appx:///Assets/FluentIcons/FluentIconsShortcutGuide.png"/>
-                </controls:Setting.Icon>
-                <controls:Setting.ActionContent>
-                    <ToggleSwitch/>
-                </controls:Setting.ActionContent>
-            </controls:Setting>
+                </wuc:SettingsCard.HeaderIcon>
+                <ToggleSwitch/>
+            </wuc:SettingsCard>
 
-            <controls:KeyVisual IsTabStop="False"
+            <wuc:KeyVisual IsTabStop="False"
                                         AutomationProperties.AccessibilityView="Raw"
                                         VisualType="SmallOutline"
                                         VerticalAlignment="Center"
                                 HorizontalAlignment="Left"
                                         Content="Ctrl+F5" />
-            <controls:ShortcutWithTextLabelControl x:Name="HotkeyMicVidControl" Text="to toggle both your microphone and video" />
-            <controls:ShortcutWithTextLabelControl x:Name="HotkeyMicControl" Text="to toggle your microphone" />
-            <controls:ShortcutWithTextLabelControl x:Name="HotkeyVidControl" Text="to toggle your microphone" />
+            <wuc:ShortcutWithTextLabelControl x:Name="HotkeyMicVidControl" Text="to toggle both your microphone and video" />
+            <wuc:ShortcutWithTextLabelControl x:Name="HotkeyMicControl" Text="to toggle your microphone" />
+            <wuc:ShortcutWithTextLabelControl x:Name="HotkeyVidControl" Text="to toggle your microphone" />
             <Button Content="Open Shortcut Dialog" Click="Button_Click"/>
-            <controls:SettingsGroup Header="Appearance &amp; behavior">
+            <wuc:SettingsGroup Header="Appearance &amp; behavior">
 
-                <controls:Setting Header="Choose a mode" Icon="&#xE771;">
-                    <controls:Setting.Description>
+                <wuc:SettingsCard Header="Choose a mode" HeaderIcon="&#xE771;">
+                    <wuc:SettingsCard.Description>
                         <HyperlinkButton Content="Windows color settings"/>
-                    </controls:Setting.Description>
-                    <controls:Setting.ActionContent>
-                        <ComboBox MinWidth="{StaticResource SettingActionControlMinWidth}" SelectedIndex="0">
-                            <ComboBoxItem Content="Dark"/>
-                            <ComboBoxItem Content="Light"/>
-                            <ComboBoxItem Content="Default"/>
-                        </ComboBox>
-                    </controls:Setting.ActionContent>
-                </controls:Setting>
+                    </wuc:SettingsCard.Description>
+                    <ComboBox MinWidth="{StaticResource SettingActionControlMinWidth}" SelectedIndex="0">
+                        <ComboBoxItem Content="Dark"/>
+                        <ComboBoxItem Content="Light"/>
+                        <ComboBoxItem Content="Default"/>
+                    </ComboBox>
+                </wuc:SettingsCard>
 
-                <controls:Setting Header="Opacity of background">
-                    <controls:Setting.ActionContent>
-                        <Slider
+                <wuc:SettingsCard Header="Opacity of background">
+                    <Slider
                             MinWidth="{StaticResource SettingActionControlMinWidth}"
                             Maximum="100"
                             Minimum="0"/>
-                    </controls:Setting.ActionContent>
-                </controls:Setting>
-            </controls:SettingsGroup>
-            <controls:SettingsGroup Header="Excluded apps">
-                <controls:SettingExpander IsExpanded="True">
-                    <controls:SettingExpander.Header>
-                        <controls:Setting
+                </wuc:SettingsCard>
+            </wuc:SettingsGroup>
+            <wuc:SettingsGroup Header="Excluded apps">
+                <wuc:SettingsExpander IsExpanded="True">
+                    <wuc:SettingsExpander.Header>
+                        <wuc:SettingsCard
                             Description="Turns off Shortcut Guide when these applications have focus - add one application name per line"
                             Header="Exclude apps"
-                            Icon="&#xE103;"
+                            HeaderIcon="&#xE103;"
                             Style="{StaticResource ExpanderHeaderSettingStyle}"/>
-                    </controls:SettingExpander.Header>
-                    <controls:SettingExpander.Content>
+                    </wuc:SettingsExpander.Header>
+                    <wuc:SettingsExpander.Content>
                         <TextBox
                             MinWidth="240"
                             MinHeight="160"
@@ -1455,15 +1352,15 @@ public class ImageSize : Observable
                             ScrollViewer.VerticalScrollBarVisibility="Visible"
                             ScrollViewer.VerticalScrollMode="Enabled"
                             TextWrapping="Wrap"/>
-                    </controls:SettingExpander.Content>
-                </controls:SettingExpander>
-            </controls:SettingsGroup>
+                    </wuc:SettingsExpander.Content>
+                </wuc:SettingsExpander>
+            </wuc:SettingsGroup>
         </StackPanel>
-    </controls:SettingsPageControl.ModuleContent>
-    <controls:SettingsPageControl.PrimaryLinks>
-        <controls:PageLink Link="https://aka.ms/PowerToysOverview_ShortcutGuide" Text="Learn more about Shortcut Guide"/>
-    </controls:SettingsPageControl.PrimaryLinks>
-</controls:SettingsPageControl>
+    </wuc:SettingsPageControl.ModuleContent>
+    <wuc:SettingsPageControl.PrimaryLinks>
+        <wuc:PageLink Link="https://aka.ms/PowerToysOverview_ShortcutGuide" Text="Learn more about Shortcut Guide"/>
+    </wuc:SettingsPageControl.PrimaryLinks>
+</wuc:SettingsPageControl>
 ```
 
 ```cs
@@ -1530,4 +1427,4 @@ private void DisableKeys()
 
 
 # Demo
-you can run [demo](https://github.com/ghost1372/SettingsUI) and see this feature.
+you can run [demo](https://github.com/WinUICommunity/SettingsUI) and see this feature.

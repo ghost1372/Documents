@@ -333,7 +333,7 @@ menu:
       default: /intellisense/ || fas fa-brain
   WinUICommunity:
     default: /winUICommunity/ || fas fa-dice-d20
-  Common - 4.0.0:
+  Common - 4.0.4:
     default: /winUICommunityCommon/ || fas fa-tools
     DynamicLanguage: /dynamicLanguage/ || fas fa-tools
     Extensions: 
@@ -359,7 +359,7 @@ menu:
     ThemeManager: /themeManager/ || fas fa-tools
     tools:
       default: /tools/ || fas fa-tools
-  LandingsPage - 2.0.0:
+  LandingsPage - 2.0.4:
       default: /winUICommunityLandingsPage/ || fab fa-intercom
       AllLandingsPage: /allLandingsPage/ ||
       HeaderTile: /headerTile/ ||
@@ -368,7 +368,7 @@ menu:
       MainLandingsPage: /mainLandingsPage/ ||
       PageHeader: /pageHeader/ ||
       SectionPage: /sectionPage/ ||
-  SettingsUI - 4.0.0:
+  SettingsUI - 4.0.1:
     default: /winUICommunitySettingsUI/ || fas fa-dice-d20
     Quick start: /quick_start/ || fas fa-dice-d20
     Controls: 
@@ -378,16 +378,14 @@ menu:
       IsEnabledTextBox: /isEnabledTextBox/ ||
       KeyVisual: /keyVisual/ ||
       OOBEPageControl: /oOBEPageControl/ ||
-      Setting: /setting/ ||
+      SettingsCard: /settingsCard/ ||
       SettingsGroup: /settingsGroup/ ||
       SettingsPageControl: /settingsPageControl/ ||
       Shortcut: /shortcut/ ||
       Windows 11 Settings Examples: /windows11SettingsExamples/ ||
-    Labs.SettingsControls:
-      default: /settingsControls/ || fab fa-intercom
     Styles: 
       default: /styles/ || fas fa-palette
-  ShellContextMenu - 4.0.0:
+  ShellContextMenu - 4.0.1:
       default: /winUICommunityShellContextMenu/ || fas fa-brain
         
 
