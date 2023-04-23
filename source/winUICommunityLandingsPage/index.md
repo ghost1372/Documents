@@ -14,10 +14,10 @@ Install-Package WinUICommunity.LandingsPage
 After installing, add the following resource to app.xaml
 
 ```xml
-xmlns:winui="using:WinUICommunity"
+xmlns:wuc="using:WinUICommunity"
 
 <ResourceDictionary Source="ms-appx:///LandingsPage/Themes/Generic.xaml"/>
-<winui:ItemTemplates/>
+<wuc:ItemTemplates/>
 ```
 See the Demo app to see how to use it.
 
@@ -28,5 +28,13 @@ This package is based on the following packages
 - CommunityToolkit.WinUI.UI
 - CommunityToolkit.WinUI.UI.Animations
 - Microsoft.Graphics.Win2D
+
+{% note warning %}
+We moved all namespaces into a single namespace. No matter which (WinUICommunity) library you use, the namespace is always as follows
+For use in the Xaml:
+`xmlns:wuc="using:WinUICommunity"`
+For use in the Csharp:
+`using WinUICommunity;`
+{% endnote %}
 
 ![LandingsPage](https://raw.githubusercontent.com/ghost1372/Resources/main/LandingsPage/0.png)

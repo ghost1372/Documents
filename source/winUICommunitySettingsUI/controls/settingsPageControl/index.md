@@ -6,6 +6,14 @@ title: SettingsPageControl
 public sealed partial class SettingsPageControl : UserControl
 ```
 
+{% note warning %}
+We moved all namespaces into a single namespace. No matter which (WinUICommunity) library you use, the namespace is always as follows
+For use in the Xaml:
+`xmlns:wuc="using:WinUICommunity"`
+For use in the Csharp:
+`using WinUICommunity;`
+{% endnote %}
+
 # Attributes
 
 | Name |
@@ -21,37 +29,37 @@ public sealed partial class SettingsPageControl : UserControl
 # Example
 
 ```xml
-<controls:SettingsPageControl ModuleDescription="Microsoft PowerToys is a set of utilities for power users to tune and streamline their Windows experience for greater productivity. Made with 💗 by Microsoft and the PowerToys community."
+<wuc:SettingsPageControl ModuleDescription="Microsoft PowerToys is a set of utilities for power users to tune and streamline their Windows experience for greater productivity. Made with 💗 by Microsoft and the PowerToys community."
                                 ModuleImageSource="ms-appx:///Assets/PT.png"
                                 ModuleTitle="General"
                                 SecondaryLinksHeader="Related information">
-    <controls:SettingsPageControl.ModuleContent>
+    <wuc:SettingsPageControl.ModuleContent>
         <StackPanel Orientation="Vertical" ChildrenTransitions="{StaticResource SettingsCardsAnimations}">
             <!-- Settings Here -->
         </StackPanel>
-    </controls:SettingsPageControl.ModuleContent>
+    </wuc:SettingsPageControl.ModuleContent>
 
-    <controls:SettingsPageControl.PrimaryLinks>
-        <controls:PageLink Link="https://aka.ms/powertoys"
+    <wuc:SettingsPageControl.PrimaryLinks>
+        <wuc:PageLink Link="https://aka.ms/powertoys"
                             Text="Documentation" />
-        <controls:PageLink Link="https://aka.ms/powertoys"
+        <wuc:PageLink Link="https://aka.ms/powertoys"
                             Text="GitHub repository" />
-        <controls:PageLink Link="https://aka.ms/powerToysReportBug"
+        <wuc:PageLink Link="https://aka.ms/powerToysReportBug"
                             Text="Report a bug" />
-        <controls:PageLink Link="https://aka.ms/powerToysRequestFeature"
+        <wuc:PageLink Link="https://aka.ms/powerToysRequestFeature"
                             Text="Request a feature" />
-    </controls:SettingsPageControl.PrimaryLinks>
+    </wuc:SettingsPageControl.PrimaryLinks>
 
-    <controls:SettingsPageControl.SecondaryLinks>
-        <controls:PageLink Link="http://go.microsoft.com/fwlink/?LinkId=521839"
+    <wuc:SettingsPageControl.SecondaryLinks>
+        <wuc:PageLink Link="http://go.microsoft.com/fwlink/?LinkId=521839"
                             Text="Privacy statement" />
-        <controls:PageLink Link="https://github.com/microsoft/PowerToys/blob/master/NOTICE.md"
+        <wuc:PageLink Link="https://github.com/microsoft/PowerToys/blob/master/NOTICE.md"
                             Text="Open-source notice" />
-    </controls:SettingsPageControl.SecondaryLinks>
-</controls:SettingsPageControl>
+    </wuc:SettingsPageControl.SecondaryLinks>
+</wuc:SettingsPageControl>
 ```
 
 # Demo
-you can run [demo](https://github.com/ghost1372/SettingsUI) and see this feature.
+you can run [demo](https://github.com/WinUICommunity/SettingsUI) and see this feature.
 
 ![SettingsUI](https://raw.githubusercontent.com/ghost1372/Resources/main/SettingsUI/Samples/SettingsPageControl.png)

@@ -49,6 +49,14 @@ After installing, add the following codes to `Package.appxmanifest`
 change `Alias` from App5.exe to your applications name
 {% endnote %}
 
+{% note warning %}
+We moved all namespaces into a single namespace. No matter which (WinUICommunity) library you use, the namespace is always as follows
+For use in the Xaml:
+`xmlns:wuc="using:WinUICommunity"`
+For use in the Csharp:
+`using WinUICommunity;`
+{% endnote %}
+
 now Create a new `ContextMenuItem`
 
 ```cs

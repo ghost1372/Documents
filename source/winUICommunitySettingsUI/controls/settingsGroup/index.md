@@ -2,6 +2,14 @@
 title: SettingsGroup
 ---
 
+{% note warning %}
+We moved all namespaces into a single namespace. No matter which (WinUICommunity) library you use, the namespace is always as follows
+For use in the Xaml:
+`xmlns:wuc="using:WinUICommunity"`
+For use in the Csharp:
+`using WinUICommunity;`
+{% endnote %}
+
 # Attributes
 
 | Name |
@@ -12,20 +20,20 @@ title: SettingsGroup
 # Example
 
 ```xml
-<controls:SettingsGroup Header="Behavior">
-    <controls:SettingsCard Header="Keep screen on">
-        <controls:SettingsCard.HeaderIcon>
+<wuc:SettingsGroup Header="Behavior">
+    <wuc:SettingsCard Header="Keep screen on">
+        <wuc:SettingsCard.HeaderIcon>
             <SymbolIcon Symbol="SetLockScreen"/>
-        </controls:SettingsCard.HeaderIcon>
+        </wuc:SettingsCard.HeaderIcon>
         <ToggleSwitch/>
-    </controls:SettingsCard>
-    <controls:SettingsCard Header="Auto Download">
-        <controls:SettingsCard.HeaderIcon>
+    </wuc:SettingsCard>
+    <wuc:SettingsCard Header="Auto Download">
+        <wuc:SettingsCard.HeaderIcon>
             <SymbolIcon Symbol="Download"/>
-        </controls:SettingsCard.HeaderIcon>
+        </wuc:SettingsCard.HeaderIcon>
         <ToggleSwitch/>
-    </controls:SettingsCard>
-</controls:SettingsGroup>
+    </wuc:SettingsCard>
+</wuc:SettingsGroup>
 ```
 
 # Demo

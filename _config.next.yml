@@ -368,7 +368,7 @@ menu:
       MainLandingsPage: /mainLandingsPage/ ||
       PageHeader: /pageHeader/ ||
       SectionPage: /sectionPage/ ||
-  SettingsUI - 4.0.1:
+  SettingsUI - 4.0.2:
     default: /winUICommunitySettingsUI/ || fas fa-dice-d20
     Quick start: /quick_start/ || fas fa-dice-d20
     Controls: 
@@ -443,8 +443,8 @@ site_state: false
 social:
   GitHub: https://github.com/ghost1372 || fab fa-github
   E-Mail: mailto:mahdidvb72@gmail.com || fa fa-envelope
-  Nuget: https://www.nuget.org/packages/HandyControl || fab fa-microsoft
-  Nuget (SettingsUI): https://www.nuget.org/packages/SettingsUI || fab fa-microsoft
+  Nuget: https://www.nuget.org/packages/HandyControls || fab fa-microsoft
+  Nuget (WinUICommunity): https://www.nuget.org/profiles/WinUICommunity || fab fa-microsoft
 
 social_icons:
   enable: true

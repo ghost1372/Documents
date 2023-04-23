@@ -6,6 +6,14 @@ title: OOBEPageControl
 public sealed partial class OOBEPageControl : UserControl
 ```
 
+{% note warning %}
+We moved all namespaces into a single namespace. No matter which (WinUICommunity) library you use, the namespace is always as follows
+For use in the Xaml:
+`xmlns:wuc="using:WinUICommunity"`
+For use in the Csharp:
+`using WinUICommunity;`
+{% endnote %}
+
 # Attributes
 
 | Name |
@@ -19,10 +27,10 @@ public sealed partial class OOBEPageControl : UserControl
 # Example
 
 ```xml
-<controls:OOBEPageControl Title="FileExplorer Preview"
+<wuc:OOBEPageControl Title="FileExplorer Preview"
     HeroImage="ms-appx:///Assets/Modules/OOBE/FileExplorer.png"
     Description="These settings allow you to manage your Windows File Explorer custom preview handlers.">
-    <controls:OOBEPageControl.PageContent>
+    <wuc:OOBEPageControl.PageContent>
         <StackPanel Orientation="Vertical" ChildrenTransitions="{StaticResource SettingsCardsAnimations}">
             <TextBlock Text="How to enable"
                         Style="{ThemeResource OobeSubtitleStyle}" />
@@ -33,8 +41,8 @@ public sealed partial class OOBEPageControl : UserControl
                 </HyperlinkButton>
             </StackPanel>
         </StackPanel>
-    </controls:OOBEPageControl.PageContent>
-</controls:OOBEPageControl>
+    </wuc:OOBEPageControl.PageContent>
+</wuc:OOBEPageControl>
 ```
 
 # Demo

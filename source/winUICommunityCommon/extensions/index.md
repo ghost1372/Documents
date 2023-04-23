@@ -2,6 +2,14 @@
 title: Extensions
 ---
 
+{% note warning %}
+We moved all namespaces into a single namespace. No matter which (WinUICommunity) library you use, the namespace is always as follows
+For use in the Xaml:
+`xmlns:wuc="using:WinUICommunity"`
+For use in the Csharp:
+`using WinUICommunity;`
+{% endnote %}
+
 # ContentDialogExtension
 
 By default, only 1 ContentDialog can be opened, with the help of this extension you can open multiple ContentDialogs.

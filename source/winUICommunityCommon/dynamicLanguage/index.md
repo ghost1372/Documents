@@ -2,6 +2,14 @@
 title: DynamicLanguage
 ---
 
+{% note warning %}
+We moved all namespaces into a single namespace. No matter which (WinUICommunity) library you use, the namespace is always as follows
+For use in the Xaml:
+`xmlns:wuc="using:WinUICommunity"`
+For use in the Csharp:
+`using WinUICommunity;`
+{% endnote %}
+
 The Localizer helps you to localize your app.
 
 - Switch languages without restarting the app
@@ -109,6 +117,6 @@ txt.Text = Localizer.Get().GetLocalizedStrings("myButtonId").FirstOrDefault();
 Localizer.Get().SetLanguage("en-US");
 ```
 
-for more info please see [Demo](https://github.com/ghost1372/SettingsUI)
+for more info please see [Demo](https://github.com/WinUICommunity/SettingsUI)
 
 ![SettingsUI](https://raw.githubusercontent.com/ghost1372/Resources/main/SettingsUI/Samples/Localization_Demo.gif)

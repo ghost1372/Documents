@@ -4,6 +4,14 @@ title: ItemsPageBase
 
 Inherited from Page and INotifyPropertyChanged. AllLandingsPage and MainLandingsPage Inherited from this class.
 
+{% note warning %}
+We moved all namespaces into a single namespace. No matter which (WinUICommunity) library you use, the namespace is always as follows
+For use in the Xaml:
+`xmlns:wuc="using:WinUICommunity"`
+For use in the Csharp:
+`using WinUICommunity;`
+{% endnote %}
+
 # Event
 |Name|
 |-|
@@ -20,11 +28,11 @@ Inherited from Page and INotifyPropertyChanged. AllLandingsPage and MainLandings
 in this example we use ItemsPageBase class for creating a LandingsPage
 
 ```xml
-<controls:ItemsPageBase
+<wuc:ItemsPageBase
     x:Class="WinUICommunity.LandingsPage.Controls.MainLandingsPage"
     xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-    xmlns:controls="using:WinUICommunity"
+    xmlns:wuc="using:WinUICommunity"
     HighContrastAdjustment="None"
     NavigationCacheMode="Enabled">
 
@@ -74,7 +82,7 @@ in this example we use ItemsPageBase class for creating a LandingsPage
                         <RowDefinition Height="204" />
                         <RowDefinition Height="*" />
                     </Grid.RowDefinitions>
-                    <controls:HomePageHeaderImage
+                    <wuc:HomePageHeaderImage
                         Grid.RowSpan="2"
                         Height="396"
                         HeaderImage="ms-appx:///Assets/Images/Header.png"
@@ -95,54 +103,54 @@ in this example we use ItemsPageBase class for creating a LandingsPage
                             Text="myApp" />
                     </StackPanel>
 
-                    <controls:TileGallery
+                    <wuc:TileGallery
                         x:Name="headerTileGallery"
                         Grid.Row="1"
                         Margin="0,0,0,0">
-                        <controls:TileGallery.HeaderContent>
+                        <wuc:TileGallery.HeaderContent>
                             <StackPanel Orientation="Horizontal" Spacing="10">
-                                <controls:HeaderTile
+                                <wuc:HeaderTile
                                         Title="Documentation Center"
                                         Description="Learn how to work with controls and styles."
                                         Link="https://ghost1372.github.io/winUICommunity/">
-                                    <controls:HeaderTile.Source>
+                                    <wuc:HeaderTile.Source>
                                         <Image Source="/Assets/HomeHeaderTiles/Header-WinUIGallery.png" />
-                                    </controls:HeaderTile.Source>
-                                </controls:HeaderTile>
-                                <controls:HeaderTile
+                                    </wuc:HeaderTile.Source>
+                                </wuc:HeaderTile>
+                                <wuc:HeaderTile
                                         Title="SettingsUI"
                                         Description="Experience WinUI 3 quickly and easily with the help of SettingsUI, Everything you need to develop an application is gathered in one place."
                                         Link="https://github.com/WinUICommunity/SettingsUI">
-                                    <controls:HeaderTile.Source>
+                                    <wuc:HeaderTile.Source>
                                         <Image Source="/Assets/HomeHeaderTiles/icon.png" />
-                                    </controls:HeaderTile.Source>
-                                </controls:HeaderTile>
-                                <controls:HeaderTile
+                                    </wuc:HeaderTile.Source>
+                                </wuc:HeaderTile>
+                                <wuc:HeaderTile
                                         Title="Common"
                                         Description="Experience WinUI 3 quickly and easily with the help of Common, Everything you need to develop an application is gathered in one place."
                                         Link="https://github.com/WinUICommunity/Common">
-                                    <controls:HeaderTile.Source>
+                                    <wuc:HeaderTile.Source>
                                         <Image Source="/Assets/HomeHeaderTiles/icon.png" />
-                                    </controls:HeaderTile.Source>
-                                </controls:HeaderTile>
-                                <controls:HeaderTile
+                                    </wuc:HeaderTile.Source>
+                                </wuc:HeaderTile>
+                                <wuc:HeaderTile
                                         Title="ShellContextMenu"
                                         Description="add a new ContextMenu for Windows 11/10."
                                         Link="https://github.com/WinUICommunity/ShellContextMenu">
-                                    <controls:HeaderTile.Source>
+                                    <wuc:HeaderTile.Source>
                                         <Image Source="/Assets/HomeHeaderTiles/icon.png" />
-                                    </controls:HeaderTile.Source>
-                                </controls:HeaderTile>
+                                    </wuc:HeaderTile.Source>
+                                </wuc:HeaderTile>
                             </StackPanel>
-                        </controls:TileGallery.HeaderContent>
-                    </controls:TileGallery>
+                        </wuc:TileGallery.HeaderContent>
+                    </wuc:TileGallery>
                 </Grid>
             </GridView.Header>
 
             <GridView.GroupStyle>
                 <GroupStyle>
                     <GroupStyle.HeaderTemplate>
-                        <DataTemplate x:DataType="controls:GroupInfoList">
+                        <DataTemplate x:DataType="wuc:GroupInfoList">
                             <TextBlock
                                 x:Name="pageSubtitle"
                                 Margin="4,32,0,0"
@@ -155,7 +163,7 @@ in this example we use ItemsPageBase class for creating a LandingsPage
             </GridView.GroupStyle>
         </GridView>
     </Grid>
-</controls:ItemsPageBase>
+</wuc:ItemsPageBase>
 
 ```
 

@@ -2,6 +2,14 @@
 title: WindowHelper
 ---
 
+{% note warning %}
+We moved all namespaces into a single namespace. No matter which (WinUICommunity) library you use, the namespace is always as follows
+For use in the Xaml:
+`xmlns:wuc="using:WinUICommunity"`
+For use in the Csharp:
+`using WinUICommunity;`
+{% endnote %}
+
 # SetWindowSize
 you can set your MainWindow Size:
 ```cs
@@ -72,4 +80,4 @@ var windows = WindowHelper.ActiveWindows;
 WindowHelper.SwitchToThisWindow(window);
 ```
 # Demo
-you can run [demo](https://github.com/ghost1372/SettingsUI) and see this feature.
+you can run [demo](https://github.com/WinUICommunity/SettingsUI) and see this feature.

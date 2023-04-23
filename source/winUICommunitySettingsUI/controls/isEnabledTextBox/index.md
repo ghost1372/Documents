@@ -2,6 +2,14 @@
 title: IsEnabledTextBox
 ---
 
+{% note warning %}
+We moved all namespaces into a single namespace. No matter which (WinUICommunity) library you use, the namespace is always as follows
+For use in the Xaml:
+`xmlns:wuc="using:WinUICommunity"`
+For use in the Csharp:
+`using WinUICommunity;`
+{% endnote %}
+
 # Attributes
 
 | Name |
@@ -16,7 +24,7 @@ title: IsEnabledTextBox
         <TextBlock x:Name="IncludeInGlobalResultTitle"
                     Margin="0,10,0,0"
                     Text="Include in global result" />
-        <controls:IsEnabledTextBlock FontSize="{StaticResource SecondaryTextFontSize}"
+        <wuc:IsEnabledTextBlock FontSize="{StaticResource SecondaryTextFontSize}"
                                         IsEnabled="{Binding ElementName=check, Path=IsChecked}"
                                         Text="Show results on queries without direct activation command" />
     </StackPanel>
@@ -24,7 +32,7 @@ title: IsEnabledTextBox
 ```
 
 # Demo
-you can run [demo](https://github.com/ghost1372/SettingsUI) and see this feature.
+you can run [demo](https://github.com/WinUICommunity/SettingsUI) and see this feature.
 
 ![SettingsUI](https://raw.githubusercontent.com/ghost1372/Resources/main/SettingsUI/Samples/IsEnabledTextBox_UnChecked.png)
 

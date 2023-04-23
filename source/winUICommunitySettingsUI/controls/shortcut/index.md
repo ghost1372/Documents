@@ -6,6 +6,14 @@ title: Shortcut
 public sealed partial class SettingsPageControl : UserControl
 ```
 
+{% note warning %}
+We moved all namespaces into a single namespace. No matter which (WinUICommunity) library you use, the namespace is always as follows
+For use in the Xaml:
+`xmlns:wuc="using:WinUICommunity"`
+For use in the Csharp:
+`using WinUICommunity;`
+{% endnote %}
+
 # ShortcutWithTextLabelControl
 ## Attributes
 
@@ -18,9 +26,9 @@ public sealed partial class SettingsPageControl : UserControl
 
 ```xml
 <StackPanel>
-    <controls:ShortcutWithTextLabelControl x:Name="HotkeyMicVidControl" Text="to toggle both your microphone and video" />
-    <controls:ShortcutWithTextLabelControl x:Name="HotkeyMicControl" Text="to toggle your microphone" />
-    <controls:ShortcutWithTextLabelControl x:Name="HotkeyVidControl" Text="to toggle your microphone" />
+    <wuc:ShortcutWithTextLabelControl x:Name="HotkeyMicVidControl" Text="to toggle both your microphone and video" />
+    <wuc:ShortcutWithTextLabelControl x:Name="HotkeyMicControl" Text="to toggle your microphone" />
+    <wuc:ShortcutWithTextLabelControl x:Name="HotkeyVidControl" Text="to toggle your microphone" />
 
     <Button Content="Open Shortcut Dialog" Click="Button_Click"/>
 </StackPanel>
@@ -101,5 +109,5 @@ private void DisableKeys()
 ![SettingsUI](https://raw.githubusercontent.com/ghost1372/Resources/main/SettingsUI/Samples/Shortcut_Dialog_Error.png)
 
 # Demo
-you can run [demo](https://github.com/ghost1372/SettingsUI) and see this feature.
+you can run [demo](https://github.com/WinUICommunity/SettingsUI) and see this feature.
 

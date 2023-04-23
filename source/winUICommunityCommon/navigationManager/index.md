@@ -4,6 +4,14 @@ title: NavigationManager
 
 Easily implement a `NavigationView` With/Without `Json` file (we read navigationview items from a json file)
 
+{% note warning %}
+We moved all namespaces into a single namespace. No matter which (WinUICommunity) library you use, the namespace is always as follows
+For use in the Xaml:
+`xmlns:wuc="using:WinUICommunity"`
+For use in the Csharp:
+`using WinUICommunity;`
+{% endnote %}
+
 # NavigationViewOptions
 
 |Name|Default|Remark|
@@ -396,9 +404,9 @@ or you can customize it:
     x:Class="WinUICommunity.DemoApp.Pages.SectionPage"
     xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-    xmlns:controls="using:WinUICommunity">
+    xmlns:wuc="using:WinUICommunity">
 
-    <controls:SectionPage x:Name="sectionPage" OnItemClick="SectionPage_OnItemClick"/>
+    <wuc:SectionPage x:Name="sectionPage" OnItemClick="SectionPage_OnItemClick"/>
 </Page>
 ```
 and

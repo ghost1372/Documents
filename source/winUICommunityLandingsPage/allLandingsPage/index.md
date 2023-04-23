@@ -4,6 +4,14 @@ title: AllLandingsPage
 
 in this Page we can load all items from json file.
 
+{% note warning %}
+We moved all namespaces into a single namespace. No matter which (WinUICommunity) library you use, the namespace is always as follows
+For use in the Xaml:
+`xmlns:wuc="using:WinUICommunity"`
+For use in the Csharp:
+`using WinUICommunity;`
+{% endnote %}
+
 # Events
 
 |Name|
@@ -28,7 +36,7 @@ xmlns:controls="using:WinUICommunity"
 then use AllLandingsPage:
 
 ```xml
-<controls:AllLandingsPage x:Name="allLandingsPage" HeaderImage="ms-appx:///Assets/GalleryHeaderImage.png"
+<wuc:AllLandingsPage x:Name="allLandingsPage" HeaderImage="ms-appx:///Assets/GalleryHeaderImage.png"
                                   HeaderText="All" Loaded="allLandingsPage_Loaded"
                                   OnItemClick="allLandingsPage_OnItemClick"/>
 ```

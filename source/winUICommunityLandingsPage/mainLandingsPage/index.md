@@ -4,6 +4,14 @@ title: MainLandingsPage
 
 in this page we can load only items that is tagged as IsNew, IsUpdated and IsPreview.
 
+{% note warning %}
+We moved all namespaces into a single namespace. No matter which (WinUICommunity) library you use, the namespace is always as follows
+For use in the Xaml:
+`xmlns:wuc="using:WinUICommunity"`
+For use in the Csharp:
+`using WinUICommunity;`
+{% endnote %}
+
 # Events
 
 |Name|
@@ -28,63 +36,63 @@ in this page we can load only items that is tagged as IsNew, IsUpdated and IsPre
 first add:
 
 ```xml
-xmlns:controls="using:WinUICommunity"
+xmlns:wuc="using:WinUICommunity"
 ```
 
 then use MainLandingsPage:
 
 ```xml
-<controls:MainLandingsPage x:Name="mainLandingsPage" Loaded="mainLandingsPage_Loaded"
+<wuc:MainLandingsPage x:Name="mainLandingsPage" Loaded="mainLandingsPage_Loaded"
                         HeaderImage="ms-appx:///Assets/GalleryHeaderImage.png"
                         HeaderText="Demo App"
                         HeaderSubtitleText="Based On WinAppSDK 1.2"
                         OnItemClick="mainLandingsPage_OnItemClick">
-    <controls:MainLandingsPage.HeaderContent>
+    <wuc:MainLandingsPage.HeaderContent>
         <StackPanel Orientation="Horizontal" Spacing="10">
-            <controls:HeaderTile
+            <wuc:HeaderTile
                     Title="Documentation Center"
                     Description="Learn how to work with controls and styles."
                     Link="https://ghost1372.github.io/winUICommunity/">
-                <controls:HeaderTile.Source>
+                <wuc:HeaderTile.Source>
                     <Image Source="/Assets/HomeHeaderTiles/Header-WinUIGallery.png" />
-                </controls:HeaderTile.Source>
-            </controls:HeaderTile>
-            <controls:HeaderTile
+                </wuc:HeaderTile.Source>
+            </wuc:HeaderTile>
+            <wuc:HeaderTile
                     Title="SettingsUI"
                     Description="Experience WinUI 3 quickly and easily with the help of SettingsUI, Everything you need to develop an application is gathered in one place."
                     Link="https://github.com/WinUICommunity/SettingsUI">
-                <controls:HeaderTile.Source>
+                <wuc:HeaderTile.Source>
                     <Image Source="/Assets/HomeHeaderTiles/icon.png" />
-                </controls:HeaderTile.Source>
-            </controls:HeaderTile>
-            <controls:HeaderTile
+                </wuc:HeaderTile.Source>
+            </wuc:HeaderTile>
+            <wuc:HeaderTile
                     Title="Common"
                     Description="Experience WinUI 3 quickly and easily with the help of Common, Everything you need to develop an application is gathered in one place."
                     Link="https://github.com/WinUICommunity/Common">
-                <controls:HeaderTile.Source>
+                <wuc:HeaderTile.Source>
                     <Image Source="/Assets/HomeHeaderTiles/icon.png" />
-                </controls:HeaderTile.Source>
-            </controls:HeaderTile>
-            <controls:HeaderTile
+                </wuc:HeaderTile.Source>
+            </wuc:HeaderTile>
+            <wuc:HeaderTile
                     Title="ShellContextMenu"
                     Description="add a new ContextMenu for Windows 11/10."
                     Link="https://github.com/WinUICommunity/ShellContextMenu">
-                <controls:HeaderTile.Source>
+                <wuc:HeaderTile.Source>
                     <Image Source="/Assets/HomeHeaderTiles/icon.png" />
-                </controls:HeaderTile.Source>
-            </controls:HeaderTile>
+                </wuc:HeaderTile.Source>
+            </wuc:HeaderTile>
         </StackPanel>
-    </controls:MainLandingsPage.HeaderContent>
+    </wuc:MainLandingsPage.HeaderContent>
 
-    <controls:MainLandingsPage.FooterContent>
+    <wuc:MainLandingsPage.FooterContent>
         <StackPanel>
             <TextBlock x:Name="LearnMore" Text="Learn More" Foreground="{ThemeResource ApplicationForegroundThemeBrush}" Style="{StaticResource SubtitleTextBlockStyle}" Margin="0,0,0,12" />
             <HyperlinkButton Content="Developer Center" NavigateUri="https://developer.microsoft.com/en-us/windows/"/>
             <HyperlinkButton Content="App Code Samples" NavigateUri="https://docs.microsoft.com/en-us/windows/apps/get-started/samples"/>
             <HyperlinkButton Content="Windows Template Studio" NavigateUri="https://github.com/microsoft/WindowsTemplateStudio"/>
         </StackPanel>
-    </controls:MainLandingsPage.FooterContent>
-</controls:MainLandingsPage>
+    </wuc:MainLandingsPage.FooterContent>
+</wuc:MainLandingsPage>
 ```
 
 # Load Items from Json File

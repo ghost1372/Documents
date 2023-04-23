@@ -2,6 +2,14 @@
 title: UpdateHelper
 ---
 
+{% note warning %}
+We moved all namespaces into a single namespace. No matter which (WinUICommunity) library you use, the namespace is always as follows
+For use in the Xaml:
+`xmlns:wuc="using:WinUICommunity"`
+For use in the Csharp:
+`using WinUICommunity;`
+{% endnote %}
+
 you can use UpdateHelper for checking application updates from github release page
 
 first you must create a new release tag in github repository, tag version must be in this format : `1.0.0.0`
@@ -25,4 +33,4 @@ if(ver.IsExistNewVersion)
 ```
 
 # Demo
-you can run [demo](https://github.com/ghost1372/SettingsUI) and see this feature.
+you can run [demo](https://github.com/WinUICommunity/SettingsUI) and see this feature.

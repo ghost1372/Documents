@@ -29,6 +29,14 @@ After installing, add the following resource to `app.xaml`
 <ResourceDictionary Source="ms-appx:///SettingsUI/Themes/Generic.xaml"/>
 ```
 
+{% note warning %}
+We moved all namespaces into a single namespace. No matter which (WinUICommunity) library you use, the namespace is always as follows
+For use in the Xaml:
+`xmlns:wuc="using:WinUICommunity"`
+For use in the Csharp:
+`using WinUICommunity;`
+{% endnote %}
+
 # Compile source code
 
 {% note warning %}

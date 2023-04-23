@@ -2,6 +2,14 @@
 title: Styles
 ---
 
+{% note warning %}
+We moved all namespaces into a single namespace. No matter which (WinUICommunity) library you use, the namespace is always as follows
+For use in the Xaml:
+`xmlns:wuc="using:WinUICommunity"`
+For use in the Csharp:
+`using WinUICommunity;`
+{% endnote %}
+
 # TextBlock
 |Name|
 |-|
@@ -37,14 +45,12 @@ title: Styles
 
 ```xml
 <Button Style="{StaticResource SettingButtonStyle}">
-    <controls:Setting Description="Remap keys to other keys or shortcuts" Header="Remap a key" Style="{StaticResource ExpanderHeaderSettingStyle}">
-        <controls:Setting.Icon>
+    <wuc:SettingsCard Description="Remap keys to other keys or shortcuts" Header="Remap a key" Style="{StaticResource ExpanderHeaderSettingStyle}">
+        <wuc:SettingsCard.HeaderIcon>
             <SymbolIcon Symbol="Keyboard"/>
-        </controls:Setting.Icon>
-        <controls:Setting.ActionContent>
-            <FontIcon FontFamily="{ThemeResource SymbolThemeFontFamily}" Glyph="&#xE8A7;"/>
-        </controls:Setting.ActionContent>
-    </controls:Setting>
+        </wuc:SettingsCard.HeaderIcon>
+        <FontIcon FontFamily="{ThemeResource SymbolThemeFontFamily}" Glyph="&#xE8A7;"/>
+    </wuc:SettingsCard>
 </Button>
 ```
 
