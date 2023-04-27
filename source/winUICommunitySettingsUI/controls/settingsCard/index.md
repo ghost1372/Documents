@@ -306,28 +306,28 @@ public ObservableCollection<MyDataModel> MyDataSet = new() {
         </DataTemplate>
     </wuc:SettingsExpander.ItemTemplate>
     <wuc:SettingsExpander.ItemsHeader>
-        <muxc:InfoBar Title="This is the ItemsHeader"
+        <InfoBar Title="This is the ItemsHeader"
                         BorderThickness="0"
                         CornerRadius="0"
                         IsIconVisible="False"
                         IsOpen="True"
                         Severity="Success">
-            <muxc:InfoBar.ActionButton>
+            <InfoBar.ActionButton>
                 <HyperlinkButton Content="It can host custom content" />
-            </muxc:InfoBar.ActionButton>
-        </muxc:InfoBar>
+            </InfoBar.ActionButton>
+        </InfoBar>
     </wuc:SettingsExpander.ItemsHeader>
     <wuc:SettingsExpander.ItemsFooter>
-        <muxc:InfoBar Title="This is the ItemsFooter"
+        <InfoBar Title="This is the ItemsFooter"
                         BorderThickness="0"
                         CornerRadius="0,0,4,4"
                         IsIconVisible="False"
                         IsOpen="True"
                         Severity="Informational">
-            <muxc:InfoBar.ActionButton>
+            <InfoBar.ActionButton>
                 <HyperlinkButton Content="It can host custom content" />
-            </muxc:InfoBar.ActionButton>
-        </muxc:InfoBar>
+            </InfoBar.ActionButton>
+        </InfoBar>
     </wuc:SettingsExpander.ItemsFooter>
 </wuc:SettingsExpander>
 ```

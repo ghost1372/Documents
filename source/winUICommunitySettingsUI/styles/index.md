@@ -23,39 +23,6 @@ For use in the Csharp:
 
 ![SettingsUI](https://raw.githubusercontent.com/ghost1372/Resources/main/SettingsUI/Samples/TextBlockStyle.png)
 
-# Expander
-|Name|
-|-|
-|SettingExpanderStyle|
-
-# Rectangle
-|Name|
-|-|
-|ExpanderSeparatorStyle|
-
-```xml
-<Rectangle Style="{StaticResource ExpanderSeparatorStyle}"/>
-```
-![SettingsUI](https://raw.githubusercontent.com/ghost1372/Resources/main/SettingsUI/Samples/ExpanderSeparatorStyle.png)
-
-# Button
-|Name|
-|-|
-|SettingButtonStyle|
-
-```xml
-<Button Style="{StaticResource SettingButtonStyle}">
-    <wuc:SettingsCard Description="Remap keys to other keys or shortcuts" Header="Remap a key" Style="{StaticResource ExpanderHeaderSettingStyle}">
-        <wuc:SettingsCard.HeaderIcon>
-            <SymbolIcon Symbol="Keyboard"/>
-        </wuc:SettingsCard.HeaderIcon>
-        <FontIcon FontFamily="{ThemeResource SymbolThemeFontFamily}" Glyph="&#xE8A7;"/>
-    </wuc:SettingsCard>
-</Button>
-```
-
-![SettingsUI](https://raw.githubusercontent.com/ghost1372/Resources/main/SettingsUI/Samples/SettingButtonStyle.png)
-
 # HyperlinkButton
 |Name|
 |-|
@@ -66,19 +33,6 @@ For use in the Csharp:
 ```
 
 ![SettingsUI](https://raw.githubusercontent.com/ghost1372/Resources/main/SettingsUI/Samples/HyperlinkButtonStyle.png)
-
-# ToggleSwitch
-## 
-|Name|
-|-|
-|ToggleSwitchSettingStyle|
-
-```xml
- <ToggleSwitch Style="{ThemeResource ToggleSwitchSettingStyle}"/>
-```
-
-![SettingsUI](https://raw.githubusercontent.com/ghost1372/Resources/main/SettingsUI/Samples/ToggleSwitchSettingStyle.png)
-
 
 # ButtonBase
 |Name|
@@ -103,7 +57,7 @@ For use in the Csharp:
     </ListView.Resources>
     <ListView.ItemTemplate>
         <DataTemplate x:DataType="models:ColorFormatModel">
-            <Grid MinHeight="68" Padding="0,0,16,0" HorizontalAlignment="Stretch" AutomationProperties.Name="{x:Bind Name}" Background="{ThemeResource CardBackgroundBrush}" BorderBrush="{ThemeResource CardBorderBrush}" BorderThickness="{ThemeResource CardBorderThickness}" CornerRadius="{ThemeResource ControlCornerRadius}">
+            <Grid MinHeight="68" Padding="0,0,16,0" HorizontalAlignment="Stretch" AutomationProperties.Name="{x:Bind Name}" Background="{ThemeResource  SettingsCardBackground}" BorderBrush="{ThemeResource SettingsCardBorderBrush}" BorderThickness="{ThemeResource SettingsCardBorderThickness}" CornerRadius="{ThemeResource ControlCornerRadius}">
                 <Grid.RowDefinitions>
                     <RowDefinition/>
                     <RowDefinition/>

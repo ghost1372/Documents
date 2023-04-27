@@ -36,8 +36,7 @@ For use in the Csharp:
                     <wuc:SettingsExpander.Header>
                         <wuc:SettingsCard
                             Header="Mode"
-                            HeaderIcon="&#xEC4E;"
-                            Style="{StaticResource ExpanderHeaderSettingStyle}"/>
+                            HeaderIcon="&#xEC4E;"/>
                     </wuc:SettingsExpander.Header>
                     <wuc:SettingsExpander.Content>
                         <StackPanel Padding="56,16,16,24" Spacing="12">
@@ -135,8 +134,7 @@ For use in the Csharp:
                     <wuc:SettingsExpander.Header>
                         <wuc:SettingsCard
                             Header="Activation behavior"
-                            HeaderIcon="&#xEC4E;"
-                            Style="{StaticResource ExpanderHeaderSettingStyle}"/>
+                            HeaderIcon="&#xEC4E;"/>
                     </wuc:SettingsExpander.Header>
                     <wuc:SettingsExpander.Content>
                         <StackPanel Padding="56,16,16,24" Spacing="12">
@@ -196,9 +194,9 @@ For use in the Csharp:
                                 Padding="0,0,16,0"
                                 HorizontalAlignment="Stretch"
                                 AutomationProperties.Name="{x:Bind Name}"
-                                Background="{ThemeResource CardBackgroundBrush}"
-                                BorderBrush="{ThemeResource CardBorderBrush}"
-                                BorderThickness="{ThemeResource CardBorderThickness}"
+                                Background="{ThemeResource  SettingsCardBackground}"
+                                BorderBrush="{ThemeResource SettingsCardBorderBrush}"
+                                BorderThickness="{ThemeResource SettingsCardBorderThickness}"
                                 CornerRadius="{ThemeResource ControlCornerRadius}">
                                 <Grid.RowDefinitions>
                                     <RowDefinition/>
@@ -360,31 +358,18 @@ public class ColorFormatModel : Observable
             </wuc:SettingsCard>
 
             <wuc:SettingsGroup Header="Editor">
-                <Button Style="{StaticResource SettingButtonStyle}">
-                    <wuc:SettingsCard
-                        Description="Set and manage your layouts"
-                        Header="Launch layout editor"
-                        HeaderIcon="&#xF246;"
-                        Style="{StaticResource ExpanderHeaderSettingStyle}">
-                        <FontIcon FontFamily="{ThemeResource SymbolThemeFontFamily}" Glyph="&#xE2B4;"/>
-
-                    </wuc:SettingsCard>
-                </Button>
-
                 <wuc:SettingsExpander IsExpanded="True">
                     <wuc:SettingsExpander.Header>
                         <wuc:SettingsCard
                             Header="Activation shortcut"
-                            HeaderIcon="&#xEDA7;"
-                            Style="{StaticResource ExpanderHeaderSettingStyle}"/>
+                            HeaderIcon="&#xEDA7;"/>
                     </wuc:SettingsExpander.Header>
 
                     <wuc:SettingsExpander.Content>
                         <StackPanel>
                             <wuc:SettingsCard
                                 Description="When using multiple screens, the editor will launch on the screen where the mouse cursor is"
-                                Header="Launch editor where mouse cursor is"
-                                Style="{StaticResource ExpanderContentSettingStyle}">
+                                Header="Launch editor where mouse cursor is">
                                 <ToggleSwitch/>
                             </wuc:SettingsCard>
                         </StackPanel>
@@ -398,18 +383,14 @@ public class ColorFormatModel : Observable
                         <wuc:SettingsCard
                             Description="Manage how zones behave when using FancyZones"
                             Header="Zone behaviors"
-                            HeaderIcon="&#xE620;"
-                            Style="{StaticResource ExpanderHeaderSettingStyle}"/>
+                            HeaderIcon="&#xE620;"/>
                     </wuc:SettingsExpander.Header>
                     <wuc:SettingsExpander.Content>
                         <StackPanel>
-                            <CheckBox Margin="{StaticResource ExpanderSettingMargin}" Content="Hold Shift key to activate zones while dragging"/>
-                            <Rectangle Style="{StaticResource ExpanderSeparatorStyle}"/>
-                            <CheckBox Margin="{StaticResource ExpanderSettingMargin}" Content="Use a non-primary mouse button to toggle zone activation"/>
-                            <Rectangle Style="{StaticResource ExpanderSeparatorStyle}"/>
-                            <CheckBox Margin="{StaticResource ExpanderSettingMargin}" Content="Show zones on all monitors while dragging a window"/>
-                            <Rectangle Style="{StaticResource ExpanderSeparatorStyle}"/>
-                            <wuc:SettingsCard Header="When multiple zones overlap" Style="{StaticResource ExpanderContentSettingStyle}">
+                            <CheckBox Content="Hold Shift key to activate zones while dragging"/>
+                            <CheckBox Content="Use a non-primary mouse button to toggle zone activation"/>
+                            <CheckBox Content="Show zones on all monitors while dragging a window"/>
+                            <wuc:SettingsCard Header="When multiple zones overlap">
                                 <ComboBox MinWidth="{StaticResource SettingActionControlMinWidth}">
                                     <ComboBoxItem Content="Activate the smallest zone by area"/>
                                     <ComboBoxItem Content="Activate the largest zone by area"/>
@@ -418,7 +399,7 @@ public class ColorFormatModel : Observable
                                 </ComboBox>
                             </wuc:SettingsCard>
 
-                            <wuc:SettingsCard Header="Zone opacity" Style="{StaticResource ExpanderContentSettingStyle}">
+                            <wuc:SettingsCard Header="Zone opacity">
                                 <Slider
                                         MinWidth="{StaticResource SettingActionControlMinWidth}"
                                         HorizontalAlignment="Right"
@@ -436,16 +417,13 @@ public class ColorFormatModel : Observable
                         <wuc:SettingsCard
                             Description="Manage how windows behave when using FancyZones"
                             Header="Window behavior"
-                            HeaderIcon="&#xE737;"
-                            Style="{StaticResource ExpanderHeaderSettingStyle}"/>
+                            HeaderIcon="&#xE737;"/>
                     </wuc:SettingsExpander.Header>
                     <wuc:SettingsExpander.Content>
                         <StackPanel>
-                            <CheckBox Margin="{StaticResource ExpanderSettingMargin}" Content="Keep windows in their zones when the screen resolution changes"/>
-                            <Rectangle Style="{StaticResource ExpanderSeparatorStyle}"/>
-                            <CheckBox Margin="{StaticResource ExpanderSettingMargin}" Content="During zone layout changes, windows assigned to a zone will match new size/positions"/>
-                            <Rectangle Style="{StaticResource ExpanderSeparatorStyle}"/>
-                            <CheckBox Margin="{StaticResource ExpanderSettingMargin}" Content="Move newly created windows to their last known zone"/>
+                            <CheckBox Content="Keep windows in their zones when the screen resolution changes"/>
+                            <CheckBox Content="During zone layout changes, windows assigned to a zone will match new size/positions"/>
+                            <CheckBox Content="Move newly created windows to their last known zone"/>
                         </StackPanel>
                     </wuc:SettingsExpander.Content>
                 </wuc:SettingsExpander>
@@ -455,8 +433,7 @@ public class ColorFormatModel : Observable
                         <wuc:SettingsCard
                             Description="This overrides the Windows Snap shortcut (Win + arrow) to move windows between zones"
                             Header="Override windows snap"
-                            HeaderIcon="&#xE145;"
-                            Style="{StaticResource ExpanderHeaderSettingStyle}">
+                            HeaderIcon="&#xE145;">
                                 <ToggleSwitch/>
                             </wuc:SettingsCard>
                     </wuc:SettingsExpander.Header>
@@ -464,14 +441,11 @@ public class ColorFormatModel : Observable
                     <wuc:SettingsExpander.Content>
                         <StackPanel>
                             <RadioButton
-                                Margin="{StaticResource ExpanderSettingMargin}"
                                 Content="Win + Left/Right to move windows based on zone index"
                                 GroupName="OverrideSnapGroup"/>
                             <RadioButton
-                                Margin="{StaticResource ExpanderSettingMargin}"
                                 Content="Win + Up/Down/Left/Right to move windows based on relative position"
                                 GroupName="OverrideSnapGroup"/>
-                            <Rectangle Style="{StaticResource ExpanderSeparatorStyle}"/>
                             <CheckBox Margin="56,8,16,8" Content="Move windows between zones across all monitors"/>
                         </StackPanel>
                     </wuc:SettingsExpander.Content>
@@ -484,15 +458,14 @@ public class ColorFormatModel : Observable
                         <wuc:SettingsCard
                             Description="You can configure layout-specific shortcuts in the editor"
                             Header="Enable quick layout switch"
-                            HeaderIcon="&#xE737;"
-                            Style="{StaticResource ExpanderHeaderSettingStyle}">
+                            HeaderIcon="&#xE737;">
                             <ToggleSwitch/>
                             </wuc:SettingsCard>
                     </wuc:SettingsExpander.Header>
 
                     <wuc:SettingsExpander.Content>
                         <StackPanel>
-                            <CheckBox Margin="{StaticResource ExpanderSettingMargin}" Content="Flash zones when switching layout"/>
+                            <CheckBox Content="Flash zones when switching layout"/>
                         </StackPanel>
                     </wuc:SettingsExpander.Content>
                 </wuc:SettingsExpander>
@@ -504,14 +477,12 @@ public class ColorFormatModel : Observable
                         <wuc:SettingsCard
                             Description="Excludes an application from snapping to zones and will only react to Windows Snap - add one application name per line"
                             Header="Exclude apps"
-                            HeaderIcon="&#xE103;"
-                            Style="{StaticResource ExpanderHeaderSettingStyle}"/>
+                            HeaderIcon="&#xE103;"/>
                     </wuc:SettingsExpander.Header>
                     <wuc:SettingsExpander.Content>
                         <TextBox
                             MinWidth="240"
                             MinHeight="160"
-                            Margin="{StaticResource ExpanderSettingMargin}"
                             AcceptsReturn="True"
                             PlaceholderText="Example: outlook.exe"
                             ScrollViewer.IsVerticalRailEnabled="True"
@@ -586,16 +557,14 @@ public class ColorFormatModel : Observable
                     <wuc:SettingsExpander.Header>
                         <wuc:SettingsCard Description="Running as user"
                                             Header="Administrator mode"
-                                            HeaderIcon="&#xE1A7;"
-                                            Style="{StaticResource ExpanderHeaderSettingStyle}">
+                                            HeaderIcon="&#xE1A7;">
                             <Button Content="Restart Demo as administrator" />
                         </wuc:SettingsCard>
                     </wuc:SettingsExpander.Header>
                     <wuc:SettingsExpander.Content>
                         <StackPanel Orientation="Vertical">
                             <wuc:SettingsCard Header="Always run as administrator"
-                                                IsEnabled="False"
-                                                Style="{StaticResource ExpanderContentSettingStyle}">
+                                                IsEnabled="False">
                                 <wuc:SettingsCard.Description>
                                     <HyperlinkButton Content="Learn more about administrator mode"
                                                         NavigateUri="https://aka.ms/powertoysDetectedElevatedHelp" />
@@ -696,9 +665,9 @@ public class ColorFormatModel : Observable
                                 MinHeight="68"
                                 Padding="0,0,16,0"
                                 HorizontalAlignment="Stretch"
-                                Background="{ThemeResource CardBackgroundBrush}"
-                                BorderBrush="{ThemeResource CardBorderBrush}"
-                                BorderThickness="{ThemeResource CardBorderThickness}"
+                                Background="{ThemeResource  SettingsCardBackground}"
+                                BorderBrush="{ThemeResource SettingsCardBorderBrush}"
+                                BorderThickness="{ThemeResource SettingsCardBorderThickness}"
                                 CornerRadius="{ThemeResource ControlCornerRadius}">
                                 <Grid.ColumnDefinitions>
                                     <ColumnDefinition Width="56"/>
@@ -867,7 +836,7 @@ public class ColorFormatModel : Observable
             <wuc:SettingsGroup Header="File">
                 <wuc:SettingsExpander IsExpanded="True">
                     <wuc:SettingsExpander.Header>
-                        <wuc:SettingsCard Header="Filename format" Style="{StaticResource ExpanderHeaderSettingStyle}">
+                        <wuc:SettingsCard Header="Filename format">
                             <StackPanel Orientation="Horizontal" Spacing="4">
                                 <TextBox
                                         MinWidth="{StaticResource SettingActionControlMinWidth}"
@@ -993,32 +962,6 @@ public class ImageSize : Observable
                     </HyperlinkButton>
                 </wuc:SettingsCard.Description>
             </wuc:SettingsCard>
-
-            <wuc:SettingsGroup Header="Keys" IsEnabled="False">
-
-                <Button Style="{StaticResource SettingButtonStyle}">
-                    <wuc:SettingsCard
-                        Description="Remap keys to other keys or shortcuts"
-                        Header="Remap a key"
-                        HeaderIcon="&#xE92E;"
-                        Style="{StaticResource ExpanderHeaderSettingStyle}">
-                        <FontIcon FontFamily="{ThemeResource SymbolThemeFontFamily}" Glyph="&#xE8A7;"/>
-                    </wuc:SettingsCard>
-                </Button>
-
-            </wuc:SettingsGroup>
-
-            <wuc:SettingsGroup Header="Shortcuts" IsEnabled="False">
-                <Button Style="{StaticResource SettingButtonStyle}">
-                    <wuc:SettingsCard
-                        Description="Remap shortcuts to other shortcuts or keys for all or specific applications"
-                        Header="Remap a shortcut"
-                        HeaderIcon="&#xE92E;"
-                        Style="{StaticResource ExpanderHeaderSettingStyle}">
-                        <FontIcon FontFamily="{ThemeResource SymbolThemeFontFamily}" Glyph="&#xE8A7;"/>
-                    </wuc:SettingsCard>
-                </Button>
-            </wuc:SettingsGroup>
         </StackPanel>
     </wuc:SettingsPageControl.ModuleContent>
     <wuc:SettingsPageControl.PrimaryLinks>
@@ -1073,12 +1016,11 @@ public class ImageSize : Observable
                         <wuc:SettingsCard
                             Description="Customize the keyboard shortcut to activate this module"
                             Header="Activation shortcut"
-                            HeaderIcon="&#xEDA7;"
-                            Style="{StaticResource ExpanderHeaderSettingStyle}"/>
+                            HeaderIcon="&#xEDA7;"/>
                     </wuc:SettingsExpander.Header>
                     <wuc:SettingsExpander.Content>
                         <StackPanel>
-                            <CheckBox Margin="{StaticResource ExpanderSettingMargin}" Content="Ignore shortcuts in fullscreen mode"/>
+                            <CheckBox Content="Ignore shortcuts in fullscreen mode"/>
                         </StackPanel>
                     </wuc:SettingsExpander.Content>
                 </wuc:SettingsExpander>
@@ -1089,8 +1031,7 @@ public class ImageSize : Observable
                     <wuc:SettingsExpander.Header>
                         <wuc:SettingsCard
                             Header="Maximum number of results"
-                            HeaderIcon="&#xE721;"
-                            Style="{StaticResource ExpanderHeaderSettingStyle}">
+                            HeaderIcon="&#xE721;">
                             <NumberBox
                                     MinWidth="{StaticResource SettingActionControlMinWidth}"
                                     Minimum="1"
@@ -1099,7 +1040,7 @@ public class ImageSize : Observable
                         </wuc:SettingsCard>
                     </wuc:SettingsExpander.Header>
                     <wuc:SettingsExpander.Content>
-                        <CheckBox Margin="{StaticResource ExpanderSettingMargin}" Content="Clear the previous query on launch"/>
+                        <CheckBox Content="Clear the previous query on launch"/>
                     </wuc:SettingsExpander.Content>
                 </wuc:SettingsExpander>
             </wuc:SettingsGroup>
@@ -1253,13 +1194,13 @@ public class ImageSize : Observable
             <wuc:SettingsGroup Header="Auto-complete">
                 <wuc:SettingsExpander IsExpanded="True">
                     <wuc:SettingsExpander.Header>
-                        <wuc:SettingsCard Header="Enable auto-complete for the search and replace fields" Style="{StaticResource ExpanderHeaderSettingStyle}">
+                        <wuc:SettingsCard Header="Enable auto-complete for the search and replace fields">
                             <ToggleSwitch/>
                         </wuc:SettingsCard>
                     </wuc:SettingsExpander.Header>
                     <wuc:SettingsExpander.Content>
                         <StackPanel HorizontalAlignment="Stretch">
-                            <wuc:SettingsCard Header="Maximum number of items" Style="{StaticResource ExpanderContentSettingStyle}">
+                            <wuc:SettingsCard Header="Maximum number of items">
                                 <NumberBox
                                         MinWidth="{StaticResource SettingActionControlMinWidth}"
                                         HorizontalAlignment="Left"
@@ -1346,14 +1287,12 @@ public class ImageSize : Observable
                         <wuc:SettingsCard
                             Description="Turns off Shortcut Guide when these applications have focus - add one application name per line"
                             Header="Exclude apps"
-                            HeaderIcon="&#xE103;"
-                            Style="{StaticResource ExpanderHeaderSettingStyle}"/>
+                            HeaderIcon="&#xE103;"/>
                     </wuc:SettingsExpander.Header>
                     <wuc:SettingsExpander.Content>
                         <TextBox
                             MinWidth="240"
                             MinHeight="160"
-                            Margin="{StaticResource ExpanderSettingMargin}"
                             AcceptsReturn="True"
                             PlaceholderText="Example: outlook.exe"
                             ScrollViewer.IsVerticalRailEnabled="True"
