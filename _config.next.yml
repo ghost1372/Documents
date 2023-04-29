@@ -333,7 +333,7 @@ menu:
       default: /intellisense/ || fas fa-brain
   WinUICommunity:
     default: /winUICommunity/ || fas fa-dice-d20
-  Common - 4.0.4:
+  Common - 4.0.6:
     default: /winUICommunityCommon/ || fas fa-tools
     DynamicLanguage: /dynamicLanguage/ || fas fa-tools
     Extensions: 
@@ -359,7 +359,7 @@ menu:
     ThemeManager: /themeManager/ || fas fa-tools
     Tools:
       default: /tools/ || fas fa-tools
-  LandingsPage - 2.0.4:
+  LandingsPage - 2.0.5:
       default: /winUICommunityLandingsPage/ || fab fa-intercom
       AllLandingsPage: /allLandingsPage/ ||
       HeaderTile: /headerTile/ ||
@@ -368,7 +368,7 @@ menu:
       MainLandingsPage: /mainLandingsPage/ ||
       PageHeader: /pageHeader/ ||
       SectionPage: /sectionPage/ ||
-  SettingsUI - 4.0.2:
+  SettingsUI - 4.0.5:
     default: /winUICommunitySettingsUI/ || fas fa-dice-d20
     Quick start: /quick_start/ || fas fa-dice-d20
     Controls: 
@@ -385,6 +385,8 @@ menu:
       Windows 11 Settings Examples: /windows11SettingsExamples/ ||
     Styles: 
       default: /styles/ || fas fa-palette
+    Validation:
+      default: /validation/ || fab fa-intercom
   ShellContextMenu - 4.0.1:
       default: /winUICommunityShellContextMenu/ || fas fa-brain
         

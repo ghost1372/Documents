@@ -63,7 +63,7 @@ Set BuildAction to Content, if you are in a Unpackaged Mode, set CopyToOutput to
       "Description": "",
       "IsSpecialSection": false,
       "HideGroup": false,
-      "IsSingleGroup": false,
+      "ShowItemsWithoutGroup": false,
       "IsExpanded" : false,
       "Items": [
         {
@@ -288,7 +288,7 @@ Set BuildAction to Content, if you are in a Unpackaged Mode, set CopyToOutput to
       "ImageIconPath": "",
       "Description": "",
       "HideGroup": false,
-      "IsSingleGroup": false,
+      "ShowItemsWithoutGroup": false,
       "IsExpanded" : false,
       "Items": [
         {
@@ -329,10 +329,11 @@ Set BuildAction to Content, if you are in a Unpackaged Mode, set CopyToOutput to
 |Description|anything||
 |IsSpecialSection|false||
 |HideGroup|false|Hide or Show a Group with Items|
-|IsSingleGroup|false|If it is true and there is only one group, all items of the group will be added directly to the NavigationView|
 |IsExpanded|true|If it is true NavigationViewItem will be expanded|
 |Items||See Below|
 |InfoBadge||See Below|
+|ShowItemsWithoutGroup|true|if you set this to true, all items of the group will be added directly to the NavigationView|
+|IsFooterNavigationViewItem|true|if you set this to true, items will be added into navigationView FooterMenuItems|
 
 ## Available Properties in Json (Items)
 |Name|Example|Detail|
@@ -450,7 +451,7 @@ and our  `UniqueId` is = `TvTime.Views.SeriesPage`
       "Description": "",
       "IsSpecialSection": false,
       "HideGroup": false,
-      "IsSingleGroup": false,
+      "ShowItemsWithoutGroup": false,
       "IsExpanded" : false,
       "Items": [
         {

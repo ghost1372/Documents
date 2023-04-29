@@ -123,7 +123,7 @@ this is a json file content:
       "Description": "",
       "IsSpecialSection": false,
       "HideGroup": false,
-      "IsSingleGroup": false,
+      "ShowItemsWithoutGroup": false,
       "IsExpanded" : false,
       "Items": [
         {
@@ -348,7 +348,7 @@ this is a json file content:
       "ImageIconPath": "",
       "Description": "",
       "HideGroup": false,
-      "IsSingleGroup": false,
+      "ShowItemsWithoutGroup": false,
       "IsExpanded" : false,
       "Items": [
         {
@@ -450,10 +450,11 @@ if you want to use a `InfoBadge` in a NavigationViewItem you should first use `H
 |Description|anything||
 |IsSpecialSection|false||
 |HideGroup|false|Hide or Show a Group with Items|
-|IsSingleGroup|false|If it is true and there is only one group, all items of the group will be added directly to the NavigationView|
 |IsExpanded|true|If it is true NavigationViewItem will be expanded|
 |Items||See Below|
 |InfoBadge||See Below|
+|ShowItemsWithoutGroup|true|if you set this to true, all items of the group will be added directly to the NavigationView|
+|IsFooterNavigationViewItem|true|if you set this to true, items will be added into navigationView FooterMenuItems|
 
 ## Available Properties in Json (Items)
 |Name|Example|Detail|
