@@ -56,6 +56,7 @@ private void SectionPage_OnItemClick(object sender, Microsoft.UI.Xaml.RoutedEven
     var args = (ItemClickEventArgs)e;
     var item = (ControlInfoDataItem)args.ClickedItem;
     Navigate(typeof(ItemPage), item.UniqueId);
+    MainWindow.Instance.navigationViewManager.NavigateForJson(typeof(ItemPage), item.UniqueId);
 }
 ```
 

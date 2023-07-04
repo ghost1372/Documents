@@ -333,7 +333,7 @@ menu:
       default: /intellisense/ || fas fa-brain
   WinUICommunity:
     default: /winUICommunity/ || fas fa-dice-d20
-  Common - 4.0.6:
+  Common - 4.0.9:
     default: /winUICommunityCommon/ || fas fa-tools
     DynamicLanguage: /dynamicLanguage/ || fas fa-tools
     Extensions: 
@@ -359,7 +359,7 @@ menu:
     ThemeManager: /themeManager/ || fas fa-tools
     Tools:
       default: /tools/ || fas fa-tools
-  LandingsPage - 2.0.5:
+  LandingsPage - 2.0.6:
       default: /winUICommunityLandingsPage/ || fab fa-intercom
       AllLandingsPage: /allLandingsPage/ ||
       HeaderTile: /headerTile/ ||
@@ -368,7 +368,7 @@ menu:
       MainLandingsPage: /mainLandingsPage/ ||
       PageHeader: /pageHeader/ ||
       SectionPage: /sectionPage/ ||
-  SettingsUI - 4.0.5:
+  SettingsUI - 4.0.6:
     default: /winUICommunitySettingsUI/ || fas fa-dice-d20
     Quick start: /quick_start/ || fas fa-dice-d20
     Controls: 
@@ -387,7 +387,7 @@ menu:
       default: /styles/ || fas fa-palette
     Validation:
       default: /validation/ || fab fa-intercom
-  ShellContextMenu - 4.0.1:
+  ShellContextMenu - 4.0.2:
       default: /winUICommunityShellContextMenu/ || fas fa-brain
         
 

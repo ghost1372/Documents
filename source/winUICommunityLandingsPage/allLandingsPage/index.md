@@ -41,12 +41,38 @@ then use AllLandingsPage:
                                   OnItemClick="allLandingsPage_OnItemClick"/>
 ```
 
+```cs
+private void allLandingsPage_Loaded(object sender, RoutedEventArgs e)
+{
+    allLandingsPage.GetDataAsync("DataModel/ControlInfoData.json", PathType.Relative);
+}
+
+private void allLandingsPage_OnItemClick(object sender, RoutedEventArgs e)
+{
+    var args = (ItemClickEventArgs)e;
+    var item = (ControlInfoDataItem)args.ClickedItem;
+
+    MainWindow.Instance.Navigate(item.UniqueId);
+}
+
+// MainWindow.xaml.cs
+public void Navigate(string uniqeId)
+{
+    Type pageType = Type.GetType(uniqeId);
+    rootFrame.Navigate(pageType);
+}
+```
+
 # Load Items from Json File
 Create a folder for example `DataModel` then add a new json file `ControlInfoData.json`:
 `DataModel\ControlInfoData.json`
 
 {% note warning %}
 Set BuildAction to Content, if you are in a Unpackaged Mode, set CopyToOutput to True
+{% endnote %}
+
+{% note info %}
+To see details and descriptions of Json's properties, refer to <ins>**[this](https://ghost1372.github.io/winUICommunity/jsonFile)**</ins> page
 {% endnote %}
 
 ```json
@@ -316,104 +342,6 @@ Set BuildAction to Content, if you are in a Unpackaged Mode, set CopyToOutput to
 
 ```
 
-## Available Properties in Json (Groups)
-|Name|Example|Detail|
-|-|-|-|
-|UniqueId|WinUICommunity.DemoApp.Pages.ApplicationDataContainerPage|Full address to a Page in Project|
-|Title|Features pages|Top Level Menu Item|
-|SecondaryTitle|anything||
-|ApiNamespace|WinUICommunity.DemoApp|Application Namespace|
-|Subtitle|anything||
-|ImagePath|ms-appx:///Assets/Modules/PT.png||
-|ImageIconPath|ms-appx:///Assets/Modules/PT.png||
-|Description|anything||
-|IsSpecialSection|false||
-|HideGroup|false|Hide or Show a Group with Items|
-|IsExpanded|true|If it is true NavigationViewItem will be expanded|
-|Items||See Below|
-|InfoBadge||See Below|
-|ShowItemsWithoutGroup|true|if you set this to true, all items of the group will be added directly to the NavigationView|
-|IsFooterNavigationViewItem|true|if you set this to true, items will be added into navigationView FooterMenuItems|
-
-## Available Properties in Json (Items)
-|Name|Example|Detail|
-|-|-|-|
-|UniqueId|WinUICommunity.DemoApp.Pages.ApplicationDataContainerPage|Full address to a Page in Project|
-|Title|Features pages|Top Level Menu Item|
-|SecondaryTitle|anything||
-|ApiNamespace|WinUICommunity.DemoApp|Application Namespace|
-|Subtitle|anything||
-|ImagePath|ms-appx:///Assets/Modules/PT.png||
-|ImageIconPath|ms-appx:///Assets/Modules/PT.png||
-|Description|anything||
-|Content|anything||
-|IsNew|true|if set true you can filter items based on new items|
-|IsUpdated|true|if set true you can filter items based on updated items|
-|IsPreview|true|if set true you can filter items based on preview items|
-|IncludedInBuild|false|if set true item will be enabled|
-|HideItem|false|if set true item will be hide|
-|HideSourceCodeAndRelatedControls|true|under development|
-|Docs||See Below|
-|RelatedControls||See Below|
-|InfoBadge||See Below|
-
-{% note warning %}
-only one of this proeprties `IsNew`, `IsUpdated` and `IsPreview` can be `true`
-{% endnote %}
-
-{% note info %}
-ApiNamespace can be set to empty `("ApiNamespace": "")` , in this way we will find application namespace.
-{% endnote %}
-
-
-## Available Properties in Json (Docs)
-|Name|Example|Detail|
-|-|-|-|
-|Title|anything||
-|Uri|https://ghost1372.github.io||
-
-
-## Available Properties in Json (RelatedControls)
-|Name|Example|Detail|
-|-|-|-|
-||anything|use like string in between ""|
-
-## InfoBadge
-|Name|Default|Detail|
-|-|-|-|
-|BadgeValue|null|you should set an integer value like: 10 in a string format (we convert string to int internally) also you should set `BadgeStyle` to one of the `AttentionValueInfoBadgeStyle, InformationalValueInfoBadgeStyle, SuccessValueInfoBadgeStyle, CautionValueInfoBadgeStyle, CriticalValueInfoBadgeStyle`|
-|BadgeStyle|AttentionValueInfoBadgeStyle|`AttentionDotInfoBadgeStyle, AttentionIconInfoBadgeStyle, AttentionValueInfoBadgeStyle, InformationalDotInfoBadgeStyle, InformationalIconInfoBadgeStyle, InformationalValueInfoBadgeStyle, SuccessDotInfoBadgeStyle, SuccessIconInfoBadgeStyle, SuccessValueInfoBadgeStyle, CautionDotInfoBadgeStyle, CautionIconInfoBadgeStyle, CautionValueInfoBadgeStyle, CriticalDotInfoBadgeStyle, CriticalIconInfoBadgeStyle, CriticalValueInfoBadgeStyle`you should set correct style if you want to use BadgeValue or Icon or Dot|
-|HideNavigationViewInfoBadge|false||
-|BadgeSymbolIcon|null|for example: `Sync` , we will convert your string to Symbol so please write correct symbol name|
-|BadgeBitmapIcon|null|for example: `ms-appx:///Assets/Modules/PT.png` you should set BadgeStyle to one of the AttentionIconInfoBadgeStyle, InformationalIconInfoBadgeStyle, SuccessIconInfoBadgeStyle, CautionIconInfoBadgeStyle, CriticalIconInfoBadgeStyle |
-|BadgeFontIconGlyph|null|for example: `E710` , you should set BadgeStyle to one of the AttentionIconInfoBadgeStyle, InformationalIconInfoBadgeStyle, SuccessIconInfoBadgeStyle, CautionIconInfoBadgeStyle, CriticalIconInfoBadgeStyle |
-|BadgeFontIconFontName|null|if you are using `BadgeFontIconGlyph` you can set FontName for using glyphs|
-|HideBadge|false||
-|BadgeWidth|||
-|BadgeHeight|||
-
-now you need to load items:
-
-```cs
-private void mainLandingsPage_Loaded(object sender, RoutedEventArgs e)
-{
-    mainLandingsPage.GetDataAsync("DataModel/ControlInfoData.json");
-}
-```
-
-if you want to navigate to another page (you should fix your namespace and folders in ControlInfoData.json and UniqeId field):
-
-```cs
-private void mainLandingsPage_OnItemClick(object sender, RoutedEventArgs e)
-{
-    var args = (ItemClickEventArgs)e;
-    var item = (ControlInfoDataItem)args.ClickedItem;
-    Type pageType = Type.GetType(item.UniqueId);
-
-    NavigateToPage(pageType);
-}
-```
-
 ## Enable/Disable Items based on Page Exist
 if you want to control items enable/disable, you can do this in 2 way (default is `CheckBasedOnIncludedInBuildProperty`):
 
@@ -425,7 +353,7 @@ if you choose CheckBasedOnIncludedInBuildProperty, you can simply enable/disable
 if you want the existence of the page to be checked for real, you should use `RealCheckBasedOnUniqeIdPath`, in this case `IncludedInBuild` property will be ignored
 
 ```cs
-allLandingsPage.GetDataAsync("DataModel/ControlInfoData.json", IncludedInBuildMode.RealCheckBasedOnUniqeIdPath);
+allLandingsPage.GetDataAsync("DataModel/ControlInfoData.json", PathType.Relative, IncludedInBuildMode.RealCheckBasedOnUniqeIdPath);
 ```
 
 now you should edit `ControlInfoData.json`:
@@ -528,18 +456,6 @@ and our  `UniqueId` is = `TvTime.Views.SeriesPage`
 }
 
 
-```
-
-### Navigate
-
-```cs
-private void allLandingsPage_OnItemClick(object sender, RoutedEventArgs e)
-{
-    var args = (ItemClickEventArgs)e;
-    var item = (ControlInfoDataItem)args.ClickedItem;
-
-    ShellPage.Instance.Navigate(item.UniqueId);
-}
 ```
 
 ![LandingsPage](https://raw.githubusercontent.com/ghost1372/Resources/main/LandingsPage/AllLandingsPage.png)
