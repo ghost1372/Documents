@@ -12,10 +12,10 @@ title: Welcome to WinUICommunity
 
 |Nuget|Github|
 |-|-|
-|[WinUICommunity.SettingsUI](https://www.nuget.org/packages/WinUICommunity.SettingsUI)|[Github](https://github.com/WinUICommunity/SettingsUI)|
-|[WinUICommunity.LandingsPage](https://www.nuget.org/packages/WinUICommunity.LandingsPage)|[Github](https://github.com/WinUICommunity/LandingsPage)|
-|[WinUICommunity.ShellContextMenu](https://www.nuget.org/packages/WinUICommunity.ShellContextMenu)|[Github](https://github.com/WinUICommunity/ShellContextMenu)|
-|[WinUICommunity.Common](https://www.nuget.org/packages/WinUICommunity.Common)|[Github](https://github.com/WinUICommunity/Common)|
+|[WinUICommunity.Components](https://www.nuget.org/packages/WinUICommunity.Components)|[Github](https://github.com/WinUICommunity/WinUICommunity)|
+|[WinUICommunity.LandingPages](https://www.nuget.org/packages/WinUICommunity.LandingPages)|[Github](https://github.com/WinUICommunity/WinUICommunity)|
+|[WinUICommunity.ContextMenuExtensions](https://www.nuget.org/packages/WinUICommunity.ContextMenuExtensions)|[Github](https://github.com/WinUICommunity/WinUICommunity)|
+|[WinUICommunity.Core](https://www.nuget.org/packages/WinUICommunity.Core)|[Github](https://github.com/WinUICommunity/WinUICommunity)|
 
 
 {% note warning %}
