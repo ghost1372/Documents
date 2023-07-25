@@ -2,6 +2,17 @@
 title: JsonFile
 ---
 
+To navigate to the pages, you must set the `UniqueId`, here you must write the exact address of your page
+
+```cs
+WinUICommunity.DemoApp.Pages.ApplicationDataContainerPage
+```
+
+{% note info %}
+If you do not set the ApiNamespace, we will load the default assembly and we will find your page (uniqueId). Therefore, if your page is located in another location (outside the default assembly of the app), you must specify the ApiNamespace
+{% endnote %}
+
+# DataGroup
 ## Available Properties in Json (Groups)
 |Name|Example|Detail|
 |-|-|-|
@@ -17,10 +28,11 @@ title: JsonFile
 |HideGroup|false|Hide or Show a Group with Items|
 |IsExpanded|true|If it is true NavigationViewItem will be expanded|
 |Items||See Below|
-|InfoBadge||See Below|
+|DataInfoBadge||See Below|
 |ShowItemsWithoutGroup|true|if you set this to true, all items of the group will be added directly to the NavigationView|
 |IsFooterNavigationViewItem|true|if you set this to true, items will be added into navigationView FooterMenuItems|
 
+# DataItem
 ## Available Properties in Json (Items)
 |Name|Example|Detail|
 |-|-|-|
@@ -28,6 +40,7 @@ title: JsonFile
 |Title|Features pages|Top Level Menu Item|
 |SecondaryTitle|anything||
 |ApiNamespace|WinUICommunity.DemoApp|Application Namespace|
+|Parameter|true|anything|
 |Subtitle|anything||
 |ImagePath|ms-appx:///Assets/Modules/PT.png||
 |ImageIconPath|ms-appx:///Assets/Modules/PT.png||
@@ -38,33 +51,29 @@ title: JsonFile
 |IsPreview|true|if set true you can filter items based on preview items|
 |IncludedInBuild|false|if set true item will be enabled|
 |HideItem|false|if set true item will be hide|
-|HideSourceCodeAndRelatedControls|true|under development|
-|Docs||See Below|
-|RelatedControls||See Below|
-|InfoBadge||See Below|
+|HideNavigationViewItem|false|if set true item will be hide|
+|Items|||
+|Links||See Below|
+|Extra||See Below|
+|DataInfoBadge||See Below|
 
 {% note warning %}
 only one of this proeprties `IsNew`, `IsUpdated` and `IsPreview` can be `true`
 {% endnote %}
 
-{% note info %}
-ApiNamespace can be set to empty `("ApiNamespace": "")` , in this way we will find application namespace.
-{% endnote %}
-
-
-## Available Properties in Json (Docs)
+## Available Properties in Json (Links)
 |Name|Example|Detail|
 |-|-|-|
 |Title|anything||
 |Uri|https://ghost1372.github.io||
 
 
-## Available Properties in Json (RelatedControls)
+## Available Properties in Json (Extra)
 |Name|Example|Detail|
 |-|-|-|
 ||anything|use like string in between ""|
 
-## InfoBadge
+## DataInfoBadge
 |Name|Default|Detail|
 |-|-|-|
 |BadgeValue|null|you should set an integer value like: 10 in a string format (we convert string to int internally) also you should set `BadgeStyle` to one of the `AttentionValueInfoBadgeStyle, InformationalValueInfoBadgeStyle, SuccessValueInfoBadgeStyle, CautionValueInfoBadgeStyle, CriticalValueInfoBadgeStyle`|
