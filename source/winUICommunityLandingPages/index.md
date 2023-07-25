@@ -16,7 +16,7 @@ After installing, add the following resource to app.xaml
 ```xml
 xmlns:wuc="using:WinUICommunity"
 
-<ResourceDictionary Source="ms-appx:///LandingPages/Themes/Generic.xaml"/>
+<ResourceDictionary Source="ms-appx:///WinUICommunity.LandingPages/Themes/Generic.xaml" />
 <wuc:ItemTemplates/>
 ```
 See the Demo app to see how to use it.

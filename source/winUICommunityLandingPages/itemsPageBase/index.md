@@ -181,10 +181,10 @@ public sealed partial class MainLandingPage : ItemsPageBase
         this.InitializeComponent();
     }
 
-    public async void GetDataAsync(string JsonRelativeFilePath, IncludedInBuildMode IncludedInBuildMode = IncludedInBuildMode.CheckBasedOnIncludedInBuildProperty)
+    public async void GetDataAsync(string JsonRelativeFilePath, bool autoIncludedInBuild = false)
     {
-        await ControlInfoDataSource.Instance.GetGroupsAsync(JsonRelativeFilePath, IncludedInBuildMode);
-        Items = ControlInfoDataSource.Instance.Groups.Where(g => !g.HideGroup).SelectMany(g => g.Items.Where(i => i.BadgeString != null && !i.HideItem)).OrderBy(i => i.Title).ToList();
+        await DataSource.Instance.GetGroupsAsync(JsonRelativeFilePath, autoIncludedInBuild);
+        Items = DataSource.Instance.Groups.Where(g => !g.HideGroup).SelectMany(g => g.Items.Where(i => i.BadgeString != null && !i.HideItem)).OrderBy(i => i.Title).ToList();
         GetCollectionViewSource().Source = FormatData();
     }
 

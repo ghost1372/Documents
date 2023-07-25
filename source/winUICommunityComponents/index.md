@@ -26,7 +26,7 @@ Install-Package WinUICommunity.Components
 After installing, add the following resource to `app.xaml`
 
 ```xml
-<ResourceDictionary Source="ms-appx:///Components/Themes/Generic.xaml"/>
+<ResourceDictionary Source="ms-appx:///WinUICommunity.Components/Themes/Generic.xaml" />
 ```
 
 {% note warning %}
