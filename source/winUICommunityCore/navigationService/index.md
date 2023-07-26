@@ -33,8 +33,8 @@ now create a new `myPageService` class, and here you can set DefaultPage or Sett
 
 ```cs
 var pageService = new myPageService();
-pageService.SetDefaultPage(typeof(HomePage));
-pageService.SetSettingsPage(typeof(SettingsPage));
+pageService.SetDefaultPage(typeof(HomeLandingsPage));
+pageService.SetSettingsPage(typeof(GeneralPage));
 ```
 
 after creating myPageService, Create `INavigationViewService` and `INavigationService`:
@@ -102,6 +102,24 @@ navigationViewService.ConfigAutoSuggestBox(autoSuggestBox);
 </NavigationView>
 ```
 
+### Complete Codes
+
+```cs
+INavigationViewService navigationViewService;
+INavigationService navigationService;
+
+var pageService = new myPageService();
+pageService.SetDefaultPage(typeof(HomeLandingsPage));
+pageService.SetSettingsPage(typeof(GeneralPage));
+
+navigationService = new NavigationService(pageService);
+navigationService.Frame = navFrame;
+
+navigationViewService = new NavigationViewService(navigationService, pageService);
+navigationViewService.Initialize(navigationView);
+navigationViewService.ConfigAutoSuggestBox(autoSuggestBox);
+```
+
 ![SettingsUI](https://raw.githubusercontent.com/ghost1372/Resources/main/SettingsUI/Samples/NavigationViewHelper.gif)
 
 
@@ -144,13 +162,13 @@ there are some config methods:
 #### ConfigDefaultPage
 set Default page for NavigationView
 ```cs
-jsonNavigationViewService.ConfigDefaultPage(typeof(BlankPage1));
+jsonNavigationViewService.ConfigDefaultPage(typeof(HomeLandingsPage));
 ```
 #### ConfigSettingsPage
 set Settings page for NavigationView
 
 ```cs
-jsonNavigationViewService.ConfigSettingsPage(typeof(BlankPage2));
+jsonNavigationViewService.ConfigSettingsPage(typeof(GeneralPage));
 ```
 
 #### ConfigAutoSuggestBox
@@ -262,6 +280,18 @@ there is some methods and properties that you can use them:
 var jsonDataSource = jsonNavigationViewService.DataSource;
 
 jsonNavigationViewService.SearchNavigationViewItems(navigationView.MenuItems, "query")
+```
+
+### Complete Codes
+
+```cs
+IJsonNavigationViewService jsonNavigationViewService;
+jsonNavigationViewService = new JsonNavigationViewService();
+jsonNavigationViewService.Initialize(navigationView, navFrame);
+jsonNavigationViewService.ConfigJson("DataModel/AppData.json");
+jsonNavigationViewService.ConfigDefaultPage(typeof(HomeLandingsPage));
+jsonNavigationViewService.ConfigSettingsPage(typeof(GeneralPage));
+jsonNavigationViewService.ConfigAutoSuggestBox(autoSuggestBox);
 ```
 
 # MVVM Patern

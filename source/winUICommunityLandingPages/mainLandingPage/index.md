@@ -182,18 +182,22 @@ now you need to load items:
 if you are using `JsonNavigationViewService`:
 
 ```cs
-private void mainLandingPage_Loaded(object sender, RoutedEventArgs e)
+protected override void OnNavigatedTo(NavigationEventArgs e)
 {
+    base.OnNavigatedTo(e);
     mainLandingPage.GetData(jsonNavigationViewService.DataSource);
+    mainLandingPage.OrderBy(i => i.Title);
 }
 ```
 
 if not:
 
 ```cs
-private void mainLandingPage_Loaded(object sender, RoutedEventArgs e)
+protected override void OnNavigatedTo(NavigationEventArgs e)
 {
+    base.OnNavigatedTo(e);
     mainLandingPage.GetDataAsync("DataModel/AppData.json");
+    mainLandingPage.OrderBy(i => i.Title);
 }
 ```
 
@@ -204,14 +208,9 @@ private void mainLandingPage_OnItemClick(object sender, RoutedEventArgs e)
 {
     var args = (ItemClickEventArgs)e;
     var item = (DataItem)args.ClickedItem;
-    Navigate(item.UniqueId);
+    jsonNavigationViewService.NavigateTo(item.UniqueId);
 }
 
-public void Navigate(string uniqeId)
-{
-    Type pageType = Type.GetType(uniqeId);
-    rootFrame.Navigate(pageType);
-}
 ```
 
 ## Enable/Disable Items based on Page Exist

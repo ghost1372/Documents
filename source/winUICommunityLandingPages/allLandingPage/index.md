@@ -44,18 +44,22 @@ then use AllLandingPage:
 if you are using `JsonNavigationViewService`:
 
 ```cs
-private void allLandingPage_Loaded(object sender, RoutedEventArgs e)
+protected override void OnNavigatedTo(NavigationEventArgs e)
 {
-    allLandingPage.GetData(jsonNavigationViewService.DataSource);
+    base.OnNavigatedTo(e);
+    allLandingsPage.GetData(jsonNavigationViewService.DataSource);
+    allLandingsPage.OrderBy(i => i.Title);
 }
 ```
 
 if not:
 
 ```cs
-private void allLandingPage_Loaded(object sender, RoutedEventArgs e)
+protected override void OnNavigatedTo(NavigationEventArgs e)
 {
+    base.OnNavigatedTo(e);
     allLandingPage.GetDataAsync("DataModel/AppData.json");
+    allLandingsPage.OrderBy(i => i.Title);
 }
 ```
 
@@ -67,14 +71,7 @@ private void allLandingPage_OnItemClick(object sender, RoutedEventArgs e)
 {
     var args = (ItemClickEventArgs)e;
     var item = (DataItem)args.ClickedItem;
-
-    Navigate(item.UniqueId);
-}
-
-public void Navigate(string uniqeId)
-{
-    Type pageType = Type.GetType(uniqeId);
-    rootFrame.Navigate(pageType);
+    jsonNavigationViewService.NavigateTo(item.UniqueId);
 }
 ```
 
