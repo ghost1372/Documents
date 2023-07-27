@@ -190,6 +190,26 @@ create a new `json` file (`AppData.json`) in a folder called `DataModel`:
 To see details and descriptions of Json's properties, refer to <ins>**[this](https://ghost1372.github.io/winUICommunity/jsonFile)**</ins> page
 {% endnote %}
 
+{% note warning %}
+If you have items that use the same Page, you should set the `parameter` property in the json file to avoid navigation errors.
+
+"UniqueId": "WinUICommunity.DemoApp.Pages.myPage",
+"Title": "Movie"
+"Parameter": "Movie"
+
+---
+
+"UniqueId": "WinUICommunity.DemoApp.Pages.myPage",
+"Title": "Series"
+"Parameter": "Series"
+
+{% endnote %}
+
+{% note info %}
+When we add page information (key, page) in the dictionary, the key is created as follows (parameter can be null)
+UniqueId + Parameter
+{% endnote %}
+
 this is a json file content:
 
 ```json
