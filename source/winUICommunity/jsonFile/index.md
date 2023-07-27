@@ -17,6 +17,7 @@ If you do not set the ApiNamespace, we will load the default assembly and we wil
 |Name|Example|Detail|
 |-|-|-|
 |UniqueId|WinUICommunity.DemoApp.Pages.ApplicationDataContainerPage|Full address to a Page in Project|
+|SectionId|WinUICommunity.DemoApp.Pages.mySectionPage|Full address to a SectionPage in Project|
 |Title|Features pages|Top Level Menu Item|
 |SecondaryTitle|anything||
 |ApiNamespace|WinUICommunity.DemoApp|Application Namespace|
@@ -37,6 +38,7 @@ If you do not set the ApiNamespace, we will load the default assembly and we wil
 |Name|Example|Detail|
 |-|-|-|
 |UniqueId|WinUICommunity.DemoApp.Pages.ApplicationDataContainerPage|Full address to a Page in Project|
+|SectionId|WinUICommunity.DemoApp.Pages.mySectionPage|Full address to a SectionPage in Project|
 |Title|Features pages|Top Level Menu Item|
 |SecondaryTitle|anything||
 |ApiNamespace|WinUICommunity.DemoApp|Application Namespace|

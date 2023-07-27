@@ -24,6 +24,19 @@ first add a SectionPage in a Page:
 </Page>
 
 ```
+
+then in your json file add a `SectionId` and `UniqueId`
+
+```cs
+"UniqueId": "Settings Control",
+"SectionId": "WinUICommunity.DemoApp.Pages.DemoSectionPage",
+```
+
+{% note info %}
+you should add your SectionPage full address inside SectionId
+{% endnote %}
+
+
 now we should navigate our page to SectionPage:
 
 ```cs
@@ -39,8 +52,8 @@ now load items and navigate to a desired pages:
 ```cs
 protected override void OnNavigatedTo(NavigationEventArgs e)
 {
-    var uniqueId = e.Parameter as string;
-    sectionPage.GetData(jsonNavigationViewService.DataSource, uniqueId);
+    var item = ApplicationHelper.GetUniqueIdAndSectionId(e.Parameter);
+    sectionPage.GetData(jsonNavigationViewService.DataSource, item.UniqueId, item.SectionId);
     sectionPage.OrderBy(i => i.Title);
 }
 

@@ -20,4 +20,4 @@ See [here](https://github.com/WinUICommunity/WinUICommunity/releases) for full c
 - AllLandingsPage changed to => `AllLandingPage`
 - MainLandingsPage changed to => `MainLandingPage`
 - ItemPage Removed
-- SectionPage Removed
+- SectionPage Initializing Changed
