@@ -315,6 +315,46 @@ jsonNavigationViewService.ConfigAutoSuggestBox(autoSuggestBox);
 ```
 
 # MVVM Patern
+first register a `IJsonNavigationViewService` service:
+
+```cs
+services.AddSingleton<IJsonNavigationViewService>(factory =>
+        {
+            var json = new JsonNavigationViewService();
+            json.ConfigJson("DataModel/AppData.json");
+            json.ConfigDefaultPage(typeof(HomeLandingsPage));
+            json.ConfigSettingsPage(typeof(SettingsPage));
+            return json;
+        });
+```
+then create a MainPage with a MainViewModel (or any Page you want) and register in service:
+
+```cs
+services.AddTransient<MainViewModel>();
+```
+
+now open you MainViewModel.cs file and get `IJsonNavigationViewService` in ctor:
+
+```cs
+public IJsonNavigationViewService JsonNavigationViewService;
+public MainViewModel(IJsonNavigationViewService jsonNavigationViewService)
+{
+    JsonNavigationViewService = jsonNavigationViewService;
+}
+```
+
+in last step we should initialize `JsonNavigationViewService` in our `MainPage`:
+
+```cs
+public MainPage()
+{
+    ViewModel = App.GetService<MainViewModel>();
+    this.InitializeComponent();
+    
+    ViewModel.JsonNavigationViewService.Initialize(NavView, NavFrame);
+    ViewModel.JsonNavigationViewService.ConfigAutoSuggestBox(ControlsSearchBox);
+}
+```
 
 # Demo
 you can run [demo](https://github.com/WinUICommunity/WinUICommunity) and see this feature.

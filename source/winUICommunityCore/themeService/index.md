@@ -93,9 +93,6 @@ SystemBackdrop is not supported on windows 10, so you can set a fallback color a
 themeService.ConfigBackdropFallBackColorForWindow10(new SolidColorBrush(Colors.Red));
 ```
 
-# MVVM Pattern
-
-
 # Changing ElementTheme in Runtime
 you can change ElementTheme in Runtime like this:
 
@@ -234,6 +231,26 @@ you can change Application SystemBackdrop:
 
 ```cs
 themeService.SetCurrentSystemBackdrop(BackdropType.Mica);
+```
+
+# MVVM Pattern
+first register a `IThemeService` service:
+
+```cs
+services.AddSingleton<IThemeService, ThemeService>();
+```
+then in your `viewModel`
+
+
+```cs
+public IThemeService ThemeService;
+public MainViewModel(IThemeService themeService)
+{
+    ThemeService.Initialize(App.currentWindow);
+    ThemeService.ConfigBackdrop(BackdropType.Mica);
+    ThemeService.ConfigElementTheme(ElementTheme.Default);
+    ThemeService.ConfigBackdropFallBackColorForWindow10(Current.Resources["ApplicationPageBackgroundThemeBrush"] as Brush);
+}
 ```
 
 # Demo

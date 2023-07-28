@@ -52,8 +52,7 @@ private async Task InitializeLocalizer(params string[] languages)
     else
     {
         // Initialize a "Strings" folder in the executables folder.
-        StringsFolderPath = Path.Combine(Directory.GetCurrentDirectory(), "Strings");
-        //StorageFolder localFolder = await StorageFolder.GetFolderFromPathAsync(Directory.GetCurrentDirectory());
+        StringsFolderPath = Path.Combine(AppContext.BaseDirectory, "Strings");
         var stringsFolder = await StorageFolder.GetFolderFromPathAsync(StringsFolderPath);
     }
 
