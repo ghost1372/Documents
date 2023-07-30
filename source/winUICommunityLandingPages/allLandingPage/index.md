@@ -168,4 +168,35 @@ we will check if page exist or not.
 you can simply enable/disable items in `AppData.json` file just set `IncludedInBuild` to `true` or `false`
 
 
+# Localizer
+
+there is methods for localizing:
+
+`GetLocalizedData
+GetLocalizedDataAsync`
+
+just pass a ILocalizer and in your JsonNavigationViewService:
+
+step1:
+
+```cs
+jsonNavigationViewService.ConfigLocalizer(localizer);
+```      
+
+step2:
+add `"UsexUid": true` for every item in json file.
+
+step3:
+add some resources in your resw files.
+for example: 
+
+|Key|Value|
+|-|-|
+|Nav_HomeTitle|Home|
+
+step4:
+copy and paste Key in your json file for `Title` or `subtitle`...
+
+`"Title": "Nav_HomeTitle"`
+
 ![LandingsPage](https://raw.githubusercontent.com/ghost1372/Resources/main/LandingsPage/AllLandingsPage.png)

@@ -177,7 +177,32 @@ You can search in the autosuggestbox and be navigated to the results page
 ```cs
 jsonNavigationViewService.ConfigAutoSuggestBox(autoSuggestBox);
 ```            
-            
+
+#### ConfigLocalizer
+you can use ILocalizer for localizing resources in json file
+
+step1:
+
+```cs
+jsonNavigationViewService.ConfigLocalizer(localizer);
+```      
+
+step2:
+add `"UsexUid": true` for every item in json file.
+
+step3:
+add some resources in your resw files.
+for example: 
+
+|Key|Value|
+|-|-|
+|Nav_HomeTitle|Home|
+
+step4:
+copy and paste Key in your json file for `Title` or `subtitle`...
+
+`"Title": "Nav_HomeTitle"`
+
 In the last step, you need to create the json file:
 create a new `json` file (`AppData.json`) in a folder called `DataModel`:
 
