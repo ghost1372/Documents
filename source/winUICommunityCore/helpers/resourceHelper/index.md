@@ -2,25 +2,38 @@
 title: ResourceHelper
 ---
 
+```cs
+var resourceHelper = new ResourceHelper();
+resourceHelper.Initialize(new ResourceManager());
+
+```
+
 # GetAllResourcesKeys
 
 ```cs
-var getAllResources = ResourceHelper.GetAllResourcesKeys();
+var getAllResources = resourceHelper.GetAllResourcesKeys();
 ```
 
 # SetLanguage
 
 ```cs
-ResourceHelper.SetLanguage("fa");
+resourceHelper.SetLanguage("fa");
 ```
 # GetString
 
 ```cs
-var value = ResourceHelper.GetString("Test");
+var value = resourceHelper.GetString("Test");
 ```
 
-# GetStringWithLanguage
+# MVVM Pattern
 
 ```cs
-var value = ResourceHelper.GetStringWithLanguage("Test", "fa");
+services.AddSingleton<IResourceHelper, ResourceHelper>();
+
+
+public MainViewModel(IResourceHelper resourceHelper)
+{
+    resourceHelper.Initialize(new ResourceManager());
+}
+
 ```
