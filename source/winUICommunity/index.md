@@ -17,6 +17,14 @@ title: Welcome to WinUICommunity
 |[WinUICommunity.ContextMenuExtensions](https://www.nuget.org/packages/WinUICommunity.ContextMenuExtensions)|[Github](https://github.com/WinUICommunity/WinUICommunity)|
 |[WinUICommunity.Core](https://www.nuget.org/packages/WinUICommunity.Core)|[Github](https://github.com/WinUICommunity/WinUICommunity)|
 
+# Project Template
+for creating a new project easily, you can use our project templates:
+
+download and install our vsix package from Marketplace:
+
+[WinUICommunityTemplates](https://marketplace.visualstudio.com/items?itemName=MahdiHosseini.WinUICommunityTemplates)
+
+![WinUICommunityTemplates](https://raw.githubusercontent.com/WinUICommunity/Resources/main/WinUICommunity-Templates/Demo-WinUICommunityTemplates.png)
 
 {% note warning %}
 We moved all namespaces into a single namespace. No matter which (WinUICommunity) library you use, the namespace is always as follows
