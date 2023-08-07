@@ -333,9 +333,9 @@ jsonNavigationViewService.SearchNavigationViewItems(navigationView.MenuItems, "q
 IJsonNavigationViewService jsonNavigationViewService;
 jsonNavigationViewService = new JsonNavigationViewService();
 jsonNavigationViewService.Initialize(navigationView, navFrame);
-jsonNavigationViewService.ConfigJson("DataModel/AppData.json");
 jsonNavigationViewService.ConfigDefaultPage(typeof(HomeLandingsPage));
 jsonNavigationViewService.ConfigSettingsPage(typeof(GeneralPage));
+jsonNavigationViewService.ConfigJson("DataModel/AppData.json");
 jsonNavigationViewService.ConfigAutoSuggestBox(autoSuggestBox);
 ```
 
@@ -346,7 +346,6 @@ first register a `IJsonNavigationViewService` service:
 services.AddSingleton<IJsonNavigationViewService>(factory =>
         {
             var json = new JsonNavigationViewService();
-            json.ConfigJson("DataModel/AppData.json");
             json.ConfigDefaultPage(typeof(HomeLandingsPage));
             json.ConfigSettingsPage(typeof(SettingsPage));
             return json;
@@ -377,6 +376,7 @@ public MainPage()
     this.InitializeComponent();
     
     ViewModel.JsonNavigationViewService.Initialize(NavView, NavFrame);
+    ViewModel.JsonNavigationViewService.ConfigJson("DataModel/AppData.json");
     ViewModel.JsonNavigationViewService.ConfigAutoSuggestBox(ControlsSearchBox);
 }
 ```
