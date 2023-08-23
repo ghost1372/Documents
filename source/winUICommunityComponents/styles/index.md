@@ -252,3 +252,11 @@ or
 ```
 
 ![SettingsUI](https://raw.githubusercontent.com/ghost1372/Resources/main/SettingsUI/Samples/TabViewItemRounded.png)
+
+# InfoBar with Blue Color for Informational Severity
+
+just add this:
+
+```xml
+<ResourceDictionary Source="ms-appx:///WinUICommunity.Components/Themes/InfoBarInformationalColor.xaml" />
+```
