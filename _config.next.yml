@@ -333,7 +333,7 @@ menu:
       default: /intellisense/ || fas fa-brain
   WinUICommunity:
     default: /winUICommunity/ || fas fa-dice-d20
-  Core - 5.0.5:
+  Core - 5.1.0:
     default: /winUICommunityCore/ || fas fa-tools
     Breaking Changes: /breaking_changes/ || fas fa-dice-d20
     DynamicLanguage: /dynamicLanguage/ || fas fa-tools
@@ -360,7 +360,7 @@ menu:
     ThemeService: /themeService/ || fas fa-tools
     Tools:
       default: /tools/ || fas fa-tools
-  LandingPages - 5.0.5:
+  LandingPages - 5.1.0:
       default: /winUICommunityLandingPages/ || fab fa-intercom
       Breaking Changes: /breaking_changes/ || fas fa-dice-d20
       AllLandingPage: /allLandingPage/ ||
@@ -368,7 +368,7 @@ menu:
       ItemsPageBase: /itemsPageBase/ ||
       MainLandingPage: /mainLandingPage/ ||
       SectionPage: /sectionPage/ ||
-  Components - 5.0.3:
+  Components - 5.1.0:
     default: /winUICommunityComponents/ || fas fa-dice-d20
     Breaking Changes: /breaking_changes/ || fas fa-dice-d20
     Quick start: /quick_start/ || fas fa-dice-d20
@@ -388,7 +388,7 @@ menu:
       default: /styles/ || fas fa-palette
     Validation:
       default: /validation/ || fab fa-intercom
-  ContextMenuExtensions - 5.0.2:
+  ContextMenuExtensions - 5.1.0:
       default: /winUICommunityContextMenuExtensions/ || fas fa-brain
       Breaking Changes: /breaking_changes/ || fas fa-dice-d20
         
