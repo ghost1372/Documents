@@ -62,7 +62,6 @@ private async Task InitializeLocalizer(params string[] languages)
         .SetOptions(options =>
         {
             options.DefaultLanguage = "en-US";
-            options.UseUidWhenLocalizedStringNotFound = true;
         })
         .Build();
 }
@@ -97,9 +96,9 @@ now in UIElement you need to set `Uid`:
 
 ```xml
 <Page
-    xmlns:loc="using:WinUICommunity">
+    xmlns:wuc="using:WinUICommunity">
 
-<Button loc:Localizer.Uid="myButtonId"/>
+<Button wuc:Localizer.Uid="myButtonId"/>
 
 </Page>
 ```
@@ -114,6 +113,15 @@ txt.Text = Localizer.Get().GetLocalizedStrings("myButtonId").FirstOrDefault();
 
 ```cs
 Localizer.Get().SetLanguage("en-US");
+```
+
+## Multiple Resources
+
+You can also have multiple string resources files. For example, besides the default **Resources.resw** file, you can have a **Messages.resw** for your messages file.
+include `/<resources-file-name>/` before the string resource identifier.
+
+```xml
+<TextBlock wuc:Localizer.Uid="/Messages/ButtonFlyoutMessage" />
 ```
 
 for more info please see [Demo](https://github.com/WinUICommunity/WinUICommunity)
