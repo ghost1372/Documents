@@ -12,4 +12,4 @@ For use in the Csharp:
 
 # NavigationService
 
-See [`NavigationManager.Service`](https://github.com/WinUICommunity/WinUICommunity/src/Core/) class for more information.
+See [`NavigationManager.Service`](https://github.com/WinUICommunity/WinUICommunity/dev/Core/) class for more information.

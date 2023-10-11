@@ -166,6 +166,10 @@ public class ColorFormatModel : Observable
 |Name|
 |-|
 |BorderPanel|
+|InfoBorderPanelStyle|
+|WarningBorderPanelStyle|
+|ErrorBorderPanelStyle|
+|SuccessBorderPanelStyle|
 
 ```xml
 <Border Style="{ThemeResource BorderPanel}">

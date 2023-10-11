@@ -99,5 +99,49 @@ var color = Application.Current.Resources["SystemAccentColor"];
 var accent = ApplicationHelper.GetColorFromHex(color.ToString());
 ```
 
+# App Name and Version
+
+We can define versions on our applications, but how to get the version at runtime?
+We can define the version numbers for AssemblyVersion, FileVersion and Version in the project file (.csproj).
+
+The AssemblyVersion and FileVersion attributes must be in format of "major[.minor[.build[.revision]]]" or you will get a compile time error (CS7034).
+
+```xml
+<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <AssemblyVersion>1.1.1.1</AssemblyVersion>
+    <FileVersion>2.2.2.2</FileVersion>
+    <Version>3.3.3.3-xyz</Version>
+  </PropertyGroup>
+</Project>
+```
+
+## GetAppName
+
+```cs
+var appname1 = ApplicationHelper.GetAppName(NameType.AssemblyVersion);
+var appname2 = ApplicationHelper.GetAppName(NameType.AssemblyVersion2);
+```
+
+
+## GetAppVersion
+
+```cs
+var appversion1 = ApplicationHelper.GetAppVersion(VersionType.AssemblyVersion); // output: 1.1.1.1
+var appversion2 = ApplicationHelper.GetAppVersion(VersionType.AssemblyVersion2);// output: 1.1.1.1
+var appversion3 = ApplicationHelper.GetAppVersion(VersionType.AssemblyFileVersion); // output: 2.2.2.2
+var appversion4 = ApplicationHelper.GetAppVersion(VersionType.AssemblyInformationalVersion); // output: 3.3.3.3-xyz
+
+```
+
+## GetAppNameAndVersion
+```cs
+var appNameVersion = ApplicationHelper.GetAppNameAndVersion(NameType.AssemblyVersion2, VersionType.AssemblyInformationalVersion);
+var name = appNameVersion.AppName;
+var version = appNameVersion.AppVersion;
+var nameversion = appNameVersion.NameAndVersion;
+```
+
+
 # Demo
 you can run [demo](https://github.com/WinUICommunity/WinUICommunity) and see this feature.

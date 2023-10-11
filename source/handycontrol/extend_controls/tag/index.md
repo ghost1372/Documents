@@ -17,6 +17,7 @@ public class Tag : ContentControl
 |HeaderTemplate||||
 |HeaderTemplateSelector||||
 |HeaderStringFormat||||
+|TagContainer.ShowCloseButton||||
 |Header|||||
 
 # Events
