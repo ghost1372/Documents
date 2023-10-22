@@ -39,7 +39,7 @@ you need to install `WinUICommunity.Core` package:
                 IsOpen="True"
                 Severity="Informational" />
 
-            <wuc:SettingsGroup
+            <wuc:SimpleSettingsGroup
                 Header="Behavior">
 
                 <wuc:SettingsCard Header="Mode"
@@ -100,7 +100,7 @@ you need to install `WinUICommunity.Core` package:
                     HeaderIcon="{wuc:FontIcon FontFamily={StaticResource SymbolThemeFontFamily}, Glyph=&#xE7F4;}">
                     <ToggleSwitch/>
                 </wuc:SettingsCard>
-            </wuc:SettingsGroup>
+            </wuc:SimpleSettingsGroup>
         </StackPanel>
     </wuc:SettingsPageControl.ModuleContent>
 
@@ -141,7 +141,7 @@ you need to install `WinUICommunity.Core` package:
                 IsOpen="True"
                 Severity="Informational" />
 
-            <wuc:SettingsGroup Header="Shortcut">
+            <wuc:SimpleSettingsGroup Header="Shortcut">
                 <wuc:SettingsCard Header="Activation behavior" HeaderIcon="{wuc:FontIcon FontFamily={StaticResource SymbolThemeFontFamily}, Glyph=&#xEC4E;}">
                     <ComboBox MinWidth="{StaticResource SettingActionControlMinWidth}" SelectedIndex="0">
                         <ComboBoxItem Content="Open editor" />
@@ -150,9 +150,9 @@ you need to install `WinUICommunity.Core` package:
                     </ComboBox>
                 </wuc:SettingsCard>
 
-            </wuc:SettingsGroup>
+            </wuc:SimpleSettingsGroup>
 
-            <wuc:SettingsGroup Header="Picker behavior">
+            <wuc:SimpleSettingsGroup Header="Picker behavior">
                 <wuc:SettingsCard Header="Default color format" Description="This format will be copied to your clipboard" HeaderIcon="{wuc:FontIcon FontFamily={StaticResource SymbolThemeFontFamily}, Glyph=&#xF0E3;}">
                     <ComboBox
                         MinWidth="{StaticResource SettingActionControlMinWidth}"/>
@@ -161,9 +161,9 @@ you need to install `WinUICommunity.Core` package:
                 <wuc:SettingsCard Header="Show color name" Description="This will show the name of the color when picking a color">
                     <ToggleSwitch />
                 </wuc:SettingsCard>
-            </wuc:SettingsGroup>
+            </wuc:SimpleSettingsGroup>
 
-            <wuc:SettingsGroup Header="Color formats">
+            <wuc:SimpleSettingsGroup Header="Color formats">
                 <wuc:SettingsCard
                     Header="Color formats"
                     Description="Configure the color formats (edit, delete, hide, reorder them)"
@@ -234,7 +234,7 @@ you need to install `WinUICommunity.Core` package:
                         </DataTemplate>
                     </ListView.ItemTemplate>
                 </ListView>
-            </wuc:SettingsGroup>
+            </wuc:SimpleSettingsGroup>
         </StackPanel>
     </wuc:SettingsPageControl.ModuleContent>
 
@@ -345,7 +345,7 @@ public class ColorFormatModel : Observable
                 IsOpen="True"
                 Severity="Informational" />
 
-            <wuc:SettingsGroup
+            <wuc:SimpleSettingsGroup
                 Header="Editor">
                 <wuc:SettingsCard
                     Header="Launch layout editor"
@@ -369,10 +369,10 @@ public class ColorFormatModel : Observable
                         <ComboBoxItem Content="Where the mouse pointer is" />
                     </ComboBox>
                 </wuc:SettingsCard>
-            </wuc:SettingsGroup>
+            </wuc:SimpleSettingsGroup>
 
 
-            <wuc:SettingsGroup
+            <wuc:SimpleSettingsGroup
                 Header="Zones">
                 <wuc:SettingsExpander
                     Header="Zone behavior" Description="Manage how zones behave when using FancyZones"
@@ -430,9 +430,9 @@ public class ColorFormatModel : Observable
                         </wuc:SettingsCard>
                     </wuc:SettingsExpander.Items>
                 </wuc:SettingsExpander>
-            </wuc:SettingsGroup>
+            </wuc:SimpleSettingsGroup>
 
-            <wuc:SettingsGroup
+            <wuc:SimpleSettingsGroup
                 Header="Windows">
 
                 <wuc:SettingsExpander
@@ -525,9 +525,9 @@ public class ColorFormatModel : Observable
                         </wuc:SettingsCard>
                     </wuc:SettingsExpander.Items>
                 </wuc:SettingsExpander>
-            </wuc:SettingsGroup>
+            </wuc:SimpleSettingsGroup>
 
-            <wuc:SettingsGroup
+            <wuc:SimpleSettingsGroup
                 Header="Layouts">
                 <wuc:SettingsExpander 
                     Header="Enable quick layout switch" Description="Layout-specific shortcuts can be configured in the editor"
@@ -541,9 +541,9 @@ public class ColorFormatModel : Observable
                         </wuc:SettingsCard>
                     </wuc:SettingsExpander.Items>
                 </wuc:SettingsExpander>
-            </wuc:SettingsGroup>
+            </wuc:SimpleSettingsGroup>
 
-            <wuc:SettingsGroup
+            <wuc:SimpleSettingsGroup
                 Header="Excluded apps">
 
                 <wuc:SettingsExpander
@@ -564,7 +564,7 @@ public class ColorFormatModel : Observable
                         </wuc:SettingsCard>
                     </wuc:SettingsExpander.Items>
                 </wuc:SettingsExpander>
-            </wuc:SettingsGroup>
+            </wuc:SimpleSettingsGroup>
         </StackPanel>
     </wuc:SettingsPageControl.ModuleContent>
 
@@ -585,7 +585,7 @@ public class ColorFormatModel : Observable
                                 SecondaryLinksHeader="Related information">
     <wuc:SettingsPageControl.ModuleContent>
         <StackPanel ChildrenTransitions="{StaticResource SettingsCardsAnimations}" Orientation="Vertical">
-            <wuc:SettingsGroup Header="Version" Margin="0,-32,0,0">
+            <wuc:SimpleSettingsGroup Header="Version" Margin="0,-32,0,0">
                 <wuc:SettingsCard Header="PowerToys V1.0" HeaderIcon="{wuc:FontIcon FontFamily={StaticResource SymbolThemeFontFamily}, Glyph=&#xE895;}">
                     <wuc:SettingsCard.Description>
                         <StackPanel Orientation="Vertical">
@@ -621,9 +621,9 @@ public class ColorFormatModel : Observable
                     IsClosable="False"
                     IsOpen="True"
                     Severity="Informational" />
-            </wuc:SettingsGroup>
+            </wuc:SimpleSettingsGroup>
 
-            <wuc:SettingsGroup Header="Appearance &amp; behavior" IsEnabled="True">
+            <wuc:SimpleSettingsGroup Header="Appearance &amp; behavior" IsEnabled="True">
                 <wuc:SettingsCard Header="App theme" HeaderIcon="{wuc:FontIcon FontFamily={StaticResource SymbolThemeFontFamily}, Glyph=&#xE790;}">
                     <wuc:SettingsCard.Description>
                         <HyperlinkButton Content="Windows color settings"/>
@@ -638,9 +638,9 @@ public class ColorFormatModel : Observable
                 <wuc:SettingsCard Header="Run at startup" Description="PowerToys will launch automatically">
                     <ToggleSwitch/>
                 </wuc:SettingsCard>
-            </wuc:SettingsGroup>
+            </wuc:SimpleSettingsGroup>
 
-            <wuc:SettingsGroup Header="Backup &amp; restore" Visibility="Visible">
+            <wuc:SimpleSettingsGroup Header="Backup &amp; restore" Visibility="Visible">
                 <wuc:SettingsExpander Header="Backup and restore your settings" Description="PowerToys will restart automatically if needed" HeaderIcon="{wuc:FontIcon FontFamily={StaticResource SymbolThemeFontFamily}, Glyph=&#xE777;}">
                     <StackPanel Orientation="Horizontal" Spacing="8">
                         <Button Content="Backup"/>
@@ -721,12 +721,12 @@ public class ColorFormatModel : Observable
                         </wuc:SettingsCard>
                     </wuc:SettingsExpander.Items>
                 </wuc:SettingsExpander>
-            </wuc:SettingsGroup>
+            </wuc:SimpleSettingsGroup>
             <InfoBar
                 Title="Result"
                 IsClosable="False"
                 IsOpen="True"/>
-            <wuc:SettingsGroup Header="Experimentation" Visibility="Visible">
+            <wuc:SimpleSettingsGroup Header="Experimentation" Visibility="Visible">
                 <wuc:SettingsCard Header="Allow experimentation with new features" Description="Note: Only Windows Insider builds may be selected for experimentation">
                     <wuc:SettingsCard.HeaderIcon>
                         <PathIcon Data="M1859 1758q14 23 21 47t7 51q0 40-15 75t-41 61-61 41-75 15H354q-40 0-75-15t-61-41-41-61-15-75q0-27 6-51t21-47l569-992q10-14 10-34V128H640V0h768v128h-128v604q0 19 10 35l569 991zM896 732q0 53-27 99l-331 577h972l-331-577q-27-46-27-99V128H896v604zm799 1188q26 0 44-19t19-45q0-10-2-17t-8-16l-164-287H464l-165 287q-9 15-9 33 0 26 18 45t46 19h1341z" />
@@ -738,7 +738,7 @@ public class ColorFormatModel : Observable
                     IsClosable="False"
                     IsOpen="True"
                     Severity="Informational" />
-            </wuc:SettingsGroup>
+            </wuc:SimpleSettingsGroup>
         </StackPanel>
     </wuc:SettingsPageControl.ModuleContent>
     <wuc:SettingsPageControl.PrimaryLinks>
@@ -784,7 +784,7 @@ public class ColorFormatModel : Observable
                 IsOpen="True"
                 Severity="Informational" />
 
-            <wuc:SettingsGroup Header="Image sizes">
+            <wuc:SimpleSettingsGroup Header="Image sizes">
                 <wuc:SettingsCard Header="Presets" Description="Manage preset sizes that can be used in the editor" HeaderIcon="{wuc:FontIcon FontFamily={StaticResource SymbolThemeFontFamily}, Glyph=&#xE792;}">
                     <Button
                         Content="Add new size"
@@ -895,9 +895,9 @@ public class ColorFormatModel : Observable
                         </DataTemplate>
                     </ListView.ItemTemplate>
                 </ListView>
-            </wuc:SettingsGroup>
+            </wuc:SimpleSettingsGroup>
 
-            <wuc:SettingsGroup Header="Encoding">
+            <wuc:SimpleSettingsGroup Header="Encoding">
                 <wuc:SettingsCard Header="Fallback encoder">
                     <ComboBox MinWidth="{StaticResource SettingActionControlMinWidth}" SelectedIndex="0">
                         <ComboBoxItem Content="PNG" />
@@ -935,9 +935,9 @@ public class ColorFormatModel : Observable
                         <ComboBoxItem Content="Zip" />
                     </ComboBox>
                 </wuc:SettingsCard>
-            </wuc:SettingsGroup>
+            </wuc:SimpleSettingsGroup>
 
-            <wuc:SettingsGroup Header="File">
+            <wuc:SimpleSettingsGroup Header="File">
                 <wuc:SettingsCard Header="Filename format" Description="This format is used as the filename for resized images">
                     <StackPanel Orientation="Horizontal" Spacing="4">
                         <TextBox
@@ -989,7 +989,7 @@ public class ColorFormatModel : Observable
                         <ComboBoxItem Content="Timestamp of resize action" />
                     </ComboBox>
                 </wuc:SettingsCard>
-            </wuc:SettingsGroup>
+            </wuc:SimpleSettingsGroup>
         </StackPanel>
     </wuc:SettingsPageControl.ModuleContent>
 
@@ -1079,23 +1079,23 @@ public class ImageSize : Observable
                 </wuc:SettingsCard.Description>
             </wuc:SettingsCard>
 
-            <wuc:SettingsGroup Header="Keys" IsEnabled="False">
+            <wuc:SimpleSettingsGroup Header="Keys" IsEnabled="False">
                 <wuc:SettingsCard
                         Description="Remap keys to other keys or shortcuts"
                         Header="Remap a key"
                         ActionIcon="{wuc:FontIcon FontFamily={StaticResource SymbolThemeFontFamily}, FontSize=14, Glyph=&#xE8A7;}"
                         HeaderIcon="{wuc:FontIcon FontFamily={StaticResource SymbolThemeFontFamily}, Glyph=&#xE92E;}"
                         IsClickEnabled="True"/>
-            </wuc:SettingsGroup>
+            </wuc:SimpleSettingsGroup>
 
-            <wuc:SettingsGroup Header="Shortcuts" IsEnabled="False">
+            <wuc:SimpleSettingsGroup Header="Shortcuts" IsEnabled="False">
                 <wuc:SettingsCard
                     Description="Remap shortcuts to other shortcuts or keys for all or specific applications"
                     Header="Remap a shortcut"
                     ActionIcon="{wuc:FontIcon FontFamily={StaticResource SymbolThemeFontFamily}, FontSize=14, Glyph=&#xE8A7;}"
                     HeaderIcon="{wuc:FontIcon FontFamily={StaticResource SymbolThemeFontFamily}, Glyph=&#xE92E;}"
                     IsClickEnabled="True" />
-            </wuc:SettingsGroup>
+            </wuc:SimpleSettingsGroup>
         </StackPanel>
     </wuc:SettingsPageControl.ModuleContent>
     <wuc:SettingsPageControl.PrimaryLinks>
@@ -1148,7 +1148,7 @@ public class ImageSize : Observable
                 IsOpen="True"
                 Severity="Informational" />
 
-            <wuc:SettingsGroup
+            <wuc:SimpleSettingsGroup
                 x:Uid="Shortcut">
                 <wuc:SettingsExpander
                     Description="Customize the keyboard shortcut to activate this module"
@@ -1167,9 +1167,9 @@ public class ImageSize : Observable
                         </wuc:SettingsCard>
                     </wuc:SettingsExpander.Items>
                 </wuc:SettingsExpander>
-            </wuc:SettingsGroup>
+            </wuc:SimpleSettingsGroup>
 
-            <wuc:SettingsGroup 
+            <wuc:SimpleSettingsGroup 
                 Header="Position &amp; appearance">
                 <wuc:SettingsExpander
                         Description="If multiple monitors are in use, PowerToys Run can be launched on the desired monitor"
@@ -1199,9 +1199,9 @@ public class ImageSize : Observable
                         </wuc:SettingsCard>
                     </wuc:SettingsExpander.Items>
                 </wuc:SettingsExpander>
-            </wuc:SettingsGroup>
+            </wuc:SimpleSettingsGroup>
 
-            <wuc:SettingsGroup
+            <wuc:SimpleSettingsGroup
                 Header="Position &amp; appearance">
                 <wuc:SettingsCard
                     Header="Preferred monitor position" Description="If multiple monitors are in use, PowerToys Run can be launched on the desired monitor"
@@ -1230,9 +1230,9 @@ public class ImageSize : Observable
                         <ComboBoxItem Content="Default" />
                     </ComboBox>
                 </wuc:SettingsCard>
-            </wuc:SettingsGroup>
+            </wuc:SimpleSettingsGroup>
 
-            <wuc:SettingsGroup
+            <wuc:SimpleSettingsGroup
                 Header="Plugins">
                 <InfoBar
                     Title="PowerToys Run can't provide any results without plugins"
@@ -1275,7 +1275,7 @@ public class ImageSize : Observable
                         VerticalAlignment="Center"
                         Style="{ThemeResource SecondaryTextStyle}" />
                 </StackPanel>
-            </wuc:SettingsGroup>
+            </wuc:SimpleSettingsGroup>
         </StackPanel>
     </wuc:SettingsPageControl.ModuleContent>
     <wuc:SettingsPageControl.PrimaryLinks>
@@ -1297,7 +1297,7 @@ public class ImageSize : Observable
     ModuleTitle="File Explorer">
     <wuc:SettingsPageControl.ModuleContent>
         <StackPanel Orientation="Vertical" ChildrenTransitions="{StaticResource SettingsCardsAnimations}">
-            <wuc:SettingsGroup Header="Preview Pane" Description="Select the file types which must be rendered in the Preview Pane. Ensure that Preview Pane is open by toggling the view with Alt + P in File Explorer.">
+            <wuc:SimpleSettingsGroup Header="Preview Pane" Description="Select the file types which must be rendered in the Preview Pane. Ensure that Preview Pane is open by toggling the view with Alt + P in File Explorer.">
                 <InfoBar
                     Title="Enabling the preview handlers will override other preview handlers already installed - there have been reports of incompatibility between Outlook and the PDF Preview Handler."
                     IsClosable="False"
@@ -1387,9 +1387,9 @@ public class ImageSize : Observable
                     IsClosable="False"
                     IsOpen="True"
                     Severity="Informational" />
-            </wuc:SettingsGroup>
+            </wuc:SimpleSettingsGroup>
 
-            <wuc:SettingsGroup Header="Thumbnail icon Preview" Description="Select the file types for which thumbnail previews must be rendered.">
+            <wuc:SimpleSettingsGroup Header="Thumbnail icon Preview" Description="Select the file types for which thumbnail previews must be rendered.">
                 <InfoBar
                     Title="A reboot may be required for changes to these settings to take effect"
                     IsClosable="False"
@@ -1407,7 +1407,7 @@ public class ImageSize : Observable
                     HeaderIcon="{wuc:FontIcon FontFamily={StaticResource SymbolThemeFontFamily}, Glyph=&#xE91B;}">
                     <ToggleSwitch/>
                 </wuc:SettingsCard>
-            </wuc:SettingsGroup>
+            </wuc:SimpleSettingsGroup>
         </StackPanel>
     </wuc:SettingsPageControl.ModuleContent>
 
@@ -1440,7 +1440,7 @@ public class ImageSize : Observable
                 IsClosable="False"
                 IsOpen="True"
                 Severity="Informational" />
-            <wuc:SettingsGroup
+            <wuc:SimpleSettingsGroup
                 Header="Shell integration">
                 <wuc:SettingsExpander
                     Header="Show PowerRename in"
@@ -1458,9 +1458,9 @@ public class ImageSize : Observable
                         </wuc:SettingsCard>
                     </wuc:SettingsExpander.Items>
                 </wuc:SettingsExpander>
-            </wuc:SettingsGroup>
+            </wuc:SimpleSettingsGroup>
 
-            <wuc:SettingsGroup
+            <wuc:SimpleSettingsGroup
                 Header="Auto-complete">
                 <wuc:SettingsExpander
                     Header="Enable auto-complete for the search &amp; replace fields"
@@ -1483,13 +1483,13 @@ public class ImageSize : Observable
                     HeaderIcon="{wuc:FontIcon FontFamily={StaticResource SymbolThemeFontFamily}, Glyph=&#xe81c;}">
                     <ToggleSwitch/>
                 </wuc:SettingsCard>
-            </wuc:SettingsGroup>
-            <wuc:SettingsGroup
+            </wuc:SimpleSettingsGroup>
+            <wuc:SimpleSettingsGroup
                 Header="Behavior">
                 <wuc:SettingsCard Header="Use Boost library" Description="Provides extended features but may use different regex syntax">
                     <ToggleSwitch />
                 </wuc:SettingsCard>
-            </wuc:SettingsGroup>
+            </wuc:SimpleSettingsGroup>
         </StackPanel>
     </wuc:SettingsPageControl.ModuleContent>
 
@@ -1526,7 +1526,7 @@ public class ImageSize : Observable
             <wuc:ShortcutWithTextLabelControl x:Name="HotkeyMicControl" Text="to toggle your microphone" />
             <wuc:ShortcutWithTextLabelControl x:Name="HotkeyVidControl" Text="to toggle your microphone" />
             <Button Content="Open Shortcut Dialog" Click="Button_Click"/>
-            <wuc:SettingsGroup Header="Appearance &amp; behavior">
+            <wuc:SimpleSettingsGroup Header="Appearance &amp; behavior">
                 <wuc:SettingsCard Header="Choose a mode" HeaderIcon="{wuc:FontIcon FontFamily={StaticResource SymbolThemeFontFamily}, Glyph=&#xE790;}">
                     <wuc:SettingsCard.Description>
                         <HyperlinkButton Content="Windows color settings"/>
@@ -1544,9 +1544,9 @@ public class ImageSize : Observable
                             Maximum="100"
                             Minimum="0"/>
                 </wuc:SettingsCard>
-            </wuc:SettingsGroup>
+            </wuc:SimpleSettingsGroup>
             
-            <wuc:SettingsGroup Header="Excluded apps">
+            <wuc:SimpleSettingsGroup Header="Excluded apps">
                 <wuc:SettingsExpander Description="Turns off Shortcut Guide when these applications have focus - add one application name per line"
                             Header="Exclude apps" IsExpanded="True" HeaderIcon="{wuc:FontIcon FontFamily={StaticResource SymbolThemeFontFamily}, Glyph=&#xECE4;}">
                     <wuc:SettingsExpander.Items>
@@ -1565,7 +1565,7 @@ public class ImageSize : Observable
                         </wuc:SettingsCard>
                     </wuc:SettingsExpander.Items>
                 </wuc:SettingsExpander>
-            </wuc:SettingsGroup>
+            </wuc:SimpleSettingsGroup>
         </StackPanel>
     </wuc:SettingsPageControl.ModuleContent>
     <wuc:SettingsPageControl.PrimaryLinks>

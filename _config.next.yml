@@ -383,6 +383,7 @@ menu:
       OOBEPageControl: /oOBEPageControl/ ||
       SettingsCard: /settingsCard/ ||
       SettingsGroup: /settingsGroup/ ||
+      SimpleSettingsGroup: /simpleSettingsGroup/ ||
       SettingsPageControl: /settingsPageControl/ ||
       Shortcut: /shortcut/ ||
       Windows 11 Settings Examples: /windows11SettingsExamples/ ||

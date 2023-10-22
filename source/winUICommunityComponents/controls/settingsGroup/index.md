@@ -2,38 +2,61 @@
 title: SettingsGroup
 ---
 
-{% note warning %}
-We moved all namespaces into a single namespace. No matter which (WinUICommunity) library you use, the namespace is always as follows
-For use in the Xaml:
-`xmlns:wuc="using:WinUICommunity"`
-For use in the Csharp:
-`using WinUICommunity;`
-{% endnote %}
-
 # Attributes
 
 | Name |
 |-|
 |Header|
 |Description|
+|HeaderIcon|
+|Content|
+|Items|
 
 # Example
 
 ```xml
-<wuc:SettingsGroup Header="Behavior">
-    <wuc:SettingsCard Header="Keep screen on">
-        <wuc:SettingsCard.HeaderIcon>
-            <SymbolIcon Symbol="SetLockScreen"/>
-        </wuc:SettingsCard.HeaderIcon>
-        <ToggleSwitch/>
-    </wuc:SettingsCard>
-    <wuc:SettingsCard Header="Auto Download">
-        <wuc:SettingsCard.HeaderIcon>
-            <SymbolIcon Symbol="Download"/>
-        </wuc:SettingsCard.HeaderIcon>
-        <ToggleSwitch/>
-    </wuc:SettingsCard>
-</wuc:SettingsGroup>
+<ScrollView>
+    <wuc:WrapPanel>
+        <wuc:SettingsGroup Margin="10"
+                                Description="Recent and commonly used settings"
+                                Header="Recommended settings">
+            <wuc:SettingsGroup.Items>
+                <wuc:SettingsCard Header="Installed apps"
+                                    HeaderIcon="{wuc:SymbolIcon Symbol=AllApps}"
+                                    IsClickEnabled="True" />
+                <wuc:SettingsCard Header="Taskbar"
+                                    HeaderIcon="{wuc:SymbolIcon Symbol=More}"
+                                    IsClickEnabled="True" />
+                <wuc:SettingsCard Header="Display"
+                                    HeaderIcon="{wuc:SymbolIcon Symbol=Mail}"
+                                    IsClickEnabled="True" />
+            </wuc:SettingsGroup.Items>
+        </wuc:SettingsGroup>
+        <wuc:SettingsGroup Margin="10"
+                                Description="Make sure OneDrive is installed on your PC so you can see your storage details here"
+                                Header="Cloud storage"
+                                HeaderIcon="{wuc:BitmapIcon Source=Assets/oneDrive.png}">
+            <wuc:SettingsGroup.Content>
+                <Button Content="Install OneDrive" />
+            </wuc:SettingsGroup.Content>
+        </wuc:SettingsGroup>
+        <wuc:SettingsGroup Margin="10"
+                                Description="Manage, add, and remove devices"
+                                Header="Bluetooth devices">
+            <wuc:SettingsGroup.Items>
+                <wuc:SettingsCard Description="Discoverable as 'DESKTOP-NJVNLK0'"
+                                    Header="Bluetooth"
+                                    HeaderIcon="{wuc:SymbolIcon Symbol=DisconnectDrive}" />
+                <wuc:SettingsCard Description="Not connected"
+                                    Header="KA"
+                                    HeaderIcon="{wuc:SymbolIcon Symbol=Mute}" />
+                <wuc:SettingsCard Header="View all devices"
+                                    IsClickEnabled="True" />
+            </wuc:SettingsGroup.Items>
+        </wuc:SettingsGroup>
+    </wuc:WrapPanel>
+</ScrollView>
+
 ```
 
 # Demo
