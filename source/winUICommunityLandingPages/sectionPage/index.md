@@ -52,7 +52,7 @@ now load items and navigate to a desired pages:
 ```cs
 protected override void OnNavigatedTo(NavigationEventArgs e)
 {
-    var item = ApplicationHelper.GetUniqueIdAndSectionId(e.Parameter);
+    var item = NavigationServiceHelper.GetUniqueIdAndSectionId(e.Parameter);
     sectionPage.GetData(jsonNavigationViewService.DataSource, item.UniqueId, item.SectionId);
     sectionPage.OrderBy(i => i.Title);
 }

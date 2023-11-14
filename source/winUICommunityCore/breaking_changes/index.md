@@ -8,6 +8,10 @@ A breaking change is a change that may require you to make changes to your appli
 See [here](https://github.com/WinUICommunity/WinUICommunity/releases) for full changes
 {% endnote %}
 
+## 5.3.3
+- ApplicationHelper removed and static methods moved to seperate classes
+
+
 ## 5.0.0
 - Project Renamed to `Core`
 - Removed NavigationManager (Use New NavigationService which support MVVM)
