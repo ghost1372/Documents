@@ -341,18 +341,27 @@ menu:
       default: /extensions/ || fas fa-tools
     Helpers: 
       default: /helpers/ || fas fa-tools
-      ApplicationHelper: /applicationHelper/ ||
       AppNotification: /appNotification/ ||
+      AssemblyInfoHelper: /assemblyInfoHelper/ ||
       AutoSuggestBoxHelper: /autoSuggestBoxHelper/ ||
+      FileAndFolderPickerHelper: /fileAndFolderPickerHelper/ ||
+      FileHelper: /fileHelper/ ||
+      GeneralHelper: /generalHelper/ ||
       INIHelper: /iniHelper/ ||
+      NetworkHelper: /networkHelper/ ||
       OSVersionHelper: /osVersionHelper/ ||
+      PackageHelper: /packageHelper/ ||
+      PathHelper: /pathHelper/ ||
+      PresenterHelper: /presenterHelper/ ||
       PrintHelper: /printHelper/ ||
       ResourceHelper: /resourceHelper/ ||
+      SecurityHelper: /securityHelper/ ||
       TaskbarHelper: /taskbarHelper/ ||
       TitleBarHelper: /titleBarHelper/ ||
       UpdateHelper: /updateHelper/ ||
       VisualHelper: /visualHelper/ ||
       WindowHelper: /windowHelper/ ||
+      WndProdcHelper: /wndProdcHelper/ ||
     NavigationService: /navigationService/ || fas fa-tools
     Services: 
       default: /services/ || fas fa-tools
