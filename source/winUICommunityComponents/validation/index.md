@@ -171,3 +171,8 @@ private void CoolButton_Click(object sender, RoutedEventArgs e)
     frame.Navigate(typeof(AccountPage));
 }
 ```
+
+![WindowUI](https://raw.githubusercontent.com/WindowUIOrg/Resources/main/WindowUIDocs/Validation.png)
+
+# Demo
+you can run [demo](https://github.com/WinUICommunity/WinUICommunity) and see this feature.

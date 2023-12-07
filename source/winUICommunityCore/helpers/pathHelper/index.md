@@ -17,11 +17,19 @@ var pathToAsset = PathHelper.GetFullPathToAsset("logo.png");
 ```
 
 # GetFilePath
+```cs
+var path = await PathHelper.GetFilePath(filePath);
+```
 
 # GetLocalFolderPath
+```cs
+var appDataPath = await PathHelper.GetLocalFolderPath();
+```
 
 # GetExecutablePathNative
-
+```cs
+var exePath = await PathHelper.GetExecutablePathNative();
+```
 
 # Demo
 you can run [demo](https://github.com/WinUICommunity/WinUICommunity) and see this feature.

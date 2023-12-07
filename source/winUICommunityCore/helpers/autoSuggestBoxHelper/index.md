@@ -19,7 +19,7 @@ private void AutoSuggest_TextChanged(AutoSuggestBox sender, AutoSuggestBoxTextCh
 }
 ```
 
-![SettingsUI](https://raw.githubusercontent.com/ghost1372/Resources/main/SettingsUI/Samples/LoadSuggestion.png)
+![WindowUI](https://raw.githubusercontent.com/WindowUIOrg/Resources/main/WindowUIDocs/AutoSuggestBoxHelper.png)
 
 # Demo
 you can run [demo](https://github.com/WinUICommunity/WinUICommunity) and see this feature.

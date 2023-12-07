@@ -50,6 +50,10 @@ Assuming we had an Animal enum type and we wanted the user to pick one of the av
     SelectedIndex="0"/>
 
 ```
+
+![WindowUI](https://raw.githubusercontent.com/WindowUIOrg/Resources/main/WindowUIDocs/EnumValueEx.png)
+
+
 # ListViewExtension
 ## AlternateColor
 
@@ -163,6 +167,9 @@ Dynamic: this mode extends Normal and if is the newest input of the TextBox is i
 </TextBlock>
 ```
 
+![WindowUI](https://raw.githubusercontent.com/WindowUIOrg/Resources/main/WindowUIDocs/TextBoxEx.png)
+
+
 ### Text mask
 The Mask attached property allows a user to more easily enter fixed width text in TextBox control where you would like them to enter the data in a certain format, ex: phone number, postal code.
 
@@ -209,3 +216,8 @@ In case you want to add a custom variable character you can use the CustomMask p
 </StackPanel>
 
 ```
+
+![WindowUI](https://raw.githubusercontent.com/WindowUIOrg/Resources/main/WindowUIDocs/TextBoxMaskEx.png)
+
+# Demo
+you can run [demo](https://github.com/WinUICommunity/WinUICommunity) and see this feature.

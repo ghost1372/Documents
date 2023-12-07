@@ -84,5 +84,7 @@ public MainViewModel(IRainbowFrame rainbowFrame)
 }
 ```
 
+![WindowUI](https://raw.githubusercontent.com/WindowUIOrg/Resources/main/WindowUI/RainbowFrame.gif)
+
 # Demo
 you can run [demo](https://github.com/WinUICommunity/WinUICommunity) and see this feature.

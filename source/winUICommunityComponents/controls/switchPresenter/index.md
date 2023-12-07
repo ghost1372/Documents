@@ -188,8 +188,8 @@ public enum Animal
         </wuc:SwitchPresenter>
     </StackPanel>
 ```
+
+![WindowUI](https://raw.githubusercontent.com/WindowUIOrg/Resources/main/WindowUIDocs/SwitchPresenter.gif)
+
 # Demo
 you can run [demo](https://github.com/WinUICommunity/WinUICommunity) and see this feature.
-
-![269031871-4dff8a74-5ced-40a9-9d62-cd0c1307ed09](https://github.com/WindowUI/Resources/assets/9213496/d3e229a5-52ab-416f-b0bd-324b0783e1b1)
-

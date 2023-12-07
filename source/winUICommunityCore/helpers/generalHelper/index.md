@@ -35,7 +35,39 @@ var accent = GeneralHelper.GetColorFromHex(color.ToString());
 
 # SetPreferredAppMode
 
+```cs
+GeneralHelper.SetPreferredAppMode(ElementTheme.Dark);
+```
 # GetRasterizationScaleForElement
+```cs
+GeneralHelper.GetRasterizationScaleForElement(myButton);
+```
+
+# GetGlyph
+
+```cs
+var glyph = GeneralHelper.GetGlyph("EA6A");
+
+```
+
+# SetApplicationLayoutRTL and SetApplicationLayoutLTR
+```cs
+GeneralHelper.SetApplicationLayoutRTL(window);
+```
+
+# GetDecodedStringFromHtml
+
+```cs
+var cleanText = GeneralHelper.GetDecodedStringFromHtml(html);
+
+```
+
+# ColorToUInt
+
+```cs
+var colorInt = GeneralHelper.ColorToUInt(Colors.Red);
+
+```
 
 # Demo
 you can run [demo](https://github.com/WinUICommunity/WinUICommunity) and see this feature.

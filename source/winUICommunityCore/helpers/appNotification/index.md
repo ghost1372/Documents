@@ -210,5 +210,8 @@ public void NotificationReceived(AppNotificationActivatedEventArgs notificationA
 for more info about payloads you can see [here](https://docs.microsoft.com/en-us/windows/apps/design/shell/tiles-and-notifications/adaptive-interactive-toasts?tabs=builder-syntax) and [here](https://docs.microsoft.com/en-us/uwp/schemas/tiles/toastschema/schema-root)
 {% endnote %}
 
+![WindowUI](https://raw.githubusercontent.com/WindowUIOrg/Resources/main/WindowUIDocs/AppNotification.png)
+
+
 # Demo
 you can run [demo](https://github.com/WinUICommunity/WinUICommunity) and see this feature.

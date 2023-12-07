@@ -177,7 +177,7 @@ public class ColorFormatModel : Observable
 </Border>
 
 ```
-![SettingsUI](https://raw.githubusercontent.com/ghost1372/Resources/main/SettingsUI/Samples/BorderPanel.png)
+![WindowUI](https://raw.githubusercontent.com/WindowUIOrg/Resources/main/WindowUIDocs/BorderStyle.png)
 
 # Grid
 |Name|
@@ -196,14 +196,14 @@ public class ColorFormatModel : Observable
 
 </Grid>
 ```
+![WindowUI](https://raw.githubusercontent.com/WindowUIOrg/Resources/main/WindowUIDocs/GridStyle.png)
 
 # StackPanel
 |Name|
 |-|
 |StackPanelStyle|
 
-
-![SettingsUI](https://raw.githubusercontent.com/ghost1372/Resources/main/SettingsUI/Samples/GridPanel.png)
+![WindowUI](https://raw.githubusercontent.com/WindowUIOrg/Resources/main/WindowUIDocs/StackPanelStyle.png)
 
 
 # TabViewItem
@@ -270,3 +270,5 @@ just add this:
 ```xml
 <ResourceDictionary Source="ms-appx:///WinUICommunity.Components/Themes/InfoBarInformationalColor.xaml" />
 ```
+
+![WindowUI](https://raw.githubusercontent.com/WindowUIOrg/Resources/main/WindowUIDocs/BlueInfoBar.png)

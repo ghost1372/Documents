@@ -128,5 +128,9 @@ title: OptionsPageControl
     </wuc:OptionsPageControl>
 
 ```
+
+![WindowUI](https://raw.githubusercontent.com/WindowUIOrg/Resources/main/WindowUIDocs/OptionsPageControl.png)
+
+
 # Demo
 you can run [demo](https://github.com/WinUICommunity/WinUICommunity) and see this feature.

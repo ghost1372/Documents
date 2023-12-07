@@ -92,3 +92,5 @@ ContextMenuService.Ins.SetCustomMenuName("my menu text");
 ```
 
 you can use other methods like `OpenMenusFolderAsync, OpenMenuFileAsync, DeleteAsync and etc.`
+
+![WindowUI](https://raw.githubusercontent.com/WindowUIOrg/Resources/main/WindowUIDocs/ContextMenu.png)

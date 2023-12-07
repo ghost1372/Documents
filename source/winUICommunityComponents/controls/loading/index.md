@@ -20,5 +20,8 @@ The Loading controls is for showing an animation with some content when the user
 </wuc:Loading>
 ```
 
+![WindowUI](https://raw.githubusercontent.com/WindowUIOrg/Resources/main/WindowUIDocs/Loading.gif)
+
+
 # Demo
 you can run [demo](https://github.com/WinUICommunity/WinUICommunity) and see this feature.
