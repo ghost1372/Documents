@@ -363,6 +363,7 @@ menu:
       WindowHelper: /windowHelper/ ||
       WndProdcHelper: /wndProdcHelper/ ||
     NavigationService: /navigationService/ || fas fa-tools
+    RainbowFrame: /rainbowFrame/ ||
     Services: 
       default: /services/ || fas fa-tools
     ThemeService: /themeService/ || fas fa-tools
@@ -389,12 +390,16 @@ menu:
       InlineAutoCompleteTextBox: /inlineAutoCompleteTextBox/ ||
       IsEnabledTextBox: /isEnabledTextBox/ ||
       KeyVisual: /keyVisual/ ||
+      Loading: /loading/ ||
+      OptionsPageControl: /optionsPageControl/ ||
       OOBEPageControl: /oOBEPageControl/ ||
       SettingsCard: /settingsCard/ ||
       SettingsGroup: /settingsGroup/ ||
       SimpleSettingsGroup: /simpleSettingsGroup/ ||
       SettingsPageControl: /settingsPageControl/ ||
       Shortcut: /shortcut/ ||
+      SwitchPresenter: /switchPresenter/ ||
+      UniformGrid: /uniformGrid/ ||
       Windows 11 Settings Examples: /windows11SettingsExamples/ ||
     Styles: 
       default: /styles/ || fas fa-palette

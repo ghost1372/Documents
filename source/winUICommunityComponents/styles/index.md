@@ -197,6 +197,12 @@ public class ColorFormatModel : Observable
 </Grid>
 ```
 
+# StackPanel
+|Name|
+|-|
+|StackPanelStyle|
+
+
 ![SettingsUI](https://raw.githubusercontent.com/ghost1372/Resources/main/SettingsUI/Samples/GridPanel.png)
 
 

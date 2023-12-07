@@ -25,6 +25,14 @@ For use in the Csharp:
 |HeaderText|
 |HeaderImage|
 |HeaderImageHeight|
+|HeaderFontSize|
+
+# Override values
+
+```xml
+<x:Double x:Key="LandingItemTitleFontSize">14</x:Double>
+<x:Double x:Key="LandingItemSubtitleFontSize">12</x:Double>
+```
 
 # Simple Use
 first add:
