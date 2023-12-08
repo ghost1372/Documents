@@ -8,15 +8,21 @@ A breaking change is a change that may require you to make changes to your appli
 See [here](https://github.com/WindowUIOrg/WindowUI/releases) for full changes
 {% endnote %}
 
-## 5.3.1
-- `SettingsGroup`` renamed to `SimpleSettingsGroup`
-- Added a New SettingsGroup with More Features and `SettingsGroup` name.
+## 6.0.0
+- We Renamed `WinUICommunity` to `WindowUI`:
+`WinUICommunity.Components` renamed to `WindowUI`
+`WinUICommunity.Core` renamed to `WindowUI.Core`
+`WinUICommunity.LandingPages` renamed to `WindowUI.LandingPages`
+`WinUICommunity.LandingPages` renamed to `WindowUI.LandingPages`
 
+- ResourceDictionary Changed:
+`
+<ResourceDictionary Source="ms-appx:///WinUICommunity.Components/Themes/Generic.xaml" />
+`
 
-## 5.0.0
-- Project Renamed to `Components`
-- Resource Dictionary Changed to:
+Changed to
 
-```xml
+`
 <ResourceDictionary Source="ms-appx:///WindowUI/Themes/Generic.xaml" />
-```
+`
+

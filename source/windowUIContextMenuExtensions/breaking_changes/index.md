@@ -8,6 +8,9 @@ A breaking change is a change that may require you to make changes to your appli
 See [here](https://github.com/WindowUIOrg/WindowUI/releases) for full changes
 {% endnote %}
 
-## 5.1.1
-- Guid Changed To: `3EB53D8C-1221-451F-80AE-50E5B67E42DF`
-- Project Renamed to `ContextMenuExtensions`
+## 6.0.0
+- We Renamed `WinUICommunity` to `WindowUI`:
+`WinUICommunity.Components` renamed to `WindowUI`
+`WinUICommunity.Core` renamed to `WindowUI.Core`
+`WinUICommunity.LandingPages` renamed to `WindowUI.LandingPages`
+`WinUICommunity.LandingPages` renamed to `WindowUI.LandingPages`
