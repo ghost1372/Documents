@@ -1,8 +1,8 @@
 ---
-title: Welcome to WinUICommunity
+title: Welcome to WindowUI
 ---
 
-### Experience WinUI 3 quickly and easily with the help of WinUICommunity, Everything you need to develop an application is gathered in one place.
+### Experience WinUI 3 quickly and easily with the help of WindowUI, Everything you need to develop an application is gathered in one place.
 
 # Requirements
 
@@ -12,26 +12,26 @@ title: Welcome to WinUICommunity
 
 |Nuget|Github|
 |-|-|
-|[WinUICommunity.Components](https://www.nuget.org/packages/WinUICommunity.Components)|[Github](https://github.com/WinUICommunity/WinUICommunity)|
-|[WinUICommunity.LandingPages](https://www.nuget.org/packages/WinUICommunity.LandingPages)|[Github](https://github.com/WinUICommunity/WinUICommunity)|
-|[WinUICommunity.ContextMenuExtensions](https://www.nuget.org/packages/WinUICommunity.ContextMenuExtensions)|[Github](https://github.com/WinUICommunity/WinUICommunity)|
-|[WinUICommunity.Core](https://www.nuget.org/packages/WinUICommunity.Core)|[Github](https://github.com/WinUICommunity/WinUICommunity)|
+|[WindowUI](https://www.nuget.org/packages/WindowUI)|[Github](https://github.com/WindowUIOrg/WindowUI)|
+|[WindowUI.LandingPages](https://www.nuget.org/packages/WindowUI.LandingPages)|[Github](https://github.com/WindowUIOrg/WindowUI)|
+|[WindowUI.ContextMenuExtensions](https://www.nuget.org/packages/WindowUI.ContextMenuExtensions)|[Github](https://github.com/WindowUIOrg/WindowUI)|
+|[WindowUI.Core](https://www.nuget.org/packages/WindowUI.Core)|[Github](https://github.com/WindowUIOrg/WindowUI)|
 
 # Project Template
 for creating a new project easily, you can use our project templates:
 
 download and install our vsix package from Marketplace:
 
-[WinUICommunityTemplates](https://marketplace.visualstudio.com/items?itemName=MahdiHosseini.WinUICommunityTemplates)
+[WindowUITemplates](https://marketplace.visualstudio.com/items?itemName=MahdiHosseini.WinUICommunityTemplates)
 
-![WinUICommunityTemplates](https://raw.githubusercontent.com/WinUICommunity/Resources/main/WinUICommunity-Templates/Demo-WinUICommunityTemplates.png)
+![WindowUITemplates](https://raw.githubusercontent.com/WindowUIOrg/Resources/main/WinUICommunity-Templates/Demo-WinUICommunityTemplates.png)
 
-![WinUICommunityTemplates](https://raw.githubusercontent.com/WinUICommunity/Resources/main/WinUICommunity-Templates/1.png)
+![WindowUITemplates](https://raw.githubusercontent.com/WindowUIOrg/Resources/main/WinUICommunity-Templates/1.png)
 
 {% note warning %}
-We moved all namespaces into a single namespace. No matter which (WinUICommunity) library you use, the namespace is always as follows
+We moved all namespaces into a single namespace. No matter which (WindowUI) library you use, the namespace is always as follows
 For use in the Xaml:
-`xmlns:wuc="using:WinUICommunity"`
+`xmlns:wui="using:WindowUI"`
 For use in the Csharp:
-`using WinUICommunity;`
+`using WindowUI;`
 {% endnote %}
