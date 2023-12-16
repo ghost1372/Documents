@@ -341,7 +341,6 @@ menu:
       InlineAutoCompleteTextBox: /inlineAutoCompleteTextBox/ ||
       IsEnabledTextBox: /isEnabledTextBox/ ||
       KeyVisual: /keyVisual/ ||
-      Loading: /loading/ ||
       OptionsPageControl: /optionsPageControl/ ||
       OOBEPageControl: /oOBEPageControl/ ||
       SettingsCard: /settingsCard/ ||

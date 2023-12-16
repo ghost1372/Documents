@@ -191,5 +191,48 @@ public enum Animal
 
 ![WindowUI](https://raw.githubusercontent.com/WindowUIOrg/Resources/main/WindowUIDocs/SwitchPresenter.gif)
 
+# Example 4
+
+```xml
+<Grid Margin="10"
+      ChildrenTransitions="{StaticResource SettingsCardsAnimations}">
+    <Grid.RowDefinitions>
+        <RowDefinition Height="Auto" />
+        <RowDefinition />
+    </Grid.RowDefinitions>
+    <ToggleSwitch x:Name="LoadingState" />
+    <wui:SwitchPresenter Grid.Row="1"
+                         HorizontalAlignment="Center"
+                         TargetType="x:Boolean"
+                         Value="{x:Bind LoadingState.IsOn, Mode=OneWay}">
+        <wui:Case Value="True">
+            <StackPanel HorizontalAlignment="Center"
+                        animations:Implicit.HideAnimations="{StaticResource HideTransitions}"
+                        animations:Implicit.ShowAnimations="{StaticResource ShowTransitions}"
+                        Orientation="Vertical"
+                        Spacing="8">
+                <ProgressRing IsActive="{x:Bind LoadingState.IsOn, Mode=OneWay}" />
+                <TextBlock HorizontalAlignment="Center"
+                           Foreground="{ThemeResource TextFillColorSecondaryBrush}"
+                           Style="{StaticResource CaptionTextBlockStyle}"
+                           Text="Fetching data.." />
+            </StackPanel>
+        </wui:Case>
+        <wui:Case Value="False">
+            <TextBlock HorizontalAlignment="Center"
+                       animations:Implicit.HideAnimations="{StaticResource HideTransitions}"
+                       animations:Implicit.ShowAnimations="{StaticResource ShowTransitions}"
+                       TextAlignment="Center"
+                       TextWrapping="WrapWholeWords">
+                <Run FontWeight="SemiBold"
+                     Text="Content has loaded" />
+                <LineBreak />
+                <Run Text="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua." />
+            </TextBlock>
+        </wui:Case>
+    </wui:SwitchPresenter>
+</Grid>
+```
+
 # Demo
 you can run [demo](https://github.com/WindowUIOrg/WindowUI) and see this feature.
