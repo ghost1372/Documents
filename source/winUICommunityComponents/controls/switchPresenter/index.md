@@ -201,11 +201,11 @@ public enum Animal
         <RowDefinition />
     </Grid.RowDefinitions>
     <ToggleSwitch x:Name="LoadingState" />
-    <wui:SwitchPresenter Grid.Row="1"
+    <wuc:SwitchPresenter Grid.Row="1"
                          HorizontalAlignment="Center"
                          TargetType="x:Boolean"
                          Value="{x:Bind LoadingState.IsOn, Mode=OneWay}">
-        <wui:Case Value="True">
+        <wuc:Case Value="True">
             <StackPanel HorizontalAlignment="Center"
                         animations:Implicit.HideAnimations="{StaticResource HideTransitions}"
                         animations:Implicit.ShowAnimations="{StaticResource ShowTransitions}"
@@ -218,7 +218,7 @@ public enum Animal
                            Text="Fetching data.." />
             </StackPanel>
         </wui:Case>
-        <wui:Case Value="False">
+        <wuc:Case Value="False">
             <TextBlock HorizontalAlignment="Center"
                        animations:Implicit.HideAnimations="{StaticResource HideTransitions}"
                        animations:Implicit.ShowAnimations="{StaticResource ShowTransitions}"

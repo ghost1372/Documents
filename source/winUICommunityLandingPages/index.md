@@ -14,7 +14,7 @@ Install-Package WinUICommunity.LandingPages
 After installing, add the following resource to app.xaml
 
 ```xml
-xmlns:wui="using:WinUICommunity"
+xmlns:wuc="using:WinUICommunity"
 
 <ResourceDictionary Source="ms-appx:///WinUICommunity.LandingPages/Themes/Generic.xaml" />
 <wuc:ItemTemplates/>
@@ -32,7 +32,7 @@ This package is based on the following packages
 {% note warning %}
 We moved all namespaces into a single namespace. No matter which (WinUICommunity) library you use, the namespace is always as follows
 For use in the Xaml:
-`xmlns:wui="using:WinUICommunity"`
+`xmlns:wuc="using:WinUICommunity"`
 For use in the Csharp:
 `using WinUICommunity;`
 {% endnote %}
