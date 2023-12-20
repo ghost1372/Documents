@@ -331,8 +331,8 @@ menu:
       UpdatableMarkupExtension: /updatableMarkupExtension/ ||
     Intellisense:
       default: /intellisense/ || fas fa-brain
-  WindowUI - 6.0.0:
-    default: /windowUI/ || fas fa-dice-d20
+  Components - 6.0.0:
+    default: /winUICommunityComponents/ || fas fa-dice-d20
     Breaking Changes: /breaking_changes/ || fas fa-dice-d20
     Quick start: /quick_start/ || fas fa-dice-d20
     Controls: 
@@ -356,7 +356,7 @@ menu:
     Validation:
       default: /validation/ || fab fa-intercom
   Core - 6.0.0:
-    default: /windowUICore/ || fas fa-tools
+    default: /winUICommunityCore/ || fas fa-tools
     Breaking Changes: /breaking_changes/ || fas fa-dice-d20
     DynamicLanguage: /dynamicLanguage/ || fas fa-tools
     Extensions: 
@@ -395,7 +395,7 @@ menu:
       default: /interfaces/ || fas fa-tools
       ITitleBarAutoSuggestBoxAware: /iTitleBarAutoSuggestBoxAware/ ||
   LandingPages - 6.0.0:
-      default: /windowUILandingPages/ || fab fa-intercom
+      default: /winUICommunityLandingPages/ || fab fa-intercom
       Breaking Changes: /breaking_changes/ || fas fa-dice-d20
       AllLandingPage: /allLandingPage/ ||
       HeaderTile: /headerTile/ ||
@@ -403,7 +403,7 @@ menu:
       MainLandingPage: /mainLandingPage/ ||
       SectionPage: /sectionPage/ ||
   ContextMenuExtensions - 6.0.0:
-      default: /windowUIContextMenuExtensions/ || fas fa-brain
+      default: /winUICommunityContextMenuExtensions/ || fas fa-brain
       Breaking Changes: /breaking_changes/ || fas fa-dice-d20
         
 
@@ -462,7 +462,7 @@ social:
   GitHub: https://github.com/ghost1372 || fab fa-github
   E-Mail: mailto:mahdidvb72@gmail.com || fa fa-envelope
   Nuget: https://www.nuget.org/packages/HandyControls || fab fa-microsoft
-  Nuget (WindowUI): https://www.nuget.org/profiles/WindowUIOrg || fab fa-microsoft
+  Nuget (WinUICommunity): https://www.nuget.org/profiles/WinUICommunity || fab fa-microsoft
 
 social_icons:
   enable: true
