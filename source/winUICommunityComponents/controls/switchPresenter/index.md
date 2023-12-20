@@ -217,7 +217,7 @@ public enum Animal
                            Style="{StaticResource CaptionTextBlockStyle}"
                            Text="Fetching data.." />
             </StackPanel>
-        </wui:Case>
+        </wuc:Case>
         <wuc:Case Value="False">
             <TextBlock HorizontalAlignment="Center"
                        animations:Implicit.HideAnimations="{StaticResource HideTransitions}"
@@ -229,8 +229,8 @@ public enum Animal
                 <LineBreak />
                 <Run Text="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua." />
             </TextBlock>
-        </wui:Case>
-    </wui:SwitchPresenter>
+        </wuc:Case>
+    </wuc:SwitchPresenter>
 </Grid>
 ```
 
