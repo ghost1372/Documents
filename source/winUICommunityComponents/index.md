@@ -12,7 +12,7 @@ title: Welcome to WinUICommunity
 
 |Nuget|Github|
 |-|-|
-|[WinUICommunity](https://www.nuget.org/profiles/WinUICommunity)|[Github](https://github.com/WinUICommunity/WinUICommunity)
+|[WinUICommunity.Components](https://www.nuget.org/packages/WinUICommunity.Components)|[Github](https://github.com/WinUICommunity/WinUICommunity)|
 
 {% note warning %}
 Github is generally updated every day and is relatively unsuitable for production.

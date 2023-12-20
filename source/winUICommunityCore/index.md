@@ -34,6 +34,12 @@ For use in the Csharp:
 Install-Package WinUICommunity.Core
 ```
 
+After installing, add the following resource to app.xaml
+
+
+```xml
+<ResourceDictionary Source="ms-appx:///WinUICommunity.Components/Themes/Generic.xaml"/>
+```
 See the Demo app to see how to use it
 
 # Compile source code
