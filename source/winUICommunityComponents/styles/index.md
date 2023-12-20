@@ -268,7 +268,7 @@ or
 just add this:
 
 ```xml
-<ResourceDictionary Source="ms-appx:///WinUICommunity/Themes/InfoBarInformationalColor.xaml" />
+<ResourceDictionary Source="ms-appx:///WinUICommunity.Components/Themes/InfoBarInformationalColor.xaml" />
 ```
 
 ![WinUICommunity](https://raw.githubusercontent.com/WinUICommunity/Resources/main/WinUICommunityDocs/BlueInfoBar.png)
