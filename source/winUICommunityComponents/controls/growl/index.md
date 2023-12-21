@@ -134,6 +134,11 @@ Growl.ClearGlobal();
 |ErrorGlobal(string title)||
 |ErrorGlobal(string title, string message)||
 |ErrorGlobal(GrowlInfo growlInfo)||
+|Ask(string title, Func<object, RoutedEventArgs, bool> actionBeforeClose)||
+|AskWithToken(string title, string token, Func<object, RoutedEventArgs, bool> actionBeforeClose)||
+|AskGlobal(string title, Func<object, RoutedEventArgs, bool> actionBeforeClose)||
+|Clear||
+|ClearGlobal||
 
 # GrowlInfo
 
@@ -171,9 +176,9 @@ Ask is special, what?
 
 The main focus of the Ask method is the second parameter, its type is `Func<bool, bool>`, let's look at the sample code:
 ``` csharp
-Growl.Ask("do you want to update?", isConfirmed =>
+Growl.Ask("do you want to update?", (s, e) =>
 {
-    Growl.Info(isConfirmed.ToString());
+    Growl.Info("test");
     return true;
 });
 ```
