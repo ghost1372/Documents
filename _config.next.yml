@@ -338,6 +338,7 @@ menu:
     Controls: 
       default: /controls/ || fab fa-intercom
       CheckBoxWithDescriptionControl: /checkBoxWithDescriptionControl/ ||
+      Growl: /growl/ ||
       InlineAutoCompleteTextBox: /inlineAutoCompleteTextBox/ ||
       IsEnabledTextBox: /isEnabledTextBox/ ||
       KeyVisual: /keyVisual/ ||
@@ -389,6 +390,7 @@ menu:
     Services: 
       default: /services/ || fas fa-tools
     ThemeService: /themeService/ || fas fa-tools
+    TransparentBackdrop: /transparentBackdrop/ ||
     Tools:
       default: /tools/ || fas fa-tools
     Interfaces:

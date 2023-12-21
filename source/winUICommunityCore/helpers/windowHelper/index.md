@@ -12,7 +12,7 @@ WindowHelper.SetWindowSize(window, 200, 300);
 you can set Window Height/Width Min/Max Size, first you need to register `RegisterWindowMinMax` method in your window class:
 
 ```cs
-var windowHelper = new WindowHelper(Window window);
+var windowHelper = new WindowHelper(window);
 windowHelper.RegisterWindowMinMax();
 ```
 now you can change window Min/Max size:
@@ -28,6 +28,22 @@ WindowHelper.MaxWindowHeight = 600;
 
 ```cs
 WindowHelper.SwitchToThisWindow(window);
+```
+
+# MoveAndResizeCenterScreen
+
+```cs
+WindowHelper.MoveAndResizeCenterScreen(window, width, height);
+```
+
+# MoveAndResize
+```cs
+WindowHelper.MoveAndResize(window, x, y, width, height);
+```
+
+# MoveAndResize
+```cs
+WindowHelper.Move(window, x, y);
 ```
 
 # Demo

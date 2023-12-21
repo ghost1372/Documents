@@ -188,6 +188,7 @@ copy this xaml in your page:
     <RadioButton Checked="OnBackdropRadioButtonChecked" Content="Desktop Acrylic" Tag="DesktopAcrylic" />
     <RadioButton Checked="OnBackdropRadioButtonChecked" Content="Acrylic Base" Tag="AcrylicBase" />
     <RadioButton Checked="OnBackdropRadioButtonChecked" Content="Acrylic Thin" Tag="AcrylicThin" />
+    <RadioButton Checked="OnBackdropRadioButtonChecked" Content="Transparent" Tag="Transparent" />
 </StackPanel>
 ```
 now call `OnBackdropRadioButtonChecked` method for changing and saving application systemBackdrop:
@@ -215,6 +216,7 @@ copy this xaml in your page:
     <ComboBoxItem Tag="DesktopAcrylic" Content="Desktop Acrylic"/>
     <ComboBoxItem Tag="AcrylicBase" Content="Acrylic Base"/>
     <ComboBoxItem Tag="AcrylicThin" Content="Acrylic Thin"/>
+    <ComboBoxItem Tag="Transparent" Content="Transparent"/>
 </ComboBox>
 ```
 now call `OnBackdropComboBoxSelectionChanged` method for changing and saving application theme:
