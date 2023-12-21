@@ -390,7 +390,7 @@ menu:
     Services: 
       default: /services/ || fas fa-tools
     ThemeService: /themeService/ || fas fa-tools
-    TransparentBackdrop: /transparentBackdrop/ ||
+    Backdrop: /backdrop/ ||
     Tools:
       default: /tools/ || fas fa-tools
     Interfaces:
