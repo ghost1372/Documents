@@ -338,6 +338,7 @@ menu:
     Controls: 
       default: /controls/ || fab fa-intercom
       CheckBoxWithDescriptionControl: /checkBoxWithDescriptionControl/ ||
+      Gravatar: /gravatar/ ||
       Growl: /growl/ ||
       InlineAutoCompleteTextBox: /inlineAutoCompleteTextBox/ ||
       IsEnabledTextBox: /isEnabledTextBox/ ||
@@ -348,6 +349,7 @@ menu:
       SettingsGroup: /settingsGroup/ ||
       SimpleSettingsGroup: /simpleSettingsGroup/ ||
       SettingsPageControl: /settingsPageControl/ ||
+      Shield: /shield/ ||
       Shortcut: /shortcut/ ||
       SwitchPresenter: /switchPresenter/ ||
       UniformGrid: /uniformGrid/ ||
