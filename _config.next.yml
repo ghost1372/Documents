@@ -338,6 +338,7 @@ menu:
     Controls: 
       default: /controls/ || fab fa-intercom
       CheckBoxWithDescriptionControl: /checkBoxWithDescriptionControl/ ||
+      Divider: /divider/ ||
       Gravatar: /gravatar/ ||
       Growl: /growl/ ||
       InlineAutoCompleteTextBox: /inlineAutoCompleteTextBox/ ||
