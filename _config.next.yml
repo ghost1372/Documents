@@ -362,6 +362,9 @@ menu:
   Core - 6.0.0:
     default: /winUICommunityCore/ || fas fa-tools
     Breaking Changes: /breaking_changes/ || fas fa-dice-d20
+    Attach:
+      default: /attach/ ||
+      PanelAttach: /panelAttach/ ||
     DynamicLanguage: /dynamicLanguage/ || fas fa-tools
     Extensions: 
       default: /extensions/ || fas fa-tools
