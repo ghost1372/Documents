@@ -368,6 +368,9 @@ menu:
     DynamicLanguage: /dynamicLanguage/ || fas fa-tools
     Extensions: 
       default: /extensions/ || fas fa-tools
+      GeneralExtension: /generalExtension/ ||
+      IconMarkupExtension: /iconMarkupExtension/ ||
+      TextBoxExtension: /textBoxExtension/ ||
     Helpers: 
       default: /helpers/ || fas fa-tools
       AppNotification: /appNotification/ ||
