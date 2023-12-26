@@ -7,5 +7,3 @@ A breaking change is a change that may require you to make changes to your appli
 {% note info %}
 See [here](https://github.com/WinUICommunity/WinUICommunity/releases) for full changes
 {% endnote %}
-
-## 6.0.0

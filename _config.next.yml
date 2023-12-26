@@ -394,6 +394,7 @@ menu:
       VisualHelper: /visualHelper/ ||
       WindowHelper: /windowHelper/ ||
       WndProdcHelper: /wndProdcHelper/ ||
+    Messaging: /messaging/ ||
     NavigationService: /navigationService/ || fas fa-tools
     RainbowFrame: /rainbowFrame/ ||
     Services: 
