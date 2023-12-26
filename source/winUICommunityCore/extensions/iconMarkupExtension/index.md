@@ -93,7 +93,7 @@ The `FontIconSourceExtension` class mirrors the `FontIconExtension` type, but pr
 
 ## SymbolIconExtension
 
-The `SymbolIconExtension` type mirrors the `FontIcon` markup extension, with the main difference being that it uses a `Symbol` value to specify the icon. All the other properties from `FontIconExtension` are available, with the exception of the font family, which is always set to "Segoe MDL2 Assets". Here is how it can be used:
+The `SymbolIconExtension` type mirrors the `FontIcon` markup extension, with the main difference being that it uses a `Symbol` value to specify the icon. All the other properties from `FontIconExtension` are available, with the exception of the font family. Here is how it can be used:
 
 ```xml
 <CommandBar>
@@ -103,7 +103,7 @@ The `SymbolIconExtension` type mirrors the `FontIcon` markup extension, with the
 
 ## SymbolIconSource
 
-The `SymbolIconSourceExtension` type is an alternative for `FontIconSourceExtension` that takes a `Symbol` value instead of a text, and displays the icon with the "Segoe MDL2 Assets". It's equivalent to the `SymbolIconExtension` type, except for the fact that it returns a `FontIconSource` instance:
+The `SymbolIconSourceExtension` type is an alternative for `FontIconSourceExtension` that takes a `Symbol` value instead of a text, and displays the icon. It's equivalent to the `SymbolIconExtension` type, except for the fact that it returns a `FontIconSource` instance:
 
 ```xml
 <SwipeItems Mode="Reveal">
