@@ -2,14 +2,11 @@
 title: SecurityHelper
 ---
 
-# GetMD5Hash
+# GetHash
 ```cs
-var md5 = SecurityHelper.GetMD5Hash(message);
-```
+var md5 = SecurityHelper.GetHash(text, HashAlgorithm.MD5);
 
-# GetSHA256Hash
-```cs
-var md5 = SecurityHelper.GetSHA256Hash(message);
+var sha256 = SecurityHelper.GetHash(text, HashAlgorithm.SHA256);
 ```
 
 # Demo

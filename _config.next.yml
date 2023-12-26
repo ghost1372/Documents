@@ -368,8 +368,15 @@ menu:
     DynamicLanguage: /dynamicLanguage/ || fas fa-tools
     Extensions: 
       default: /extensions/ || fas fa-tools
+      CollectionExtension: /collectionExtension/ ||
+      DictionaryExtensions: /dictionaryExtensions/ ||
+      EnumValueExtension: /enumValueExtension/ ||
       GeneralExtension: /generalExtension/ ||
       IconMarkupExtension: /iconMarkupExtension/ ||
+      ListExtensions: /listExtensions/ ||
+      ListViewExtension: /listViewExtension/ ||
+      MergedDictionariesExtensions: /mergedDictionariesExtensions/ ||
+      StringExtension: /stringExtension/ ||
       TextBoxExtension: /textBoxExtension/ ||
     Helpers: 
       default: /helpers/ || fas fa-tools
