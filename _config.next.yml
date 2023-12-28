@@ -365,6 +365,7 @@ menu:
     Attach:
       default: /attach/ ||
       PanelAttach: /panelAttach/ ||
+    Command: /command/ ||
     DynamicLanguage: /dynamicLanguage/ || fas fa-tools
     Extensions: 
       default: /extensions/ || fas fa-tools

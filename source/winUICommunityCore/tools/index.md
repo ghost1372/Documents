@@ -25,19 +25,14 @@ public class ShellViewModel : Observable
 }
 ```
 
-# RelayCommand
+# Generic Comapre
+Check if there is an specific item in the collection or not
 
 ```cs
-inherited from `ICommand`
-```
-
-```cs
-private ICommand itemInvokedCommand;
-
-public ICommand ItemInvokedCommand => itemInvokedCommand ?? (itemInvokedCommand = new RelayCommand<string>(OnItemInvoked));
-
-public void OnItemInvoked(string arg)
+var model = new Model
 {
-
-}
+    Id = 1,
+    Name = "Test"
+};
+var contain = DataList.Contains(model, new GenericCompare<Model>(x=>x.Id)); 
 ```
