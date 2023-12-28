@@ -20,6 +20,7 @@ For use in the Csharp:
 |IsWindows11_22000_OrGreater|
 |IsWindows11_22621|
 |IsWindows11_22621_OrGreater|
+|IsEqualOrGreater|
 
 ```cs
 var getOSVersion = OSVersionHelper.GetOSVersion();
