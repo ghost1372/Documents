@@ -377,6 +377,7 @@ menu:
       ListExtensions: /listExtensions/ ||
       ListViewExtension: /listViewExtension/ ||
       MergedDictionariesExtensions: /mergedDictionariesExtensions/ ||
+      PersianDateTimeExtension: /persianDateTimeExtension/ ||
       StringExtension: /stringExtension/ ||
       TextBoxExtension: /textBoxExtension/ ||
     Helpers: 
@@ -404,6 +405,7 @@ menu:
       WndProdcHelper: /wndProdcHelper/ ||
     Messaging: /messaging/ ||
     NavigationService: /navigationService/ || fas fa-tools
+    PersianDateTime: /persianDateTime/ ||
     RainbowFrame: /rainbowFrame/ ||
     Services: 
       default: /services/ || fas fa-tools
