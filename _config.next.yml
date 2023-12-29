@@ -407,6 +407,7 @@ menu:
     NavigationService: /navigationService/ || fas fa-tools
     PersianDateTime: /persianDateTime/ ||
     RainbowFrame: /rainbowFrame/ ||
+    RelativeDate: // |relativeDate|
     Services: 
       default: /services/ || fas fa-tools
     ThemeService: /themeService/ || fas fa-tools
