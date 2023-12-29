@@ -34,7 +34,14 @@ var sha256 = await SecurityHelper.GetHashFromFileAsync(filePath, HashAlgorithm.S
 //A69AC8A63339FF52973B6FC4462EB685DF1AA5B795B39FAABE809C0263C8FACB
 ```
 
-# Text Encryption
+## EncryptBase64/DecryptBase64
+```cs
+var encText = SecurityHelper.EncryptBase64("Hello");
+
+var decText = SecurityHelper.DecryptBase64(encText);
+```
+
+# Symmetric Encryption
 
 ## EncryptStringSymmetric/DecrypStringSymmetric
 
@@ -66,6 +73,14 @@ var encText = SecurityHelper.EncryptStringSymmetric("Hello", "123456789123456");
 var decText = SecurityHelper.DecrypStringSymmetric(encText, "123456789123456");
 ```
 
+## EncryptFileAES/DecryptFileAES
+
+```cs
+SecurityHelper.EncryptFileAES(inputFilePath, outputFilePath, aes_Key, aes_IV);
+
+```
+
+# Asymmetric Encryption
 ## EncryptStringAsymmetric/DecryptStringAsymmetric
 
 |Asymmetric Algorithm|
@@ -119,12 +134,6 @@ var encText = SecurityHelper.EncryptStringAsymmetric("Hello", publicKey);
 var decText = SecurityHelper.DecryptStringAsymmetric(encText, privateKey);
 ```
 
-## EncryptBase64/DecryptBase64
-```cs
-var encText = SecurityHelper.EncryptBase64("Hello");
-
-var decText = SecurityHelper.DecryptBase64(encText);
-```
 
 # Demo
 you can run [demo](https://github.com/WinUICommunity/WinUICommunity) and see this feature.
