@@ -43,40 +43,21 @@ var decText = SecurityHelper.DecryptBase64(encText);
 
 # Symmetric Encryption
 
-## EncryptStringSymmetric/DecrypStringSymmetric
-
-|Symmetric Algorithm|
-|-|
-|RC4|
-|RC2_CBC|
-|RC2_ECB|
-|RC2_CBC_PKCS7|
-|RC2_ECB_PKCS7|
-|AES_CBC|
-|AES_CBC_PKCS7|
-|AES_CCM|
-|AES_ECB|
-|AES_ECB_PKCS7|
-|DES_CBC|
-|DES_CBC_PKCS7|
-|DES_ECB|
-|DES_ECB_PKCS7|
-|TRIPLE_DES_CBC|
-|TRIPLE_DES_CBC_PKCS7|
-|TRIPLE_DES_ECB|
-|TRIPLE_DES_ECB_PKCS7|
+## EncryptStringAes/DecryptStringAes
 
 
 ```cs
-var encText = SecurityHelper.EncryptStringSymmetric("Hello", "123456789123456");
+var encText = SecurityHelper.EncryptStringAes("text", out var key, out var iv);
 
-var decText = SecurityHelper.DecrypStringSymmetric(encText, "123456789123456");
+var decText = SecurityHelper.DecryptStringAes(encText, key, iv);
 ```
 
 ## EncryptFileAES/DecryptFileAES
 
 ```cs
-SecurityHelper.EncryptFileAES(inputFilePath, outputFilePath, aes_Key, aes_IV);
+SecurityHelper.EncryptFileAES(inputFilePath, outputFilePath, out var aes_Key, out var aes_IV);
+
+SecurityHelper.DecryptFileAES(outputFilePath, newOutputFilePath, aes_Key, aes_IV);
 
 ```
 
