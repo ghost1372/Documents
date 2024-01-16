@@ -337,6 +337,7 @@ menu:
     Quick start: /quick_start/ || fas fa-dice-d20
     Controls: 
       default: /controls/ || fab fa-intercom
+      AutoScrollView: /AutoScrollView/ ||
       CheckBoxWithDescriptionControl: /checkBoxWithDescriptionControl/ ||
       Divider: /divider/ ||
       Gravatar: /gravatar/ ||
@@ -346,6 +347,7 @@ menu:
       KeyVisual: /keyVisual/ ||
       OptionsPageControl: /optionsPageControl/ ||
       OOBEPageControl: /oOBEPageControl/ ||
+      ProgressRing: /progressRing/ ||
       SettingsCard: /settingsCard/ ||
       SettingsGroup: /settingsGroup/ ||
       SimpleSettingsGroup: /simpleSettingsGroup/ ||
@@ -354,11 +356,29 @@ menu:
       Shortcut: /shortcut/ ||
       SwitchPresenter: /switchPresenter/ ||
       UniformGrid: /uniformGrid/ ||
+      WaveProgressBar: /waveProgressBar/ ||
       Windows 11 Settings Examples: /windows11SettingsExamples/ ||
     Styles: 
       default: /styles/ || fas fa-palette
     Validation:
       default: /validation/ || fab fa-intercom
+  Win2D - 6.1.0:
+    default: /winUICommunityWin2d/ || fas fa-dice-d20
+    Breaking Changes: /breaking_changes/ || fas fa-dice-d20
+    Quick start: /quick_start/ || fas fa-dice-d20
+    Controls: 
+      default: /controls/ || fab fa-intercom
+      Bubble: /bubble/ ||
+      Gooey: /gooey/ ||
+      Particle: /particle/ ||
+      TextBlockStrokView: /textBlockStrokView/ ||
+      TextGlitchEffect: /textGlitchEffect/ ||
+      TextMorphEffect: /textMorphEffect/ ||
+      Watermark: /watermark/ ||
+      WaveCircule: /waveCircule/ ||
+    Helpers: 
+      default: /helpers/ || fas fa-tools
+      BlurAnimationHelper: /blurAnimationHelper/ ||
   Core - 6.0.0:
     default: /winUICommunityCore/ || fas fa-tools
     Breaking Changes: /breaking_changes/ || fas fa-dice-d20
