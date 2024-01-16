@@ -347,6 +347,7 @@ menu:
       KeyVisual: /keyVisual/ ||
       OptionsPageControl: /optionsPageControl/ ||
       OOBEPageControl: /oOBEPageControl/ ||
+      OpacityMaskView: /opacityMaskView/ ||
       ProgressRing: /progressRing/ ||
       SettingsCard: /settingsCard/ ||
       SettingsGroup: /settingsGroup/ ||
