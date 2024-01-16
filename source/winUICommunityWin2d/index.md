@@ -1,5 +1,5 @@
 ---
-title: Welcome to WinUICommunity.Core
+title: Welcome to WinUICommunity
 ---
 
 ### Experience WinUI 3 quickly and easily with the help of WinUICommunity, Everything you need to develop an application is gathered in one place.
@@ -12,35 +12,23 @@ title: Welcome to WinUICommunity.Core
 
 |Nuget|Github|
 |-|-|
-|[WinUICommunity.Core](https://www.nuget.org/packages/WinUICommunity.Core)|[Github](https://github.com/WinUICommunity/WinUICommunity)|
-
+|[WinUICommunity.Components.Win2d](https://www.nuget.org/packages/WinUICommunity.Components.Win2d)|[Github](https://github.com/WinUICommunity/WinUICommunity)|
 
 {% note warning %}
 Github is generally updated every day and is relatively unsuitable for production.
 {% endnote %}
 
-{% note warning %}
-We moved all namespaces into a single namespace. No matter which (WinUICommunity) library you use, the namespace is always as follows
-For use in the Xaml:
-`xmlns:wuc="using:WinUICommunity"`
-For use in the Csharp:
-`using WinUICommunity;`
-{% endnote %}
+# Project Template
+for creating a new project easily, you can use our project templates:
 
+download and install our vsix package from Marketplace:
 
-## Install
+[WinUICommunityTemplates](https://marketplace.visualstudio.com/items?itemName=MahdiHosseini.WinUICommunityTemplates)
 
-```
-Install-Package WinUICommunity.Core
-```
+![WinUICommunityTemplates](https://raw.githubusercontent.com/WinUICommunity/Resources/main/WinUICommunity-Templates/Demo-WinUICommunityTemplates.png)
 
-After installing, add the following resource to app.xaml
+![WinUICommunityTemplates](https://raw.githubusercontent.com/WinUICommunity/Resources/main/WinUICommunity-Templates/1.png)
 
-
-```xml
-<ResourceDictionary Source="ms-appx:///WinUICommunity.Components/Themes/Generic.xaml"/>
-```
-See the Demo app to see how to use it
 
 # Compile source code
 
