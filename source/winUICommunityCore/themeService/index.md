@@ -212,6 +212,8 @@ themeService.ResetBackdropProperties();
 ConfigBackdropTintColor, ConfigBackdropFallBackColor, ConfigBackdropTintOpacity and ConfigBackdropLuminosityOpacity only works if you use Acrylic or Mica Backdrop.
 {% endnote %}
 
+![WinUICommunity](https://raw.githubusercontent.com/WinUICommunity/Resources/main/WinUICommunityDocs/TintColor.gif)
+
 # Changing ElementTheme in Runtime
 you can change ElementTheme in Runtime like this:
 
