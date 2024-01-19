@@ -31,7 +31,11 @@ If you do not set the ApiNamespace, we will load the default assembly and we wil
 |Items||See Below|
 |DataInfoBadge||See Below|
 |ShowItemsWithoutGroup|true|if you set this to true, all items of the group will be added directly to the NavigationView|
-|IsFooterNavigationViewItem|true|if you set this to true, items will be added into navigationView FooterMenuItems|
+|IsFooterNavigationViewItem|true|if you set this to true, item will be added into navigationView FooterMenuItems|
+|IsNavigationViewItemHeader|false|if you set this to true, item will be added as NavigationViewItemHeader|
+|Order|false|if you set this to true, items will be Sorted by Ascending|
+|OrderByDescending|false|if you set this to true, items will be Sorted by Descending|
+
 
 # DataItem
 ## Available Properties in Json (Items)
@@ -51,6 +55,7 @@ If you do not set the ApiNamespace, we will load the default assembly and we wil
 |IsNew|true|if set true you can filter items based on new items|
 |IsUpdated|true|if set true you can filter items based on updated items|
 |IsPreview|true|if set true you can filter items based on preview items|
+|IsNavigationViewItemHeader|false|if you set this to true, item will be added as NavigationViewItemHeader|
 |IncludedInBuild|false|if set true item will be enabled|
 |HideItem|false|if set true item will be hide|
 |HideNavigationViewItem|false|if set true item will be hide|

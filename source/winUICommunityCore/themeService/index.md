@@ -2,7 +2,67 @@
 title: ThemeService
 ---
 
-You can simplify the operation of saving, retrieving and selecting the Application theme. All operations are performed automatically.
+You can simplify the operation of saving, retrieving and selecting the Application theme, backdrop and TintColors. All operations are performed automatically.
+
+# Backdrops
+|Name|
+|-|
+|Mica|
+|MicaAlt|
+|DesktopAcrylic|
+|AcrylicThin|
+|AcrylicBase|
+|Transparent|
+
+# Methods
+|Name|
+|-|
+|Window|
+|CurrentSystemBackdrop|
+|CurrentBackdropType|
+|ConfigBackdrop|
+|ConfigBackdropTintColor|
+|ConfigBackdropFallBackColor|
+|ConfigBackdropTintOpacity|
+|ConfigBackdropLuminosityOpacity|
+|ConfigElementTheme|
+|ConfigTitleBar|
+|ConfigBackdropFallBackColorForWindow10|
+|ActualThemeChanged|
+|GetSystemBackdrop|
+|GetBackdropType|
+|GetElementTheme|
+|GetActualTheme|
+|GetDefaultBackdropFallBackColor|
+|GetBackdropFallBackColor|
+|GetBackdropFallBackBrush|
+|GetDefaultBackdropTintColor|
+|GetBackdropTintColor|
+|GetBackdropTintBrush|
+|GetDefaultBackdropLuminosityOpacity|
+|GetBackdropLuminosityOpacity|
+|GetDefaultBackdropTintOpacity|
+|GetBackdropTintOpacity|
+|SetBackdropType|
+|SetBackdropLuminosityOpacity|
+|SetBackdropTintOpacity|
+|SetBackdropFallBackColor|
+|SetBackdropTintColor|
+|SetElementTheme|
+|SetElementThemeWithoutSave|
+|SetThemeComboBoxDefaultItem|
+|SetBackdropComboBoxDefaultItem|
+|SetThemeRadioButtonDefaultItem|
+|SetBackdropRadioButtonDefaultItem|
+|OnThemeComboBoxSelectionChanged|
+|OnBackdropComboBoxSelectionChanged|
+|OnThemeRadioButtonChecked|
+|OnBackdropRadioButtonChecked|
+|IsDarkTheme|
+|UpdateSystemCaptionButton|
+|UpdateSystemCaptionButtonForAppWindow|
+|ResetCaptionButtonColors|
+|ResetBackdropProperties|
 
 # Simple Usage
 
@@ -67,7 +127,6 @@ themeService.ConfigTitleBar(new TitleBarCustomization
 #### TitleBarWindowType
 |Name|
 |-|
-|Window|
 |AppWindow|
 |None|
 
@@ -93,12 +152,72 @@ SystemBackdrop is not supported on windows 10, so you can set a fallback color a
 themeService.ConfigBackdropFallBackColorForWindow10(new SolidColorBrush(Colors.Red));
 ```
 
+### ConfigBackdropTintColor
+you can change system backdrop TintColor.
+
+```cs
+themeService.ConfigBackdropTintColor();
+```
+then you can set your tint color:
+
+```cs
+themeService.SetBackdropTintColor(Colors.Yellow);
+```
+
+### ConfigBackdropFallBackColor
+you can change system backdrop FallBackColor.
+
+```cs
+themeService.ConfigBackdropFallBackColor();
+```
+
+then you can set your FallBackColor
+```cs
+themeService.SetBackdropFallBackColor();
+```
+
+### ConfigBackdropTintOpacity
+you can change system backdrop TintOpacity.
+
+```cs
+themeService.ConfigBackdropTintOpacity();
+```
+
+and :
+
+```cs
+themeService.SetBackdropTintOpacity(0.5f);
+```
+
+
+### ConfigBackdropLuminosityOpacity
+you can change system backdrop LuminosityOpacity.
+
+```cs
+themeService.ConfigBackdropLuminosityOpacity();
+```
+
+```cs
+themeService.SetBackdropLuminosityOpacity(1f);
+```
+
+### ResetBackdropProperties
+
+you can reset your backdrop by calling `ResetBackdropProperties`
+```cs
+themeService.ResetBackdropProperties();
+```
+
+{% note warning %}
+ConfigBackdropTintColor, ConfigBackdropFallBackColor, ConfigBackdropTintOpacity and ConfigBackdropLuminosityOpacity only works if you use Acrylic or Mica Backdrop.
+{% endnote %}
+
 # Changing ElementTheme in Runtime
 you can change ElementTheme in Runtime like this:
 
 ```cs
-themeService.SetCurrentTheme(ElementTheme.Dark);
-// themeService.GetCurrentTheme();
+themeService.SetElementTheme(ElementTheme.Dark);
+// themeService.GetElementTheme();
 
 ```
 
@@ -106,9 +225,8 @@ themeService.SetCurrentTheme(ElementTheme.Dark);
 you can change SystemBackdrop Type in Runtime like this:
 
 ```cs
-themeService.SetCurrentSystemBackdrop(BackdropType.Mica);
-// var systemBackdrop = themeService.GetCurrentSystemBackdrop();
-// var systemBackdrop = themeService.GetCurrentSystemBackdrop(WindowHelper.ActiveWindows.FirstOrDefault());
+themeService.SetBackdropType(BackdropType.Mica);
+// var systemBackdrop = themeService.GetSystemBackdrop();
 
 ```
 
@@ -171,7 +289,7 @@ themeService.RootTheme = ElementTheme.Dark;
 //OR
 themeService.ActualTheme = ElementTheme.Dark;
 //OR
-themeService.SetCurrentTheme(ElementTheme.Dark);
+themeService.SetElementTheme(ElementTheme.Dark);
 ```
 
 # Changing SystemBackdrop
@@ -236,7 +354,7 @@ themeService.SetBackdropComboBoxDefaultItem(cmbBackdrop);
 you can change Application SystemBackdrop:
 
 ```cs
-themeService.SetCurrentSystemBackdrop(BackdropType.Mica);
+themeService.SetBackdropType(BackdropType.Mica);
 ```
 
 # MVVM Pattern

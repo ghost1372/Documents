@@ -6,12 +6,12 @@ Easily implement a `NavigationView` With/Without `Json` file (we read navigation
 
 # Simple Usage
 
-First Create a Class `myPageService` and inherit from `PageService`
+First Create a Class `myPageService` and inherit from `PageServiceEx`
 
 then in this class in `ctor` add your pages with a key into `_pageKeyToTypeMap` dictionary:
 
 ```cs
-public class myPageService : PageService
+public class myPageService : PageServiceEx
 {
     public myPageService()
     {
@@ -37,15 +37,15 @@ pageService.SetDefaultPage(typeof(HomeLandingsPage));
 pageService.SetSettingsPage(typeof(GeneralPage));
 ```
 
-after creating myPageService, Create `INavigationViewService` and `INavigationService`:
+after creating myPageService, Create `INavigationViewServiceEx` and `INavigationServiceEx`:
 
 ```cs
-INavigationViewService navigationViewService;
-INavigationService navigationService;
+INavigationViewServiceEx navigationViewService;
+INavigationServiceEx navigationService;
 
-navigationService = new NavigationService(pageService);
+navigationService = new NavigationServiceEx(pageService);
 navigationService.Frame = navFrame;
-navigationViewService = new NavigationViewService(navigationService, pageService);
+navigationViewService = new NavigationViewServiceEx(navigationService, pageService);
 ```
 
 as you can see, we should set `Frame` in `navigationService`.
@@ -59,7 +59,7 @@ navigationViewService.Initialize(navigationView);
 now you should add a `NavigateTo` in your NavigationViewItem:
 
 ```xml
-<NavigationViewItem helper:NavigationHelper.NavigateTo="BlankPage1" Content="First" />
+<NavigationViewItem helper:NavigationHelperEx.NavigateTo="BlankPage1" Content="First" />
 ```
 
 {% note info %}
@@ -105,17 +105,17 @@ navigationViewService.ConfigAutoSuggestBox(autoSuggestBox);
 ### Complete Codes
 
 ```cs
-INavigationViewService navigationViewService;
-INavigationService navigationService;
+INavigationViewServiceEx navigationViewService;
+INavigationServiceEx navigationService;
 
 var pageService = new myPageService();
 pageService.SetDefaultPage(typeof(HomeLandingsPage));
 pageService.SetSettingsPage(typeof(GeneralPage));
 
-navigationService = new NavigationService(pageService);
+navigationService = new NavigationServiceEx(pageService);
 navigationService.Frame = navFrame;
 
-navigationViewService = new NavigationViewService(navigationService, pageService);
+navigationViewService = new NavigationViewServiceEx(navigationService, pageService);
 navigationViewService.Initialize(navigationView);
 navigationViewService.ConfigAutoSuggestBox(autoSuggestBox);
 ```
