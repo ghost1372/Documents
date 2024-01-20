@@ -344,6 +344,7 @@ menu:
       ColorPalette: /colorPalette/ ||
       CopyButton: /copyButton/ ||
       Divider: /divider/ ||
+      FlyoutMenuButton: /flyoutMenuButton/ ||
       Gravatar: /gravatar/ ||
       Growl: /growl/ ||
       InlineAutoCompleteTextBox: /inlineAutoCompleteTextBox/ ||
