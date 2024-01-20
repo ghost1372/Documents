@@ -335,11 +335,14 @@ menu:
     default: /winUICommunityComponents/ || fas fa-dice-d20
     Breaking Changes: /breaking_changes/ || fas fa-dice-d20
     Quick start: /quick_start/ || fas fa-dice-d20
+    Converters:
+      default: /converters/ || fab fa-intercom
     Controls: 
       default: /controls/ || fab fa-intercom
       AutoScrollView: /AutoScrollView/ ||
       CheckBoxWithDescriptionControl: /checkBoxWithDescriptionControl/ ||
       ColorPalette: /colorPalette/ ||
+      CopyButton: /copyButton/ ||
       Divider: /divider/ ||
       Gravatar: /gravatar/ ||
       Growl: /growl/ ||
@@ -357,6 +360,7 @@ menu:
       Shield: /shield/ ||
       Shortcut: /shortcut/ ||
       SwitchPresenter: /switchPresenter/ ||
+      TitleBar: /titleBar/ ||
       UniformGrid: /uniformGrid/ ||
       WaveProgressBar: /waveProgressBar/ ||
       Windows 11 Settings Examples: /windows11SettingsExamples/ ||
