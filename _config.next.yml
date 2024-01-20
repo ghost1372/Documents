@@ -339,6 +339,7 @@ menu:
       default: /controls/ || fab fa-intercom
       AutoScrollView: /AutoScrollView/ ||
       CheckBoxWithDescriptionControl: /checkBoxWithDescriptionControl/ ||
+      ColorPalette: /colorPalette/ ||
       Divider: /divider/ ||
       Gravatar: /gravatar/ ||
       Growl: /growl/ ||
