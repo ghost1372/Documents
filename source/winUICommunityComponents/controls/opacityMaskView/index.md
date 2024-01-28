@@ -29,7 +29,7 @@ title: OpacityMaskView
 </wuc:OpacityMaskView>
 ```
 
-![WinUICommunity](https://raw.githubusercontent.com/WinUICommunity/Resources/main/WinUICommunityDocs/OpacityMaskView.gif)
+![WinUICommunity](https://raw.githubusercontent.com/WinUICommunity/Resources/main/WinUICommunityDocs/OpacityMaskView.png)
 
 # Example / EffectButton
 

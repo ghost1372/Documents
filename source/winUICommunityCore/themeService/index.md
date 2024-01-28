@@ -18,34 +18,18 @@ You can simplify the operation of saving, retrieving and selecting the Applicati
 |Name|
 |-|
 |Window|
-|CurrentSystemBackdrop|
-|CurrentBackdropType|
 |ConfigBackdrop|
 |ConfigBackdropTintColor|
 |ConfigBackdropFallBackColor|
-|ConfigBackdropTintOpacity|
-|ConfigBackdropLuminosityOpacity|
 |ConfigElementTheme|
 |ConfigTitleBar|
-|ConfigBackdropFallBackColorForWindow10|
+|ConfigBackdropFallBackColorForUnSupportedOS|
 |ActualThemeChanged|
 |GetSystemBackdrop|
 |GetBackdropType|
 |GetElementTheme|
 |GetActualTheme|
-|GetDefaultBackdropFallBackColor|
-|GetBackdropFallBackColor|
-|GetBackdropFallBackBrush|
-|GetDefaultBackdropTintColor|
-|GetBackdropTintColor|
-|GetBackdropTintBrush|
-|GetDefaultBackdropLuminosityOpacity|
-|GetBackdropLuminosityOpacity|
-|GetDefaultBackdropTintOpacity|
-|GetBackdropTintOpacity|
 |SetBackdropType|
-|SetBackdropLuminosityOpacity|
-|SetBackdropTintOpacity|
 |SetBackdropFallBackColor|
 |SetBackdropTintColor|
 |SetElementTheme|
@@ -62,7 +46,6 @@ You can simplify the operation of saving, retrieving and selecting the Applicati
 |UpdateSystemCaptionButton|
 |UpdateSystemCaptionButtonForAppWindow|
 |ResetCaptionButtonColors|
-|ResetBackdropProperties|
 
 # Simple Usage
 
@@ -144,12 +127,12 @@ themeService.ConfigTitleBar(new TitleBarCustomization
 |ButtonPressedBackgroundColor|
 |ButtonPressedForegroundColor|
 
-### ConfigBackdropFallBackColorForWindow10
+### ConfigBackdropFallBackColorForUnSupportedOS
 
 SystemBackdrop is not supported on windows 10, so you can set a fallback color and this color can be used in windows 10.
 
 ```cs
-themeService.ConfigBackdropFallBackColorForWindow10(new SolidColorBrush(Colors.Red));
+themeService.ConfigBackdropFallBackColorForUnSupportedOS(new SolidColorBrush(Colors.Red));
 ```
 
 ### ConfigBackdropTintColor
@@ -176,40 +159,8 @@ then you can set your FallBackColor
 themeService.SetBackdropFallBackColor();
 ```
 
-### ConfigBackdropTintOpacity
-you can change system backdrop TintOpacity.
-
-```cs
-themeService.ConfigBackdropTintOpacity();
-```
-
-and :
-
-```cs
-themeService.SetBackdropTintOpacity(0.5f);
-```
-
-
-### ConfigBackdropLuminosityOpacity
-you can change system backdrop LuminosityOpacity.
-
-```cs
-themeService.ConfigBackdropLuminosityOpacity();
-```
-
-```cs
-themeService.SetBackdropLuminosityOpacity(1f);
-```
-
-### ResetBackdropProperties
-
-you can reset your backdrop by calling `ResetBackdropProperties`
-```cs
-themeService.ResetBackdropProperties();
-```
-
 {% note warning %}
-ConfigBackdropTintColor, ConfigBackdropFallBackColor, ConfigBackdropTintOpacity and ConfigBackdropLuminosityOpacity only works if you use Acrylic or Mica Backdrop.
+ConfigBackdropTintColor and ConfigBackdropFallBackColor only works if you use Acrylic or Mica Backdrop.
 {% endnote %}
 
 ![WinUICommunity](https://raw.githubusercontent.com/WinUICommunity/Resources/main/WinUICommunityDocs/TintColor.gif)
