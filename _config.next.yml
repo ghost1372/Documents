@@ -347,6 +347,7 @@ menu:
       FlyoutMenuButton: /flyoutMenuButton/ ||
       Gravatar: /gravatar/ ||
       Growl: /growl/ ||
+      IndeterminateProgressBar: /indeterminateProgressBar/ ||
       InlineAutoCompleteTextBox: /inlineAutoCompleteTextBox/ ||
       IsEnabledTextBox: /isEnabledTextBox/ ||
       KeyVisual: /keyVisual/ ||
