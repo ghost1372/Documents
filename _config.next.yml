@@ -350,6 +350,7 @@ menu:
       InlineAutoCompleteTextBox: /inlineAutoCompleteTextBox/ ||
       IsEnabledTextBox: /isEnabledTextBox/ ||
       KeyVisual: /keyVisual/ ||
+      LoadingIndicator: /loadingIndicator/ ||
       OptionsPageControl: /optionsPageControl/ ||
       OOBEPageControl: /oOBEPageControl/ ||
       OpacityMaskView: /opacityMaskView/ ||
