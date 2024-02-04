@@ -115,6 +115,5 @@ var encText = SecurityHelper.EncryptStringAsymmetric("Hello", publicKey);
 var decText = SecurityHelper.DecryptStringAsymmetric(encText, privateKey);
 ```
 
-
 # Demo
 you can run [demo](https://github.com/WinUICommunity/WinUICommunity) and see this feature.

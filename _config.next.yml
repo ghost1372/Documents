@@ -415,6 +415,7 @@ menu:
       AppNotification: /appNotification/ ||
       AssemblyInfoHelper: /assemblyInfoHelper/ ||
       AutoSuggestBoxHelper: /autoSuggestBoxHelper/ ||
+      CredentialHelper: /credentialHelper/ ||
       FileAndFolderPickerHelper: /fileAndFolderPickerHelper/ ||
       FileHelper: /fileHelper/ ||
       GeneralHelper: /generalHelper/ ||
