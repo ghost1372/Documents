@@ -344,6 +344,7 @@ menu:
       ColorPalette: /colorPalette/ ||
       CopyButton: /copyButton/ ||
       Divider: /divider/ ||
+      FlipSide: /flipSide/ ||
       FlyoutMenuButton: /flyoutMenuButton/ ||
       Gravatar: /gravatar/ ||
       Growl: /growl/ ||
@@ -352,6 +353,7 @@ menu:
       IsEnabledTextBox: /isEnabledTextBox/ ||
       KeyVisual: /keyVisual/ ||
       LoadingIndicator: /loadingIndicator/ ||
+      LongShadowTextBlock: /longShadowTextBlock/ ||
       OptionsPageControl: /optionsPageControl/ ||
       OOBEPageControl: /oOBEPageControl/ ||
       OpacityMaskView: /opacityMaskView/ ||
@@ -380,6 +382,7 @@ menu:
       default: /controls/ || fab fa-intercom
       Bubble: /bubble/ ||
       Gooey: /gooey/ ||
+      OutlineTextControl: /outlineTextControl/ ||
       Particle: /particle/ ||
       TextBlockStrokView: /textBlockStrokView/ ||
       TextGlitchEffect: /textGlitchEffect/ ||
@@ -389,6 +392,9 @@ menu:
     Helpers: 
       default: /helpers/ || fas fa-tools
       BlurAnimationHelper: /blurAnimationHelper/ ||
+    Media:
+      default: /media/ || fab fa-intercom
+      TiledImageBrush: /tiledImageBrush/ ||
   Core - 6.3.0:
     default: /winUICommunityCore/ || fas fa-tools
     Breaking Changes: /breaking_changes/ || fas fa-dice-d20
@@ -415,6 +421,7 @@ menu:
       AppNotification: /appNotification/ ||
       AssemblyInfoHelper: /assemblyInfoHelper/ ||
       AutoSuggestBoxHelper: /autoSuggestBoxHelper/ ||
+      CompositionHelper: /compositionHelper/ ||
       CredentialHelper: /credentialHelper/ ||
       FileAndFolderPickerHelper: /fileAndFolderPickerHelper/ ||
       FileHelper: /fileHelper/ ||
