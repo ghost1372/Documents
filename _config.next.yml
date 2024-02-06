@@ -342,6 +342,7 @@ menu:
       AutoScrollView: /AutoScrollView/ ||
       CheckBoxWithDescriptionControl: /checkBoxWithDescriptionControl/ ||
       ColorPalette: /colorPalette/ ||
+      ColorfulShimmingEffect: /colorfulShimmingEffect/ ||
       CopyButton: /copyButton/ ||
       Divider: /divider/ ||
       FlipSide: /flipSide/ ||
