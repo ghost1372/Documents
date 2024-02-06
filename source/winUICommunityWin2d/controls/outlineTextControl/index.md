@@ -16,8 +16,9 @@ title: OutlineTextControl
 # Example
 
 ```xml
-<wuc:OutlineTextControl DashStyle="Solid"
-                        FontSize="100"
+<wuc:OutlineTextControl Height="200"
+                        DashStyle="Solid"
+                        FontSize="120"
                         OutlineColor="Purple"
                         StrokeWidth="4"
                         Text="WinUICommunity" />
