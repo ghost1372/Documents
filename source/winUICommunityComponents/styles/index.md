@@ -272,3 +272,13 @@ just add this:
 ```
 
 ![WinUICommunity](https://raw.githubusercontent.com/WinUICommunity/Resources/main/WinUICommunityDocs/BlueInfoBar.png)
+
+# NavigationViewItem Style
+
+just add this:
+
+```xml
+<ResourceDictionary Source="ms-appx:///WinUICommunity.Components/Themes/NavigationViewItemStyle.xaml" />
+```
+
+![WinUICommunity](https://raw.githubusercontent.com/WinUICommunity/Resources/main/WinUICommunityDocs/NavigationViewItemStyle.gif)
