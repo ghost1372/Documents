@@ -2,6 +2,12 @@
 title: GeneralHelper
 ---
 
+# ChangeCursor
+you can change any UIElement mouse Cursor with `ChangeCursor` (reflection) method
+```cs
+GeneralHelper.ChangeCursor(element, InputSystemCursor.Create(InputSystemCursorShape.Hand));
+```
+
 # EnableSound
 enable sound for controls
 
@@ -24,13 +30,6 @@ var myenum = GeneralHelper.GetEnum<ElementTheme>("Dark");
 var myGeometry = GeneralHelper.GetGeometry("FavoriteGeometry");
 
 Icon = new PathIcon { Data = myGeometry },
-```
-
-# GetColorFromHex
-
-```cs
-var color = Application.Current.Resources["SystemAccentColor"];
-var accent = GeneralHelper.GetColorFromHex(color.ToString());
 ```
 
 # SetPreferredAppMode
@@ -59,13 +58,6 @@ GeneralHelper.SetApplicationLayoutRTL(window);
 
 ```cs
 var cleanText = GeneralHelper.GetDecodedStringFromHtml(html);
-
-```
-
-# ColorToUInt
-
-```cs
-var colorInt = GeneralHelper.ColorToUInt(Colors.Red);
 
 ```
 

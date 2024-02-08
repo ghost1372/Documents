@@ -331,7 +331,7 @@ menu:
       UpdatableMarkupExtension: /updatableMarkupExtension/ ||
     Intellisense:
       default: /intellisense/ || fas fa-brain
-  Components - 6.3.0:
+  Components - 6.4.0:
     default: /winUICommunityComponents/ || fas fa-dice-d20
     Breaking Changes: /breaking_changes/ || fas fa-dice-d20
     Quick start: /quick_start/ || fas fa-dice-d20
@@ -375,7 +375,7 @@ menu:
       default: /styles/ || fas fa-palette
     Validation:
       default: /validation/ || fab fa-intercom
-  Win2D - 6.3.0:
+  Win2D - 6.4.0:
     default: /winUICommunityWin2d/ || fas fa-dice-d20
     Breaking Changes: /breaking_changes/ || fas fa-dice-d20
     Quick start: /quick_start/ || fas fa-dice-d20
@@ -396,7 +396,7 @@ menu:
     Media:
       default: /media/ || fab fa-intercom
       TiledImageBrush: /tiledImageBrush/ ||
-  Core - 6.3.0:
+  Core - 6.4.0:
     default: /winUICommunityCore/ || fas fa-tools
     Breaking Changes: /breaking_changes/ || fas fa-dice-d20
     Attach:
@@ -423,6 +423,7 @@ menu:
       AssemblyInfoHelper: /assemblyInfoHelper/ ||
       AutoSuggestBoxHelper: /autoSuggestBoxHelper/ ||
       CompositionHelper: /compositionHelper/ ||
+      ColorHelper: /colorHelper/ ||
       CredentialHelper: /credentialHelper/ ||
       FileAndFolderPickerHelper: /fileAndFolderPickerHelper/ ||
       FileHelper: /fileHelper/ ||
@@ -456,7 +457,7 @@ menu:
     Interfaces:
       default: /interfaces/ || fas fa-tools
       ITitleBarAutoSuggestBoxAware: /iTitleBarAutoSuggestBoxAware/ ||
-  LandingPages - 6.3.0:
+  LandingPages - 6.4.0:
       default: /winUICommunityLandingPages/ || fab fa-intercom
       Breaking Changes: /breaking_changes/ || fas fa-dice-d20
       AllLandingPage: /allLandingPage/ ||
@@ -464,7 +465,7 @@ menu:
       ItemsPageBase: /itemsPageBase/ ||
       MainLandingPage: /mainLandingPage/ ||
       SectionPage: /sectionPage/ ||
-  ContextMenuExtensions - 6.3.0:
+  ContextMenuExtensions - 6.4.0:
       default: /winUICommunityContextMenuExtensions/ || fas fa-brain
       Breaking Changes: /breaking_changes/ || fas fa-dice-d20
         
