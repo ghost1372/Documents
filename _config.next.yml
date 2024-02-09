@@ -331,6 +331,10 @@ menu:
       UpdatableMarkupExtension: /updatableMarkupExtension/ ||
     Intellisense:
       default: /intellisense/ || fas fa-brain
+  WASDK-OMD:
+    default: /wasdkOMD/ || fas fa-tools
+    v1.5-preview1_v1.4.4: /omd/WinAppSDK1.5.240205001-preview1_v1.4.231219000 ||
+    v1.5-preview1_v1.5-exp2: /omd/WinAppSDK1.5.240205001-preview1_v1.5.240124002-experimental2.html ||
   Components - 6.4.0:
     default: /winUICommunityComponents/ || fas fa-dice-d20
     Breaking Changes: /breaking_changes/ || fas fa-dice-d20
