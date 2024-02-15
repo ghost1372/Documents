@@ -381,6 +381,24 @@ public MainPage()
 }
 ```
 
+# INavigationAwareEx
+you can use `INavigationAwareEx` in your ViewModel and you can access to OnNavigatedFrom and OnNavigatedTo methods.
+
+```cs
+public partial class myViewModel : INavigationAwareEx
+
+public void OnNavigatedFrom()
+{
+
+}
+
+public async void OnNavigatedTo(object parameter)
+{
+    
+}
+
+```
+
 # Demo
 you can run [demo](https://github.com/WinUICommunity/WinUICommunity) and see this feature.
 
