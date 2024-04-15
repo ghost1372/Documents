@@ -1,5 +1,5 @@
 ---
-title: Seperator
+title: Separator
 ---
 
 # SeparatorBaseStyle
