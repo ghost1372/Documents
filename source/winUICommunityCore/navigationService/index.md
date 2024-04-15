@@ -122,6 +122,36 @@ navigationViewService.ConfigAutoSuggestBox(autoSuggestBox);
 
 ![WinUICommunity](https://raw.githubusercontent.com/ghost1372/Resources/main/SettingsUI/Samples/NavigationViewHelper.gif)
 
+### MVVM Pattern
+you can use MVVM pattern:
+
+First Register your Services:
+
+```cs
+var services = new ServiceCollection();
+services.AddSingleton<IPageServiceEx, myPageService>();
+services.AddSingleton<INavigationServiceEx, NavigationServiceEx>();
+services.AddTransient<INavigationViewServiceEx, NavigationViewServiceEx>();
+```
+
+then, in your `MainViewModel`
+
+```cs
+public INavigationServiceEx NavigationService { get; }
+public INavigationViewServiceEx NavigationViewService { get; }
+public MainViewModel(INavigationServiceEx navigationService, INavigationViewServiceEx navigationViewService)
+{
+    NavigationService = navigationService;
+    NavigationViewService = navigationViewService;
+}
+```
+
+finally in your `MainPage.xaml.cs`
+
+```cs
+ViewModel.NavigationService.Frame = frame;
+ViewModel.NavigationViewService.Initialize(navigationView);
+```
 
 ## NavigationView With Json File
 

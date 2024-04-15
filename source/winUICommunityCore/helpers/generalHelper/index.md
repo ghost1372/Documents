@@ -39,7 +39,7 @@ GeneralHelper.SetPreferredAppMode(ElementTheme.Dark);
 ```
 # GetRasterizationScaleForElement
 ```cs
-GeneralHelper.GetRasterizationScaleForElement(myButton);
+var scale = GeneralHelper.GetRasterizationScaleForElement(myButton);
 ```
 
 # GetGlyph
