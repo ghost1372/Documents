@@ -18,3 +18,4 @@ This additional attribute is specific to the hc internal DataGrid style and is n
 | ShowRowNumber | Whether to display the line number |
 | CanUnselectAllWithBlankArea | |
 | ShowSelectAllButton ||
+|IsTristateSortingEnabled||
