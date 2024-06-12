@@ -63,6 +63,28 @@ For use in the Csharp:
 `using WinUICommunity;`
 {% endnote %}
 
+# Attributes
+
+|Name|Remark|
+|-|-|
+|File||
+|FileName||
+|Title||
+|Exe||
+|Param||
+|Icon||
+|IconDark||
+|AcceptDirectory||
+|AcceptDirectoryFlag||
+|AcceptFile||
+|AcceptFileFlag||
+|AcceptExts||
+|AcceptFileRegex||
+|AcceptMultipleFilesFlag||
+|PathDelimiter||
+|ParamForMultipleFiles||
+|Index||
+
 now Create a new `ContextMenuItem`
 
 ```cs
@@ -85,7 +107,8 @@ if you want to open your application, set `exe` like above example.
 after that, we need to save our created menu:
 
 ```cs
-await ContextMenuService.Ins.SaveAsync(menu);
+ContextMenuService menuService = new ContextMenuService();
+await menuService.SaveAsync(menu);
 ```
 
 # Set Custom Menu Name
@@ -93,11 +116,27 @@ await ContextMenuService.Ins.SaveAsync(menu);
 you can change default name for Custom Menu like this:
 
 ```cs
-ContextMenuService.Ins.SetCustomMenuName("my menu text");
+menuService.SetCustomMenuName("my menu text");
 
 ```
 you can use other methods like `OpenMenusFolderAsync, OpenMenuFileAsync, DeleteAsync and etc.`
 
+# Examples
+there is a lot of examples here, take a look [here](https://github.com/ikas-mc/ContextMenuForWindows11/tree/main/menuSample) to see how properties can be filled.
+
+# Disable context menu
+
+find guid form (your guid)
+
+`HKEY_CLASSES_ROOT\PackagedCom\Package\`
+
+{8F491918-259F-451A-950F-8C3EBF4864AF}
+
+add to
+`HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\Shell Extensions\Blocked`
+
+# More Deatils
+see [here](https://github.com/ikas-mc/ContextMenuForWindows11/wiki/Help) for more details.
 
 # GUID
 GUID is Necessary for single instance of context menu. you should pick up a guid from this list.
