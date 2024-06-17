@@ -359,6 +359,7 @@ menu:
       OOBEPageControl: /oOBEPageControl/ ||
       OpacityMaskView: /opacityMaskView/ ||
       PagerControl: /pagerControl/ ||
+      PinBox: /pinBox/ ||
       ProgressRing: /progressRing/ ||
       SettingsCard: /settingsCard/ ||
       SettingsGroup: /settingsGroup/ ||
