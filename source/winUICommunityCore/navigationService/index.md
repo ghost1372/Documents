@@ -209,12 +209,11 @@ jsonNavigationViewService.ConfigAutoSuggestBox(autoSuggestBox);
 ```            
 
 #### ConfigLocalizer
-you can use ILocalizer for localizing resources in json file
 
 step1:
 
 ```cs
-jsonNavigationViewService.ConfigLocalizer(localizer);
+jsonNavigationViewService.ConfigLocalizer(resourceManager, resourceContext);
 ```      
 
 step2:

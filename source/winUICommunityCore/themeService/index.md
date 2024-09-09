@@ -7,6 +7,7 @@ You can simplify the operation of saving, retrieving and selecting the Applicati
 # Backdrops
 |Name|
 |-|
+|None|
 |Mica|
 |MicaAlt|
 |DesktopAcrylic|
@@ -19,46 +20,47 @@ You can simplify the operation of saving, retrieving and selecting the Applicati
 |-|
 |Window|
 |ConfigBackdrop|
-|ConfigBackdropTintColor|
-|ConfigBackdropFallBackColor|
+|ConfigTintColor|
+|ConfigFallbackColor|
 |ConfigElementTheme|
-|ConfigTitleBar|
-|ConfigBackdropFallBackColorForUnSupportedOS|
-|ActualThemeChanged|
 |GetSystemBackdrop|
 |GetBackdropType|
 |GetElementTheme|
 |GetActualTheme|
 |SetBackdropType|
-|SetBackdropFallBackColor|
 |SetBackdropTintColor|
+|SetBackdropFallbackColor|
 |SetElementTheme|
 |SetElementThemeWithoutSave|
-|SetThemeComboBoxDefaultItem|
-|SetBackdropComboBoxDefaultItem|
-|SetThemeRadioButtonDefaultItem|
-|SetBackdropRadioButtonDefaultItem|
-|OnThemeComboBoxSelectionChanged|
-|OnBackdropComboBoxSelectionChanged|
-|OnThemeRadioButtonChecked|
-|OnBackdropRadioButtonChecked|
 |IsDarkTheme|
-|UpdateSystemCaptionButton|
-|UpdateSystemCaptionButtonForAppWindow|
-|ResetCaptionButtonColors|
+|OnThemeComboBoxSelectionChanged|
+|SetThemeComboBoxDefaultItem|
+|OnBackdropComboBoxSelectionChanged|
+|SetBackdropComboBoxDefaultItem|
+|OnThemeRadioButtonChecked|
+|SetThemeRadioButtonDefaultItem|
+|OnBackdropRadioButtonChecked|
+|SetBackdropRadioButtonDefaultItem|
+|UpdateCaptionButtons|
 
 # Simple Usage
 
-First Create a new `ThemeService` then call `Initialize` method with a `window`
+There is multipe ways you can use ThemeService:
+
+In this method, all settings are applied automatically.
 
 ```cs
-IThemeService themeService;
-
-themeService = new ThemeService();
-themeService.Initialize(window);
+var themeService = new ThemeService(window);
 ```
 
-if you want to change autosave config file location:
+or
+
+```cs
+var themeService = new ThemeService();
+themeService.AutoInitialize(window);
+```
+
+If you want to change some settings like autosave, file location, use `Initialize` method:
 
 ```cs
 themeService.Initialize(window, true, @"D:\app\config.json");
@@ -88,58 +90,11 @@ If you use the `ConfigElementTheme`, the themeService will automatically save an
 themeService.ConfigElementTheme(ElementTheme.Default);
 ```
 
-### ConfigTitleBar
-
-If you want to customize the titlebar, you can use `ConfigTitleBar`
-
-```cs
-themeService.ConfigTitleBar(new TitleBarCustomization
-{
-    TitleBarWindowType = TitleBarWindowType.AppWindow,
-    LightTitleBarButtons = new TitleBarButtons
-    {
-        ButtonBackgroundColor = Colors.Transparent
-    },
-    DarkTitleBarButtons = new TitleBarButtons
-    {
-        ButtonBackgroundColor = Colors.Transparent
-    }
-});
-```
-
-#### TitleBarWindowType
-|Name|
-|-|
-|AppWindow|
-|None|
-
-#### TitleBarButtons
-|Name|
-|-|
-|BackgroundColor|
-|ButtonBackgroundColor|
-|ForegroundColor|
-|ButtonForegroundColor|
-|ButtonInactiveForegroundColor|
-|ButtonInactiveBackgroundColor|
-|ButtonHoverBackgroundColor|
-|ButtonHoverForegroundColor|
-|ButtonPressedBackgroundColor|
-|ButtonPressedForegroundColor|
-
-### ConfigBackdropFallBackColorForUnSupportedOS
-
-SystemBackdrop is not supported on windows 10, so you can set a fallback color and this color can be used in windows 10.
-
-```cs
-themeService.ConfigBackdropFallBackColorForUnSupportedOS(new SolidColorBrush(Colors.Red));
-```
-
-### ConfigBackdropTintColor
+### ConfigTintColor
 you can change system backdrop TintColor.
 
 ```cs
-themeService.ConfigBackdropTintColor();
+themeService.ConfigTintColor();
 ```
 then you can set your tint color:
 
@@ -147,11 +102,11 @@ then you can set your tint color:
 themeService.SetBackdropTintColor(Colors.Yellow);
 ```
 
-### ConfigBackdropFallBackColor
+### ConfigFallbackColor
 you can change system backdrop FallBackColor.
 
 ```cs
-themeService.ConfigBackdropFallBackColor();
+themeService.ConfigFallbackColor();
 ```
 
 then you can set your FallBackColor
@@ -160,7 +115,7 @@ themeService.SetBackdropFallBackColor();
 ```
 
 {% note warning %}
-ConfigBackdropTintColor and ConfigBackdropFallBackColor only works if you use Acrylic or Mica Backdrop.
+ConfigTintColor and ConfigFallbackColor only works if you use Acrylic or Mica Backdrop.
 {% endnote %}
 
 ![WinUICommunity](https://raw.githubusercontent.com/WinUICommunity/Resources/main/WinUICommunityDocs/TintColor.gif)
@@ -316,17 +271,14 @@ first register a `IThemeService` service:
 ```cs
 services.AddSingleton<IThemeService, ThemeService>();
 ```
-then in your `viewModel`
+then in your `App.xaml.cs`
 
 
 ```cs
-public IThemeService ThemeService;
-public MainViewModel(IThemeService themeService)
+var themeService = GetService<IThemeService>() as ThemeService;
+if (themeService != null)
 {
-    ThemeService.Initialize(App.currentWindow);
-    ThemeService.ConfigBackdrop(BackdropType.Mica);
-    ThemeService.ConfigElementTheme(ElementTheme.Default);
-    ThemeService.ConfigBackdropFallBackColorForWindow10(Current.Resources["ApplicationPageBackgroundThemeBrush"] as Brush);
+    themeService.AutoInitialize(Window);
 }
 ```
 

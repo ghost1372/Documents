@@ -178,17 +178,15 @@ you can simply enable/disable items in `AppData.json` file just set `IncludedInB
 
 # Localizer
 
-there is methods for localizing:
+there are methods for localizing:
 
 `GetLocalizedData
 GetLocalizedDataAsync`
 
-just pass a ILocalizer and in your JsonNavigationViewService:
-
 step1:
 
 ```cs
-jsonNavigationViewService.ConfigLocalizer(localizer);
+jsonNavigationViewService.ConfigLocalizer(resourceManager, resourceContext);
 ```      
 
 step2:

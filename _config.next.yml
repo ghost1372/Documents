@@ -368,7 +368,6 @@ menu:
       Shield: /shield/ ||
       Shortcut: /shortcut/ ||
       SwitchPresenter: /switchPresenter/ ||
-      TitleBar: /titleBar/ ||
       UniformGrid: /uniformGrid/ ||
       WaveProgressBar: /waveProgressBar/ ||
       Windows 11 Settings Examples: /windows11SettingsExamples/ ||
@@ -403,8 +402,8 @@ menu:
     Attach:
       default: /attach/ ||
       PanelAttach: /panelAttach/ ||
+      TitleBarAttach: /titleBarAttach/ ||
     Command: /command/ ||
-    DynamicLanguage: /dynamicLanguage/ || fas fa-tools
     Extensions: 
       default: /extensions/ || fas fa-tools
       CollectionExtension: /collectionExtension/ ||
@@ -420,7 +419,6 @@ menu:
       TextBoxExtension: /textBoxExtension/ ||
     Helpers: 
       default: /helpers/ || fas fa-tools
-      AppNotification: /appNotification/ ||
       AssemblyInfoHelper: /assemblyInfoHelper/ ||
       AutoSuggestBoxHelper: /autoSuggestBoxHelper/ ||
       CompositionHelper: /compositionHelper/ ||
@@ -439,7 +437,6 @@ menu:
       ResourceHelper: /resourceHelper/ ||
       SecurityHelper: /securityHelper/ ||
       TaskbarHelper: /taskbarHelper/ ||
-      TitleBarHelper: /titleBarHelper/ ||
       UpdateHelper: /updateHelper/ ||
       VisualHelper: /visualHelper/ ||
       WindowHelper: /windowHelper/ ||

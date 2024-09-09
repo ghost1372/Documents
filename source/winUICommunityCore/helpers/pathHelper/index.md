@@ -21,9 +21,9 @@ var pathToAsset = PathHelper.GetFullPathToAsset("logo.png");
 var path = await PathHelper.GetFilePath(filePath);
 ```
 
-# GetLocalFolderPath
+# GetAppDataFolderPath
 ```cs
-var appDataPath = await PathHelper.GetLocalFolderPath();
+var appDataPath = await PathHelper.GetAppDataFolderPath();
 ```
 
 # GetExecutablePathNative
