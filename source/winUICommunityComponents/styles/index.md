@@ -282,3 +282,6 @@ just add this:
 ```
 
 ![WinUICommunity](https://raw.githubusercontent.com/WinUICommunity/Resources/main/WinUICommunityDocs/NavigationViewItemStyle.gif)
+
+# AppTitleBarMenuFlyoutItemStyle
+

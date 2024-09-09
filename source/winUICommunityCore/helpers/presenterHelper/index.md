@@ -2,14 +2,14 @@
 title: PresenterHelper
 ---
 
-# SetOverlappedPresenterState
+# SetPresenterState
 ```cs
-PresenterHelper.SetOverlappedPresenterState(window, OverlappedPresenterState.Maximized);
+PresenterHelper.SetPresenterState(appWindow, OverlappedPresenterState.Maximized);
 ```
 
-# SetOverlappedPresenter
+# SetPresenter
 ```cs
-PresenterHelper.SetOverlappedPresenter(window, overlappedPresenter);
+PresenterHelper.SetPresenter(appWindow, overlappedPresenter);
 ```
 
 # Demo

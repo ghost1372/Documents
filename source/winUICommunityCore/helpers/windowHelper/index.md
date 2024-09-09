@@ -5,7 +5,23 @@ title: WindowHelper
 # SetWindowSize
 you can set your MainWindow Size:
 ```cs
-WindowHelper.SetWindowSize(window, 200, 300);
+WindowHelper.SetWindowSize(appWindow, 200, 300);
+```
+
+# MoveAndResizeCenterScreen
+
+```cs
+WindowHelper.MoveAndResizeCenterScreen(window, width, height);
+```
+
+# MoveAndResize
+```cs
+WindowHelper.MoveAndResize(window, x, y, width, height);
+```
+
+# MoveAndResize
+```cs
+WindowHelper.Move(appWindow, x, y);
 ```
 
 # Window Height/Width Min/Max Size
@@ -28,22 +44,99 @@ WindowHelper.MaxWindowHeight = 600;
 
 ```cs
 WindowHelper.SwitchToThisWindow(window);
+
+or
+
+WindowHelper.SwitchToThisWindow(hwnd);
+
 ```
 
-# MoveAndResizeCenterScreen
-
+# ReActivateWindow
 ```cs
-WindowHelper.MoveAndResizeCenterScreen(window, width, height);
+WindowHelper.ReActivateWindow(window);
+
+or
+
+WindowHelper.ReActivateWindow(hwnd);
+
 ```
 
-# MoveAndResize
+# CreateWindowWithFrame
+
 ```cs
-WindowHelper.MoveAndResize(window, x, y, width, height);
+var windowWithFrame = WindowHelper.CreateWindowWithFrame();
+
+//windowWithFrame.rootFrame
+//windowWithFrame.window
 ```
 
-# MoveAndResize
+# SetWindowCornerRadius
+
 ```cs
-WindowHelper.Move(window, x, y);
+WindowHelper.SetWindowCornerRadius(window, NativeValues.DWM_WINDOW_CORNER_PREFERENCE.DWMWCP_ROUND);
+
+or
+
+WindowHelper.SetWindowCornerRadius(hwnd, NativeValues.DWM_WINDOW_CORNER_PREFERENCE.DWMWCP_ROUND);
+
+```
+
+# GetTopLevelWindows
+
+```cs
+var topWindows = WindowHelper.GetTopLevelWindows();
+```
+
+# GetProcessWindowList
+
+```cs
+var processWindowList = WindowHelper.GetProcessWindowList();
+```
+
+# GetWindowText
+
+```cs
+var windowText = WindowHelper.GetWindowText(hwnd);
+```
+
+# GetClassName
+
+```cs
+var windowClassName = WindowHelper.GetClassName(hwnd);
+```
+
+# GetCurrentAppWindow
+
+```cs
+var appWindow = WindowHelper.GetCurrentAppWindow();
+```
+
+# GetAppWindow / GetAppWindow2
+
+```cs
+
+// Use XamlRoot
+var appWindow = WindowHelper.GetAppWindow(element);
+
+or
+
+// Use Microsoft.UI.Composition.Visual
+var appWindow = WindowHelper.GetAppWindow2(element);
+
+```
+
+# GetWindowHandle / GetWindowHandle2
+
+```cs
+
+// Use XamlRoot
+var hwnd = WindowHelper.GetWindowHandle(element);
+
+or
+
+// Use Microsoft.UI.Composition.Visual
+var hwnd = WindowHelper.GetWindowHandle2(element);
+
 ```
 
 # Demo

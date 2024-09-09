@@ -37,10 +37,13 @@ Icon = new PathIcon { Data = myGeometry },
 ```cs
 GeneralHelper.SetPreferredAppMode(ElementTheme.Dark);
 ```
-# GetRasterizationScaleForElement
+
+# GetElementRasterizationScale
 ```cs
-var scale = GeneralHelper.GetRasterizationScaleForElement(myButton);
+var scale = GeneralHelper.GetElementRasterizationScale(myButton);
 ```
+
+# GetGlyphCharacter
 
 # GetGlyph
 
@@ -52,6 +55,10 @@ var glyph = GeneralHelper.GetGlyph("EA6A");
 # SetApplicationLayoutRTL and SetApplicationLayoutLTR
 ```cs
 GeneralHelper.SetApplicationLayoutRTL(window);
+
+// or
+
+GeneralHelper.SetApplicationLayoutRTL(hwnd);
 ```
 
 # GetDecodedStringFromHtml
@@ -60,6 +67,9 @@ GeneralHelper.SetApplicationLayoutRTL(window);
 var cleanText = GeneralHelper.GetDecodedStringFromHtml(html);
 
 ```
+
+# GetThemeIndex
+# GetElementThemeEnum
 
 # Demo
 you can run [demo](https://github.com/WinUICommunity/WinUICommunity) and see this feature.

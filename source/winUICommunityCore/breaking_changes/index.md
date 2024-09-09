@@ -11,6 +11,8 @@ A breaking change is a change that may require you to make changes to your appli
 - AppNotification Removed
 - TitleBarHelper Removed
 - ThemeService Some Methods Removed
+- ListViewExtensions Removed
+
 {% note info %}
 See [here](https://github.com/WinUICommunity/WinUICommunity/releases) for full changes
 {% endnote %}

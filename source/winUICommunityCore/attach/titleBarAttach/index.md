@@ -1,24 +1,30 @@
 ---
-title: TitleBarHelper
+title: TitleBarAttach
 ---
 
-We've made it easy to use the  [customized Windows title bar](https://docs.microsoft.com/en-us/windows/apps/develop/title-bar?tabs=wasdk)
 
-![WinUICommunity](https://raw.githubusercontent.com/ghost1372/Resources/main/SettingsUI/Samples/TitleBar.png)
+# Property
 
-you can easily define drag regions or clear drag regions for a titlebar.
+|Name|
+|-|
+|IsMaximizable|
+|IsMinimizable|
+|IsAlwaysOnTop|
+|IsResizable|
+|HasTitleBar|
+|TitleBarHeightOption|
 
-# SetDragRegion
+```xml
+<Window>
+    <Grid>
+        <Grid.RowDefenitions>
+            <RowDefenitions/>
+            <RowDefenitions/>
+        </Grid.RowDefenitions>
 
-```cs
-TitleBarHelper.SetDragRegion(window, NonClientRegionKind.Passthrough, myAutosuggestBox, myButton);
-
-```
-
-# ClearDragRegions
-
-```cs
-TitleBarHelper.ClearDragRegions(window, NonClientRegionKind.Passthrough);
+        <TitleBar IsMaximizable="False"/>
+    </Grid>
+</Window>
 ```
 
 # Demo

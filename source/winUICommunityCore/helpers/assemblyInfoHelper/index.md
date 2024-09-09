@@ -17,29 +17,33 @@ The AssemblyVersion and FileVersion attributes must be in format of "major[.mino
 </Project>
 ```
 
-## GetAppName
+# GetCurrentAssemblyCustomAttribute
+
+# GetCurrentAssemblyCustomAttribute(Assembly)
+
+# GetVersion
+
+```cs
+var appversion1 = AssemblyInfoHelper.GetVersion(VersionType.EntryAssemblyVersion); // output: 1.1.1.1
+var appversion2 = AssemblyInfoHelper.GetVersion(VersionType.CurrentAssemblyVersion);// output: 1.1.1.1
+var appversion3 = AssemblyInfoHelper.GetVersion(VersionType.AssemblyFileVersion); // output: 2.2.2.2
+var appversion4 = AssemblyInfoHelper.GetVersion(VersionType.AssemblyInformationalVersion); // output: 3.3.3.3-xyz
+
+```
+
+# GetAppName
 
 ```cs
 var appname1 = AssemblyInfoHelper.GetAppName(NameType.EntryAssemblyVersion);
 var appname2 = AssemblyInfoHelper.GetAppName(NameType.CurrentAssemblyVersion);
 ```
 
-
-## GetAssemblyVersion
+# GetAppDetails
 
 ```cs
-var appversion1 = AssemblyInfoHelper.GetAssemblyVersion(VersionType.EntryAssemblyVersion); // output: 1.1.1.1
-var appversion2 = AssemblyInfoHelper.GetAssemblyVersion(VersionType.CurrentAssemblyVersion);// output: 1.1.1.1
-var appversion3 = AssemblyInfoHelper.GetAssemblyVersion(VersionType.AssemblyFileVersion); // output: 2.2.2.2
-var appversion4 = AssemblyInfoHelper.GetAssemblyVersion(VersionType.AssemblyInformationalVersion); // output: 3.3.3.3-xyz
-
-```
-
-## GetAppInfo
-```cs
-var appNameVersion = AssemblyInfoHelper.GetAppInfo(NameType.CurrentAssemblyVersion, VersionType.AssemblyInformationalVersion);
-var name = appNameVersion.AppName;
-var version = appNameVersion.AppVersion;
+var appNameVersion = AssemblyInfoHelper.GetAppDetails(NameType.CurrentAssemblyVersion, VersionType.AssemblyInformationalVersion);
+var name = appNameVersion.Name;
+var version = appNameVersion.Version;
 var nameversion = appNameVersion.NameAndVersion;
 ```
 
