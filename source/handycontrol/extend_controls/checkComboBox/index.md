@@ -30,7 +30,7 @@ public class CheckComboBox : ListBox, IDataInput
 |TitleElement.TitlePlacement|Title Alignment|TitlePlacementType.Top||
 |TitleElement.TitleWidth|TitleWidth|120||
 |DropDownElement.ConsistentWidth|Whether the drop-down content is the same as the width of the drop-down box|false|||
-
+|IsReadOnly|||||
 # Style
 |Style|Description|
 |-|-|
