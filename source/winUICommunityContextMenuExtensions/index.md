@@ -16,6 +16,7 @@ After installing, add the following codes to `Package.appxmanifest`
   xmlns:desktop="http://schemas.microsoft.com/appx/manifest/desktop/windows10"
   xmlns:desktop4="http://schemas.microsoft.com/appx/manifest/desktop/windows10/4"
   xmlns:desktop5="http://schemas.microsoft.com/appx/manifest/desktop/windows10/5"
+  xmlns:desktop10="http://schemas.microsoft.com/appx/manifest/desktop/windows10/10"
 <Extensions>
     <desktop4:Extension Category="windows.fileExplorerContextMenus">
         <desktop4:FileExplorerContextMenus>
@@ -28,6 +29,9 @@ After installing, add the following codes to `Package.appxmanifest`
             <desktop5:ItemType Type="Directory\Background">
                 <desktop5:Verb Id="CustomMenu" Clsid="3EB53D8C-1221-451F-80AE-50E5B67E42DF" />
             </desktop5:ItemType>
+            <desktop10:ItemType Type="Drive">
+                <desktop10:Verb Id="CustomMenu" Clsid="9DD7188B-41FA-4C01-BFB2-F82DC1521DAD" />
+            </desktop10:ItemType>
         </desktop4:FileExplorerContextMenus>
     </desktop4:Extension>
     <com:Extension Category="windows.comServer">
@@ -69,6 +73,7 @@ For use in the Csharp:
 |-|-|
 |File||
 |FileName||
+|Enabled||
 |Title||
 |Exe||
 |Param||
@@ -84,6 +89,8 @@ For use in the Csharp:
 |PathDelimiter||
 |ParamForMultipleFiles||
 |Index||
+|ShowWindowFlag||
+|WorkingDirectory||
 
 now Create a new `ContextMenuItem`
 
@@ -94,9 +101,13 @@ using WinUICommunity;
 ContextMenuItem menu = new ContextMenuItem
 {
     Title = "Open App Here",
-    AcceptDirectory = true,
-    Exe = "App5.exe",
-    Param = "{path}"
+    Param = @"""{path}""",
+    AcceptFileFlag = (int)FileMatchFlagEnum.All,
+    AcceptDirectoryFlag = (int)(DirectoryMatchFlagEnum.Directory | DirectoryMatchFlagEnum.Background | DirectoryMatchFlagEnum.Desktop),
+    AcceptMultipleFilesFlag = (int)FilesMatchFlagEnum.Each,
+    Index = 0,
+    Enabled = true,
+    Exe = "App5.exe"
 };
 ```
 
