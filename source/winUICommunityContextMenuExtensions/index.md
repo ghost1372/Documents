@@ -2,7 +2,15 @@
 title: WinUICommunity.ContextMenuExtensions
 ---
 
+### Experience WinUI 3 quickly and easily with the help of WinUICommunity, Everything you need to develop an application is gathered in one place.
+
 with this nuget package you can easily add a new Item in Windows 11/10 new Context Menu.
+
+# Download and Install
+
+|Nuget|Github|
+|-|-|
+|[WinUICommunity.ContextMenuExtensions](https://www.nuget.org/packages/WinUICommunity.ContextMenuExtensions)|[Github](https://github.com/WinUICommunity/WinUICommunity)|
 
 ```
 Install-Package WinUICommunity.ContextMenuExtensions
@@ -43,28 +51,19 @@ After installing, add the following codes to `Package.appxmanifest`
     </com:Extension>
     <uap3:Extension Category="windows.appExecutionAlias">
         <uap3:AppExecutionAlias>
-            <desktop:ExecutionAlias Alias="App5.exe"/>
+            <desktop:ExecutionAlias Alias="App.exe"/>
         </uap3:AppExecutionAlias>
     </uap3:Extension>
 </Extensions>
 ```
 
 {% note warning %}
-change `Alias` from App5.exe to your applications name
+change `Alias` from `App.exe` to your applications name
 {% endnote %}
 
 
 {% note warning %}
 if you are using `ContextMenuExtensions` in multiple app in a system, you should change `GUID` for every app. in this way you can have seperate Context Menu, otherwise you will have a single menu with multiple sub menu. see end of this article for 500 GUID which you can use in your app.
-{% endnote %}
-
-
-{% note warning %}
-We moved all namespaces into a single namespace. No matter which (WinUICommunity) library you use, the namespace is always as follows
-For use in the Xaml:
-`xmlns:wuc="using:WinUICommunity"`
-For use in the Csharp:
-`using WinUICommunity;`
 {% endnote %}
 
 # Attributes
@@ -107,7 +106,7 @@ ContextMenuItem menu = new ContextMenuItem
     AcceptMultipleFilesFlag = (int)FilesMatchFlagEnum.Each,
     Index = 0,
     Enabled = true,
-    Exe = "App5.exe"
+    Exe = "App.exe"
 };
 ```
 
