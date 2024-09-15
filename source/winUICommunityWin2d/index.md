@@ -6,7 +6,7 @@ title: Welcome to WinUICommunity
 
 # Requirements
 
-![dotnet-require](https://img.shields.io/badge/.net-%3E=6.0-brightgreen) ![os-require](https://img.shields.io/badge/OS-%3E%3D%20Windows%2010%20Build%201809-orange) ![IDE-require](https://img.shields.io/badge/IDE-vs2022-red) ![csharp-require](https://img.shields.io/badge/CSharp-Latest-yellow)
+![os-require](https://img.shields.io/badge/OS-%3E%3D%20Windows%2010%20Build%201809-orange) ![IDE-require](https://img.shields.io/badge/IDE-vs2022-red)
 
 # Download and Install
 
@@ -37,9 +37,9 @@ Please confirm that your development environment meets the requirements before c
 - Visual Studio 2022
     On the `Workloads` tab of the installation dialog box, select as appropriate:
     - select .NET Desktop Development
-    - select `Windows App SDK` C# Templates (at the bottom of the list).
-    - On the Individual components tab of the installation dialog box, in the SDKs, libraries, and frameworks section, make sure `Windows 10 SDK (10.0.19041.0)` (or 22000, 22621) is selected.
-- .Net `5.x`, `6.x`, `7.x` and `8.x`
+    - select Windows application development
+    - make sure `Windows 11 SDK (10.0.22000.0)` and `Windows 11 SDK (10.0.22621.0)` or `Windows 11 SDK (10.0.26100.0)` is selected.
+- .Net `8.x` and `9.x`
 
 {% endnote %}
 
