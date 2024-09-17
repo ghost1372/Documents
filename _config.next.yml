@@ -420,7 +420,6 @@ menu:
       TextBoxExtension: /textBoxExtension/ ||
     Helpers: 
       default: /helpers/ || fas fa-tools
-      AssemblyInfoHelper: /assemblyInfoHelper/ ||
       AutoSuggestBoxHelper: /autoSuggestBoxHelper/ ||
       CompositionHelper: /compositionHelper/ ||
       ColorHelper: /colorHelper/ ||
