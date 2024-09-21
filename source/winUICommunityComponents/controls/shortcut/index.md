@@ -6,14 +6,6 @@ title: Shortcut
 public sealed partial class SettingsPageControl : UserControl
 ```
 
-{% note warning %}
-We moved all namespaces into a single namespace. No matter which (WinUICommunity) library you use, the namespace is always as follows
-For use in the Xaml:
-`xmlns:wuc="using:WinUICommunity"`
-For use in the Csharp:
-`using WinUICommunity;`
-{% endnote %}
-
 # ShortcutWithTextLabelControl
 ## Attributes
 
@@ -49,6 +41,7 @@ HotkeyVidControl.Keys = new List<object> { "Ctrl", "Alt", "F5" };
 |-|-|
 |Keys|ShortcutDialogContentControl|
 |IsError|ShortcutDialogContentControl|
+|IsWarningAltGr|ShortcutDialogContentControl|
 
 ```cs
 private ShortcutDialogContentControl c = new ShortcutDialogContentControl();
