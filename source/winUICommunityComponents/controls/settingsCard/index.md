@@ -26,6 +26,7 @@ For use in the Csharp:
 |IsClickEnabled|
 |ContentAlignment|
 |IsActionIconVisible|
+|LaunchUri|
 
 # Example
 

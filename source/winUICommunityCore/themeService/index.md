@@ -138,58 +138,91 @@ themeService.SetBackdropType(BackdropType.Mica);
 
 ```
 
-# Changing ElementTheme
-## Auto Theme Change
-### RadioButton
+# Auto Change Theme/Backdrop and Auto Load Default Item
 
-copy this xaml in your page:
+if you want to set defualt item for combobox or radiobuttons, and auto switch between themes or backdrops just add following line in your xaml
 
-```xml
- <StackPanel x:Name="ThemePanel" Margin="10">
-    <RadioButton Tag="Light" Checked="OnThemeRadioButtonChecked" Content="Light"/>
-    <RadioButton Tag="Dark" Checked="OnThemeRadioButtonChecked" Content="Dark" />
-    <RadioButton Tag="Default" Checked="OnThemeRadioButtonChecked" Content="Use system setting" />
-</StackPanel>
-```
-now call `OnThemeRadioButtonChecked` method for changing and saving application theme:
-```cs
-private void OnThemeRadioButtonChecked(object sender, RoutedEventArgs e)
-{
-    themeService.OnThemeRadioButtonChecked(sender);
-}
-```
-now if you want to selecting currect radiobutton item when page is loading, you can call `SetThemeRadioButtonDefaultItem` method in Page `Loaded` event:
-
-```cs
-themeService.SetThemeRadioButtonDefaultItem(ThemePanel);
-```
-
-### ComboBox
-
-copy this xaml in your page:
+## ComboBox
 
 ```xml
-<ComboBox Name="cmbTheme" SelectionChanged="cmbTheme_SelectionChanged">
-    <ComboBoxItem Tag="Light" Content="Light"/>
-    <ComboBoxItem Tag="Dark" Content="Dark"/>
-    <ComboBoxItem Tag="Default" Content="Default"/>
+<ComboBox wuc:ThemeServiceAttach.ThemeService="{x:Bind local:App.Current.GetThemeService}">
+    <ComboBoxItem Content="Light" Tag="Light" />
+    <ComboBoxItem Content="Dark" Tag="Dark" />
+    <ComboBoxItem Content="Default" Tag="Default" />
+</ComboBox>
+
+<ComboBox wuc:ThemeServiceAttach.ThemeService="{x:Bind local:App.Current.GetThemeService}">
+    <ComboBoxItem Tag="None" Content="None"/>
+    <ComboBoxItem Tag="Mica" Content="Mica"/>
+    <ComboBoxItem Tag="MicaAlt" Content="MicaAlt"/>
+    <ComboBoxItem Tag="DesktopAcrylic" Content="Desktop Acrylic"/>
+    <ComboBoxItem Tag="AcrylicBase" Content="Acrylic Base"/>
+    <ComboBoxItem Tag="AcrylicThin" Content="Acrylic Thin"/>
+    <ComboBoxItem Tag="Transparent" Content="Transparent"/>
 </ComboBox>
 ```
-now call `OnThemeComboBoxSelectionChanged` method for changing and saving application theme:
+
+## RadioButtons
+
+```xml
+<StackPanel wuc:ThemeServiceAttach.ThemeService="{x:Bind local:App.Current.GetThemeService}">
+    <RadioButton Tag="Light" Content="Light"/>
+    <RadioButton Tag="Dark"  Content="Dark" />
+    <RadioButton Tag="Default" Content="Use system setting" />
+</StackPanel>
+
+ <StackPanel wuc:ThemeServiceAttach.ThemeService="{x:Bind local:App.Current.GetThemeService}">
+    <RadioButton Tag="None" Content="None"/>
+    <RadioButton Tag="Mica" Content="Mica"/>
+    <RadioButton Tag="MicaAlt" Content="MicaAlt" />
+    <RadioButton Content="Desktop Acrylic" Tag="DesktopAcrylic" />
+    <RadioButton Content="Acrylic Base" Tag="AcrylicBase" />
+    <RadioButton Content="Acrylic Thin" Tag="AcrylicThin" />
+    <RadioButton Content="Transparent" Tag="Transparent" />
+</StackPanel>
+```
+
+# Auto Change Theme/Backdrop and Auto Load Default Item (Old Methods)
+
+## ComboBox
+if you want to handle everything by yourself, first of all remove `wuc:ThemeServiceAttach.ThemeService="{x:Bind local:App.Current.GetThemeService}"` and then add your events:
+
+for changing and saving application theme / backdrop:
 ```cs
 private void cmbTheme_SelectionChanged(object sender, SelectionChangedEventArgs e)
 {
     themeService.OnThemeComboBoxSelectionChanged(sender);
+    themeService.OnBackdropComboBoxSelectionChanged(sender);
 }
 ```
-now if you want to selecting currect combobox item when page is loading, you can call `SetThemeComboBoxDefaultItem` method in Page `Loaded` event:
+for selecting currect combobox item when page is loading, you can call `SetThemeComboBoxDefaultItem` or `SetBackdropComboBoxDefaultItem` method in Page `Loaded` event:
 
 ```cs
-themeService.SetThemeComboBoxDefaultItem(cmbTheme);
+themeService.SetThemeComboBoxDefaultItem(cmb1);
+themeService.SetBackdropComboBoxDefaultItem(cmb2);
 ```
 
 
-## Manuel
+## RadioButtons
+if you want to handle everything by yourself, first of all remove `wuc:ThemeServiceAttach.ThemeService="{x:Bind local:App.Current.GetThemeService}"` and then add your events:
+
+for changing and saving application theme / backdrop:
+```cs
+private void OnThemeRadioButtonChecked(object sender, RoutedEventArgs e)
+{
+    themeService.OnThemeRadioButtonChecked(sender);
+    themeService.OnBackdropRadioButtonChecked(sender);
+}
+```
+for selecting currect radiobutton item when page is loading, you can call `SetThemeRadioButtonDefaultItem` or `SetBackdropRadioButtonDefaultItem` method in Page `Loaded` event:
+
+```cs
+themeService.SetThemeRadioButtonDefaultItem(ThemePanel1);
+themeService.SetBackdropRadioButtonDefaultItem(ThemePanel2);
+```
+
+# Change Theme/Backdrop Manual
+
 you can change Application Theme with `RootTheme`, `ActualTheme` and `ChangeTheme` method:
 
 ```cs
@@ -200,65 +233,6 @@ themeService.ActualTheme = ElementTheme.Dark;
 themeService.SetElementTheme(ElementTheme.Dark);
 ```
 
-# Changing SystemBackdrop
-## Auto SystemBackdrop Change
-### RadioButton
-
-copy this xaml in your page:
-
-```xml
- <StackPanel x:Name="BackdropPanel" Margin="10">
-    <RadioButton Tag="None" Checked="OnBackdropRadioButtonChecked" Content="None"/>
-    <RadioButton Tag="Mica" Checked="OnBackdropRadioButtonChecked" Content="Mica"/>
-    <RadioButton Tag="MicaAlt" Checked="OnBackdropRadioButtonChecked" Content="MicaAlt" />
-    <RadioButton Checked="OnBackdropRadioButtonChecked" Content="Desktop Acrylic" Tag="DesktopAcrylic" />
-    <RadioButton Checked="OnBackdropRadioButtonChecked" Content="Acrylic Base" Tag="AcrylicBase" />
-    <RadioButton Checked="OnBackdropRadioButtonChecked" Content="Acrylic Thin" Tag="AcrylicThin" />
-    <RadioButton Checked="OnBackdropRadioButtonChecked" Content="Transparent" Tag="Transparent" />
-</StackPanel>
-```
-now call `OnBackdropRadioButtonChecked` method for changing and saving application systemBackdrop:
-```cs
-private void OnBackdropRadioButtonChecked(object sender, RoutedEventArgs e)
-{
-    themeService.OnBackdropRadioButtonChecked(sender);
-}
-```
-now if you want to selecting currect radiobutton item when page is loading, you can call `SetBackdropRadioButtonDefaultItem` method in Page `Loaded` event:
-
-```cs
-themeService.SetBackdropRadioButtonDefaultItem(BackdropPanel);
-```
-
-### ComboBox
-
-copy this xaml in your page:
-
-```xml
-<ComboBox Name="cmbBackdrop" SelectionChanged="cmbBackdrop_SelectionChanged">
-    <ComboBoxItem Tag="None" Content="None"/>
-    <ComboBoxItem Tag="Mica" Content="Mica"/>
-    <ComboBoxItem Tag="MicaAlt" Content="MicaAlt"/>
-    <ComboBoxItem Tag="DesktopAcrylic" Content="Desktop Acrylic"/>
-    <ComboBoxItem Tag="AcrylicBase" Content="Acrylic Base"/>
-    <ComboBoxItem Tag="AcrylicThin" Content="Acrylic Thin"/>
-    <ComboBoxItem Tag="Transparent" Content="Transparent"/>
-</ComboBox>
-```
-now call `OnBackdropComboBoxSelectionChanged` method for changing and saving application theme:
-```cs
-private void cmbBackdrop_SelectionChanged(object sender, SelectionChangedEventArgs e)
-{
-    themeService.OnBackdropComboBoxSelectionChanged(sender);
-}
-```
-now if you want to selecting currect combobox item when page is loading, you can call `SetBackdropComboBoxDefaultItem` method in Page `Loaded` event:
-
-```cs
-themeService.SetBackdropComboBoxDefaultItem(cmbBackdrop);
-```
-
-## Manuel
 you can change Application SystemBackdrop:
 
 ```cs
