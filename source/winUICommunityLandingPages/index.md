@@ -12,7 +12,6 @@ After installing, add the following resource to app.xaml
 
 ```xml
 <ResourceDictionary Source="ms-appx:///WinUICommunity.LandingPages/Themes/Generic.xaml" />
-<ItemTemplates xmlns="using:WinUICommunity"/>
 ```
 See the Demo app to see how to use it.
 

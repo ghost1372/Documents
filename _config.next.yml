@@ -339,7 +339,8 @@ menu:
       default: /converters/ || fab fa-intercom
     Controls: 
       default: /controls/ || fab fa-intercom
-      AutoScrollView: /AutoScrollView/ ||
+      AutoScrollView: /autoScrollView/ ||
+      BreadcrumbNavigator: /breadcrumbNavigator/ ||
       CheckBoxWithDescriptionControl: /checkBoxWithDescriptionControl/ ||
       ColorPalette: /colorPalette/ ||
       ColorfulShimmingEffect: /colorfulShimmingEffect/ ||

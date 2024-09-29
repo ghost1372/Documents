@@ -186,9 +186,15 @@ To see details and descriptions of Json's properties, refer to <ins>**[this](htt
 
 ```
 
-now you need to load items:
+## Using JsonNavigationViewService
 
-if you are using `JsonNavigationViewService`:
+first add following line in xaml:
+
+```xml
+JsonNavigationViewService="{x:Bind local:App.GetJsonNavigationViewService()}"
+```
+
+if you are using `JsonNavigationViewService` your data will be loaded automatically and you dont need to do anything, however if you want to change it, you can do like this:
 
 ```cs
 protected override void OnNavigatedTo(NavigationEventArgs e)
@@ -199,7 +205,9 @@ protected override void OnNavigatedTo(NavigationEventArgs e)
 }
 ```
 
-if not:
+Navigation is done automatically, if you want to change something, you can use `OnItemClick` event
+
+## Normal
 
 ```cs
 protected override void OnNavigatedTo(NavigationEventArgs e)

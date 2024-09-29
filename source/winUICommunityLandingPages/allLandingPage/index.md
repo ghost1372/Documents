@@ -4,14 +4,6 @@ title: AllLandingPage
 
 in this Page we can load all items from json file.
 
-{% note warning %}
-We moved all namespaces into a single namespace. No matter which (WinUICommunity) library you use, the namespace is always as follows
-For use in the Xaml:
-`xmlns:wuc="using:WinUICommunity"`
-For use in the Csharp:
-`using WinUICommunity;`
-{% endnote %}
-
 # Events
 
 |Name|
@@ -41,26 +33,31 @@ first add:
 xmlns:controls="using:WinUICommunity"
 ```
 
-then use AllLandingPage:
+## Usage with JsonNavigationViewService
+if you are using `JsonNavigationViewService` you can use it like this which is so easy:
 
+```xml
+<wuc:AllLandingPage x:Name="allLandingPage" HeaderImage="ms-appx:///Assets/GalleryHeaderImage.png"
+                                  HeaderText="All" Loaded="allLandingPage_Loaded"
+                                  JsonNavigationViewService="{x:Bind local:App.GetJsonNavigationViewService()}"/>
+```
+
+or if you want to load data yourself, you can load data like this:
+
+```cs
+allLandingPage.CanExecuteInternalCommand = false;
+allLandingsPage.GetData(jsonNavigationViewService.DataSource);
+allLandingsPage.OrderBy(i => i.Title);
+```
+
+Navigation is done automatically, if you want to change something, you can use `OnItemClick` event
+
+## Normal Usage
 ```xml
 <wuc:AllLandingPage x:Name="allLandingPage" HeaderImage="ms-appx:///Assets/GalleryHeaderImage.png"
                                   HeaderText="All" Loaded="allLandingPage_Loaded"
                                   OnItemClick="allLandingPage_OnItemClick"/>
 ```
-
-if you are using `JsonNavigationViewService`:
-
-```cs
-protected override void OnNavigatedTo(NavigationEventArgs e)
-{
-    base.OnNavigatedTo(e);
-    allLandingsPage.GetData(jsonNavigationViewService.DataSource);
-    allLandingsPage.OrderBy(i => i.Title);
-}
-```
-
-if not:
 
 ```cs
 protected override void OnNavigatedTo(NavigationEventArgs e)

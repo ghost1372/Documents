@@ -2,10 +2,11 @@
 title: WinUICommunity.ContextMenuExtensions
 ---
 
-### Experience WinUI 3 quickly and easily with the help of WinUICommunity, Everything you need to develop an application is gathered in one place.
+### Experience .Net Apps quickly and easily with the help of WinUICommunity, Everything you need to develop an application is gathered in one place.
 
 Add Custom Context Menu For Windows 11, We use the following project to create menus https://github.com/ikas-mc/ContextMenuForWindows11
 Therefore, make sure that your app is a `Packaged` Application and `not` a `UnPackaged`.
+You can use `WinUICommunity.ContextMenuExtensions` in any .Net >= 8.0 apps which supports Package Identity. this means you can use it in WPF or WinForm with MSIX Packaging.
 
 # Download and Install
 
