@@ -30,10 +30,10 @@ After installing, add the following codes to `Package.appxmanifest`
 <Extensions>
     <desktop4:Extension Category="windows.fileExplorerContextMenus">
         <desktop4:FileExplorerContextMenus>
-            <desktop5:ItemType Type="Directory"  >
+            <desktop5:ItemType Type="Directory">
                 <desktop5:Verb Id="CustomMenu" Clsid="YOUR_GUID" />
             </desktop5:ItemType>
-            <desktop5:ItemType Type="*"  >
+            <desktop5:ItemType Type="*">
                 <desktop5:Verb Id="CustomMenu" Clsid="YOUR_GUID" />
             </desktop5:ItemType>
             <desktop5:ItemType Type="Directory\Background">
@@ -154,6 +154,7 @@ protected async override void OnLaunched(LaunchActivatedEventArgs args)
         AcceptMultipleFilesFlag = (int)FilesMatchFlagEnum.Each,
         Index = 0,
         Enabled = true,
+        Icon = ProcessInfoHelper.GetFileVersionInfo().FileName,
         Exe = "YOUR_APPNAME"
     };
 
@@ -166,6 +167,19 @@ protected async override void OnLaunched(LaunchActivatedEventArgs args)
 - Replace `YOUR_APPNAME` with your applications name. (for example `App.exe`)
 - Replace `YOUR_MENU_TITLE` with your menu title. (for example `Open App Here`)
 {% endnote %}
+
+## Config menu for Specific Extension
+make sure your Type is set to `*`
+```xml
+<desktop5:ItemType Type="*">
+    <desktop5:Verb Id="CustomMenu" Clsid="YOUR_GUID" />
+</desktop5:ItemType>
+```
+then you need to change `AcceptFileFlag` and `AcceptExts`
+```cs
+AcceptFileFlag = (int)FileMatchFlagEnum.ExtList,
+AcceptExts = ".pkg|.pup",
+```
 
 # Fix Some Issues
 - if you dont see any menu items, make sure that the `ContextMenuCustomHost.dll` file is copied next to the executable file.

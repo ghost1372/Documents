@@ -230,13 +230,7 @@ private void mainLandingPage_OnItemClick(object sender, RoutedEventArgs e)
 
 ```
 
-## Enable/Disable Items based on Page Exist
-if you want to control items enable/disable, you can do this in 2 way (default is `autoIncludedInBuild = false`):
-
-### AutoIncludedInBuild
-we will check if page exist or not.
-
-### IncludedInBuild
+## Enable/Disable Items based on Page Exist / IncludedInBuild
 you can simply enable/disable items in `AppData.json` file just set `IncludedInBuild` to `true` or `false`
 
 

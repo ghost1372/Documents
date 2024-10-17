@@ -18,6 +18,12 @@ in this Page we can load all items from json file.
 |HeaderImage|
 |HeaderImageHeight|
 |HeaderFontSize|
+|UseFullScreenHeaderImage|
+|GridViewPadding|
+|HeaderTextForeground|
+|HeaderTextVerticalAlignment|
+|GridViewVerticalAlignment|
+|SpaceBetweenHeaderAndGridView|
 
 # Override values
 
@@ -163,13 +169,7 @@ To see details and descriptions of Json's properties, refer to <ins>**[this](htt
 
 ```
 
-## Enable/Disable Items based on Page Exist
-if you want to control items enable/disable, you can do this in 2 way (default is `autoIncludedInBuild = false`):
-
-### AutoIncludedInBuild
-we will check if page exist or not.
-
-### IncludedInBuild
+## Enable/Disable Items based on Page Exist / IncludedInBuild
 you can simply enable/disable items in `AppData.json` file just set `IncludedInBuild` to `true` or `false`
 
 

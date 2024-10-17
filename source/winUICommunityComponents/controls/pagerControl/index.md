@@ -2,8 +2,6 @@
 title: PagerControl
 ---
 
-It will be removed with the release of WASDK v1.5
-
 # Attributes
 |Property|
 |-|
