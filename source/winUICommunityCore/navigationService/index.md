@@ -366,6 +366,21 @@ string FindProjectRoot(string directory)
 #>
 ```
 
+{% note warning %}
+Visual Studio cannot automatically generate T4 files, to solve this problem we need to create a target to generate all T4 files when building the project.
+{% endnote %}
+
+```xml
+<Target Name="TransformAllT4Templates" BeforeTargets="BeforeBuild">
+  <ItemGroup>
+    <!-- This picks up all T4 templates in the project -->
+    <T4Template Include="**\*.tt" />
+  </ItemGroup>
+  <!-- Iterate over each .tt file and run TextTransform.exe -->
+  <Exec Command="&quot;$(DevEnvDir)TextTransform.exe&quot; &quot;%(T4Template.FullPath)&quot;" />
+</Target>
+```
+
 ### Configs
 there are some config methods:
 
@@ -571,6 +586,21 @@ string FindProjectRoot(string directory)
 #>
     };
 }
+```
+
+{% note warning %}
+Visual Studio cannot automatically generate T4 files, to solve this problem we need to create a target to generate all T4 files when building the project.
+{% endnote %}
+
+```xml
+<Target Name="TransformAllT4Templates" BeforeTargets="BeforeBuild">
+  <ItemGroup>
+    <!-- This picks up all T4 templates in the project -->
+    <T4Template Include="**\*.tt" />
+  </ItemGroup>
+  <!-- Iterate over each .tt file and run TextTransform.exe -->
+  <Exec Command="&quot;$(DevEnvDir)TextTransform.exe&quot; &quot;%(T4Template.FullPath)&quot;" />
+</Target>
 ```
 
 #### ConfigLocalizer
