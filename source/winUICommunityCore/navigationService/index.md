@@ -776,7 +776,7 @@ public MainPage()
 ```
 
 # INavigationAwareEx
-you can use `INavigationAwareEx` in your ViewModel and you can access to OnNavigatedFrom and OnNavigatedTo methods.
+you can use `INavigationAwareEx` in your ViewModel and you can access to `OnNavigatedFrom` and `OnNavigatedTo` methods.
 
 ```cs
 public partial class myViewModel : INavigationAwareEx
@@ -791,6 +791,21 @@ public async void OnNavigatedTo(object parameter)
     
 }
 
+```
+
+{% note warning %}
+if you are using `AOT` feature, you should set `DataContext`, otherwise you cant use this interface.
+{% endnote %}
+
+```cs
+public myViewModel ViewModel {get;}
+
+public BlankPage()
+{
+    ViewModel = App.GetService<myViewModel>();
+    DataContext = ViewModel;
+    this.InitializeComponent();
+}
 ```
 
 # Demo

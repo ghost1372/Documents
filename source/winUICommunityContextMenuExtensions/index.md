@@ -64,6 +64,10 @@ After installing, add the following codes to `Package.appxmanifest`
 - Replace All `YOUR_GUID` with your GUID.(`19E348CC-C459-4103-8415-ACB13961B26A`) Follow the instructions below to create a new guide.
 {% endnote %}
 
+{% note warning %}
+drive menu support (windows 11 22621+)
+{% endnote %}
+
 ## How to Create GUID?
 - 1.Open Visual Studio
 - 2.From `Tools` menu Select `Create GUID` option
