@@ -43,7 +43,7 @@ The easiest way to use, put `BreadcrumbNavigator` in your main page for example 
 then use `ConfigBreadcrumbBar` in `JsonNavigationViewService` 
 
 ```cs
-jsonNavigationViewService.ConfigBreadcrumbBar(breadCrumbو NavigationPageMappings.PageDictionary);
+jsonNavigationViewService.ConfigBreadcrumbBar(breadCrumb, NavigationPageMappings.PageDictionary);
 ```
 
 everything will done automatically.
@@ -78,6 +78,7 @@ then in your pages you should use attached property for Item Title and visibilit
 ```xml
 <Page
 wuc:BreadcrumbNavigator.PageTitle="Test"
+wuc:BreadcrumbNavigator.IsHeaderVisible="True"
 
 >
 ```

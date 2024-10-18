@@ -415,8 +415,10 @@ Due to the limitation in using reflection in AOT, we have to use the following m
 {% endnote %}
 
 ```cs
-jsonNavigationViewService.ConfigBreadcrumbBar(breadCrumbو NavigationPageMappings.PageDictionary);
+jsonNavigationViewService.ConfigBreadcrumbBar(breadCrumb, NavigationPageMappings.PageDictionary);
 ```            
+
+use `wuc:BreadcrumbNavigator.PageTitle` and `wuc:BreadcrumbNavigator.IsHeaderVisible` attached properties on your pages, for Title and Header visiblity.
 
 ```t4
 <#@ template language="C#" hostspecific="true" #>
@@ -478,8 +480,8 @@ void ExtractAttachedProperties(string content)
     string title = !string.IsNullOrEmpty(pageTitle) ? pageTitle : string.Empty;
 
     // Convert to bool based on string value directly
-    bool isHeaderVisibile = isHeaderVisible?.Equals("True", StringComparison.OrdinalIgnoreCase) ?? true;
-    bool clearNavigation = clearCache?.Equals("True", StringComparison.OrdinalIgnoreCase) ?? true;
+    bool isHeaderVisibile = isHeaderVisible?.Equals("True", StringComparison.OrdinalIgnoreCase) ?? false;
+    bool clearNavigation = clearCache?.Equals("True", StringComparison.OrdinalIgnoreCase) ?? false;
 
     if (string.IsNullOrEmpty(title) && string.IsNullOrEmpty(isHeaderVisible) && string.IsNullOrEmpty(clearCache))
     {
