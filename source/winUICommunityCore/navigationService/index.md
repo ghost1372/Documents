@@ -384,8 +384,9 @@ Visual Studio cannot automatically generate T4 files, to solve this problem we n
     <!-- This picks up all T4 templates in the project -->
     <T4Template Include="**\*.tt" />
   </ItemGroup>
-  <!-- Iterate over each .tt file and run TextTransform.exe -->
-  <Exec Command="&quot;$(DevEnvDir)TextTransform.exe&quot; &quot;%(T4Template.FullPath)&quot;" />
+
+  <!-- Check if TextTransform.exe exists before running -->
+  <Exec Command="if exist &quot;$(DevEnvDir)TextTransform.exe&quot; &quot;$(DevEnvDir)TextTransform.exe&quot; &quot;%(T4Template.FullPath)&quot;" Condition="Exists('$(DevEnvDir)TextTransform.exe')" />
 </Target>
 ```
 
@@ -613,8 +614,9 @@ Visual Studio cannot automatically generate T4 files, to solve this problem we n
     <!-- This picks up all T4 templates in the project -->
     <T4Template Include="**\*.tt" />
   </ItemGroup>
-  <!-- Iterate over each .tt file and run TextTransform.exe -->
-  <Exec Command="&quot;$(DevEnvDir)TextTransform.exe&quot; &quot;%(T4Template.FullPath)&quot;" />
+
+  <!-- Check if TextTransform.exe exists before running -->
+  <Exec Command="if exist &quot;$(DevEnvDir)TextTransform.exe&quot; &quot;$(DevEnvDir)TextTransform.exe&quot; &quot;%(T4Template.FullPath)&quot;" Condition="Exists('$(DevEnvDir)TextTransform.exe')" />
 </Target>
 ```
 
