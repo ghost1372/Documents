@@ -23,4 +23,4 @@ This package is based on the following packages
 - CommunityToolkit.WinUI.UI.Animations
 - Microsoft.Graphics.Win2D
 
-![LandingsPage](https://raw.githubusercontent.com/ghost1372/Resources/main/LandingsPage/0.png)
+![GalleryApp](https://raw.githubusercontent.com/WinUICommunity/Resources/main/WinUICommunityDocs/GalleryApp.png)

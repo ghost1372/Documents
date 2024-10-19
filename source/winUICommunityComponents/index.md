@@ -22,3 +22,5 @@ After installing, add the following resource to app.xaml
 ```
 
 See the Demo app to see how to use it
+
+![GalleryApp](https://raw.githubusercontent.com/WinUICommunity/Resources/main/WinUICommunityDocs/GalleryApp.png)

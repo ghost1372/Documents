@@ -15,3 +15,5 @@ Install-Package WinUICommunity.Core
 ```
 
 See the Demo app to see how to use it
+
+![GalleryApp](https://raw.githubusercontent.com/WinUICommunity/Resources/main/WinUICommunityDocs/GalleryApp.png)

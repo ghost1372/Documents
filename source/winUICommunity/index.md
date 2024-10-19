@@ -60,7 +60,7 @@ download and install our vsix package from Marketplace:
 # Demo
 See the Demo app to see how to use it
 
-![Demo](https://raw.githubusercontent.com/ghost1372/Resources/main/LandingsPage/0.png)
+![GalleryApp](https://raw.githubusercontent.com/WinUICommunity/Resources/main/WinUICommunityDocs/GalleryApp.png)
 
 ![WinUICommunity](https://raw.githubusercontent.com/ghost1372/Resources/main/SettingsUI/0.png)
 
