@@ -14,16 +14,27 @@ in this Page we can load all items from json file.
 
 |Name|
 |-|
-|HeaderText|
-|HeaderImage|
-|HeaderImageHeight|
-|HeaderFontSize|
-|UseFullScreenHeaderImage|
-|GridViewPadding|
-|HeaderTextForeground|
-|HeaderTextVerticalAlignment|
-|GridViewVerticalAlignment|
 |SpaceBetweenHeaderAndGridView|
+|HeaderContentMargin|
+|HeaderCornerRadius|
+|HeaderVerticalAlignment|
+|HeaderText|
+|HeaderFontSize|
+|HeaderSubtitleText|
+|HeaderSubtitleFontSize|
+|UseFullScreenHeaderImage|
+|HeaderImage|
+|HeaderOverlayImage|
+|OverlayOpacity|
+|Stretch|
+|NormalizedCenterPoint|
+|LazyLoadingThreshold|
+|EnableLazyLoading|
+|PlaceholderSource|
+|IsCacheEnabled|
+|GridViewVerticalAlignment|
+|GridViewPadding|
+|JsonNavigationViewService|
 
 # Override values
 

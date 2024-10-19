@@ -22,17 +22,36 @@ For use in the Csharp:
 
 |Name|
 |-|
+|SpaceBetweenHeaderAndGridView|
+|HeaderContentMargin|
+|HeaderCornerRadius|
+|HeaderVerticalAlignment|
 |HeaderText|
+|HeaderFontSize|
 |HeaderSubtitleText|
-|HeaderContent|
+|HeaderSubtitleFontSize|
+|UseFullScreenHeaderImage|
 |HeaderImage|
 |HeaderImageHeight|
+|HeaderOverlayImage|
+|OverlayOpacity|
+|Stretch|
+|NormalizedCenterPoint|
+|LazyLoadingThreshold|
+|EnableLazyLoading|
+|PlaceholderSource|
+|IsCacheEnabled|
+|GridViewVerticalAlignment|
+|GridViewPadding|
+|JsonNavigationViewService|
+|PreviewGroupText|
+|UpdatedGroupText|
+|NewGroupText|
+|HeaderContent|
 |HeaderMargin|
 |FooterContent|
 |FooterHeight|
 |FooterMargin|
-|HeaderFontSize|
-|HeaderSubtitleFontSize|
 
 # Override values
 
