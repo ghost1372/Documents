@@ -23,7 +23,7 @@ If you do not set the ApiNamespace, we will load the default assembly and we wil
 |ApiNamespace|WinUICommunity.DemoApp|Application Namespace|
 |Subtitle|anything||
 |ImagePath|ms-appx:///Assets/Modules/PT.png||
-|ImageIconPath|ms-appx:///Assets/Modules/PT.png||
+|IconGlyph|E946 or ||
 |Description|anything||
 |IsSpecialSection|false||
 |HideGroup|false|Hide or Show a Group with Items|
@@ -49,7 +49,7 @@ If you do not set the ApiNamespace, we will load the default assembly and we wil
 |Parameter|true|anything|
 |Subtitle|anything||
 |ImagePath|ms-appx:///Assets/Modules/PT.png||
-|ImageIconPath|ms-appx:///Assets/Modules/PT.png||
+|IconGlyph|E946 or ||
 |Description|anything||
 |Content|anything||
 |IsNew|true|if set true you can filter items based on new items|

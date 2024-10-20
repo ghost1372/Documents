@@ -124,7 +124,6 @@ To see details and descriptions of Json's properties, refer to <ins>**[this](htt
           "SecondaryTitle": "Test SecondaryTitle",
           "Subtitle": "you can use ApplicationDataContainerHelper for saving and loading application settings.",
           "ImagePath": "ms-appx:///Assets/Modules/PT.png",
-          "ImageIconPath": "ms-appx:///Assets/Modules/PT.png",
           "Description": "test description",
           "IsUpdated": true,
           "IncludedInBuild": true,
@@ -146,7 +145,6 @@ To see details and descriptions of Json's properties, refer to <ins>**[this](htt
           "SecondaryTitle": "Test SecondaryTitle",
           "Subtitle": "you can use AppNotificationPage for Sending Toast Notification.",
           "ImagePath": "ms-appx:///Assets/Modules/PT.png",
-          "ImageIconPath": "ms-appx:///Assets/Modules/PT.png",
           "IncludedInBuild": true,
           "Links": [
             {
@@ -169,7 +167,6 @@ To see details and descriptions of Json's properties, refer to <ins>**[this](htt
           "SecondaryTitle": "Test SecondaryTitle",
           "Subtitle": "Settings Page with a Hero Image",
           "ImagePath": "ms-appx:///Assets/Modules/PT.png",
-          "ImageIconPath": "ms-appx:///Assets/Modules/PT.png",
           "IsUpdated": true,
           "IncludedInBuild": true,
         }
